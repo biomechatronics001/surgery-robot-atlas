@@ -1,0 +1,150 @@
+{
+ "schema_version": 1,
+ "id": "cstar_activecath_jayender2006",
+ "name": "CSTAR active catheter",
+ "full_name": "CSTAR robot-assisted active-catheter insertion test bed (7-DOF PA10-7C arm inserting an SMA-actuated catheter)",
+ "group": "Western University / Canadian Surgical Technologies and Advanced Robotics (CSTAR) (R. V. Patel; J. Jayender, M. Azizian) with NRC Integrated Manufacturing Technologies Institute (S. Nikumb, SMA micro-welding)",
+ "group_short": "Western / CSTAR",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2006,
+ "latest_year": 2009,
+ "versions": "2006 ICRA hybrid impedance (force/position) control of catheter insertion by a 7-DOF redundant robot with proximal force sensing (title; rafiitari2014_current Sec. Robotic platforms); 2007 IROS autonomous insertion with image guidance (title); 2008 TRO autonomous image-guided insertion (full); 2008 BioRob wave-variable bilateral teleoperation of the active catheter (title); 2009 IJRR augmented hybrid impedance control + master-slave SMA tip control (full, jayender2009_robot)",
+ "target_anatomy": "vascular/angioplasty access (vinyl-tube vessel test bed); PCI-size (5 Fr) catheters as motivation",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "one 5 Fr guide catheter (Medtronic) instrumented with SMA actuators: three SMA wires at 120 deg, several sections (TRO 2008 Sec. II, VII)",
+ "n_dof": 7,
+ "n_dof_detail": "7 (Mitsubishi PA10-7C arm) plus SMA tip bending (yaw and pitch)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: 7-DOF industrial arm (Mitsubishi PA10-7C) inserts the catheter in strokes whose length is set from image feedback",
+ "rotation_mechanism": "other",
+ "rotation_detail": "arm wrist (catheter roll use N.R.); tip steering by SMA actuators",
+ "device_range": "one 5 Fr catheter",
+ "footprint_mm": "N.R. (industrial arm)",
+ "mass_kg": "N.R.",
+ "force_sensing": "ATI Gamma 6-DOF wrist force/torque sensor regulates insertion force (TRO 2008 Sec. II)",
+ "haptics_leader": "none in TRO 2008 (clinician sets start and target in a GUI); IJRR 2009: Phantom Omni gives yaw/pitch references for the SMA tip (closed loop on an NDI Aurora tip sensor, 30 Hz) and the user sets the insertion stroke (Sec. 3.2, 5.4, Fig. 4); bilateral wave-variable teleoperation in BioRob 2008 (title only)",
+ "imaging_compat": "camera images of the test bed as X-ray stand-in (about 1.0 mm/pixel) plus 5-DOF NDI Aurora EM sensor at the tip (TRO 2008 Sec. II-III)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "autonomous insertion through a vinyl-tube test bed with tubes of 3.0, 4.5 and 6.0 mm internal diameter and two bifurcations (second at a random 3-D angle) (TRO 2008 Sec. II, VIII); IJRR 2009: position, force, and force+moment control runs in the 3.0 mm tube, then a teleoperated run through two active branches (left, then right) with SMA bending at each junction (Sec. 5, Figs. 7-20)",
+ "key_numbers": "arm Cartesian tracking RMS 0.27/0.30/0.43 mm (x/y/z) and 0.18/0.06/0.17 deg; force tracking RMS 0.05 N; host-arm loop 333 Hz; EM sensor RMS 0.9-1.3 mm (TRO 2008 Sec. II, VI); insertion force regulated at 0.25 N, never exceeded through two active branches (IJRR 2009 Sec. 5.4, Fig. 20)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "jayender2008_autonomous_TRO Fig. 2 (test bed with Mitsubishi PA10-7C arm)",
+  "source_url": "https://doi.org/10.1109/tro.2008.2001353",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Jayender et al., IEEE Transactions on Robotics (2008), Fig. 2. publisher copyright (IEEE).",
+  "edits": "native extract (708x698); no crop; labels and arrows are baked into the raster and cross the arm, left as is; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "cstar_activecath_jayender2006_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "PA10-7C arm inserting the active catheter into the planar vessel test bed",
+   "source_key": "jayender2007_autonomous",
+   "source": "jayender2007_autonomous, Fig. 8, p. 5",
+   "source_url": null,
+   "where": "Fig. 8, p. 5",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "cstar_activecath_jayender2006_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Unlabelled view of the arm, catheter gripper and vessel-network test bed",
+   "source_key": "jayender2006_robot",
+   "source": "Jayender et al., Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006. (), Fig. 2, p. 3",
+   "source_url": "https://doi.org/10.1109/robot.2006.1641777",
+   "where": "Fig. 2, p. 3",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "cstar_activecath_jayender2006_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "SMA-actuated active catheter tip shown at successive bending angles",
+   "source_key": "jayender2008_autonomous",
+   "source": "Jayender et al., IEEE Transactions on Robotics (2008), Fig. 11, p. 8",
+   "source_url": "https://doi.org/10.1109/tro.2008.2001353",
+   "where": "Fig. 11, p. 8",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "cstar_activecath_jayender2006_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "SMA wires laser-microwelded to stainless-steel pads at the catheter tip",
+   "source_key": "jayender2008_autonomous",
+   "source": "Jayender et al., IEEE Transactions on Robotics (2008), Fig. 12, p. 8",
+   "source_url": "https://doi.org/10.1109/tro.2008.2001353",
+   "where": "Fig. 12, p. 8",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "jayender2008_autonomous",
+   "doi": "10.1109/tro.2008.2001353",
+   "url": null,
+   "title": "Autonomous Image-Guided Robot-Assisted Active Catheter Insertion",
+   "year": 2008,
+   "venue": "IEEE Transactions on Robotics"
+  },
+  {
+   "key": "jayender2006_robot",
+   "doi": "10.1109/robot.2006.1641777",
+   "url": null,
+   "title": "Robot-assisted catheter insertion using hybrid impedance control",
+   "year": null,
+   "venue": "Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006."
+  },
+  {
+   "key": "jayender2008_wave",
+   "doi": "10.1109/biorob.2008.4762778",
+   "url": null,
+   "title": "Wave variables based bilateral teleoperation of an active catheter",
+   "year": 2008,
+   "venue": "2008 2nd IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics"
+  },
+  {
+   "key": "jayender2009_robot",
+   "doi": "10.1177/0278364909103785",
+   "url": null,
+   "title": "Robot-assisted Active Catheter Insertion: Algorithms and Experiments",
+   "year": 2009,
+   "venue": "The International Journal of Robotics Research"
+  },
+  {
+   "key": "rafiitari2014_current",
+   "doi": "10.1007/s10439-013-0946-8",
+   "url": null,
+   "title": "Current and Emerging Robot-Assisted Endovascular Catheterization Technologies: A Review",
+   "year": 2014,
+   "venue": "Annals of Biomedical Engineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (TRO 2008; IJRR 2009, ); title/secondary for 2006, 2007, 2008 BioRob",
+ "notes": "General-purpose industrial arm used as the inserter; the contribution is the SMA active catheter with force/position control. | 2026-11-08 X3: IJRR 2009 read in full; its two hardware figures (Fig. 7 test bed, Fig. 2 micro-welded SMA tip) repeat pictures already in the gallery (_01 IROS 2007 Fig. 8, _04 TRO 2008 Fig. 12), so no gallery addition",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

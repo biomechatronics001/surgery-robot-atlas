@@ -1,0 +1,81 @@
+{
+ "schema_version": 1,
+ "id": "polimi_zhang2022",
+ "name": "MitraClip stabiliser",
+ "full_name": "PoliMi motorised stabiliser for the MitraClip delivery catheter with IRL path planning",
+ "group": "Politecnico di Milano, DEIB NEARLab (E. De Momi; X. Zhang, A. Segato) with E. Votta (cardiovascular biomechanics); Horizon 2020 funding",
+ "group_short": "Politecnico di Milano",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2022,
+ "latest_year": 2022,
+ "versions": "2022 IROS (only)",
+ "target_anatomy": "structural heart: transseptal mitral edge-to-edge repair",
+ "devices": [
+  "catheter",
+  "sheath",
+  "therapeutic-device"
+ ],
+ "devices_driven": "Abbott MitraClip delivery catheter, 16 Fr (5.28 mm), 109.5 cm, three pull wires 90 deg apart, inside its sheath (Sec. III-C)",
+ "n_dof": 3,
+ "n_dof_detail": "3 (medio-lateral bending, antero-posterior bending, insertion in the sheath)",
+ "translation_mechanism": "linear-stage+clamp",
+ "translation_detail": "linear-stage+clamp (linear actuator on the motorised stabiliser advances the delivery catheter)",
+ "rotation_mechanism": "none",
+ "rotation_detail": "none; two bending DOF actuated through the handle",
+ "device_range": "one clinical delivery system",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R. (3-D-printed PLA)",
+ "force_sensing": "none",
+ "haptics_leader": "none (autonomous execution of planned path, PID on EM feedback)",
+ "imaging_compat": "NDI Aurora EM: 5-DOF tip sensor (0.7 +- 1.4 mm) for feedback, 6-DOF probe (0.48 +- 0.88 mm) for recording",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "patient-specific silicone phantom of femoral vein and IVC with rigid fossa ovalis and mitral replicas registered to Unity (Sec. IV-A)",
+ "key_numbers": "closed-loop tip error 1.12 +- 0.75, 1.09 +- 0.68, 1.66 +- 0.62 mm (X/Y/Z), maximum 2.64 mm; PID reduces mean error by 32.68% vs open loop; planned path 60.63 +- 0.96 mm (BC+GAIL) vs 64.99 +- 6.11 mm (manual) (Sec. V)",
+ "sim_model": "yes: Unity scene of the patient anatomy with a Cosserat-rod-based catheter kinematic model (zhang2022_robotic Sec. III)",
+ "has_sim_model": true,
+ "sim2real": "yes",
+ "sim2real_detail": "yes (phantom): a BC+GAIL inverse-RL path planner trained in the Unity environment generated the path that the robot executed in the physical phantom with EM closed loop (zhang2022_robotic Sec. IV, Fig. 7)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "zhang2022_structural_IROS Fig. 4(A) catheter actuation plant (inside the red frame)",
+  "source_url": "https://doi.org/10.1109/iros47612.2022.9981676",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Zhang et al., 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2022), Fig. 4. publisher copyright (IEEE).",
+  "edits": "native extract (961x568, the whole composite is one raster); cropped to panel A interior; labels and dashed callout lines are baked in and left; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "polimi_zhang2022_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Whole system: actuation plant, motorised stabiliser close-ups, phantom, EM tracker and PCs",
+   "source_key": "zhang2022_robotic",
+   "source": "Zhang et al., 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2022), Fig. 4(A)-(G), p. 3",
+   "source_url": "https://doi.org/10.1109/iros47612.2022.9981676",
+   "where": "Fig. 4(A)-(G), p. 3",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "zhang2022_robotic",
+   "doi": "10.1109/iros47612.2022.9981676",
+   "url": null,
+   "title": "Robotic Actuation and Control of a Catheter for Structural Intervention Cardiology",
+   "year": 2022,
+   "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "Fills the Politecnico di Milano gap of A3. Only robot in A9 with a simulation-trained planner run on hardware.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

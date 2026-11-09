@@ -1,0 +1,81 @@
+{
+ "schema_version": 1,
+ "id": "raysight_raysight2025",
+ "name": "Raysight PCI",
+ "full_name": "Raysight Medical PCI robot",
+ "group": "Raysight Medical",
+ "group_short": "Raysight Medical",
+ "family": "commercial",
+ "category": "clinical-stage",
+ "first_year": 2025,
+ "latest_year": 2026,
+ "versions": "N.R.",
+ "target_anatomy": "coronary",
+ "devices": [
+  "guidewire",
+  "catheter",
+  "therapeutic-device"
+ ],
+ "devices_driven": "3 channels: guide catheter, guidewire, balloon/stent device",
+ "n_dof": null,
+ "n_dof_detail": "N.R.",
+ "translation_mechanism": "not-reported",
+ "translation_detail": "N.R.",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R.",
+ "haptics_leader": "N.R.",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "3 pigs, 34 episodes (liu2026_ai)",
+ "key_numbers": "correct-command rate 83.6-95.6% (not task success)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "AI controller on live fluoroscopy in pig (liu2026_ai, full; sim_to_real flagged no in S7b)",
+ "picture": {
+  "status": "cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "liu2026_ai Fig. 1(b), PMC image https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fc68/13509165/4899e05a13e2/bioengineering-13-00848-g001.webp (article https://pmc.ncbi.nlm.nih.gov/articles/PMC13509165/)",
+  "source_url": "https://doi.org/10.3390/bioengineering13080848",
+  "licence": "CC BY 4.0",
+  "credit": "Liu et al., Bioengineering (2026), Fig. 1(b). CC BY 4.0.",
+  "edits": "cropped (68,595)-(783,1030) of 1600x1048, right of the panel letter \"b\"",
+  "file": "pictures/raysight_raysight2025.jpg"
+ },
+ "pictures": [
+  {
+   "id": "raysight_raysight2025_01",
+   "status": "cleared",
+   "file": "pictures/extra/raysight_raysight2025_01.jpg",
+   "thumb": "pictures/thumbs/raysight_raysight2025_01.jpg",
+   "kind": "render",
+   "caption": "Rendering of the Raysight robot on the patient table beside a C-arm",
+   "source_key": "liu2026_ai",
+   "source": "Liu et al., Bioengineering (2026), Fig. 1(a), PMC13509165",
+   "source_url": "https://doi.org/10.3390/bioengineering13080848",
+   "where": "Fig. 1(a), PMC13509165",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "liu2026_ai",
+   "doi": "10.3390/bioengineering13080848",
+   "url": null,
+   "title": "AI-Driven Robotic PCI: A Perception-to-Action Framework for Coronary Guidewire Control",
+   "year": 2026,
+   "venue": "Bioengineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (S8/S7b)",
+ "notes": "Interface proprietary.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

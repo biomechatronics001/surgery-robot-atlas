@@ -1,0 +1,101 @@
+{
+ "schema_version": 1,
+ "id": "ydhbns01_yidu2020",
+ "name": "VAS HERO",
+ "full_name": "YDHB-NS01 / VAS HERO",
+ "group": "Yidu Hebei Robot Technology",
+ "group_short": "Yidu Hebei",
+ "family": "commercial",
+ "category": "commercial",
+ "first_year": 2020,
+ "latest_year": 2026,
+ "versions": "YDHB-NS01; v2.0 mentioned",
+ "target_anatomy": "neurovascular (cerebral angiography)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "0.035-in guidewire + 5F catheter",
+ "n_dof": null,
+ "n_dof_detail": "catheter advance+rotate, wire advance",
+ "translation_mechanism": "linear-stage+clamp",
+ "translation_detail": "linear-stage+clamp",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "catheter carriage on linear axis; wire clamp-and-relay",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R.",
+ "haptics_leader": "no (steering handles, doctor console)",
+ "imaging_compat": "bedside slave + remote console",
+ "sterility": "N.R.",
+ "highest_validation": "human",
+ "validation_detail": "RCT 260 enrolled/257 done, 3 centres (liu2024_efficacy); 25+25 (liu2026_clinical)",
+ "key_numbers": "success 100% both; operation time 47.94+-27.49 vs 48.59+-25.60 min (liu2024_efficacy); 27 vs 38 min p=0.005 (liu2026_clinical)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "render",
+  "source": "liu2024_efficacy Fig. 2(B), PMC image https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ca6f/11221321/099807b86682/svn-2022-002260f02.jpg (https://pmc.ncbi.nlm.nih.gov/articles/PMC11221321/)",
+  "source_url": "https://doi.org/10.1136/svn-2022-002260",
+  "licence": "CC BY-NC 4.0",
+  "credit": "Liu et al., Stroke and Vascular Neurology (2024), Fig. 2. CC BY-NC 4.0.",
+  "edits": "cropped (422,0)-(783,228) of 783x574",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "ydhbns01_yidu2020_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "System rendering with callouts: disposables, operating arm, cabinet, workstation",
+   "source_key": "liu2024_efficacy",
+   "source": "Liu et al., Stroke and Vascular Neurology (2024), Fig. 2(A), PMC11221321",
+   "source_url": "https://doi.org/10.1136/svn-2022-002260",
+   "where": "Fig. 2(A), PMC11221321",
+   "licence": "CC BY-NC 4.0"
+  },
+  {
+   "id": "ydhbns01_yidu2020_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Operator at the workstation driving the robot with joystick and touch panel",
+   "source_key": "liu2024_efficacy",
+   "source": "Liu et al., Stroke and Vascular Neurology (2024), Fig. 2(D), PMC11221321",
+   "source_url": "https://doi.org/10.1136/svn-2022-002260",
+   "where": "Fig. 2(D), PMC11221321",
+   "licence": "CC BY-NC 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "liu2024_efficacy",
+   "doi": "10.1136/svn-2022-002260",
+   "url": null,
+   "title": "Efficacy and safety of a neurointerventional operation robotic assistance system in cerebral angiography",
+   "year": 2024,
+   "venue": "Stroke and Vascular Neurology"
+  },
+  {
+   "key": "liu2026_clinical",
+   "doi": "10.1186/s41016-026-00426-w",
+   "url": null,
+   "title": "Clinical validation and literature review of robot-assisted cerebral angiography",
+   "year": 2026,
+   "venue": "Chinese Neurosurgical Journal"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full text on disk",
+ "notes": "NMPA Class III approval 2023-03-13 per cn-healthcare.com 2023-04-28 (named 易度河北, product VAS HERO). CONFLICT: other press attributes the first NMPA approval (2023-03-14, 260-pt, 100% success) to Beijing Wansi (万思) Medical; the 260-pt 3-centre trial matches liu2024_efficacy (YDHB-NS01), so Wansi attribution looks like a mix-up; unresolved without the NMPA database.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

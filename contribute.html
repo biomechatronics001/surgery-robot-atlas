@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contribute — Catheter Robot Atlas</title><meta name="description" content="How to add or fix a robot record."><meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+</head><body><div class="banner"><div class="wrap"><b>Lab preview.</b> This build shows pictures under publisher copyright or press terms. Pictures are reproduced from the cited papers and company material and stay under their owners' copyright; do not reuse them.</div></div>
+<header class="top"><div class="wrap"><a class="mark" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 C 12 26, 10 8, 20 8 S 28 14, 28 6" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="6" r="2.6" fill="#222"/></svg>Catheter Robot Atlas</a><nav><a href="index.html">Home</a><a href="library.html">Library</a><a href="reviews.html">Reviews</a><a href="sim2real.html">Sim-to-real</a><a href="docs.html">Schema &amp; API</a><a href="contribute.html" class=on>Contribute</a><a href="about.html">About</a></nav></div></header>
+<main><div class="wrap"><div class="pagehead"><p class="kicker">Get involved</p><h1>Contribute</h1>
+<p class="lede">Add a robot, fix a number, or give us a picture you own. Every record is one YAML file; adding or fixing
+one is a pull request, checked automatically against the schema.</p></div>
+<div class="doc"><nav class="toc"><a href="#ways">Ways to contribute</a><a href="#steps">Add or fix a record</a><a href="#template">Record template</a>
+<a href="#rules">Field rules</a><a href="#pictures">Pictures</a><a href="#checklist">Pull request checklist</a><a href="#issue">Issue form</a></nav><div>
+<section id="ways"><h2>Ways to contribute</h2><div class="cols" style="grid-template-columns:repeat(2,1fr)">
+<div><p class="kicker">Add a robot</p><p>Any robot that pushes or twists a catheter or guidewire, or a device that bends its
+own tip, with at least one paper or product page. Open an issue with the form below, or send the YAML file as a pull request.</p></div>
+<div><p class="kicker">Fix a record</p><p>A wrong number, a missing version, a newer test level: change the field, cite the
+source key and section in the text, open a pull request. Every robot page has a "Suggest a correction" link.</p></div>
+<div><p class="kicker">Give a picture</p><p>A photo of your own robot under CC BY 4.0 replaces a placeholder. State the licence
+and the credit line you want.</p></div>
+<div><p class="kicker">Improve the schema</p><p>Need a field or a vocabulary value that does not exist? Propose it in the same
+pull request as the record that needs it.</p></div></div>
+<p class="small muted">Repository: GitHub <span class="todo" title="open decision for the maintainers">[repository not created yet]</span></p></section>
+<section id="steps"><h2>Add or fix a record</h2><ol class="steps">
+<li><div><b>Copy</b> the template below to <code>records/robots/&lt;id&gt;.yaml</code>. The id is
+<code>&lt;shortname&gt;_&lt;firstauthor&gt;&lt;year&gt;</code> in lower case, e.g. <code>legobot_gao2026</code>.</div></li>
+<li><div><b>Fill</b> the fields from the papers. Required: <code>schema_version</code>, <code>id</code>, <code>name</code>, <code>full_name</code>, <code>group</code>, <code>family</code>, <code>category</code>, <code>first_year</code>, <code>devices</code>, <code>translation_mechanism</code>, <code>rotation_mechanism</code>, <code>highest_validation</code>, <code>sim2real</code>, <code>picture</code>, <code>sources</code>, <code>read_level</code>, <code>maintainers_own</code>.
+Vocabularies are listed in the <a href="docs.html#vocab">docs</a>.</div></li>
+<li><div><b>Validate</b>: <code>python3 tools/validate_records.py</code> (needs <code>pip install pyyaml jsonschema</code>). It exits
+non-zero and names the file and field on any error.</div></li>
+<li><div><b>Preview</b>: <code>python3 tools/build_site.py --public</code>, then <code>cd site &amp;&amp; python3 -m http.server 8000</code>
+and open <code>http://localhost:8000</code>.</div></li>
+<li><div><b>Submit</b> a pull request with the YAML file (and a picture in <code>records/pictures/</code> if you own it).
+The repository's checks run the validator and build the site.</div></li></ol>
+<p class="small muted">While the catalogue is generated from the review's CSV, a maintainer copies an accepted change into the CSV,
+so it survives the next build.</p></section>
+<section id="template"><h2>Record template</h2><pre><code># records/robots/&lt;id&gt;.yaml — one file per robot. Text fields keep the sources&#x27; words; write N.R. when a
+# source does not report it; never estimate a number. Check: python3 tools/validate_records.py
+schema_version: 1
+id: &#x27;&#x27;
+name: &#x27;&#x27;
+full_name: &#x27;&#x27;
+group: &#x27;&#x27;
+group_short: &#x27;&#x27;
+# family: commercial | academic | tip | magnetic
+family: &#x27;&#x27;
+# category: commercial | clinical-stage | academic | actuated-device | magnetic-navigation
+category: &#x27;&#x27;
+first_year: null
+latest_year: null
+versions: &#x27;&#x27;
+target_anatomy: &#x27;&#x27;
+# devices: guidewire | microcatheter | catheter | sheath | therapeutic-device | other | not-reported
+devices: []
+devices_driven: &#x27;&#x27;
+n_dof: null
+n_dof_detail: &#x27;&#x27;
+# translation_mechanism: friction-roller | clamp-relay | belt/track | linear-stage+clamp | magnetic | tendon/tip-actuation | other | not-reported
+translation_mechanism: &#x27;&#x27;
+translation_detail: &#x27;&#x27;
+# rotation_mechanism: rotating-clamp | rotating-drive-unit | roller-rolling | handle-rotation | tendon-bending | magnetic-field | none | other | not-reported
+rotation_mechanism: &#x27;&#x27;
+rotation_detail: &#x27;&#x27;
+device_range: &#x27;&#x27;
+footprint_mm: &#x27;&#x27;
+mass_kg: &#x27;&#x27;
+force_sensing: &#x27;&#x27;
+haptics_leader: &#x27;&#x27;
+imaging_compat: &#x27;&#x27;
+sterility: &#x27;&#x27;
+# highest_validation: bench | phantom | ex-vivo | animal | human
+highest_validation: &#x27;&#x27;
+validation_detail: &#x27;&#x27;
+key_numbers: &#x27;&#x27;
+sim_model: &#x27;&#x27;
+has_sim_model: false
+# sim2real: yes | partial | model-based | unclear | none-found
+sim2real: &#x27;&#x27;
+sim2real_detail: &#x27;&#x27;
+picture:
+  status: none        # cleared | not-cleared | none
+  grade: none         # A | B | C | none
+  kind: null          # photo | render | product-photo | clinical-photo | drawing
+  source: &#x27;&#x27;          # paper key + figure, or page URL
+  source_url: null
+  licence: &#x27;&#x27;
+  credit: &#x27;&#x27;
+  edits: &#x27;&#x27;
+  file: null          # pictures/&lt;id&gt;.jpg, only when cleared
+pictures: []
+sources:
+- key: firstauthor2026_word
+  doi: 10.xxxx/xxxxx
+  url: null
+  title: &#x27;&#x27;
+  year: 2026
+  venue: &#x27;&#x27;
+# read_level: full | partial | abstract | web | secondary
+read_level: &#x27;&#x27;
+read_level_detail: &#x27;&#x27;
+notes: &#x27;&#x27;
+maintainers_own: false
+# found_by: academic | commercial | actuated-tip | gap | contributor
+found_by: &#x27;&#x27;
+</code></pre></section>
+<section id="rules"><h2>Field rules</h2><ul>
+<li>Write what the source says, in its units, with the source key and section: <code>stroke 300 mm (kantu2025_portable Sec. III-A)</code>.</li>
+<li>A number the source does not report is <code>N.R.</code>. Never estimate or convert a number the source did not give.</li>
+<li>One record per robot line: later versions of the same robot go into <code>versions</code>, oldest first.</li>
+<li><code>highest_validation</code> is the highest level reached by any version, and <code>validation_detail</code> says how many
+cases, animals or patients.</li>
+<li><code>sim2real</code> is <code>yes</code> only when a controller or model trained in simulation ran on this robot; cite the study.</li>
+<li><code>read_level</code> says honestly how deep the reading went: full text, part of it, abstract, web page, or a secondary source.</li>
+<li>Every paper in <code>sources</code> has its DOI when one exists.</li></ul></section>
+<section id="pictures"><h2>Pictures</h2><p>A picture is published only when its licence allows reuse: Creative Commons
+Attribution (CC BY, without NC, ND or SA) or material of the maintainers' own lab; the rule is
+<code>licence_ok()</code> in <code>tools/licence_rule.py</code>. Any other picture (publisher copyright, press images,
+NC/ND licences) stays at its source and the record links to it. Pictures are resized to 800 px on the long side;
+list every change you made in <code>picture.edits</code> (CC BY asks for that).</p></section>
+<section id="checklist"><h2>Pull request checklist</h2><ul>
+<li>One robot per file; file name = <code>id</code> + <code>.yaml</code>.</li>
+<li><code>python3 tools/validate_records.py</code> passes.</li>
+<li>Every number has its source key and section; unreported values are <code>N.R.</code>.</li>
+<li>Every source has a DOI or a link.</li>
+<li>A picture, if added, is yours or CC BY, with <code>licence</code>, <code>credit</code> and <code>edits</code> filled.</li>
+<li>If you built the robot, say so in the pull request.</li></ul></section>
+<section id="issue"><h2>Issue form: new robot</h2><p>The repository's issue form (<code>.github/ISSUE_TEMPLATE/new-robot.yml</code>)
+asks for the following; by e-mail, the same list works.</p><pre><code>Robot name and short description:
+Developer (lab, university or company):
+First paper (DOI) and later versions (DOIs):
+Devices driven (guidewire / catheter / microcatheter / sheath / balloon-stent), sizes:
+Push mechanism (friction rollers / clamp relay / belt / linear stage / magnetic / tip-actuated / other):
+Twist mechanism:
+Degrees of freedom:
+Highest test level (bench / phantom / ex vivo / animal / human) and the paper that reports it:
+A picture you own or one under CC BY (link and licence), if any:
+Your relation to the robot (developer / user / reader):</code></pre></section>
+</div></div></div></main>
+<footer class="foot"><div class="wrap">
+<div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
+the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
+pictures keep their owners' licences. Built 2026-11-09.</div>
+<div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
+Paper: Endovascular Catheter and Guidewire Robots: A Hardware Atlas (in preparation)</div>
+<div>Machine-readable: <a href="api/robots.json">robots.json</a> · <a href="robots.csv">robots.csv</a> ·
+<a href="api/schema.json">schema.json</a><br><a href="docs.html">Schema &amp; API</a> · <a href="contribute.html">Contribute</a></div>
+</div></footer><script src="assets/library.js"></script>
+</body></html>

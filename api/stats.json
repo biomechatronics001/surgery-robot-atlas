@@ -1,0 +1,106 @@
+{
+ "generated": "2026-11-09",
+ "robots": 126,
+ "reviews": 34,
+ "first_year": 1996,
+ "latest_year": 2026,
+ "by_family": {
+  "commercial": 33,
+  "academic": 62,
+  "tip": 10,
+  "magnetic": 21
+ },
+ "by_highest_validation": {
+  "bench": 18,
+  "phantom": 54,
+  "ex-vivo": 3,
+  "animal": 26,
+  "human": 25
+ },
+ "family_x_validation": {
+  "commercial": {
+   "bench": 3,
+   "phantom": 3,
+   "ex-vivo": 0,
+   "animal": 2,
+   "human": 25
+  },
+  "academic": {
+   "bench": 13,
+   "phantom": 32,
+   "ex-vivo": 2,
+   "animal": 15,
+   "human": 0
+  },
+  "tip": {
+   "bench": 1,
+   "phantom": 6,
+   "ex-vivo": 1,
+   "animal": 2,
+   "human": 0
+  },
+  "magnetic": {
+   "bench": 1,
+   "phantom": 13,
+   "ex-vivo": 0,
+   "animal": 7,
+   "human": 0
+  }
+ },
+ "by_decade": {
+  "1990s": 1,
+  "2000s": 9,
+  "2010s": 39,
+  "2020s": 76,
+  "N.R.": 1
+ },
+ "by_translation_mechanism": {
+  "friction-roller": 29,
+  "magnetic": 25,
+  "other": 24,
+  "linear-stage+clamp": 16,
+  "clamp-relay": 12,
+  "tendon/tip-actuation": 10,
+  "not-reported": 8,
+  "belt/track": 2
+ },
+ "by_rotation_mechanism": {
+  "magnetic-field": 25,
+  "rotating-clamp": 19,
+  "other": 18,
+  "rotating-drive-unit": 18,
+  "not-reported": 17,
+  "handle-rotation": 11,
+  "none": 8,
+  "roller-rolling": 6,
+  "tendon-bending": 4
+ },
+ "by_device": {
+  "catheter": 94,
+  "guidewire": 73,
+  "therapeutic-device": 25,
+  "sheath": 21,
+  "microcatheter": 15,
+  "other": 7,
+  "not-reported": 1
+ },
+ "pictures": {
+  "found": 126,
+  "cleared_for_reuse": 21,
+  "by_grade": {
+   "B": 45,
+   "A": 26,
+   "C": 55
+  }
+ },
+ "notes": "by_decade uses first_year.",
+ "sim2real_studies": 26,
+ "by_sim2real": {
+  "none-found": 112,
+  "yes": 8,
+  "model-based": 4,
+  "partial": 1,
+  "unclear": 1
+ },
+ "with_sim_model": 37
+}

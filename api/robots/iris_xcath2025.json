@@ -1,0 +1,90 @@
+{
+ "schema_version": 1,
+ "id": "iris_xcath2025",
+ "name": "Iris",
+ "full_name": "Iris Surgical Robotic System (XCath EVR)",
+ "group": "XCath",
+ "group_short": "XCath",
+ "family": "commercial",
+ "category": "clinical-stage",
+ "first_year": 2025,
+ "latest_year": 2026,
+ "versions": "EVR (earlier name); Iris",
+ "target_anatomy": "neurovascular (intracranial): aneurysm treatment, thrombectomy",
+ "devices": [
+  "guidewire",
+  "microcatheter",
+  "catheter",
+  "sheath"
+ ],
+ "devices_driven": "steerable guidewire with electroactive-polymer tip; catheters/sheath; microcatheters (per press)",
+ "n_dof": null,
+ "n_dof_detail": "N.R.",
+ "translation_mechanism": "other",
+ "translation_detail": "other: pinch rollers for catheter (mandhumula2025_robotic via S8)",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none reported",
+ "haptics_leader": "no (joystick console visible in photo)",
+ "imaging_compat": "works on monoplane angiography (company claim)",
+ "sterility": "N.R.",
+ "highest_validation": "human",
+ "validation_detail": "3 aneurysm pts, Panama Clinic, Nov 2025 (press); 1 telerobotic thrombectomy, Panama, ~200 km, March 2026 (press); both company-reported",
+ "key_numbers": "telerobotic thrombectomy: NIHSS 21 LVO, mTICI 3, first pass (hitconsultant 2026-03-20). Series C US$30M March 2026, total US$92M (pulse2/massdevice).",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "https://xcath.com/images/iris.png (home page https://xcath.com/)",
+  "source_url": "https://xcath.com/images/iris.png",
+  "licence": "press image (XCath)",
+  "credit": "https://xcath.com/images/iris.png (home page https://xcath.com/). Licence: press image (XCath).",
+  "edits": "cropped (222,123)-(1672,1006) of 1920x1080 RGBA, flattened on white; cut = same crop with the publisher alpha; not upscaled; no tone change; no erasing",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "iris_xcath2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "XCath console with two joysticks and touch screen in the Santiago control room",
+   "source_key": "web:hitconsultant.net",
+   "source": "hitconsultant.net, (HIT Consultant, 2026-03)",
+   "source_url": "https://hitconsultant.net/wp-content/uploads/2026/03/XCath_Team_Santiago_Control_Room_DrPereira_Dr_Moll_for_wire-1500x841.jpg",
+   "where": "https://hitconsultant.net/wp-content/uploads/2026/03/XCath_Team_Santiago_Control_Room_DrPereira_Dr_Moll_for_wire-1500x841.jpg (HIT Consultant, 2026-03)",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  },
+  {
+   "key": "chen2026_teleoperation",
+   "doi": "10.1109/TMRB.2026.3681030",
+   "url": null,
+   "title": "Remote Teleoperation of Endovascular Intervention Robots: A Systematic Review",
+   "year": 2026,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  }
+ ],
+ "read_level": "web",
+ "read_level_detail": "web",
+ "notes": "Not cleared by any regulator (Endovascular Today 2026-03-25 per S8). Operator Vitor Mendes Pereira, also lead of GRX neuro series. No peer-reviewed paper found.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

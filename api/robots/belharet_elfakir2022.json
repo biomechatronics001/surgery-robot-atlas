@@ -1,0 +1,121 @@
+{
+ "schema_version": 1,
+ "id": "belharet_elfakir2022",
+ "name": "PRISME platforms",
+ "full_name": "Magnetic catheter navigation platforms of the Belharet lab (8-coil EMA with haptic and VR teleoperation; KUKA-held permanent magnet with motorized catheter driver)",
+ "group": "Belharet, PRISME EA 4229, Junia HEI / Univ. Orleans",
+ "group_short": "U. Orléans",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2022,
+ "latest_year": 2024,
+ "versions": "VHMM: 8-electromagnet EMA of the lab + PI XYZ positioner pushing the catheter + Omega.6 haptic master + Simscape VR (elfakir2022_towards, AIM 2022); KUKA LBR iiwa R14 holding a 70 x 70 mm NdFeB magnet + motorized catheter driver + glass phantom (elfakir2022_magnetic, ICARM 2022); PhD thesis 2024 (HAL tel-04914777, not opened)",
+ "target_anatomy": "complex vascular networks and small arteries (2 mm), applications named: brain tumours, stenosis, cardiac ablation, renal artery occlusion (elfakir2022_magnetic Sec. I, Fig. 1)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "own magnetic catheters: LDPE shaft with 3 NdFeB magnets (1 mm x 3 mm) at the tip (elfakir2022_towards Sec. II-B); 1 mm catheter with 3 magnets (1 x 3 mm, 8 mm spacing) in LDPE tube (elfakir2022_magnetic Table I, Fig. 6B)",
+ "n_dof": null,
+ "n_dof_detail": "EMA version: 2 bending angles + 1 insertion from the haptic device (elfakir2022_towards Sec. V); arm version: 7-DoF arm + motorized insertion (elfakir2022_magnetic Sec. IV-C)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (tip steering); linear-stage push of the proximal end (PI XYZ stage, elfakir2022_towards Sec. II-A; motorized catheter control system, elfakir2022_magnetic Sec. IV-C)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "field of 8 fixed electromagnets (EMA) or pose of a permanent magnet on a 7-DoF arm (KUKA)",
+ "device_range": "catheter OD 1 mm (elfakir2022_magnetic Sec. IV-A)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none on the catheter; haptic forces come from virtual contact in the VR model (Ks = 1000 N/m, bm = 30 Ns/m, elfakir2022_towards Sec. III-D)",
+ "haptics_leader": "Omega.6 (Force Dimension) with force feedback from simulated contacts (elfakir2022_towards Sec. II-A, III-D)",
+ "imaging_compat": "cameras only (stereo vision; CCD camera tracking)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "glass phantom with 2 mm arteries, 20 cm path and four successive bifurcations (45 and 90 deg): three navigations, all reached the target (elfakir2022_magnetic Sec. IV-C, Fig. 8); free-space and glass-vessel deflection under the EMA (elfakir2022_towards Figs. 6-8)",
+ "key_numbers": "max tip deflection 155 deg (elfakir2022_magnetic Sec. IV-B); first navigation 35 s including actuator moves (Sec. IV-C); EMA current-to-angle polynomial model of degree 2 with error 0.39 (elfakir2022_towards Sec. IV-A); magnet 70 x 70 mm, Br 1.42 T (elfakir2022_magnetic Sec. II)",
+ "sim_model": "Simscape (MATLAB) multibody model of the catheter with a spatial contact-force model, run alongside the real catheter as VR (elfakir2022_towards Sec. III); Euler-Bernoulli multi-element deflection model for catheter design (elfakir2022_magnetic Sec. II)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found (the virtual model drives haptic feedback while the real catheter runs open loop; no simulation-trained controller, elfakir2022_towards Sec. IV)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "elfakir2022_magnetic Fig. 6(A)",
+  "source_url": "https://doi.org/10.1109/icarm54641.2022.9959369",
+  "licence": "publisher copyright",
+  "credit": "Elfakir et al., 2022 International Conference on Advanced Robotics and Mechatronics (ICARM) (2022), Fig. 6. publisher copyright.",
+  "edits": "native extract from elfakir2022_complex-network_ICARM.pdf p. 5; cropped to the arm, magnet, catheter driver and phantom (control panel and inset B removed); none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "belharet_elfakir2022_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Haptic master, VR screen and eight-coil electromagnetic actuation system",
+   "source_key": "elfakir2022_towards",
+   "source": "Elfakir et al., 2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2022), Fig. 1, p. 1",
+   "source_url": "https://doi.org/10.1109/aim52237.2022.9863252",
+   "where": "Fig. 1, p. 1",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "belharet_elfakir2022_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Prototype 1 mm magnetic catheter with three magnets on a ruler",
+   "source_key": "elfakir2022_magnetic",
+   "source": "Elfakir et al., 2022 International Conference on Advanced Robotics and Mechatronics (ICARM) (2022), Fig. 6(B), p. 5",
+   "source_url": "https://doi.org/10.1109/icarm54641.2022.9959369",
+   "where": "Fig. 6(B), p. 5",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "belharet_elfakir2022_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Magnetic catheter shape in a glass vessel model and simulation",
+   "source_key": "elfakir2022_towards",
+   "source": "Elfakir et al., 2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2022), Fig. 6, p. 5",
+   "source_url": "https://doi.org/10.1109/aim52237.2022.9863252",
+   "where": "Fig. 6, p. 5",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "elfakir2022_towards",
+   "doi": "10.1109/aim52237.2022.9863252",
+   "url": null,
+   "title": "Towards a Robust Steerability Magnetic Catheter with Haptic Force Feedback and Virtual Reality",
+   "year": 2022,
+   "venue": "2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)"
+  },
+  {
+   "key": "elfakir2022_magnetic",
+   "doi": "10.1109/icarm54641.2022.9959369",
+   "url": null,
+   "title": "Magnetic Catheter Optimized for Navigation in a Complex Vascular Network",
+   "year": 2022,
+   "venue": "2022 International Conference on Advanced Robotics and Mechatronics (ICARM)"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (elfakir2022_towards, elfakir2022_magnetic)",
+ "notes": "Family: magnetic. alekseeva2025_design Table 14 row 9 lists both 2022 papers as one system; the two papers use different field sources, kept as versions of one row. Thesis PDF behind an Anubis challenge on HAL: manual list.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

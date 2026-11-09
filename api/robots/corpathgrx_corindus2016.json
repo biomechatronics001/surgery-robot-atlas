@@ -1,0 +1,267 @@
+{
+ "schema_version": 1,
+ "id": "corpathgrx_corindus2016",
+ "name": "CorPath GRX",
+ "full_name": "CorPath 200 / CorPath GRX",
+ "group": "Corindus (Siemens Healthineers 2019-)",
+ "group_short": "Corindus",
+ "family": "commercial",
+ "category": "commercial",
+ "first_year": 2011,
+ "latest_year": 2026,
+ "versions": "CorPath 200 (FDA 510(k) K120834, 2012-07-19; used in PRECISE, weisz2013_safety, and in the RAPID peripheral trial, mahmud2016_feasibility); CorPath GRX (K160121, 2016-10-27; PVI 2018; PMDA 2018; neuro CE/TGA 2019-2020); neuro cassette",
+ "target_anatomy": "coronary; peripheral; neurovascular (angiography, aneurysm coiling, carotid stenting; thrombectomy in vitro only)",
+ "devices": [
+  "guidewire",
+  "microcatheter",
+  "catheter",
+  "therapeutic-device"
+ ],
+ "devices_driven": "GRX: guide catheter (advance 100 mm + rotate), 0.014-in guidewire, rapid-exchange balloon/stent catheter; neuro cassette: microcatheter, 0.014-in wire, coils/stents (stent/stent-retriever compatibility limited); CorPath 200: all commercial 0.014-in guidewires, rapid-exchange balloons and stent delivery systems, guide catheter positioned by hand and connected to the disposable cassette (6 F in 119, 7 F in 45 PRECISE patients) (weisz2013_safety p. 1597-1598); RAPID: 0.014-in wires and RX balloons 3-7 x 20 mm, the over-the-wire self-expanding stent delivered by hand (mahmud2016_feasibility p. 2059)",
+ "n_dof": 5,
+ "n_dof_detail": "5 for GRX (gao2026_legobot Table I via S8); CorPath 200: 3, insertion and rotation of the guidewire and insertion of the stent catheter (cha2016_assembly p. 70); li2024_design Table I says 2 (conflict)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "clamped-wheel rotation of guidewire in single-use cassette (S8 csv)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (bedside arm on table rail + radiation-shielded cockpit)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none (ren2023_critical Table IV); CorPath 200: proximal force measurement (rafiitari2014_current Table 3); no haptic feedback",
+ "haptics_leader": "no: CorPath 200 radiation-shielded mobile cockpit with console joysticks or touch-screen buttons (weisz2013_safety p. 1597), 2 joysticks (mahmud2016_feasibility p. 2059); GRX control console with touch screen and three joysticks for device, guidewire and guide catheter (Corindus media-kit image Control-Console_HR.jpg)",
+ "imaging_compat": "standard cath lab fluoroscopy; fluoroscopic, ECG and haemodynamic images slaved to duplicate monitors in the cockpit (weisz2013_safety p. 1597)",
+ "sterility": "single-use sterile cassette on the bedside arm (weisz2013_safety; mahmud2016_feasibility, cassette attached to the sheath with a Tuohy-Borst); drape not mentioned in these papers",
+ "highest_validation": "human",
+ "validation_detail": "PRECISE 164 pts at 9 sites, 23 operators (CorPath 200, weisz2013_safety p. 1597); RAPID peripheral 20 pts/29 lesions, single centre (Graz), 3 operators (CorPath 200, mahmud2016_feasibility); GRX PCI 980 procedures pooled; neuro: 117-pt aneurysm study (10 sites), 214 diagnostic angiographies single centre, 6 aneurysm, 4 carotid stent, 10 angio/carotid; thrombectomy only in vitro/3D-printed models",
+ "key_numbers": "PRECISE: device technical success 162/164 (98.8%), clinical success 160/164 (97.6%), 2 conversions for stent-delivery resistance, procedure time 24.4 +- 14.1 min, fluoroscopy 11.1 +- 6.2 min, operator dose 95.2% lower in the cockpit than at the table (weisz2013_safety). RAPID: device technical success, safety and clinical procedural success 100%, 3 minor access-site haematomas, operator dose not measured (mahmud2016_feasibility). Neuro aneurysm: 110/117 (94.0%) without unplanned conversion, 117.3+-47.3 min total, 2 ruptures 2 strokes (mendespereira2024_evaluation abstract). Diagnostic cerebral angiography 214 robotic vs 636 manual: no difference in times or patient dose, conversion 39/214 (18%) (hamimi2026_learning abstract). Meta-analysis 7 neuro studies/265 pts: pooled technical success 87% (95% CI 75-96) (tan2026_corpathmeta abstract). Visceral: 16/18 (88.9%) technical success (wagenpfeil2026_visceral abstract). Automated movements on vs off 49 pts: conversion 22% vs 18% (ruggiero2026_evaluation).",
+ "sim_model": "none found (no public model of the robot; neuro in-vitro/3D-printed-phantom studies used the real robot: tomasello2024_modeling, kaneko2026_in, williams2025_robotic)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found; only fixed-rule automation in the product (Rotate-on-Retract, technIQ), alnooryani2018_rotate (human, 1 patient, full) - not learned; Siemens ARPA-H award 2026-08-20 aims at autonomous remote thrombectomy (press, not a result)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "product-photo",
+  "source": "https://web.archive.org/web/2019id_/https://www.corindus.com/assets/images/mediakit/Extended-Reach_Arm_HR.jpg (Corindus media kit page https://www.corindus.com/news-events/media-kit, Wayback snapshot 2019-12-21)",
+  "source_url": "https://web.archive.org/web/2019id_/https://www.corindus.com/assets/images/mediakit/Extended-Reach_Arm_HR.jpg",
+  "licence": "press image (Corindus media kit; image carries \"Copyright (c) Corindus, Inc. All rights reserved\"; credit Corindus/Siemens Healthineers in caption)",
+  "credit": "https://web.archive.org/web/2019id_/https://www.corindus.com/assets/images/mediakit/Extended-Reach_Arm_HR.jpg (Corindus media kit page https://www.corindus.com/news-events/media-kit, Wayback snapshot 2019-12-21). Licence: press image (Corindus media kit; image carries \"Copyright (c) Corindus, Inc. All rights reserved\"; credit Corindus/Siemens Healthineers in caption).",
+  "edits": "cropped (350,160)-(5745,2760) of 5952x3040, which also drops the copyright line at bottom right (put the credit in the caption)",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "corpathgrx_corindus2016_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Robotic drive with the single-use cassette, product close-up",
+   "source_key": "web:corindus.com (Wayback)",
+   "source": "corindus.com (Wayback), Corindus media kit Robotic-Drive-and-Single-use-Cassette_HR.jpg",
+   "source_url": "https://web.archive.org/web/2019id_/https://www.corindus.com/assets/images/mediakit/Robotic-Drive-and-Single-use-Cassette_HR.jpg",
+   "where": "Corindus media kit Robotic-Drive-and-Single-use-Cassette_HR.jpg, https://web.archive.org/web/2019id_/https://www.corindus.com/assets/images/mediakit/Robotic-Drive-and-Single-use-Cassette_HR.jpg",
+   "licence": "press image"
+  },
+  {
+   "id": "corpathgrx_corindus2016_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Operator seated at the CorPath GRX interventional cockpit with joysticks",
+   "source_key": "chen2023_operating",
+   "source": "Chen et al., IEEE Transactions on Medical Robotics and Bionics (2023), Fig. 8(d), p. 7",
+   "source_url": "https://doi.org/10.1109/tmrb.2023.3272049",
+   "where": "Fig. 8(d), p. 7",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "corpathgrx_corindus2016_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "CorPath GRX control console: touch screen and joysticks for device, guidewire and guide catheter",
+   "source_key": "web:corindus.com media kit",
+   "source": "corindus.com media kit, Corindus media kit Control-Console_HR.jpg (2913 x 2574; hand-downloaded, figures/raw/web/Control-Console_HR.jpg); bottom strip with the copyright line cropped",
+   "source_url": null,
+   "where": "Corindus media kit Control-Console_HR.jpg (2913 x 2574; hand-downloaded, figures/raw/web/Control-Console_HR.jpg); bottom strip with the copyright line cropped",
+   "licence": "press image"
+  },
+  {
+   "id": "corpathgrx_corindus2016_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "CorPath 200 in the cath lab: operator in the shielded cockpit, cassette at the table",
+   "source_key": "weisz2013_safety",
+   "source": "Weisz et al., Journal of the American College of Cardiology (2013), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1016/j.jacc.2012.12.045",
+   "where": "Fig. 1, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "corpathgrx_corindus2016_05",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "CorPath 200 layout: articulating arm, robotic drive, single-use cassette and cockpit (labelled)",
+   "source_key": "mahmud2016_feasibility",
+   "source": "Mahmud et al., JACC: Cardiovascular Interventions (2016), Fig. 1, p. 3",
+   "source_url": "https://doi.org/10.1016/j.jcin.2016.07.002",
+   "where": "Fig. 1, p. 3",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "corpathgrx_corindus2016_06",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Peripheral intervention: draped robotic drive at the leg and investigator at the cockpit",
+   "source_key": "mahmud2016_feasibility",
+   "source": "Mahmud et al., JACC: Cardiovascular Interventions (2016), Fig. 2(A-B), p. 4",
+   "source_url": "https://doi.org/10.1016/j.jcin.2016.07.002",
+   "where": "Fig. 2(A-B), p. 4",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "fda2012_k120834",
+   "doi": null,
+   "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K120834",
+   "title": "510(k) Premarket Notification K120834: CorPath 200 System (Corindus, Inc.)",
+   "year": 2012,
+   "venue": null
+  },
+  {
+   "key": "fda2016_k160121",
+   "doi": null,
+   "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfPMN/pmn.cfm?ID=K160121",
+   "title": "510(k) Premarket Notification K160121: CorPath GRX System (Corindus, Inc.)",
+   "year": 2016,
+   "venue": null
+  },
+  {
+   "key": "weisz2013_safety",
+   "doi": "10.1016/j.jacc.2012.12.045",
+   "url": null,
+   "title": "Safety and Feasibility of Robotic Percutaneous Coronary Intervention",
+   "year": 2013,
+   "venue": "Journal of the American College of Cardiology"
+  },
+  {
+   "key": "mahmud2025_robotic",
+   "doi": "10.1016/j.jscai.2025.103655",
+   "url": null,
+   "title": "Robotic-Assisted Percutaneous Coronary Intervention: Final Results of the PRECISION and PRECISION GRX Studies",
+   "year": 2025,
+   "venue": "Journal of the Society for Cardiovascular Angiography & Interventions"
+  },
+  {
+   "key": "mahmud2016_feasibility",
+   "doi": "10.1016/j.jcin.2016.07.002",
+   "url": null,
+   "title": "Feasibility and Safety of Robotic Peripheral Vascular Interventions",
+   "year": 2016,
+   "venue": "JACC: Cardiovascular Interventions"
+  },
+  {
+   "key": "mendespereira2020_first",
+   "doi": "10.1136/neurintsurg-2019-015671.rep",
+   "url": null,
+   "title": "First-in-human, robotic-assisted neuroendovascular intervention",
+   "year": 2020,
+   "venue": "Journal of NeuroInterventional Surgery"
+  },
+  {
+   "key": "mendespereira2024_evaluation",
+   "doi": "10.1136/jnis-2023-020161",
+   "url": null,
+   "title": "Evaluation of effectiveness and safety of the CorPath GRX robotic system in endovascular embolization procedures of cerebral aneurysms",
+   "year": 2023,
+   "venue": "Journal of NeuroInterventional Surgery"
+  },
+  {
+   "key": "hamimi2026_learning",
+   "doi": "10.3174/ajnr.a9651",
+   "url": null,
+   "title": "Robotic-Assisted versus Manual Diagnostic Cerebral Angiography: Comparative Outcomes and Learning Curve in a Large Single-Institution Cohort",
+   "year": 2026,
+   "venue": "American Journal of Neuroradiology"
+  },
+  {
+   "key": "tan2026_corpathmeta",
+   "doi": "10.1007/s11701-026-03665-2",
+   "url": null,
+   "title": "Evaluating the CorPath GRX robotic system in cerebral aneurysm embolization and diagnostic angiography: a systematic review and single-arm meta-analysis",
+   "year": 2026,
+   "venue": "Journal of Robotic Surgery"
+  },
+  {
+   "key": "wagenpfeil2026_visceral",
+   "doi": "10.1007/s00270-025-04340-z",
+   "url": null,
+   "title": "Clinical Feasibility of Robotic-Assisted Endovascular Visceral Interventions",
+   "year": 2026,
+   "venue": "CardioVascular and Interventional Radiology"
+  },
+  {
+   "key": "ruggiero2026_evaluation",
+   "doi": "10.1016/j.carrev.2025.05.027",
+   "url": null,
+   "title": "Evaluation of the CorPath-GRX technIQ automated movements during robotic-PCI (NAVIGATE GRX study)",
+   "year": 2026,
+   "venue": "Cardiovascular Revascularization Medicine"
+  },
+  {
+   "key": "kaneko2026_in",
+   "doi": "10.1177/15910199231206315",
+   "url": null,
+   "title": "In vitro comparison of manual and robotic endovascular thrombectomy for acute ischemic stroke",
+   "year": 2023,
+   "venue": "Interventional Neuroradiology"
+  },
+  {
+   "key": "tomasello2024_modeling",
+   "doi": "10.3174/ajnr.A8205",
+   "url": null,
+   "title": "Modeling Robotic-Assisted Mechanical Thrombectomy Procedures with the CorPath GRX Robot: The Core-Flow Study",
+   "year": 2024,
+   "venue": "American Journal of Neuroradiology"
+  },
+  {
+   "key": "williams2025_robotic",
+   "doi": "10.5853/jos.2024.05057",
+   "url": null,
+   "title": "Robotic Stroke Thrombectomy: A Feasibility and Efficacy Study in Flow Models",
+   "year": 2025,
+   "venue": "Journal of Stroke"
+  },
+  {
+   "key": "alnooryani2018_rotate",
+   "doi": "10.1155/2018/6086034",
+   "url": null,
+   "title": "Rotate-on-Retract Procedural Automation for Robotic-Assisted Percutaneous Coronary Intervention: First Clinical Experience",
+   "year": 2018,
+   "venue": "Case Reports in Cardiology"
+  },
+  {
+   "key": "winsor2024_performance",
+   "doi": "10.1016/j.jscai.2024.102148",
+   "url": null,
+   "title": "Performance of a Novel Miniaturized Robotic System in Percutaneous Coronary Intervention: A Preclinical Study",
+   "year": 2024,
+   "venue": "Journal of the Society for Cardiovascular Angiography & Interventions"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (weisz2013_safety, mahmud2016_feasibility: CorPath 200); abstract + web (rest: S8 integration; hamimi2026, tan2026, wagenpfeil2026 abstracts via Europe PMC)",
+ "notes": "MARKET EXIT: Siemens Healthineers announced May 2023 it stops selling/developing CorPath for cardiology and peripheral, keeps neurovascular R&D (massdevice/dotmed, via web search summary, not opened). Installed units still reported in 2025-2026 studies. No FDA neuro clearance found; neuro cleared under CE and TGA (mendespereira2020_first). PMDA approval for PCI mid-2018 (mpo-mag 2018-07-19). Siemens+Stryker strategic partnership (2025) for robotic neurovascular system; ARPA-H AIR award up to US$31.1M over 5 y (2026-08-20, Stryker sub-awardee) for autonomous remote thrombectomy; Siemens page: under development, not commercially available. | X2 2026-11-08: PRECISE and RAPID used the CorPath 200, not the GRX (full texts). Gallery adds the GRX control console (media kit) and three paper figures.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

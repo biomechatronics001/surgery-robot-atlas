@@ -1,0 +1,122 @@
+{
+ "schema_version": 1,
+ "id": "harvard_mccath_kesner2011",
+ "name": "Motion-comp. catheter",
+ "full_name": "Harvard motion-compensation catheter system (voice-coil guidewire drive with 3-D ultrasound servoing)",
+ "group": "Harvard SEAS BioRobotics Lab (R. D. Howe; S. B. Kesner)",
+ "group_short": "Harvard",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2011,
+ "latest_year": 2014,
+ "versions": "2011 ICRA force control of flexible catheter robots for beating-heart surgery (title); 2011 TRO position control with friction and backlash compensation (full, PMC author manuscript); 2014 IJRR robotic catheter cardiac ablation combining 3DUS guidance and force control, new force-sensing RF ablation end effector (full, kesner2014_robotic)",
+ "target_anatomy": "intracardiac beating-heart repair (mitral annulus tracking); RF cardiac ablation (kesner2014 Sec. 1-2)",
+ "devices": [
+  "guidewire",
+  "sheath"
+ ],
+ "devices_driven": "guidewire/instrument sliding in a fixed 85 cm Teflon sheath with steel spring; in vivo 1.5 mm OD guidewire in 1.6 mm ID sheath (TRO 2011 Sec. III, Table I)",
+ "n_dof": 1,
+ "n_dof_detail": "1 actuated (fast axial translation); bending and rotation by the clinician with conventional catheter controls",
+ "translation_mechanism": "other",
+ "translation_detail": "other: voice-coil linear actuator (H2W NCC20-18-02-1X, 50.8 mm travel, 26.7 N peak) on a BX3-3 linear ball slide",
+ "rotation_mechanism": "none",
+ "rotation_detail": "none (manual); pull-wire bending and guidewire twisting proposed as future DOF (Fig. 18)",
+ "device_range": "sheath ID 1.59-2.38 mm with guidewire OD 0.76-2.23 mm tested (Table I)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "LCFD-1KG load cell (10 N range) in the drive measures friction; LP-50F potentiometer for position (TRO 2011); IJRR 2014: catheter-tip force sensor, a reflective surface on perpendicular 0.25 mm NiTi flexures read by a fibre-optic transducer, 3D-printed (Objet Connex500), about 5 mm diameter, integrated with the RF ablation electrode, calibrated against an ATI Mini40 (Sec. 2.2, Figs. 4-5)",
+ "haptics_leader": "linear joystick adds commands to the fast axis; no force feedback reported",
+ "imaging_compat": "3-D ultrasound (Philips SONOS 7500, epicardial) with GPU Radon-transform tool tracking; EKF compensates 50-100 ms imaging delay",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "one 75 kg pig, catheter inserted through the top of the left atrium (not through the vasculature), mitral-annulus tracking trials longer than 15 s; number of trials N.R. (TRO 2011 Sec. VII); IJRR 2014: bench force-control runs and water-tank runs under 3DUS against a target moving 12 mm at about 1 Hz (sinusoid and human mitral-annulus trajectory), robotic vs manual Medtronic RF Marinr MCXL catheter (Sec. 4-5, Figs. 16-17)",
+ "key_numbers": "in vivo RMS tracking error below 1.0 mm in all trials (0.77 mm shown) vs above 8 mm without compensation; friction compensation up to 2 N; bench MAE 1.28 -> 0.26 mm (inverse compensation, 1 Hz) and 2.34 -> 0.24 mm (model-based); design targets >= 20 mm travel, >= 210 mm/s, >= 3800 mm/s^2, about 4 N (TRO 2011); IJRR 2014: 1 N contact force held on the moving target under 3DUS with 0.08 N RMS error, 97 % less RMS contact-resistance variation than the manual catheter, force control improved motion tracking by about 20 % (Abstract)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "kesner2011_force Fig. 2 (drive system CAD, p. 2), IEEE ICRA 2011,",
+  "source_url": "https://doi.org/10.1109/icra.2011.5979690",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Kesner et al., 2011 IEEE International Conference on Robotics and Automation (2011), Fig. 2. publisher copyright (IEEE).",
+  "edits": "native extract (embedded 1179 x 526); no crop; nothing erased; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "harvard_mccath_kesner2011_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "3D-printed optical force sensor at the tip of the catheter guidewire stem",
+   "source_key": "kesner2011_force",
+   "source": "Kesner et al., 2011 IEEE International Conference on Robotics and Automation (2011), Fig. 4 (photograph), p. 2",
+   "source_url": "https://doi.org/10.1109/icra.2011.5979690",
+   "where": "Fig. 4 (photograph), p. 2",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "harvard_mccath_kesner2011_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Force-sensing RF ablation end effector: solid model and 3D-printed prototype on the guidewire",
+   "source_key": "kesner2014_robotic",
+   "source": "Kesner et al., The International Journal of Robotics Research (2014), Fig. 4(a), p. 633",
+   "source_url": "https://doi.org/10.1177/0278364913511350",
+   "where": "Fig. 4(a), p. 633",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "harvard_mccath_kesner2011_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robotic catheter tip on a moving target in the water tank beside the 3DUS probe",
+   "source_key": "kesner2014_robotic",
+   "source": "Kesner et al., The International Journal of Robotics Research (2014), Fig. 17 (bottom), p. 641",
+   "source_url": "https://doi.org/10.1177/0278364913511350",
+   "where": "Fig. 17 (bottom), p. 641",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "kesner2011_position",
+   "doi": "10.1109/tro.2011.2160467",
+   "url": null,
+   "title": "Position Control of Motion Compensation Cardiac Catheters",
+   "year": 2011,
+   "venue": "IEEE Transactions on Robotics"
+  },
+  {
+   "key": "kesner2011_force",
+   "doi": "10.1109/icra.2011.5979690",
+   "url": null,
+   "title": "Force control of flexible catheter robots for beating heart surgery",
+   "year": 2011,
+   "venue": "2011 IEEE International Conference on Robotics and Automation"
+  },
+  {
+   "key": "kesner2014_robotic",
+   "doi": "10.1177/0278364913511350",
+   "url": null,
+   "title": "Robotic catheter cardiac ablation combining ultrasound guidance and force control",
+   "year": 2014,
+   "venue": "The International Journal of Robotics Research"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (TRO 2011 via PMC HTML; IJRR 2014, ); title (ICRA 2011)",
+ "notes": "Proximal drive for one fast DOF; same Harvard group later built the ICE-steering robot (harvard_ice_loschak2017). Boundary case: transatrial, not transvascular. | 2026-11-08 X3: IJRR 2014 read in full: same drive (voice coil NCC20-18-02-1X on a BX3-3 slide, LP-50F), 85 cm Teflon or Nylon sheath with steel-spring guidewire (Sec. 2); no new animal test (validation stays animal from TRO 2011)",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

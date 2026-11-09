@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- Web copy of 51-legobot-ros2/description/urdf/legobot.urdf and description/meshes/ (the ROS 2 / RViz digital twin with the CAD housings; generated from the CAD by 70-legobot-simulation/scripts/build_urdf_modules.py): visuals only, GLB meshes. Built by tools/build_models.py 2026-11-07. Lab and collaborator material (BIRO Lab, New York University); CAD not released. -->
+<robot name="legobot">
+  <link name="base_link">
+    </link>
+  <link name="upper_rotor">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/upper_rotor.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="upper_tube">
+    </link>
+  <joint name="upper_rot" type="revolute">
+    <parent link="base_link" />
+    <child link="upper_rotor" />
+    <origin xyz="-0.012 0.048 0.11" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-6.2832" upper="6.2832" effort="1.0" velocity="3.1416" />
+  </joint>
+  <joint name="upper_ins" type="prismatic">
+    <parent link="upper_rotor" />
+    <child link="upper_tube" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.1" upper="0.1" effort="10.0" velocity="0.05" />
+  </joint>
+  <link name="middle_rotor">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/middle_rotor.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="middle_tube">
+    </link>
+  <joint name="middle_rot" type="revolute">
+    <parent link="base_link" />
+    <child link="middle_rotor" />
+    <origin xyz="-0.012 0.009 -0.005" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-6.2832" upper="6.2832" effort="1.0" velocity="3.1416" />
+  </joint>
+  <joint name="middle_ins" type="prismatic">
+    <parent link="middle_rotor" />
+    <child link="middle_tube" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.1" upper="0.1" effort="10.0" velocity="0.05" />
+  </joint>
+  <link name="lower_rotor">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/lower_rotor.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="lower_tube">
+    </link>
+  <joint name="lower_rot" type="revolute">
+    <parent link="base_link" />
+    <child link="lower_rotor" />
+    <origin xyz="-0.012 0.047 -0.12" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-6.2832" upper="6.2832" effort="1.0" velocity="3.1416" />
+  </joint>
+  <joint name="lower_ins" type="prismatic">
+    <parent link="lower_rotor" />
+    <child link="lower_tube" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.1" upper="0.1" effort="10.0" velocity="0.05" />
+  </joint>
+  <link name="housing_upper">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/housing_upper.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="housing_upper_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="housing_upper" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="housing_middle">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/housing_middle.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="housing_middle_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="housing_middle" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="housing_lower">
+    <visual>
+      <geometry>
+        <mesh filename="meshes/housing_lower.glb" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="housing_lower_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="housing_lower" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+</robot>

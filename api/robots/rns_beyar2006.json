@@ -1,0 +1,118 @@
+{
+ "schema_version": 1,
+ "id": "rns_beyar2006",
+ "name": "RNS",
+ "full_name": "Remote Navigation System (RNS)",
+ "group": "NaviCath Ltd. (R. Beyar co-founder) with Rambam Medical Center / Technion; clinical sites also Fundeni Hospital and Shaare Zedek (beyar2006_remote p. 296-297)",
+ "group_short": "NaviCath",
+ "family": "commercial",
+ "category": "clinical-stage",
+ "first_year": 2005,
+ "latest_year": 2006,
+ "versions": "2005 concept, design and pre-clinical studies (EuroIntervention 2005;1:340-5, cited as weisz2013_safety ref. 1; not read); 2006 JACC first-in-human pilot (beyar2006_remote); described as the basis of CorPath 200 (crinnion2022_robotics; no full text states that NaviCath became Corindus)",
+ "target_anatomy": "coronary PCI",
+ "devices": [
+  "guidewire",
+  "catheter",
+  "therapeutic-device"
+ ],
+ "devices_driven": "standard 0.014-in coronary guidewire and the angioplasty device (balloon or stent); the guiding catheter is hooked to the RNS but not driven; the two devices are interlocked: 'When the guidewire is manipulated, the device is locked at its position and vice versa' (beyar2006_remote p. 296-297). Rapid-exchange devices per wagener2024_features (not stated in beyar2006)",
+ "n_dof": 3,
+ "n_dof_detail": "3: wire axial and rotation (optionally discrete 30-degree steps), device axial (beyar2006_remote p. 296)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller (device: motored roller pair with a passive motion-sensing roller pair behind it, beyar2006_remote p. 296, Fig. 2B; wire: 'mechanical transmission module', type N.R.)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "wire navigator rotates the wire through a mechanical transmission module (type N.R.) (beyar2006_remote p. 296)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "no force sensor named: motion-sensing rollers report slippage of the motored rollers and the system halts; 'any force that exceeds a threshold causes system stall' (beyar2006_remote p. 296, 299)",
+ "haptics_leader": "no: computerised touch-screen control console and joystick (beyar2006_remote p. 296, Fig. 3); haptic force feedback named as future work (p. 299)",
+ "imaging_compat": "standard fluoroscopy screens; the protocol kept the operators at the bedside (beyar2006_remote p. 299)",
+ "sterility": "detachable wire and device navigators on a sterile plastic-sheet-covered base; Y-connector in a sterile holder (beyar2006_remote p. 296, Fig. 2 caption); disposable status N.R.",
+ "highest_validation": "human",
+ "validation_detail": "glass coronary model; anaesthetised sheep (number N.R.), 14 coronary branches, 8 stents implanted; first-in-human pilot: 18 patients (15 men, 3 women) at 3 centres, single-vessel PCI (beyar2006_remote p. 297); 20 lesions per wagener2024_features Table 1 (lesion count not stated in beyar2006)",
+ "key_numbers": "wire crossed the lesion in 17 of 18; stent delivered in 15 of 17; technical success 94% (guidewire) and 83% (overall procedure); clinical success 100%; fluoroscopy time 8.8 +- 4.8 vs 9.1 +- 3.5 min with standard technique (NS); catheterisation time 44 +- 32.7 vs 61 +- 19 min; diameter stenosis 60.6 +- 13.5% -> 17.0 +- 7.8%; no in-hospital MACE (beyar2006_remote p. 296-298)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "beyar2006_rns Fig. 2(A) (prototype bedside unit on the patient table, loaded with wire and device), JACC 2006;47:296-300, p. 3,",
+  "source_url": "https://doi.org/10.1016/j.jacc.2005.09.024",
+  "licence": "publisher copyright (Elsevier / ACC Foundation)",
+  "credit": "Beyar et al., Journal of the American College of Cardiology (2006), Fig. 2. publisher copyright (Elsevier / ACC Foundation).",
+  "edits": "native extract (embedded 1000 x 1172 holds panels A and B); cropped to panel A without the panel letter; nothing erased; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "rns_beyar2006_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Bedside unit on the patient table and operator control unit in the cath lab",
+   "source_key": "beyar2006_remote",
+   "source": "Beyar et al., Journal of the American College of Cardiology (2006), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1016/j.jacc.2005.09.024",
+   "where": "Fig. 1, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "rns_beyar2006_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Operator control unit: touch screen and joystick",
+   "source_key": "beyar2006_remote",
+   "source": "Beyar et al., Journal of the American College of Cardiology (2006), Fig. 3, p. 4",
+   "source_url": "https://doi.org/10.1016/j.jacc.2005.09.024",
+   "where": "Fig. 3, p. 4",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "beyar2006_remote",
+   "doi": "10.1016/j.jacc.2005.09.024",
+   "url": null,
+   "title": "Remote-Control Percutaneous Coronary Interventions: Concept, Validation, and First-in-Humans Pilot Clinical Trial",
+   "year": 2006,
+   "venue": "Journal of the American College of Cardiology"
+  },
+  {
+   "key": "wagener2024_features",
+   "doi": "10.3390/jcm13185537",
+   "url": null,
+   "title": "Features and Limitations of Robotically Assisted Percutaneous Coronary Intervention (R-PCI): A Systematic Review of R-PCI",
+   "year": 2024,
+   "venue": "Journal of Clinical Medicine"
+  },
+  {
+   "key": "chen2023_operating",
+   "doi": "10.1109/tmrb.2023.3272049",
+   "url": null,
+   "title": "The Catheter and Guidewire Operating Systems of Vascular Interventional Surgical Robots: A Systematic Review",
+   "year": 2023,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "crinnion2022_robotics",
+   "doi": "10.1136/neurintsurg-2021-018096",
+   "url": null,
+   "title": "Robotics in neurointerventional surgery: a systematic review of the literature",
+   "year": 2021,
+   "venue": "Journal of NeuroInterventional Surgery"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (beyar2006_remote); secondary (reviews)",
+ "notes": "In S8_systems.csv but in no catalogue file before A9 (A3 assigned it to A4; A4 did not add it). Picture is a schematic reproduced in chen2023_operating. | X2 2026-11-08: raised to full text (beyar2006_remote). Two devices loaded but only one moves at a time. Main picture now Beyar Fig. 2(A) photo (old schematic kept as rns_beyar2006_prev.png).",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

@@ -1,0 +1,146 @@
+{
+ "schema_version": 1,
+ "id": "xmu_mei2025",
+ "name": "XMU wire robot",
+ "full_name": "Xiamen University vascular interventional robot for sim-trained guidewire navigation",
+ "group": "Xiamen University (Yang Zhao, Ziyang Mei, Dezhi Wu, Gang Liu) with Shuxiang Guo (SUSTech / BIT)",
+ "group_short": "Xiamen U.",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2024,
+ "latest_year": 2026,
+ "versions": "2024/2025 robot + Pymunk-trained RL agent (mei2025_transferring, full); same group and hardware table in FreezeSeg2RL (mei2025_freezeseg2rl) and EVEGARS (PRCV 2026, see A6 notes); 2020: Xiamen University (Y. Zhao) remote-controlled TACE robot with force sensing and bending feedback (Zhou, Mei, ... Zhao 2020, Micromachines 11:805) (Belikov 2024 Fig. 6 ZH2; Duan 2023 Table 1 row 13) (belikov2024_evolution; duan2023_progress; li2024_design; zhao2022_remote)",
+ "target_anatomy": "coronary paths (virtual tasks built from DSA images); transparent ex vivo vessel model in a water tank",
+ "devices": [
+  "guidewire",
+  "microcatheter"
+ ],
+ "devices_driven": "guidewire and microcatheter (mei2025_transferring Sec. IV-B)",
+ "n_dof": 3,
+ "n_dof_detail": "3 modules: guidewire delivery, guidewire rotation, microcatheter linear motion (mei2025_transferring Sec. IV-B)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller",
+ "rotation_mechanism": "rotating-drive-unit",
+ "rotation_detail": "other: rotating platform driven along the axis by the friction-wheel module (mei2025_transferring Sec. IV-B)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none reported",
+ "haptics_leader": "none (discrete commands from agent or surgeon)",
+ "imaging_compat": "camera above a transparent model (no X-ray)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "transparent vessel model ('ex vivo vascular model'), 4 targets; RL agent 40 deliveries per target, interventional surgeon 20 per target, replayed expert sequence as control (mei2025_transferring Sec. IV-B, Table III)",
+ "key_numbers": "RL success 82.50 / 87.50 / 82.50 / 72.50% (targets A-D) vs surgeon 100% and expert-clone replay 0%; mean steps 41.61 / 36.8 / 45.94 / 54.10 vs 31 / 26.95 / 34.05 / 41.65; actions push/pull 10 mm, rotate 45 deg, wait 0.5 s (Tables II-III); simulation success 99.30 / 99.26 / 98.34% over three training stages (Sec. IV-A); HX8-U28 bus servos for friction wheels, ASM34AK steppers, ESP32 control",
+ "sim_model": "2D Pymunk guidewire-vessel simulation built from DSA path reconstructions (mei2025_transferring Sec. III-A)",
+ "has_sim_model": true,
+ "sim2real": "yes",
+ "sim2real_detail": "yes, phantom level: agent trained only in 2D simulation and run zero-shot on the robot with camera images re-rendered to the simulator style (mei2025_transferring Sec. IV-B, full)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "photo",
+  "source": "mei2025_transferring Fig. 1(c) robot cut-out by the authors (native raster p. 2)",
+  "source_url": "https://doi.org/10.1109/tmech.2024.3420954",
+  "licence": "publisher copyright",
+  "credit": "Mei et al., IEEE/ASME Transactions on Mechatronics (2025), Fig. 1(c). publisher copyright.",
+  "edits": "native extract; cropped; three annotation fragments (blue arrow, 'Delivery in Real-world' text, blue bar) on plain white background painted white, none touching the robot; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "xmu_mei2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robot with micro-catheter and guidewire manipulators at the ex vivo model",
+   "source_key": "mei2025_transferring",
+   "source": "Mei et al., IEEE/ASME Transactions on Mechatronics (2025), Fig. 6, p. 7",
+   "source_url": "https://doi.org/10.1109/tmech.2024.3420954",
+   "where": "Fig. 6, p. 7",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "xmu_mei2025_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Guidewire robot under the X-ray probe with the remote station",
+   "source_key": "mei2026_evegars",
+   "source": "Mei et al., Lecture Notes in Computer Science (2026), Fig. 8, p. 12",
+   "source_url": "https://doi.org/10.1007/978-981-95-5740-0_15",
+   "where": "Fig. 8, p. 12",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "xmu_mei2025_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robot at the end of the angiography table with the ex vivo vessel model",
+   "source_key": "mei2025_freezeseg2rl",
+   "source": "Mei et al., PRICAI 2025: Trends in Artificial Intelligence (2026), Fig. 8(a), p. 13",
+   "source_url": "https://doi.org/10.1007/978-981-95-7072-0_25",
+   "where": "Fig. 8(a), p. 13",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "mei2025_transferring",
+   "doi": "10.1109/tmech.2024.3420954",
+   "url": null,
+   "title": "Transferring Virtual Surgical Skills to Reality: AI Agents Mastering Surgical Decision-Making in Vascular Interventional Robotics",
+   "year": 2025,
+   "venue": "IEEE/ASME Transactions on Mechatronics"
+  },
+  {
+   "key": "mei2025_freezeseg2rl",
+   "doi": "10.1007/978-981-95-7072-0_25",
+   "url": null,
+   "title": "FreezeSeg2RL: Frozen Segmentation Pretraining for Reinforcement Learning On Vascular Interventional Robot Autonomous Delivering",
+   "year": 2026,
+   "venue": "PRICAI 2025: Trends in Artificial Intelligence"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  },
+  {
+   "key": "duan2023_progress",
+   "doi": "10.3390/mi14010197",
+   "url": null,
+   "title": "Technical and Clinical Progress on Robot-Assisted Endovascular Interventions: A Review",
+   "year": 2023,
+   "venue": "Micromachines"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "zhao2022_remote",
+   "doi": "10.21037/qims-21-792",
+   "url": null,
+   "title": "Remote vascular interventional surgery robotics: a literature review",
+   "year": 2022,
+   "venue": "Quantitative Imaging in Medicine and Surgery"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "A6 lists the EVEGARS/FreezeSeg2RL sim2real rows on the same hardware; this TMECH paper is the one that describes the robot.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

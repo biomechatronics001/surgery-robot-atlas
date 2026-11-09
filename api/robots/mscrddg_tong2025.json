@@ -1,0 +1,79 @@
+{
+ "schema_version": 1,
+ "id": "mscrddg_tong2025",
+ "name": "Soft magnetic rod",
+ "full_name": "Magnetic soft continuum robot with real-time DDG hard-magnetic rod simulator and inverse-design field control",
+ "group": "Wang, USTC (with M. Liu and W. Huang)",
+ "group_short": "USTC",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2025,
+ "latest_year": 2025,
+ "versions": "arXiv 2503.08864",
+ "target_anatomy": "generic confined lumens (vascular and GI), 3D-printed lumen phantom",
+ "devices": [
+  "other"
+ ],
+ "devices_driven": "own MSCR: PDMS + NdFeB particles, rod radius 0.6 mm (1.2 mm OD), length 100 mm, magnetised tip 5 mm, E = 3.0 MPa",
+ "n_dof": null,
+ "n_dof_detail": "Helmholtz coil field (3 axes) + stepper advancer",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (steering) + stepper-motor advancer",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "field direction",
+ "device_range": "100 mm rod",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none (contact force estimated in simulation)",
+ "haptics_leader": "no",
+ "imaging_compat": "camera",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "3D-printed lumen phantoms of varying geometry in Helmholtz coils; counts N.R.",
+ "key_numbers": "remanent magnetisation 0.1448 A m; pulse magnetised at about 4 T; contact-force minimisation compared with passive pushing",
+ "sim_model": "hard-magnetic elastic rod in discrete differential geometry with reduced-order contact (tong2025_realtime, full)",
+ "has_sim_model": true,
+ "sim2real": "model-based",
+ "sim2real_detail": "model-based: field commands computed from the simulator ran on the hardware (tong2025 Sec. 5); no learned policy",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "tong2025_realtime arXiv 2503.08864 Fig. 5 (advancer, MSCR, Helmholtz coils, lumen phantom)",
+  "source_url": "https://arxiv.org/abs/2503.08864",
+  "licence": "arXiv author preprint, licence not checked",
+  "credit": "Tong et al., 2025, Fig. 5. arXiv author preprint, licence not checked.",
+  "edits": "native extract (4816 px); 5 labels, Push arrow and 4 leader lines erased (LaMa); background ghosts flattened to the background grey; leader ghosts on the flat-shaded coil face replaced by the column median",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "mscrddg_tong2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Rod pushed through a sinusoidal lumen phantom: simulation above, experiment below",
+   "source_key": "tong2025_realtime",
+   "source": "Tong et al. (2025), Fig. 7, arXiv p. 14",
+   "source_url": "https://arxiv.org/abs/2503.08864",
+   "where": "Fig. 7, arXiv p. 14",
+   "licence": "CC BY-NC-ND 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "tong2025_realtime",
+   "doi": null,
+   "url": "https://arxiv.org/abs/2503.08864",
+   "title": "Real-time simulation enabled navigation control of magnetic soft continuum robots in confined lumens",
+   "year": 2025,
+   "venue": null
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (abstract, set-up); speed numbers not extracted",
+ "notes": "Best example in this scope of a real-time physics model driving a magnetic wire; not a lone robot.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

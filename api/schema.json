@@ -1,0 +1,668 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "robot.schema.json",
+ "title": "Catheter Robot Atlas: robot record",
+ "description": "One endovascular catheter or guidewire robot (all versions of one robot line in one record). Free-text fields keep the wording of the sources; 'N.R.' means the sources read do not report it. Fields marked derived are computed from the free text by tools/build_site.py while the CSV is the source of truth.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "schema_version",
+  "id",
+  "name",
+  "full_name",
+  "group",
+  "family",
+  "category",
+  "first_year",
+  "devices",
+  "translation_mechanism",
+  "rotation_mechanism",
+  "highest_validation",
+  "sim2real",
+  "picture",
+  "sources",
+  "read_level",
+  "maintainers_own"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "const": 1,
+   "description": "Version of this schema.",
+   "examples": [
+    1
+   ]
+  },
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$",
+   "description": "<shortname>_<firstauthor or company><year>, lower case; also the file name and the page URL (robots/<id>.html).",
+   "examples": [
+    "legobot_gao2026"
+   ]
+  },
+  "name": {
+   "type": "string",
+   "minLength": 1,
+   "maxLength": 40,
+   "description": "Short display name used on cards.",
+   "examples": [
+    "LegoBot"
+   ]
+  },
+  "full_name": {
+   "type": "string",
+   "minLength": 1,
+   "description": "Full name as the sources give it, with a short description.",
+   "examples": [
+    "LegoBot: modular, compact, device-agnostic robot"
+   ]
+  },
+  "group": {
+   "type": "string",
+   "minLength": 1,
+   "description": "Developer: laboratory, university or company, with clinical partners where stated."
+  },
+  "group_short": {
+   "type": "string",
+   "maxLength": 40,
+   "description": "Short form of the developer for cards.",
+   "examples": [
+    "NYU BIRO Lab"
+   ]
+  },
+  "family": {
+   "type": "string",
+   "enum": [
+    "commercial",
+    "academic",
+    "tip",
+    "magnetic"
+   ],
+   "description": "One of four families used across the atlas.",
+   "x-labels": {
+    "commercial": "Commercial and clinical-stage systems",
+    "academic": "Academic bedside robots",
+    "tip": "Actuated-tip devices",
+    "magnetic": "Magnetic navigation"
+   },
+   "x-definitions": {
+    "commercial": "Products and clinical-stage systems from companies, including commercial magnetic systems.",
+    "academic": "Research robots at the bedside that push and twist catheters and guidewires.",
+    "tip": "Devices whose own tip bends (tendons, shape-memory alloy, fluid, notched tubes), with or without a bedside drive.",
+    "magnetic": "Academic systems that steer a magnetic device tip with an external field."
+   }
+  },
+  "category": {
+   "type": "string",
+   "enum": [
+    "commercial",
+    "clinical-stage",
+    "academic",
+    "actuated-device",
+    "magnetic-navigation"
+   ],
+   "description": "Finer category of the search briefs; family groups these.",
+   "x-definitions": {
+    "commercial": "On the market.",
+    "clinical-stage": "Company system in or near clinical trials.",
+    "academic": "University or institute research robot.",
+    "actuated-device": "A device that actuates its own tip.",
+    "magnetic-navigation": "External-field steering system."
+   }
+  },
+  "first_year": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "minimum": 1980,
+   "maximum": 2035,
+   "description": "Year of the first publication or product of this robot line; null when not reported.",
+   "examples": [
+    2026
+   ]
+  },
+  "latest_year": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "minimum": 1980,
+   "maximum": 2035,
+   "description": "Year of the latest version found."
+  },
+  "versions": {
+   "type": "string",
+   "description": "Lineage of versions with their papers (oldest first)."
+  },
+  "target_anatomy": {
+   "type": "string",
+   "description": "Intended procedure or vessel territory."
+  },
+  "devices": {
+   "type": "array",
+   "minItems": 1,
+   "uniqueItems": true,
+   "items": {
+    "type": "string",
+    "enum": [
+     "guidewire",
+     "microcatheter",
+     "catheter",
+     "sheath",
+     "therapeutic-device",
+     "other",
+     "not-reported"
+    ]
+   },
+   "description": "Device types the robot drives (derived from devices_driven by keyword; the free text is authoritative).",
+   "x-definitions": {
+    "guidewire": "Guidewire or microwire (including a robot's own wire).",
+    "microcatheter": "Microcatheter.",
+    "catheter": "Guide, diagnostic, aspiration, ablation, imaging or steerable catheter.",
+    "sheath": "Sheath or steerable sheath.",
+    "therapeutic-device": "Balloon, stent, stent retriever, coil, clip or valve delivery system.",
+    "other": "Own untethered or soft robot, or an unspecified instrument.",
+    "not-reported": "Not reported."
+   },
+   "x-labels": {
+    "guidewire": "Guidewire",
+    "microcatheter": "Microcatheter",
+    "catheter": "Catheter",
+    "sheath": "Sheath",
+    "therapeutic-device": "Balloon, stent or valve",
+    "other": "Other",
+    "not-reported": "Not reported"
+   }
+  },
+  "devices_driven": {
+   "type": "string",
+   "description": "Which devices, sizes and how many at once, as the sources state.",
+   "examples": [
+    "guidewire 0.014 in; 2.8 Fr microcatheter; 6 Fr aspiration catheter"
+   ]
+  },
+  "n_dof": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "minimum": 0,
+   "maximum": 30,
+   "description": "Number of actuated degrees of freedom (the leading number of n_dof_detail); null when not stated as a number.",
+   "examples": [
+    4
+   ]
+  },
+  "n_dof_detail": {
+   "type": "string",
+   "description": "Degrees of freedom as the sources state them."
+  },
+  "translation_mechanism": {
+   "type": "string",
+   "enum": [
+    "friction-roller",
+    "clamp-relay",
+    "belt/track",
+    "linear-stage+clamp",
+    "magnetic",
+    "tendon/tip-actuation",
+    "other",
+    "not-reported"
+   ],
+   "description": "How the robot pushes and pulls the device.",
+   "x-labels": {
+    "friction-roller": "Friction rollers",
+    "clamp-relay": "Clamp relay",
+    "belt/track": "Belt pinch",
+    "linear-stage+clamp": "Linear stage",
+    "magnetic": "Magnetic",
+    "tendon/tip-actuation": "Tip-actuated",
+    "other": "Other drives",
+    "not-reported": "Not reported"
+   },
+   "x-definitions": {
+    "friction-roller": "A pair of wheels pinches the device and turns to push it; unlimited stroke.",
+    "clamp-relay": "Grippers alternately clamp and move, hand over hand.",
+    "belt/track": "Two belts or tracks squeeze the device.",
+    "linear-stage+clamp": "One clamp rides a carriage on a rail or lead screw; stroke = rail length.",
+    "magnetic": "The tip is steered by an external field; a separate feeder may push.",
+    "tendon/tip-actuation": "The device bends itself (tendons, SMA, fluid).",
+    "other": "Hybrid or other drive; see translation_detail.",
+    "not-reported": "Not reported in the sources read."
+   }
+  },
+  "translation_detail": {
+   "type": "string",
+   "description": "Translation mechanism in the sources' words."
+  },
+  "rotation_mechanism": {
+   "type": "string",
+   "enum": [
+    "rotating-clamp",
+    "rotating-drive-unit",
+    "roller-rolling",
+    "handle-rotation",
+    "tendon-bending",
+    "magnetic-field",
+    "none",
+    "other",
+    "not-reported"
+   ],
+   "description": "How the robot twists the device about its own axis (derived from rotation_detail by keyword with reviewed exceptions while the CSV is the source of truth).",
+   "x-labels": {
+    "rotating-clamp": "Rotating clamp",
+    "rotating-drive-unit": "Rotating drive unit",
+    "roller-rolling": "Rolling between rollers",
+    "handle-rotation": "Handle or knob",
+    "tendon-bending": "Tendon bending only",
+    "magnetic-field": "Field direction",
+    "none": "None",
+    "other": "Other",
+    "not-reported": "Not reported"
+   },
+   "x-definitions": {
+    "rotating-clamp": "A clamp, gripper, chuck or torque device holds the device and turns with it.",
+    "rotating-drive-unit": "The whole roller pair, cassette or frame turns about the device axis.",
+    "roller-rolling": "Rollers or pads move across each other and roll the device between them, like thumb and forefinger.",
+    "handle-rotation": "Motors turn a catheter handle or its steering knobs.",
+    "tendon-bending": "No shaft rotation; the tip bends by tendons.",
+    "magnetic-field": "No shaft rotation; the tip direction follows an external field.",
+    "none": "No rotation degree of freedom, or rotation by hand.",
+    "other": "Actuated, but the mechanism fits none of the classes above or is described only as 'a motor'.",
+    "not-reported": "Not reported in the sources read."
+   }
+  },
+  "rotation_detail": {
+   "type": "string",
+   "description": "Rotation mechanism in the sources' words."
+  },
+  "device_range": {
+   "type": "string",
+   "description": "Device sizes the drive accepts."
+  },
+  "footprint_mm": {
+   "type": "string",
+   "description": "Size of the bedside unit in mm as reported."
+  },
+  "mass_kg": {
+   "type": "string",
+   "description": "Mass in kg as reported."
+  },
+  "force_sensing": {
+   "type": "string",
+   "description": "Force or torque sensing: where, how, accuracy."
+  },
+  "haptics_leader": {
+   "type": "string",
+   "description": "Leader (master) device and haptic feedback."
+  },
+  "imaging_compat": {
+   "type": "string",
+   "description": "Imaging the robot works with (fluoroscopy, MRI, ultrasound) and radiation-related design."
+  },
+  "sterility": {
+   "type": "string",
+   "description": "Sterile barrier, cassette or disposable concept."
+  },
+  "highest_validation": {
+   "type": "string",
+   "enum": [
+    "bench",
+    "phantom",
+    "ex-vivo",
+    "animal",
+    "human"
+   ],
+   "description": "Highest level at which the robot was tested.",
+   "x-labels": {
+    "bench": "Bench",
+    "phantom": "Phantom",
+    "ex-vivo": "Ex vivo",
+    "animal": "Animal",
+    "human": "Human"
+   },
+   "x-definitions": {
+    "bench": "Device driven on the bench (in air, in a straight tube); accuracy tests.",
+    "phantom": "Vessel phantom (silicone, 3D-printed, glass).",
+    "ex-vivo": "Excised tissue or cadaver.",
+    "animal": "In vivo animal study.",
+    "human": "First-in-human or clinical study."
+   }
+  },
+  "validation_detail": {
+   "type": "string",
+   "description": "What was tested, how often, with whom."
+  },
+  "key_numbers": {
+   "type": "string",
+   "description": "Headline performance numbers with their sources."
+  },
+  "sim_model": {
+   "type": "string",
+   "description": "Published simulation model of this robot or its devices (simulator, paper), or 'none found'.",
+   "x-internal": true
+  },
+  "has_sim_model": {
+   "type": "boolean",
+   "description": "Derived: sim_model names a model (does not start with none, no or N.R.).",
+   "x-internal": true
+  },
+  "sim2real": {
+   "type": "string",
+   "enum": [
+    "yes",
+    "partial",
+    "model-based",
+    "unclear",
+    "none-found"
+   ],
+   "description": "Has a controller or model trained in simulation run on this robot?",
+   "x-definitions": {
+    "yes": "A controller or perception model trained in simulation ran on this robot.",
+    "partial": "A simulation-trained part ran on the robot at motor level only, not for navigation.",
+    "model-based": "Commands computed in a simulator or from a physical model ran on the robot; nothing was learned.",
+    "unclear": "Learning or simulation is reported but where it was trained is not stated.",
+    "none-found": "No simulation-trained controller found for this robot."
+   },
+   "x-labels": {
+    "yes": "Yes",
+    "partial": "Partial (motor level)",
+    "model-based": "Model-based only",
+    "unclear": "Unclear",
+    "none-found": "None found"
+   },
+   "x-internal": true
+  },
+  "sim2real_detail": {
+   "type": "string",
+   "description": "The study, its level and its numbers.",
+   "x-internal": true
+  },
+  "picture": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "status",
+    "grade"
+   ],
+   "description": "The best picture of the robot found. Only pictures whose licence allows reuse (CC BY without NC/ND/SA, or the maintainers' own material) are published; the others are described and linked to their source.",
+   "properties": {
+    "status": {
+     "type": "string",
+     "enum": [
+      "cleared",
+      "not-cleared",
+      "none"
+     ],
+     "description": "cleared = licence allows reuse and the picture is shown; not-cleared = a picture exists at the source; none = no picture found.",
+     "x-definitions": {
+      "cleared": "Licence allows reuse with credit; shown on the public site.",
+      "not-cleared": "A picture exists but its licence does not allow reuse; the site links to the source.",
+      "none": "No picture found."
+     }
+    },
+    "grade": {
+     "type": "string",
+     "enum": [
+      "A",
+      "B",
+      "C",
+      "none"
+     ],
+     "description": "Quality of the best picture found.",
+     "x-definitions": {
+      "A": "Clean, sharp, whole robot; good printed 2 in wide.",
+      "B": "Usable with one flaw (small, clutter at the edge, CAD only, partly hidden).",
+      "C": "Best available is still annotated, tiny or partial.",
+      "none": "No picture found."
+     }
+    },
+    "kind": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "enum": [
+      "photo",
+      "render",
+      "product-photo",
+      "clinical-photo",
+      "drawing",
+      null
+     ],
+     "description": "What the picture is."
+    },
+    "source": {
+     "type": "string",
+     "description": "Where the picture comes from: paper key and figure, or page URL."
+    },
+    "source_url": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "pattern": "^https?://",
+     "description": "Link to the picture's source (DOI, arXiv or web page)."
+    },
+    "licence": {
+     "type": "string",
+     "description": "Licence as stated by the source."
+    },
+    "credit": {
+     "type": "string",
+     "description": "Attribution line shown under a cleared picture."
+    },
+    "edits": {
+     "type": "string",
+     "description": "Changes made to the picture (cropping, erased labels); CC BY asks for these to be indicated."
+    },
+    "file": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "pattern": "^pictures/[a-z0-9_]+\\.(jpg|png)$",
+     "description": "Web-size copy (long side 800 px) in pictures/; present only when status is cleared."
+    }
+   }
+  },
+  "pictures": {
+   "type": "array",
+   "description": "Further pictures of the robot from its papers or its maker (the gallery on its page), best first. Like the main picture, only cleared pictures are published; the others are described and linked to their source.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "status",
+     "kind",
+     "caption",
+     "licence"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(_[a-z0-9]+)*_\\d{2}$",
+      "description": "<robot_id>_<nn>; also the file name."
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "cleared",
+       "not-cleared"
+      ],
+      "description": "cleared = licence allows reuse (shown on the public site); not-cleared = linked only."
+     },
+     "file": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^pictures/extra/[a-z0-9_]+\\.jpg$",
+      "description": "Web copy, long side 1200 px; only when cleared."
+     },
+     "thumb": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^pictures/thumbs/[a-z0-9_]+\\.jpg$",
+      "description": "Thumbnail, long side 360 px; only when cleared."
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "photo",
+       "render",
+       "in-use",
+       "close-up",
+       "leader",
+       "setup"
+      ],
+      "description": "What the picture shows.",
+      "x-definitions": {
+       "photo": "Photo of the robot.",
+       "render": "CAD render or drawing of the robot.",
+       "in-use": "The robot in use (bench, phantom, animal, clinical).",
+       "close-up": "A drive, cassette or module close up.",
+       "leader": "The leader (master) device or console.",
+       "setup": "The experimental set-up around the robot."
+      }
+     },
+     "caption": {
+      "type": "string",
+      "description": "Neutral caption, 6-15 words."
+     },
+     "source_key": {
+      "type": "string",
+      "description": "BibTeX key of the paper, or web:<site> for a company or press page."
+     },
+     "source": {
+      "type": "string",
+      "description": "Attribution: authors, venue (year), figure and page."
+     },
+     "source_url": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^https?://",
+      "description": "Link to the source (DOI, arXiv or page)."
+     },
+     "where": {
+      "type": "string",
+      "description": "Figure and page in the source, or the image URL."
+     },
+     "licence": {
+      "type": "string",
+      "description": "Licence as stated by the source."
+     }
+    }
+   }
+  },
+  "sources": {
+   "type": "array",
+   "minItems": 0,
+   "description": "Papers and pages the record is built from, oldest first where known.",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "key"
+    ],
+    "properties": {
+     "key": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_:.\\-]+$",
+      "description": "BibTeX key <firstauthor><year>_<word>."
+     },
+     "doi": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^10\\.\\d{4,9}/\\S+$",
+      "description": "DOI without the https://doi.org/ prefix."
+     },
+     "url": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^https?://",
+      "description": "Link when there is no DOI."
+     },
+     "title": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "year": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "venue": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    }
+   }
+  },
+  "read_level": {
+   "type": "string",
+   "enum": [
+    "full",
+    "partial",
+    "abstract",
+    "web",
+    "secondary"
+   ],
+   "description": "Deepest reading behind the record.",
+   "x-definitions": {
+    "full": "Full text read.",
+    "partial": "Parts of the full text read.",
+    "abstract": "Abstract only.",
+    "web": "Company, press or project page.",
+    "secondary": "Through another review or catalogue."
+   }
+  },
+  "read_level_detail": {
+   "type": "string",
+   "description": "Which source was read at which level."
+  },
+  "notes": {
+   "type": "string",
+   "description": "Anything that does not fit the fields above."
+  },
+  "maintainers_own": {
+   "type": "boolean",
+   "description": "True for the robots built by the lab that maintains this catalogue (conflict of interest, stated once on the About page; not marked on the site)."
+  },
+  "found_by": {
+   "type": "string",
+   "enum": [
+    "academic",
+    "commercial",
+    "actuated-tip",
+    "gap",
+    "contributor"
+   ],
+   "description": "Which logged search added the record.",
+   "x-definitions": {
+    "academic": "Search of academic bedside robots.",
+    "commercial": "Search of commercial and clinical-stage systems.",
+    "actuated-tip": "Search of actuated-tip and magnetic devices.",
+    "gap": "Gap searches for robots the other searches missed.",
+    "contributor": "Added by a contributor through a pull request."
+   }
+  }
+ },
+ "x-internal-note": "Fields with x-internal: true (simulation and sim-to-real) stay in-house: the public build and the public repository leave them out."
+}

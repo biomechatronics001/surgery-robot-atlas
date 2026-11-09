@@ -1,0 +1,113 @@
+{
+ "schema_version": 1,
+ "id": "cstar_ablation_khoshnam2014",
+ "name": "CSTAR ablation robot",
+ "full_name": "CSTAR robotics-assisted ablation-catheter manipulation system (pull-wire drive with tension sensing and model-based contact-force estimation)",
+ "group": "Western University / CSTAR (R. V. Patel; M. Khoshnam, I. Khalaji)",
+ "group_short": "Western / CSTAR",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2014,
+ "latest_year": 2015,
+ "versions": "2014 BioRob robotics-assisted catheter manipulation for ablation efficiency (title); 2015 IROS system with real-time force estimation (full); 3-DOF manipulator named as ongoing work (IROS 2015 Sec. V)",
+ "target_anatomy": "cardiac ablation (atria)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "one 7 Fr unidirectional steerable ablation catheter (Biosense Webster); handle cover removed, prismatic knob fixed to the stage slider (IROS 2015 Sec. II)",
+ "n_dof": 1,
+ "n_dof_detail": "1 actuated (pull-wire flexion); catheter body free in the sheath",
+ "translation_mechanism": "other",
+ "translation_detail": "other: body insertion not actuated; pull-wire driven by a Zaber T-LSR300B motorised linear stage",
+ "rotation_mechanism": "none",
+ "rotation_detail": "none (not actuated)",
+ "device_range": "one catheter model",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "ATI Nano43 measures pull-wire tension; tip-tissue force estimated from tension plus tip pose (no tip sensor); ATI Nano17 under the tissue as ground truth (IROS 2015 Sec. II)",
+ "haptics_leader": "none; GUI displays real-time contact-force estimate",
+ "imaging_compat": "camera tracking of tip markers (640 x 480 px, 30 fps) as fluoroscopy stand-in",
+ "sterility": "N.R.",
+ "highest_validation": "bench",
+ "validation_detail": "artificial tissue on a Nano17 sensor moved by a Zaber T-LSM050A stage, including 8.5 mm sinusoidal wall motion; three cases in Table II (IROS 2015 Sec. IV)",
+ "key_numbers": "tip placed within +-1 mm of target; contact-force estimation error below 3 gf, maximum 2.64 gf (IROS 2015 abstract, Sec. V)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "khoshnam2015_ablation_IROS Fig. 1 (CAD of set-up), left part: motorized linear stage, handle clamp, pull-wire force sensor",
+  "source_url": "https://doi.org/10.1109/iros.2015.7353821",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Khoshnam et al., 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2015), Fig. 1. publisher copyright (IEEE).",
+  "edits": "native extract (3828x1769); cropped to the pull-wire drive; 3 leader arrows on white background erased (LaMa, imgprep erase --box/--line), robot untouched; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "cstar_ablation_khoshnam2014_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Proximal actuator: motorised stage pulling the catheter knob through a force sensor",
+   "source_key": "khoshnam2015_robotics",
+   "source": "Khoshnam et al., 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2015), Fig. 2, p. 2",
+   "source_url": "https://doi.org/10.1109/iros.2015.7353821",
+   "where": "Fig. 2, p. 2",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "cstar_ablation_khoshnam2014_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Catheter tip against a force sensor under a side camera, linear stage behind",
+   "source_key": "khoshnam2015_robotics",
+   "source": "Khoshnam et al., 2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2015), Fig. 3, p. 2",
+   "source_url": "https://doi.org/10.1109/iros.2015.7353821",
+   "where": "Fig. 3, p. 2",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "cstar_ablation_khoshnam2014_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "CAD of the 2014 set-up: handle actuation stage, camera and tip force sensor",
+   "source_key": "khoshnam2014_robotics",
+   "source": "Khoshnam et al., 5th IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics (2014), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1109/biorob.2014.6913794",
+   "where": "Fig. 1, p. 2",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "khoshnam2015_robotics",
+   "doi": "10.1109/iros.2015.7353821",
+   "url": null,
+   "title": "A robotics-assisted catheter manipulation system for cardiac ablation with real-time force estimation",
+   "year": 2015,
+   "venue": "2015 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  },
+  {
+   "key": "khoshnam2014_robotics",
+   "doi": "10.1109/biorob.2014.6913794",
+   "url": null,
+   "title": "Robotics-assisted catheter manipulation for improving cardiac ablation efficiency",
+   "year": 2014,
+   "venue": "5th IEEE RAS/EMBS International Conference on Biomedical Robotics and Biomechatronics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (IROS 2015); title (BioRob 2014)",
+ "notes": "Boundary case: actuates only tip flexion of a conventional ablation catheter (compare robots_A3 toronto_nazari2024 EP-handle robot).",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

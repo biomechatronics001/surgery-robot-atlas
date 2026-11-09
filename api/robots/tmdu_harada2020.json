@@ -1,0 +1,93 @@
+{
+ "schema_version": 1,
+ "id": "tmdu_harada2020",
+ "name": "TMDU pneumatic",
+ "full_name": "TMDU pneumatically driven catheter-gripping robot for hot-balloon ablation",
+ "group": "Tokyo Medical and Dental University, Institute of Biomaterials and Bioengineering (Kenji Kawashima, Tetsuro Miyazaki, Takahiro Kanno) with Tokyo Institute of Technology (Toshihiro Kawase)",
+ "group_short": "TMDU",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2020,
+ "latest_year": 2020,
+ "versions": "single prototype (harada2020_development)",
+ "target_anatomy": "left atrium / pulmonary veins (hot-balloon catheter ablation)",
+ "devices": [
+  "sheath",
+  "therapeutic-device"
+ ],
+ "devices_driven": "SATAKE HotBalloon catheter (Toray) and its sheath",
+ "n_dof": 1,
+ "n_dof_detail": "1 (push/pull)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: pneumatic air cylinder (100 mm stroke) moving a magnet-closed catheter gripper",
+ "rotation_mechanism": "none",
+ "rotation_detail": "none",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "contact force estimated from cylinder air pressure; magnetic distance sensor on the gripper",
+ "haptics_leader": "haptic display of the pressure-estimated force (prototype)",
+ "imaging_compat": "X-ray fluoroscopy",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "pulmonary-vein blocking with the balloon in a live pig (one animal described); anomaly detection tested on an excised pig heart (harada2020_development Sec. IV-V)",
+ "key_numbers": "push force about 10 N; gripper magnets 11.8 N (9 mm) and 4.3 N (5 mm) (harada2020_development Sec. III)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "harada2020_development Fig. 2 (catheter gripping robot photo), SII 2020, doi:10.1109/SII46433.2020.9026176",
+  "source_url": "https://doi.org/10.1109/SII46433.2020.9026176",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Harada et al., 2020 IEEE/SICE International Symposium on System Integration (SII) (2020), Fig. 2. publisher copyright (IEEE).",
+  "edits": "native extract of the embedded photo (132 x 237, stored rotated) and rotated 90 deg to the page orientation; no crop, no erase; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "tmdu_harada2020_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Catheter gripping robot at the table during the swine pulmonary-vein blocking test",
+   "source_key": "harada2020_development",
+   "source": "Harada et al., 2020 IEEE/SICE International Symposium on System Integration (SII) (2020), Fig. 7, p. 4",
+   "source_url": "https://doi.org/10.1109/sii46433.2020.9026176",
+   "where": "Fig. 7, p. 4",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "tmdu_harada2020_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Sheath gripper part with the lid open, silicone seat removed",
+   "source_key": "harada2020_development",
+   "source": "Harada et al., 2020 IEEE/SICE International Symposium on System Integration (SII) (2020), Fig. 3(b), p. 2",
+   "source_url": "https://doi.org/10.1109/sii46433.2020.9026176",
+   "where": "Fig. 3(b), p. 2",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "harada2020_development",
+   "doi": "10.1109/sii46433.2020.9026176",
+   "url": null,
+   "title": "Development of Pneumatically Driven Surgical Robot for Catheter Ablation",
+   "year": 2020,
+   "venue": "2020 IEEE/SICE International Symposium on System Integration (SII)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "Back-drivable pneumatic actuation (Kawashima's surgical-robot line).",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

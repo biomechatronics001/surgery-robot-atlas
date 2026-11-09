@@ -1,0 +1,89 @@
+{
+ "schema_version": 1,
+ "id": "microvast_tognarelli2012",
+ "name": "MicroVAST",
+ "full_name": "MicroVAST robotic magnetic navigation platform (external permanent magnet on a robot arm, robotic ultrasound tracking)",
+ "group": "Menciassi, The BioRobotics Institute, Scuola Superiore Sant'Anna",
+ "group_short": "SSSA",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2012,
+ "latest_year": 2016,
+ "versions": "2012: wireless magnetic capsule dragged by an EPM on a 6-DoF arm, second arm holds the US probe (tognarelli2012_magnetic); 2015: 2D US tracking of soft-tethered devices on the MicroVAST platform (mura2015_ultrasound, abstract); 2016: 3D US tracking of a magnetic-dragged soft-tethered device (mura2016_computer, abstract)",
+ "target_anatomy": "cardiovascular (atherosclerotic arteries, tognarelli2012_magnetic Introduction); listed as neuroendovascular in alekseeva2025_design Table 14",
+ "devices": [
+  "other"
+ ],
+ "devices_driven": "2012: capsule 5 mm x 10.6 mm, 0.75 g, with an internal NdFeB N52 magnet of 6 tablets (3.2 mm x 1.6 mm) (tognarelli2012_magnetic Methods); 2015-16: soft-tethered endovascular device (dimensions N.R. in the abstracts)",
+ "n_dof": 6,
+ "n_dof_detail": "6 (alekseeva2025_design Table 14): Mitsubishi RV-3SB 6-DoF arm moves the EPM; RV-6SL 6-DoF arm moves the US probe (tognarelli2012_magnetic Methods)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (dragging by the moving external permanent magnet)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "EPM pose (robot arm)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R. (EPM 0.4 kg, 51 mm diameter x 25 mm, tognarelli2012_magnetic Methods)",
+ "force_sensing": "none",
+ "haptics_leader": "Phantom Omni haptic input device moves the EPM arm (tognarelli2012_magnetic Methods)",
+ "imaging_compat": "ultrasound: Esaote CA430E convex probe (3.5-5 MHz) on the second arm with real-time US servoing (tognarelli2012_magnetic); 3D US tracking (mura2016_computer)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "soft-tethered device: tracking and locomotion tests on the platform (mura2016_computer abstract; phantom type N.R.; alekseeva2025_design: 'ex vivo phantom studies (TRL3)'). The 2012 tests used the untethered capsule: 300 mm path of Plexiglas tube, PVC tube and a freshly excised porcine vessel in a flow loop at 2.3, 3.1 and 3.7 L/min, with and against flow (tognarelli2012_magnetic Methods)",
+ "key_numbers": "EPM NdFeB N52, remanence 1.48 T; arm drag speed 5 mm/s (tognarelli2012_magnetic Methods); 3D US tracking error 6.4 +/- 2.8 px, mean displacement from the pre-operative path 13.6 +/- 4.5 mm, 12.2 +/- 1.5 ms per frame (mura2016_computer abstract)",
+ "sim_model": "none found (analytical magnetic and fluid-drag model, tognarelli2012_magnetic)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "tognarelli2012_magnetic Fig. 2",
+  "source_url": "https://doi.org/10.1007/s11701-011-0332-1",
+  "licence": "publisher copyright",
+  "credit": "Tognarelli et al., Journal of Robotic Surgery (2011), Fig. 2. publisher copyright.",
+  "edits": "native extract from tognarelli2012_magnetic-propulsion_JRS.pdf p. 3; no crop; none upscaled",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "tognarelli2012_magnetic",
+   "doi": "10.1007/s11701-011-0332-1",
+   "url": null,
+   "title": "Magnetic propulsion and ultrasound tracking of endovascular devices",
+   "year": 2011,
+   "venue": "Journal of Robotic Surgery"
+  },
+  {
+   "key": "mura2015_ultrasound",
+   "doi": "10.1002/rcs.1603",
+   "url": null,
+   "title": "Ultrasound-based tracking strategy for endoluminal devices in cardiovascular surgery: Computer-assisted robotic strategy for autonomous intervention",
+   "year": 2014,
+   "venue": "The International Journal of Medical Robotics and Computer Assisted Surgery"
+  },
+  {
+   "key": "mura2016_computer",
+   "doi": "10.1080/24699322.2016.1185467",
+   "url": null,
+   "title": "A computer-assisted robotic platform for vascular procedures exploiting 3D US-based tracking",
+   "year": 2016,
+   "venue": "Computer Assisted Surgery"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (tognarelli2012_magnetic); abstract (mura2015_ultrasound, mura2016_computer)",
+ "notes": "Family: magnetic. The catheter-like device (soft-tethered) appears only in the 2015-16 papers, read as abstracts; Mura 2016 (T&F, CC BY-NC) and Mura 2015 (Wiley) are on the manual-download list and would decide the device size and test level. alekseeva2025_design Sec. 4 calls the field source an electromagnet; tognarelli2012_magnetic uses a permanent magnet.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

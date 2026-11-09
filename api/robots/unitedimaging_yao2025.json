@@ -1,0 +1,108 @@
+{
+ "schema_version": 1,
+ "id": "unitedimaging_yao2025",
+ "name": "United Imaging",
+ "full_name": "United Imaging vascular interventional robot (VascularPilot3D platform)",
+ "group": "United Imaging and United Imaging Research Institute of Intelligent Imaging, with U. Michigan (Ghaffari); also used by Tongji University (Tianliang Yao, Peng Qi), Soochow University (Bo Lu), Siemens Healthineers",
+ "group_short": "UIH / Tongji",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2024,
+ "latest_year": 2025,
+ "versions": "song2025_vascularpilot3d (arXiv 2405.09375 v1 2024-05-15; ICRA 2025): United Imaging's own robot carrying the VascularPilot3D navigation stack ('Our own robot was built', Sec. III, Fig. 5) -> yao2025_sim4endor (ICRA 2025, open-loop replay) -> yao2025_sim2real (T-ASE 2025)",
+ "target_anatomy": "simplified vascular phantom and complex coronary phantom",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "guidewire (simulated 0.9 mm radius, 1.55 g/cm3)",
+ "n_dof": null,
+ "n_dof_detail": "translation + rotation of the guidewire (Fig. 3 labels); count N.R.",
+ "translation_mechanism": "not-reported",
+ "translation_detail": "N.R. (robot only described as a 'specialized vascular intervention robot provided by United Imaging')",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R.",
+ "haptics_leader": "N.R.",
+ "imaging_compat": "United Imaging uAngio 960 fluoroscopy, mean delay 0.2 s from the C-arm to the navigation software; pre-operative CT on uCT 860 (song2025_vascularpilot3d Sec. III)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "Physical robot, Target B of a vascular phantom; 5 trials per RL method, 3 trials per human operator (yao2025_sim2real); autonomous navigation to 5 destinations in a transparent phantom under fluoroscopy, 5 trials each, which the paper calls ex-vivo (song2025_vascularpilot3d Sec. III, Fig. 5)",
+ "key_numbers": "PPO+GAE+DR: 100 % success, 53.0 +/- 5.1 s, error 2.92 +/- 0.41 mm (A) and 2.06 +/- 0.31 mm (B); plain PPO 60 % in 61.0 +/- 4.8 s; SAC 75 % (45.0 s); DDPG 75 % (40.0 s); humans 100 % in 35.0 and 39.0 s (yao2025_sim2real); VascularPilot3D 25 of 25 autonomous navigations, 18.38 % fewer control loops than the human operator, one control step about 2 s (song2025_vascularpilot3d abstract, Sec. III)",
+ "sim_model": "SOFA with BeamAdapter discrete-point guidewire model; anatomy from CT, built with Blender and Onshape; Sim4EndoR platform (yao2025_sim4endor)",
+ "has_sim_model": true,
+ "sim2real": "yes",
+ "sim2real_detail": "yes: policy trained only in simulation (PPO with GAE and domain randomisation over friction and tissue elasticity) deployed on this robot with no real-time position feedback; sim 90 % (9/10, Target B) -> robot 100 % (5/5) (yao2025_sim2real, full). yao2025_sim4endor: robot 5/5 and 3/5, open-loop replay (S7b evidence)",
+ "picture": {
+  "status": "cleared",
+  "grade": "A",
+  "kind": "photo",
+  "source": "song2025_vascularpilot3d Fig. 5, top panel (arXiv 2405.09375v2, p. 5, native raster 1052 x 1462)",
+  "source_url": "https://arxiv.org/abs/2405.09375v2",
+  "licence": "CC BY 4.0",
+  "credit": "Song et al., 2025 IEEE International Conference on Robotics and Automation (ICRA) (2025), Fig. 5. CC BY 4.0.",
+  "edits": "native extract; cropped to the top panel; nothing erased; none upscaled",
+  "file": "pictures/unitedimaging_yao2025.jpg"
+ },
+ "pictures": [
+  {
+   "id": "unitedimaging_yao2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robot on the operation table with phantom, C-arm and monitor",
+   "source_key": "yao2025_sim2real",
+   "source": "Yao et al., IEEE Transactions on Automation Science and Engineering (2025), Fig. 3, p. 10",
+   "source_url": "https://doi.org/10.1109/tase.2025.3555559",
+   "where": "Fig. 3, p. 10",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "unitedimaging_yao2025_02",
+   "status": "cleared",
+   "file": "pictures/extra/unitedimaging_yao2025_02.jpg",
+   "thumb": "pictures/thumbs/unitedimaging_yao2025_02.jpg",
+   "kind": "in-use",
+   "caption": "Robot and vascular phantom on the angiography table",
+   "source_key": "song2025_vascularpilot3d",
+   "source": "Song et al., 2025 IEEE International Conference on Robotics and Automation (ICRA) (2025), Fig. 5 (middle left), p. 5, arXiv 2405.09375v2",
+   "source_url": "https://doi.org/10.1109/icra55743.2025.11127370",
+   "where": "Fig. 5 (middle left), p. 5, arXiv 2405.09375v2",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "song2025_vascularpilot3d",
+   "doi": "10.1109/icra55743.2025.11127370",
+   "url": null,
+   "title": "VascularPilot3D: Toward a 3D Fully Autonomous Navigation for Endovascular Robotics",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)"
+  },
+  {
+   "key": "yao2025_sim2real",
+   "doi": "10.1109/tase.2025.3555559",
+   "url": null,
+   "title": "Sim2Real Learning With Domain Randomization for Autonomous Guidewire Navigation in Robotic-Assisted Endovascular Procedures",
+   "year": 2025,
+   "venue": "IEEE Transactions on Automation Science and Engineering"
+  },
+  {
+   "key": "yao2025_sim4endor",
+   "doi": "10.1109/icra55743.2025.11127627",
+   "url": null,
+   "title": "Sim4EndoR: A Reinforcement Learning Centered Simulation Platform for Task Automation of Endovascular Robotics",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (song2025_vascularpilot3d; yao2025_sim2real); S7b evidence (sim4endor)",
+ "notes": "United Imaging built the robot itself ('Our own robot was built', song2025_vascularpilot3d Sec. III) and runs its navigation software on ROS on a laptop; no paper describes the drive mechanism. Same white two-cassette bedside unit on an arm as in yao2025_sim2real Fig. 3. Found 2026-11-07 by the user (arXiv 2405.09375), missed by the searches because the title names the navigation system, not the robot.",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

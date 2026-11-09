@@ -1,0 +1,87 @@
+{
+ "schema_version": 1,
+ "id": "bupt_yang2022",
+ "name": "BUPT guidewire robot",
+ "full_name": "BUPT guidewire feeding robot (friction-wheel push-pull, gear rotation) used for deep-RL guidewire feeding on a vessel phantom",
+ "group": "Beijing University of Posts and Telecommunications, School of Automation (Deai Yang, Jingzhou Song, Yuhang Hu) (yang2022_guidewire p. 1287; Crossref affiliations)",
+ "group_short": "BUPT",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2022,
+ "latest_year": 2022,
+ "versions": "single paper (yang2022_guidewire, ICMA 2022); the robot is described only in its Sec. IV-A",
+ "target_anatomy": "abdominal-aorta target in a vessel phantom with pumped water at a controlled temperature (Sec. IV-A, IV-C, Figs. 1-2, 7); detection images from the phantom's femoral artery and aortic arch (Sec. IV-B)",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "one guidewire (type N.R.)",
+ "n_dof": 2,
+ "n_dof_detail": "2: push-pull and rotation, decoupled (Sec. IV-A)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller: 'It moves the guidewire forward or backward via a pair of friction wheels clamping it' (Sec. IV-A)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "'The rotation of the guidewire around the central axis is achieved by a pair of rotating gears' (Sec. IV-A)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none (force from the motor current proposed as future work, Sec. V)",
+ "haptics_leader": "none: an autonomous SAC agent on a server sends (push-pull, rotation) actions (Sec. IV-A, Fig. 2)",
+ "imaging_compat": "camera above the transparent phantom; the YOLOv5s tip detector was also run on angiographic images (Fig. 5); fluoroscopy with the robot N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "phantom: two training-and-test experiments on the physical phantom, (1) push-pull only, 500 episodes of <= 150 steps in 2.5 h, converged after about 260 episodes; (2) push-pull plus rotation, 500 episodes in 4.2 h, converged after about 300; test runs reached the target within the 40-pixel (about 5 mm) termination criterion (Sec. IV-C, Figs. 8-13). Number of test runs N.R.",
+ "key_numbers": "push-pull accuracy 1 mm, rotation accuracy 5 deg (Sec. IV-A); action limits +/-20 mm, +/-90 deg (Sec. III-A); feeding error < 5 mm, tip detection >= 92.9 % (Abstract); YOLOv5s 23 ms per image (Sec. IV-B)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found: the policy is trained on the physical phantom without a simulator ('To avoid the error caused by the virtual simulation environment, we built an interventional surgery experimental platform based on vessel phantom', Sec. IV-A)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "yang2022_guidewire Fig. 1 (experimental platform), right part, p. 4",
+  "source_url": "https://doi.org/10.1109/icma54519.2022.9856351",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Yang et al., 2022 IEEE International Conference on Mechatronics and Automation (ICMA) (2022), Fig. 1. publisher copyright (IEEE).",
+  "edits": "native embedded raster (727 x 456) cropped to the robot (box 498,195,727,378); tip of the red pointer of the 'guidewire feeding robot' label remains at the lower left; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "bupt_yang2022_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Guidewire feeding robot beside the vessel phantom, camera, pump and thermostat",
+   "source_key": "yang2022_guidewire",
+   "source": "Yang et al., 2022 IEEE International Conference on Mechatronics and Automation (ICMA) (2022), Fig. 1, p. 4",
+   "source_url": "https://doi.org/10.1109/icma54519.2022.9856351",
+   "where": "Fig. 1, p. 4",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "yang2022_guidewire",
+   "doi": "10.1109/icma54519.2022.9856351",
+   "url": null,
+   "title": "Guidewire feeding method based on deep reinforcement learning for vascular intervention robot",
+   "year": 2022,
+   "venue": "2022 IEEE International Conference on Mechatronics and Automation (ICMA)"
+  },
+  {
+   "key": "konda2025_robotically",
+   "doi": "10.1126/scirobotics.adt7461",
+   "url": null,
+   "title": "Robotically steerable guidewires—Current trends and future directions",
+   "year": 2025,
+   "venue": "Science Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "N3 2026-11-08, from review_comparison Sec. 1.3 (Konda 2025 control row 37, ref. 129, one of the 'learning-only controllers'). The controller ran on this physical robot, so the robot itself is catalogued. No other paper describing the robot was found. Picture is 229 px wide and carries the tip of a red pointer: the robot is about a third of the 727 px setup photo.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

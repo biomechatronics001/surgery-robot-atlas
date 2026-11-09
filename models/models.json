@@ -1,0 +1,242 @@
+{
+ "generated": "2026-11-07",
+ "note": "3D models built by tools/build_models.py; paths are relative to the site root. Licence gate: only robot ids in site_src/config.json models_public reach the public build.",
+ "models": [
+  {
+   "robot_id": "legobot_gao2026",
+   "name": "LegoBot (three modules)",
+   "urdf": "models/legobot_gao2026/robot.urdf",
+   "meshes": [
+    {
+     "link": "upper_rotor",
+     "file": "models/legobot_gao2026/meshes/upper_rotor.glb",
+     "source_file": "upper_rotor.stl",
+     "faces_source": 95000,
+     "faces_web": 38000,
+     "bytes": 680908,
+     "device": null
+    },
+    {
+     "link": "middle_rotor",
+     "file": "models/legobot_gao2026/meshes/middle_rotor.glb",
+     "source_file": "middle_rotor.stl",
+     "faces_source": 95000,
+     "faces_web": 38000,
+     "bytes": 680664,
+     "device": null
+    },
+    {
+     "link": "lower_rotor",
+     "file": "models/legobot_gao2026/meshes/lower_rotor.glb",
+     "source_file": "lower_rotor.stl",
+     "faces_source": 57030,
+     "faces_web": 22812,
+     "bytes": 408004,
+     "device": null
+    },
+    {
+     "link": "housing_upper",
+     "file": "models/legobot_gao2026/meshes/housing_upper.glb",
+     "source_file": "housing_upper.stl",
+     "faces_source": 27763,
+     "faces_web": 27763,
+     "bytes": 500792,
+     "device": null
+    },
+    {
+     "link": "housing_middle",
+     "file": "models/legobot_gao2026/meshes/housing_middle.glb",
+     "source_file": "housing_middle.stl",
+     "faces_source": 35895,
+     "faces_web": 35895,
+     "bytes": 647256,
+     "device": null
+    },
+    {
+     "link": "housing_lower",
+     "file": "models/legobot_gao2026/meshes/housing_lower.glb",
+     "source_file": "housing_lower.stl",
+     "faces_source": 29682,
+     "faces_web": 29682,
+     "bytes": 534856,
+     "device": null
+    }
+   ],
+   "colors": {
+    "upper_rotor": "#5d5d63",
+    "middle_rotor": "#5d5d63",
+    "lower_rotor": "#5d5d63",
+    "housing_upper": "#9a7fd0",
+    "housing_middle": "#eeebe3",
+    "housing_lower": "#f3cc3a"
+   },
+   "devices": [
+    {
+     "link": "upper_tube",
+     "label": "guide catheter",
+     "color": "#2b8a8e",
+     "parent": "upper_rotor",
+     "joint": "upper_ins",
+     "axis": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "near": [
+      0.0,
+      -0.05357,
+      -0.0
+     ],
+     "far": [
+      0.0,
+      -0.16357,
+      -0.0
+     ],
+     "radius": 0.00125
+    },
+    {
+     "link": "middle_tube",
+     "label": "aspiration catheter / microcatheter",
+     "color": "#33373b",
+     "parent": "middle_rotor",
+     "joint": "middle_ins",
+     "axis": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "near": [
+      0.0,
+      0.008,
+      0.0
+     ],
+     "far": [
+      0.0,
+      -0.102,
+      0.0
+     ],
+     "radius": 0.00125
+    },
+    {
+     "link": "lower_tube",
+     "label": "guidewire",
+     "color": "#a9adb2",
+     "parent": "lower_rotor",
+     "joint": "lower_ins",
+     "axis": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "near": [
+      0.0,
+      0.096,
+      0.0
+     ],
+     "far": [
+      0.0,
+      0.246,
+      0.0
+     ],
+     "radius": 0.0004
+    }
+   ],
+   "joints": [
+    {
+     "name": "upper_rot",
+     "type": "revolute",
+     "label": "Upper module (purple) · rotation",
+     "unit": "deg",
+     "scale": 57.29578,
+     "min": -360,
+     "max": 360,
+     "step": 1,
+     "parent": "base_link",
+     "child": "upper_rotor"
+    },
+    {
+     "name": "upper_ins",
+     "type": "prismatic",
+     "label": "Upper module (purple) · insertion",
+     "unit": "mm",
+     "scale": 1000.0,
+     "min": -100,
+     "max": 250,
+     "step": 1,
+     "parent": "upper_rotor",
+     "child": "upper_tube"
+    },
+    {
+     "name": "middle_rot",
+     "type": "revolute",
+     "label": "Middle module (white) · rotation",
+     "unit": "deg",
+     "scale": 57.29578,
+     "min": -360,
+     "max": 360,
+     "step": 1,
+     "parent": "base_link",
+     "child": "middle_rotor"
+    },
+    {
+     "name": "middle_ins",
+     "type": "prismatic",
+     "label": "Middle module (white) · insertion",
+     "unit": "mm",
+     "scale": 1000.0,
+     "min": -100,
+     "max": 250,
+     "step": 1,
+     "parent": "middle_rotor",
+     "child": "middle_tube"
+    },
+    {
+     "name": "lower_rot",
+     "type": "revolute",
+     "label": "Lower module (yellow) · rotation",
+     "unit": "deg",
+     "scale": 57.29578,
+     "min": -360,
+     "max": 360,
+     "step": 1,
+     "parent": "base_link",
+     "child": "lower_rotor"
+    },
+    {
+     "name": "lower_ins",
+     "type": "prismatic",
+     "label": "Lower module (yellow) · insertion",
+     "unit": "mm",
+     "scale": 1000.0,
+     "min": -100,
+     "max": 250,
+     "step": 1,
+     "parent": "lower_rotor",
+     "child": "lower_tube"
+    }
+   ],
+   "up_axis": [
+    1,
+    0,
+    0
+   ],
+   "units": {
+    "prismatic": "mm on the slider (URDF metres x 1000)",
+    "revolute": "degrees on the slider (URDF radians)"
+   },
+   "kinematics": "Joint values are tube outputs, not motor angles (70-legobot-simulation/KINEMATICS.md): per module rot = 0.26667 x motor rot, ins = 0.032 m/rad x (motor ins - motor rot). Devices are nested: the guide catheter's insertion is upper_ins, the inner catheter's upper_ins + middle_ins, the guidewire's upper_ins + middle_ins + lower_ins. The URDF's joint limits are placeholders; the slider ranges are display ranges.",
+   "source": "51-legobot-ros2/description/urdf/legobot.urdf and description/meshes/ (the ROS 2 / RViz digital twin with the CAD housings; generated from the CAD by 70-legobot-simulation/scripts/build_urdf_modules.py)",
+   "licence": "Lab and collaborator material (BIRO Lab, New York University); CAD not released",
+   "still": "models/legobot_gao2026/still.jpg",
+   "bytes_total": 3452480,
+   "replay": {
+    "file": "models/legobot_gao2026/replay.json",
+    "label": "Replay: recorded SOFA run (aspiration thrombectomy, via ROS)",
+    "frames": 524,
+    "duration_s": 69.564,
+    "source": "51-legobot-ros2/legobot_sofa/runs/thrombectomy_ros/trace.npz",
+    "setup": "scene/setups/thrombectomy_tmech.yaml"
+   }
+  }
+ ]
+}

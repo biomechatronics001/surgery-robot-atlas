@@ -1,0 +1,100 @@
+{
+ "schema_version": 1,
+ "id": "tsinghua_wang2023",
+ "name": "MFCR",
+ "full_name": "MFCR: magnetic-controlled flexible continuum robot with C, J and S deformation modes, steered by a three-dimensional electromagnet platform",
+ "group": "Tsinghua University, State Key Laboratory of Tribology in Advanced Equipment (Zili Wang, Ding Weng, Zhaoxin Li, Lei Chen, Yuan Ma, Jiadao Wang) (wang2023_magnetic p. 1)",
+ "group_short": "Tsinghua U.",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2023,
+ "latest_year": 2023,
+ "versions": "single version (wang2023_magnetic, Actuators 12:247, 2023)",
+ "target_anatomy": "coronary access through aorta-coronary bifurcations (PTCA-type guidewire navigation, Sec. 3.2); tested in 3D-printed ring channels (ID 4 mm, 30-130 deg), simplified aorta-left/right coronary models at three angles, and a Y-bifurcation with clay obstacles (Sec. 3.2-3.3, Figs. 5-6)",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "its own magnetic soft continuum robot (guidewire-like): silicone elastomer with NdFeB powder (1:1 by mass) as the magnetic tip, nitinol-core silicone body (Sec. 2.2); advanced into the branch 'with the help of manual operation' (Sec. 3.2)",
+ "n_dof": null,
+ "n_dof_detail": "tip deformation set by the field direction and strength (three planar modes C, J, S); insertion by hand (Sec. 3)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (steering); forward push by hand ('with the help of manual operation', Sec. 3.2)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "magnetic torque of the external field on the programmed magnetisation; no axial rotation (Sec. 2.1, 3.1)",
+ "device_range": "magnetic part L = 15 mm (segments 6, 3 and 6 mm with different magnetisation), D = 1.5 mm (Sec. 3.1, Fig. 3)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "none (N.R.)",
+ "imaging_compat": "optical: DSLR camera, camera above the testbed (Fig. 1c, Sec. 3.1); fluoroscopy N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "bench: static deformation in the three-dimensional electromagnet platform against the model, n = 3 per condition (Sec. 3.1, Fig. 4); phantom: passing 30-130 deg ring channels and aorta-coronary models with a permanent magnet (Fig. 5), and entering a branch past an obstacle with J and S modes in the electromagnet system (Fig. 6, Videos S1-S2)",
+ "key_numbers": "C-shape field 19.7-127 mT; < 150 mT in all tests (Sec. 4); max mean angle error 2.979 deg and max mean tip-position error 0.328 mm (Sec. 5); J mode 0.589 / 0.499 deg and 0.103 mm (Sec. 4); magnetised at 1.5 T for 10 s (Sec. 2.2)",
+ "sim_model": "yes: quasi-static model from magnetic plus elastic potential energy on an Euler-Bernoulli beam, solved in MATLAB to predict the deformation modes (wang2023_magnetic Sec. 2.1, 3.1)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "cleared",
+  "grade": "C",
+  "kind": "render",
+  "source": "wang2023_magnetic Fig. 1(c), p. 3",
+  "source_url": "https://doi.org/10.3390/act12060247",
+  "licence": "CC BY 4.0",
+  "credit": "Wang et al., Actuators (2023), Fig. 1(c). CC BY 4.0.",
+  "edits": "native embedded raster (two strips of 3418 px joined); cropped to panel (c), panel letter cropped off; labels 'Camera', 'MFCR', 'Magnetic System', 'Testbed' and their arrows kept (one arrow touches the MFCR); not upscaled",
+  "file": "pictures/tsinghua_wang2023.jpg"
+ },
+ "pictures": [
+  {
+   "id": "tsinghua_wang2023_01",
+   "status": "cleared",
+   "file": "pictures/extra/tsinghua_wang2023_01.jpg",
+   "thumb": "pictures/thumbs/tsinghua_wang2023_01.jpg",
+   "kind": "in-use",
+   "caption": "MFCR in J and S modes passing an obstacle into a branch under the electromagnet system",
+   "source_key": "wang2023_magnetic",
+   "source": "Wang et al., Actuators (2023), Fig. 6, p. 8",
+   "source_url": "https://doi.org/10.3390/act12060247",
+   "where": "Fig. 6, p. 8",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "tsinghua_wang2023_02",
+   "status": "cleared",
+   "file": "pictures/extra/tsinghua_wang2023_02.jpg",
+   "thumb": "pictures/thumbs/tsinghua_wang2023_02.jpg",
+   "kind": "in-use",
+   "caption": "MFCR turning through 30-130 degree ring channels and aorta-coronary models",
+   "source_key": "wang2023_magnetic",
+   "source": "Wang et al., Actuators (2023), Fig. 5, p. 7",
+   "source_url": "https://doi.org/10.3390/act12060247",
+   "where": "Fig. 5, p. 7",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "wang2023_magnetic",
+   "doi": "10.3390/act12060247",
+   "url": null,
+   "title": "A Magnetic-Controlled Flexible Continuum Robot with Different Deformation Modes for Vascular Interventional Navigation Surgery",
+   "year": 2023,
+   "venue": "Actuators"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "N3 2026-11-08, from review_comparison Sec. 1.3 (Alekseeva Table 15 row 2). In scope as magnetic navigation: a computer-controlled 'three-dimensional electromagnet platform' bends the tip inside vessel models with a measured result. Number of coils, currents and workspace of the platform N.R. The permanent magnet of Fig. 5 was 'held in the operator's hands or installed on a robot arm' (Sec. 4); which one N.R.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

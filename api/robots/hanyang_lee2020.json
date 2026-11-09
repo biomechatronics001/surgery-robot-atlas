@@ -1,0 +1,122 @@
+{
+ "schema_version": 1,
+ "id": "hanyang_lee2020",
+ "name": "MCR in CMNS",
+ "full_name": "Multifunctional magnetic catheter robot (MCR) in a closed-loop magnetic navigation system (CMNS)",
+ "group": "G. Jang, Department of Mechanical Engineering, Hanyang University",
+ "group_short": "Hanyang U.",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2020,
+ "latest_year": 2021,
+ "versions": "CMNS hardware: 8 electromagnets at the vertices of a hexahedron with a back yoke (nam2018_magnetic); MCR with steering, tunnelling and stent-delivery motions (lee2021_steering, online 2020-01-15, IEEE TIE 68(1) 2021)",
+ "target_anatomy": "occlusive vascular disease (angioplasty: steering, clot tunnelling, stent delivery) (lee2021_steering Sec. I)",
+ "devices": [
+  "guidewire",
+  "therapeutic-device"
+ ],
+ "devices_driven": "own MCR: tube with a diametrically magnetized front magnet and drill tip, magnetic joint, two tension springs (26 N/m total), self-expandable stent; max OD 3.5 mm (about 10 Fr), min ID 0.4 mm passes a 0.014-in guidewire (lee2021_steering Sec. IV-A)",
+ "n_dof": null,
+ "n_dof_detail": "field direction, magnitude and rotation from 8 electromagnets: steering (static field), tunnelling (rotating field), stent release (field magnitude) (lee2021_steering Sec. II-C)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (tip steering); advance mechanism N.R. (lee2021_steering)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "rotating field (20 mT, 12 Hz) spins the front magnet and drill tip for tunnelling (lee2021_steering Sec. IV-B)",
+ "device_range": "MCR OD 3.5 mm",
+ "footprint_mm": "cylindrical workspace up to 500 diameter (lee2021_steering Sec. II-B)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "no: joystick controller (lee2021_steering Fig. 3b)",
+ "imaging_compat": "biplane cameras (CMOS, 30 fps) only (lee2021_steering Sec. II-B, IV-B)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "in vitro only: obstacle table with 4 steering points; stent-release threshold in a straight glass tube (10 trials); stent deployment accuracy in a branched 8 mm glass tube, 10 trials each for MCR and a conventional catheter; Y-shaped water-filled glass tube with a 5% agar clot: steer, tunnel, deploy stent, return (lee2021_steering Sec. IV)",
+ "key_numbers": "steering at 20 mT; tunnelling at 20 mT, 12 Hz; stent release at 78.5 mT on average (theory 59 mT), 100% above 80 mT; stent position error 2.30 +/- 0.34 mm vs 8.79 +/- 0.69 mm for a conventional delivery catheter (lee2021_steering Sec. IV-B)",
+ "sim_model": "none found (dynamic model of the magnetic joint for design, lee2021_steering Sec. III)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "lee2021_steering Fig. 3(b), right photo",
+  "source_url": "https://doi.org/10.1109/tie.2020.2965480",
+  "licence": "publisher copyright",
+  "credit": "Lee et al., IEEE Transactions on Industrial Electronics (2021), Fig. 3(b). publisher copyright.",
+  "edits": "native extract from lee2021_multifunctional-magnetic-catheter_TIE.pdf p. 3; cropped to the CMNS frame; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "hanyang_lee2020_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Catheter robot parts before and after assembly",
+   "source_key": "lee2021_steering",
+   "source": "Lee et al., IEEE Transactions on Industrial Electronics (2021), Fig. 8, p. 7",
+   "source_url": "https://doi.org/10.1109/tie.2020.2965480",
+   "where": "Fig. 8, p. 7",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "hanyang_lee2020_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Clot tunnelling and stent delivery in a Y-shaped glass vessel",
+   "source_key": "lee2021_steering",
+   "source": "Lee et al., IEEE Transactions on Industrial Electronics (2021), Fig. 12, p. 9",
+   "source_url": "https://doi.org/10.1109/tie.2020.2965480",
+   "where": "Fig. 12, p. 9",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "hanyang_lee2020_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Front view of the eight electromagnets around the workspace",
+   "source_key": "lee2021_steering",
+   "source": "Lee et al., IEEE Transactions on Industrial Electronics (2021), Fig. 3(b) left, p. 3",
+   "source_url": "https://doi.org/10.1109/tie.2020.2965480",
+   "where": "Fig. 3(b) left, p. 3",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "lee2021_steering",
+   "doi": "10.1109/tie.2020.2965480",
+   "url": null,
+   "title": "Steering, Tunneling, and Stent Delivery of a Multifunctional Magnetic Catheter Robot to Treat Occlusive Vascular Disease",
+   "year": 2021,
+   "venue": "IEEE Transactions on Industrial Electronics"
+  },
+  {
+   "key": "nam2018_magnetic",
+   "doi": "10.1109/tie.2017.2782220",
+   "url": null,
+   "title": "Magnetic Navigation System Utilizing a Closed Magnetic Circuit to Maximize Magnetic Field and a Mapping Method to Precisely Control Magnetic Field in Real Time",
+   "year": 2018,
+   "venue": "IEEE Transactions on Industrial Electronics"
+  },
+  {
+   "key": "zhao2022_remote",
+   "doi": "10.21037/qims-21-792",
+   "url": null,
+   "title": "Remote vascular interventional surgery robotics: a literature review",
+   "year": 2022,
+   "venue": "Quantitative Imaging in Medicine and Surgery"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (lee2021_steering); figures only (nam2018_magnetic)",
+ "notes": "Family: magnetic. zhao2022 Table 1 row 17b. Same university as hanyang_crr_kim2023 but a different lab (Jang, not Yi).",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

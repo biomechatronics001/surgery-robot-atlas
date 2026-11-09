@@ -1,0 +1,93 @@
+{
+ "schema_version": 1,
+ "id": "fau_fischer2026",
+ "name": "roboEVI",
+ "full_name": "roboEVI compact top-loading robot",
+ "group": "FAU Erlangen-Nuernberg, SPARC lab (Mathis-Ullrich; Fischer, Karstensen)",
+ "group_short": "FAU Erlangen",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2026,
+ "latest_year": 2026,
+ "versions": "2026 (single)",
+ "target_anatomy": "aortic arch / supra-aortic phantom (aortic root, left vertebral V2)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "0.035 in guidewire or 5.2 Fr catheter, one at a time",
+ "n_dof": 2,
+ "n_dof_detail": "2 (translation + rotation of one instrument)",
+ "translation_mechanism": "clamp-relay",
+ "translation_detail": "clamp-relay (two alternating carts with pneumatic membrane grippers, threaded rod, stroke 17.5 mm per cart; leader-follower hand-over)",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "stepper through pinion shaft turning the gripper gear (78.4 deg per hand-over)",
+ "device_range": "0.035 in wire and 5.2 Fr catheter tested; top-loading for any size",
+ "footprint_mm": "176 x 137.6 x 63.2",
+ "mass_kg": "N.R.",
+ "force_sensing": "none (future work)",
+ "haptics_leader": "none; gamepad",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "motion tracking with guidewire and catheter; pulsatile vascular phantom, 5 repeats per mode (aortic root / vertebral artery, manual vs robot)",
+ "key_numbers": "relative tracking error 3.6+-2.2% (translation) and 4.1+-1.6% (rotation); phantom success 90% robot vs 100% manual; unintended branch insertions 8 vs 5; hand-over limited speed 30.4 mm/s, tested up to 19 mm/s",
+ "sim_model": "none for this robot (group's stEVE/SOFA environment is separate)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "fischer2026_compact Fig. 1 (CAD, embedded as three 2237x400 strips)",
+  "source_url": "https://arxiv.org/abs/2607.11779",
+  "licence": "arXiv non-exclusive distribution licence (authors' copyright)",
+  "credit": "Fischer et al., 2026, Fig. 1. arXiv non-exclusive distribution licence (authors' copyright).",
+  "edits": "native extract; three strips restacked; cropped; 40 px top and 25 px bottom white padding on the render's white background",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "fau_fischer2026_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robot at the femoral access of a pulsatile vascular phantom with gamepad control",
+   "source_key": "fischer2026_compact",
+   "source": "Fischer et al. (2026), Fig. 2, p. 7 (arXiv 2607.11779v1)",
+   "source_url": "https://arxiv.org/abs/2607.11779",
+   "where": "Fig. 2, p. 7 (arXiv 2607.11779v1)",
+   "licence": "arXiv non-exclusive distribution licence (authors' copyright)"
+  },
+  {
+   "id": "fau_fischer2026_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Uncovered actuation unit with power supply, pneumatic valves and camera tracking rig",
+   "source_key": "fischer2026_compact",
+   "source": "Fischer et al. (2026), Fig. 3, p. 8 (arXiv 2607.11779v1)",
+   "source_url": "https://arxiv.org/abs/2607.11779",
+   "where": "Fig. 3, p. 8 (arXiv 2607.11779v1)",
+   "licence": "arXiv non-exclusive distribution licence (authors' copyright)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "fischer2026_compact",
+   "doi": null,
+   "url": "https://arxiv.org/abs/2607.11779",
+   "title": "A Compact Top-Loading Robot for Endovascular Interventions: Design, Control and Evaluation",
+   "year": 2026,
+   "venue": null
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "Fig. 1 is CAD; Fig. 3 photo shows the robot only small.",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

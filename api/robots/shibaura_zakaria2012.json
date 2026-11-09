@@ -1,0 +1,79 @@
+{
+ "schema_version": 1,
+ "id": "shibaura_zakaria2012",
+ "name": "Foolproof guide",
+ "full_name": "Shibaura Institute of Technology tele-operated foolproof catheter guide system (ER-fluid master, roller slave)",
+ "group": "Shibaura Institute of Technology, Research Organization for Advanced Engineering (Takashi Komeda) with Universiti Teknologi MARA (Noor Ayuni Che Zakaria, Cheng Yee Low, Ahmad Yusri Ismail), M. D. Mohri Hospital (Mohri Makoto) and Fraunhofer Institute for Production Technology (Roman Dumitrescu)",
+ "group_short": "Shibaura IT",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2012,
+ "latest_year": 2012,
+ "versions": "single prototype (Prod. Eng. Res. Devel. 7:81-90; online 20 Nov 2012, issue dated 2013)",
+ "target_anatomy": "interventional radiology catheterisation (vessel not specified)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "catheter, \"compliant with catheter sizes 3-11 Fr\" (Sec. 8)",
+ "n_dof": 2,
+ "n_dof_detail": "2 (thrust and rotation) on the slave and on the master (Sec. 8)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: \"passive roller as thrust mechanism while holding the catheter\", rubber with a high friction coefficient; stepping motor, DC motor and slide rail labelled in Fig. 9, their roles not stated (Sec. 8)",
+ "rotation_mechanism": "rotating-drive-unit",
+ "rotation_detail": "rotation of the slave housing about the catheter axis (Fig. 9 \"Rotation movement\"); actuator N.R.",
+ "device_range": "3-11 Fr (Sec. 8)",
+ "footprint_mm": "N.R. (\"lightweight, compact\", Sec. 8)",
+ "mass_kg": "N.R.",
+ "force_sensing": "claimed but not shown: \"It is installed with a force sensor to enable haptic feedback\" and \"For future work, force sensors will be attached to the slave robot\" (Sec. 8); design threshold: contact force above 0.12 N is treated as a collision (Sec. 6)",
+ "haptics_leader": "master tool with 2 DOF (thrust on a sliding screw and bearing, rotation) and electro-rheological (ER) fluid as a passive actuator that stiffens when force is detected (Sec. 8); not demonstrated",
+ "imaging_compat": "N.R. (concept: DSA, surgeon in a separate control room, Fig. 1)",
+ "sterility": "requirement only: \"the parts of the catheter must be sterilizable\" (Sec. 8)",
+ "highest_validation": "bench",
+ "validation_detail": "initial thrust and rotation tracking of the slave following the master; no phantom, trial counts N.R. (Sec. 8, Figs. 10-11)",
+ "key_numbers": "rotation tracking error < 1 deg with time delay < 10 ms; thrust tracking shows \"1:5 distance differences\" and a tracking error in the second stroke (Sec. 8); design limits: translational velocity below 10 mm/s, collision threshold 0.12 N (Sec. 6)",
+ "sim_model": "none found (control software in MATLAB Simulink; system specified in CONSENS)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "zakaria2012_development Fig. 9 (slave robot photo, top left of the figure), Prod. Eng. Res. Devel. 7:81-90, doi:10.1007/s11740-012-0430-6; native raster p. 8 (228 x 152)",
+  "source_url": "https://doi.org/10.1007/s11740-012-0430-6",
+  "licence": "publisher copyright",
+  "credit": "Che Zakaria et al., Production Engineering (2012), Fig. 9. publisher copyright.",
+  "edits": "native extract; cropped to drop the orange thrust arrow at the left (two small cyan rotation-arrow marks on the bracket remain); not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "shibaura_zakaria2012_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Slave roller unit: stepping motor, roller, slide rail and DC motor",
+   "source_key": "zakaria2012_development",
+   "source": "Che Zakaria et al., Production Engineering (2012), Fig. 9 (bottom), p. 8",
+   "source_url": "https://doi.org/10.1007/s11740-012-0430-6",
+   "where": "Fig. 9 (bottom), p. 8",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "zakaria2012_development",
+   "doi": "10.1007/s11740-012-0430-6",
+   "url": null,
+   "title": "Development of foolproof catheter guide system based on mechatronic design",
+   "year": 2012,
+   "venue": "Production Engineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (zakaria2012_development, 2026-10-14)",
+ "notes": "Added by F4 2026-10-14 from the A8 title-only lead (snowball via li2024_review). Mostly a CONSENS design-methodology paper; the prototype is a 2-DoF master-slave with bench tracking only. Surname is Che Zakaria (bib key zakaria2012_development). Not in S8_systems.csv.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

@@ -1,0 +1,93 @@
+{
+ "schema_version": 1,
+ "id": "shu_li2018",
+ "name": "SHU friction-wheel",
+ "full_name": "Shanghai University master-slave vascular interventional surgery robot (friction-wheel slave, catheter-handling master)",
+ "group": "Shanghai University, School of Mechatronic Engineering and Automation, Shanghai Key Laboratory of Intelligent Manufacturing and Robotics (Long Li, Zhihui Huang, Yingzhong Tian, Zexi Li) with Shenzhen Polytechnic (Wenbin Wang, Wei Chen) and Ryerson University (Fengfeng Xi)",
+ "group_short": "Shanghai U.",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2018,
+ "latest_year": 2018,
+ "versions": "2018 IEEE ROBIO prototype (li2018_design, doi:10.1109/ROBIO.2018.8664841); title only in a page-1 render (the text layer has no title)",
+ "target_anatomy": "general vascular intervention; no anatomy tested (li2018_design Sec. I-II)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "one catheter or guidewire (Sec. II); bench tests drove a catheter (Sec. III)",
+ "n_dof": 2,
+ "n_dof_detail": "2 (axial, circumferential) (Sec. II-C)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller: stepper motor 1 turns friction wheel 1; a spring clamping device presses the two wheels on the device (Sec. II-C, Figs. 3-4)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "stepper motor 2 drives a ball screw that slides friction wheel 2 sideways, rolling the device in the groove of wheel 1 (Sec. II-C, Fig. 3(b))",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "force detection at the catheter front end and a force-feedback device at the master are part of the system architecture (Sec. II-A, Fig. 1); not evaluated",
+ "haptics_leader": "custom master: the operator moves a real catheter between two spring-pressed friction wheels read by an encoder (axial) and turns an operating tube on a rotary encoder (rotation); force-feedback device described, not evaluated (Sec. II-A-B, Fig. 2)",
+ "imaging_compat": "N.R. (DSA appears only in the architecture drawing, Fig. 1)",
+ "sterility": "N.R.",
+ "highest_validation": "bench",
+ "validation_detail": "bench accuracy only: master inputs of 2, 5, 8, 10, 20 mm and 20, 45, 60, 90, 120 deg, 10 repeats each, slave output measured with an infrared range sensor and a light spot; several master-slave ratios (Sec. III-IV, Figs. 5-6, Tables I-III)",
+ "key_numbers": "position accuracy 0.17-0.60 mm (repeatability 0.07-0.14 mm) over 2-20 mm; angle accuracy 0.27-0.88 deg (repeatability 0.10-0.18 deg) over 20-120 deg (Tables I-II)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "render",
+  "source": "li2018_design Fig. 4 (structure of slave manipulator), p. 178, IEEE ROBIO 2018 doi:10.1109/ROBIO.2018.8664841",
+  "source_url": "https://doi.org/10.1109/ROBIO.2018.8664841",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Li et al., 2018 IEEE International Conference on Robotics and Biomimetics (ROBIO) (2018), Fig. 4. publisher copyright (IEEE).",
+  "edits": "page region rendered at the embedded strips' native scale (3.32 px/pt, 239 dpi; the figure is stored as ten 714 px strips plus vector labels); caption excluded; nothing erased; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "shu_li2018_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Displacement-accuracy bench: master and slave with the catheter drive device",
+   "source_key": "li2018_design",
+   "source": "Li et al., 2018 IEEE International Conference on Robotics and Biomimetics (ROBIO) (2018), Fig. 5(a)-(b), p. 179",
+   "source_url": "https://doi.org/10.1109/robio.2018.8664841",
+   "where": "Fig. 5(a)-(b), p. 179",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "shu_li2018_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Angle-accuracy bench: slave manipulator with infrared range sensor and light spot",
+   "source_key": "li2018_design",
+   "source": "Li et al., 2018 IEEE International Conference on Robotics and Biomimetics (ROBIO) (2018), Fig. 6(a)-(b), p. 179",
+   "source_url": "https://doi.org/10.1109/robio.2018.8664841",
+   "where": "Fig. 6(a)-(b), p. 179",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "li2018_design",
+   "doi": "10.1109/robio.2018.8664841",
+   "url": null,
+   "title": "Design and Performance Evaluation of a Novel Vascular Interventional Surgery Robot",
+   "year": 2018,
+   "venue": "2018 IEEE International Conference on Robotics and Biomimetics (ROBIO)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (li2018_design,; text decoded per font, title from a page-1 render)",
+ "notes": "2026-11-08 X3: new row from the hand-downloaded ROBIO 2018 paper. Different group from tianjin_song2023 (Tianjin Univ. of Technology) although both use an encoder-read real catheter as the master handle. No later paper of this robot found in lit/ (grep 'Yingzhong Tian')",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

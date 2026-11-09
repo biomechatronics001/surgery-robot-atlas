@@ -1,0 +1,103 @@
+{
+ "schema_version": 1,
+ "id": "capstan_capstanmedical2025",
+ "name": "Capstan TMVR",
+ "full_name": "Capstan Medical robotic TMVR system (catheter-based robotic delivery platform)",
+ "group": "Capstan Medical",
+ "group_short": "Capstan Medical",
+ "family": "commercial",
+ "category": "clinical-stage",
+ "first_year": 2025,
+ "latest_year": 2026,
+ "versions": "single: first-in-human cases in Santiago, early 2025 (capstan2025_press); registered first-in-human study NCT06600191 (nct06600191_capstan)",
+ "target_anatomy": "transcatheter mitral valve replacement for moderate-severe or worse mitral regurgitation (nct06600191_capstan); transfemoral venous access ('up through your femoral vein', santacruzworks_capstan)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "own steerable delivery catheter and TMVR implant (capstan2025_press; mandhumula2025_robotic text)",
+ "n_dof": 3,
+ "n_dof_detail": "3-4 (mandhumula2025_robotic Table 1); robot 'controlling all six knobs at the same time' (santacruzworks_capstan, D. Wallace)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller (mandhumula2025_robotic Table 1 'Friction rollers'; Fig. 2I 'Drive-mechanism consisting roller assembly')",
+ "rotation_mechanism": "tendon-bending",
+ "rotation_detail": "steerable-catheter deflection by a multi-spool tendon mechanism that also deploys the implant (mandhumula2025_robotic text, Table 1 'Pull-wires'); shaft rotation N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R.",
+ "haptics_leader": "N.R.",
+ "imaging_compat": "'Visual (Likely TEE and X-ray)' (mandhumula2025_robotic Table 1)",
+ "sterility": "N.R. (robot draped in an animal-lab photo, santacruzworks_capstan)",
+ "highest_validation": "human",
+ "validation_detail": "human: 2 TMVR patients at Hospital Clinico Universidad Catolica, Santiago, both with mitral regurgitation eliminated and unobstructed LVOT (capstan2025_press, 2025-03-06); registered FIH study NCT06600191: 10 participants (estimated), 4 sites (Melbourne, Sao Paulo, Santiago, Auckland), recruiting (nct06600191_capstan, accessed 2026-11-08)",
+ "key_numbers": "NCT06600191 first posted 2024-09-19, start 2025-02-24, primary completion 2026-12 (estimated), last update 2026-08-28 (nct06600191_capstan); USD 110 M financing (PR Newswire 2024-12-11)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "drawing",
+  "source": "mandhumula2025_robotic Fig. 2(I) (PMC12513367 figure file https://cdn.ncbi.nlm.nih.gov/pmc/blobs/ae99/12513367/445add2a14f2/mdcvj-21-5-1652-g2.jpg)",
+  "source_url": "https://doi.org/10.14797/mdcvj.1652",
+  "licence": "CC BY-NC 4.0",
+  "credit": "Mandhumula et al., Methodist DeBakey Cardiovascular Journal (2025), Fig. 2. CC BY-NC 4.0.",
+  "edits": "cropped panel (I) from the 800 px PMC figure; no edit; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "capstan_capstanmedical2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Draped robot and delivery catheter during an animal procedure",
+   "source_key": "santacruzworks_capstan",
+   "source": "Works (), web photo 'Aaron Evelyn Dan lab.jpg'",
+   "source_url": null,
+   "where": "web photo 'Aaron Evelyn Dan lab.jpg'",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "nct06600191_capstan",
+   "doi": null,
+   "url": null,
+   "title": "Capstan Medical TMVR Study: First-in-Human Evaluation of the Capstan TMVR System (NCT06600191)",
+   "year": 2024,
+   "venue": null
+  },
+  {
+   "key": "capstan2025_press",
+   "doi": null,
+   "url": null,
+   "title": "Capstan Medical Achieves Milestone: World's First Robotic Catheter Mitral Valve Replacements Successfully Completed",
+   "year": 2025,
+   "venue": null
+  },
+  {
+   "key": "santacruzworks_capstan",
+   "doi": null,
+   "url": null,
+   "title": "Interview: Dan Wallace, Co-founder & CTO of Capstan Medical",
+   "year": null,
+   "venue": null
+  },
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  }
+ ],
+ "read_level": "web",
+ "read_level_detail": "web (press release, registry, company interview); review-only (mandhumula2025_robotic)",
+ "notes": "Family: commercial (A4 scope; clinical-stage). No peer-reviewed paper; patents (Wallace 2024, mandhumula2025_robotic refs 62-64) not opened. Structural-heart (TMVR) robot, in scope like the TEER robots. Company site and press releases carry no photo of the robot; the only photo found shows it draped in an animal lab (gallery).",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

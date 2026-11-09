@@ -1,0 +1,129 @@
+{
+ "schema_version": 1,
+ "id": "fraunhofer_karstensen2022",
+ "name": "Wire manipulator",
+ "full_name": "Karstensen guidewire manipulator (stEVE test platform)",
+ "group": "Fraunhofer IPA, Project Group for Automation in Medicine and Biotechnology (T. Behr, L. Karstensen, J. Stallkamp) / KIT then FAU Erlangen-Nuernberg (F. Mathis-Ullrich)",
+ "group_short": "Fraunhofer IPA",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2019,
+ "latest_year": 2025,
+ "versions": "2019 CDBME test bench (behr2019_deep: 'experimental robotic manipulator' for the two guidewire DOF, 300 mm linear travel, infinite rotation, PMMA phantom, Sec. 2.4); 2020 CDBME 2D phantom bench (karstensen2020_autonomous: 'testbench manipulator ... reused', Materials and methods, Fig. 1); 2022 IJCARS (ex-vivo liver); 2025 CBM stEVE benchmark (camera and fluoroscopy benches)",
+ "target_anatomy": "hepatic veins (porcine liver ex vivo); aortic arch phantoms; planar PMMA / 3D-printed 2D vessel phantoms (2019, 2020)",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "one guidewire (0.035 in Terumo Radifocus angled stiff)",
+ "n_dof": 2,
+ "n_dof_detail": "2 (translation, continuous rotation)",
+ "translation_mechanism": "linear-stage+clamp",
+ "translation_detail": "linear-stage+clamp (wire fixed to a stepper on a linear rail driven by a second stepper)",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "stepper with the wire attached directly (infinite rotation)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (translation 300 mm)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "none; gamepad manual control",
+ "imaging_compat": "C-arm fluoroscopy with recurrent-CNN tip tracker; or overhead camera (2019-2020: camera above, light source below the phantom emulating fluoroscopy, 5 Hz; karstensen2020 Methods)",
+ "sterility": "N.R.",
+ "highest_validation": "ex-vivo",
+ "validation_detail": "2019: 10 sim-trained DDPG runs on a PMMA bifurcation phantom (behr2019 Sec. 3); 2020: 2D glycerin-water phantom, sim-trained DDPG+HER on the bench (karstensen2020 Results); 2022: 30 targets (10 per main vein) in one ex-vivo porcine liver; 2025: 100 + 100 camera trials, 10 fluoroscopy trials on printed arch phantoms",
+ "key_numbers": "2019: sim 89.6% (DDPG+HER) -> bench 7/10 (behr2019 Sec. 3); 2020: sim max 96% after 52,500 episodes, bench 'same results as in simulation', 100% with the next bifurcation as interim target (karstensen2020 Results); 2022: sim 100% (150/150) -> ex vivo 30% (9/30; wrong branch 10, entanglement 11); 2025: BasicWireNav sim 98% -> camera 97%, fluoroscopy 10/10; ArchVariety sim 90% -> camera 84%; action limits +-10 mm/s, +-6.28 rad/s at 7.5 Hz",
+ "sim_model": "yes: SOFA + BeamAdapter (behr2019_deep, karstensen2020_autonomous, karstensen2022_learning), stEVE (karstensen2025_learning)",
+ "has_sim_model": true,
+ "sim2real": "yes",
+ "sim2real_detail": "yes: behr2019_deep (full) DDPG sim 89.6% -> bench 7/10; karstensen2020_autonomous (full) DDPG+HER sim 96% -> bench same, 100% with interim targets; karstensen2022_learning (full) 100% sim -> 30% ex vivo; karstensen2025_learning (via the sim-to-real study table) 97%/84%/10-of-10",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "karstensen2025_learning Fig. 4(a) (arXiv 2410.01956 preprint, embedded 2342x1553): guidewire manipulator in its 'guido' housing, callout 6",
+  "source_url": "https://arxiv.org/abs/2410.01956",
+  "licence": "arXiv non-exclusive distribution licence (authors' copyright)",
+  "credit": "Karstensen et al., Computers in Biology and Medicine (2025), Fig. 4(a). arXiv non-exclusive distribution licence (authors' copyright).",
+  "edits": "native extract; cropped; callouts 3 and 6 and the camera-image inset kept (the inset covers the back of the housing; removing it would invent pixels); not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "fraunhofer_karstensen2022_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Guidewire manipulator housing at a phantom under the C-arm fluoroscopy detector",
+   "source_key": "karstensen2025_learning",
+   "source": "Karstensen et al., Computers in Biology and Medicine (2025), Fig. 4(b), p. 7 (arXiv 2410.01956 preprint)",
+   "source_url": "https://doi.org/10.1016/j.compbiomed.2025.110844",
+   "where": "Fig. 4(b), p. 7 (arXiv 2410.01956 preprint)",
+   "licence": "arXiv non-exclusive distribution licence (authors' copyright)"
+  },
+  {
+   "id": "fraunhofer_karstensen2022_02",
+   "status": "cleared",
+   "file": "pictures/extra/fraunhofer_karstensen2022_02.jpg",
+   "thumb": "pictures/thumbs/fraunhofer_karstensen2022_02.jpg",
+   "kind": "in-use",
+   "caption": "Ex-vivo porcine liver bench with guidewire manipulator, C-arm, pump and gamepad",
+   "source_key": "karstensen2022_learning",
+   "source": "Karstensen et al., International Journal of Computer Assisted Radiology and Surgery (2022), Fig. 3(c), p. 5",
+   "source_url": "https://doi.org/10.1007/s11548-022-02646-8",
+   "where": "Fig. 3(c), p. 5",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "fraunhofer_karstensen2022_03",
+   "status": "cleared",
+   "file": "pictures/extra/fraunhofer_karstensen2022_03.jpg",
+   "thumb": "pictures/thumbs/fraunhofer_karstensen2022_03.jpg",
+   "kind": "setup",
+   "caption": "2020 test bench: 2-DOF manipulator housing, lit 2D phantom, camera and gamepad",
+   "source_key": "karstensen2020_autonomous",
+   "source": "Karstensen et al., Current Directions in Biomedical Engineering (2020), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1515/cdbme-2020-0007",
+   "where": "Fig. 1, p. 2",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "karstensen2022_learning",
+   "doi": "10.1007/s11548-022-02646-8",
+   "url": null,
+   "title": "Learning-based autonomous vascular guidewire navigation without human demonstration in the venous system of a porcine liver",
+   "year": 2022,
+   "venue": "International Journal of Computer Assisted Radiology and Surgery"
+  },
+  {
+   "key": "karstensen2025_learning",
+   "doi": "10.1016/j.compbiomed.2025.110844",
+   "url": null,
+   "title": "Learning-based autonomous navigation, benchmark environments and simulation framework for endovascular interventions",
+   "year": 2025,
+   "venue": "Computers in Biology and Medicine"
+  },
+  {
+   "key": "karstensen2020_autonomous",
+   "doi": "10.1515/cdbme-2020-0007",
+   "url": null,
+   "title": "Autonomous guidewire navigation in a two dimensional vascular phantom",
+   "year": 2020,
+   "venue": "Current Directions in Biomedical Engineering"
+  },
+  {
+   "key": "behr2019_deep",
+   "doi": "10.1515/cdbme-2019-0002",
+   "url": null,
+   "title": "Deep Reinforcement Learning for the Navigation of Neurovascular Catheters",
+   "year": 2019,
+   "venue": "Current Directions in Biomedical Engineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (karstensen2022_learning; behr2019_deep and karstensen2020_autonomous CDBME PDFs read 2026-11-08; karstensen2025 via the sim-to-real study table)",
+ "notes": "Manipulator is small and drawn as a labelled box; no close-up photo in the paper. | 2026-11-08 X3: first_year 2022 -> 2019: behr2019 (Sec. 2.4) already ran a sim-trained DDPG on this group's 2-DOF guidewire manipulator (300 mm travel, infinite rotation), and karstensen2020 states the test-bench manipulator was reused. behr2019 is not simulation-only: 7 of 10 bench runs reached the goal (Sec. 3)",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

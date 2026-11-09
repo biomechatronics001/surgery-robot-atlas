@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sim2real.schema.json",
+  "title": "Catheter Robot Atlas: simulation-to-robot study record",
+  "description": "One study in which a controller or model trained in simulation ran on a physical catheter or guidewire robot, with its success in simulation and on the robot.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "key",
+    "year",
+    "title"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(_[a-z0-9]+)+$",
+      "description": "BibTeX key of the study."
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1990,
+      "maximum": 2035
+    },
+    "venue": {
+      "type": "string"
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Paper title from the bibliography; null when not in it."
+    },
+    "doi": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^10\\.\\d{4,9}/\\S+$"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^https?://"
+    },
+    "robot_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$",
+      "description": "The robot record this study ran on, when the robot is in the catalogue."
+    },
+    "robot_used": {
+      "type": "string",
+      "description": "The physical robot as the paper describes it."
+    },
+    "simulator": {
+      "type": "string"
+    },
+    "trained": {
+      "type": "string",
+      "description": "What was trained (policy, perception model) and how."
+    },
+    "observation": {
+      "type": "string"
+    },
+    "action_space": {
+      "type": "string"
+    },
+    "gap_closing": {
+      "type": "string",
+      "description": "What the study did to close the simulation-to-robot gap."
+    },
+    "real_setup": {
+      "type": "string",
+      "description": "Where it ran on hardware (phantom, animal) and how often."
+    },
+    "sim_success": {
+      "type": "string",
+      "description": "Success in simulation as reported."
+    },
+    "real_success": {
+      "type": "string",
+      "description": "Success on the robot as reported."
+    },
+    "gap_measure": {
+      "type": "string"
+    },
+    "code_public": {
+      "type": "string"
+    },
+    "read_level": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x-internal": true,
+  "x-internal-note": "The whole sim-to-real library stays in-house: not in the public build or the public repository."
+}

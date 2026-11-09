@@ -1,0 +1,92 @@
+{
+ "schema_version": 1,
+ "id": "n1_remedy2025",
+ "name": "N1",
+ "full_name": "N1 System",
+ "group": "Remedy Robotics",
+ "group_short": "Remedy Robotics",
+ "family": "commercial",
+ "category": "clinical-stage",
+ "first_year": 2025,
+ "latest_year": 2026,
+ "versions": "N1",
+ "target_anatomy": "neurovascular / general (stroke, MI, trauma per company)",
+ "devices": [
+  "other"
+ ],
+ "devices_driven": "up to 4 passive instruments (chen2026_teleoperation via S8)",
+ "n_dof": null,
+ "n_dof_detail": "N.R.",
+ "translation_mechanism": "not-reported",
+ "translation_detail": "N.R.",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none reported",
+ "haptics_leader": "N.R.",
+ "imaging_compat": "remote operation across hospitals",
+ "sterility": "N.R.",
+ "highest_validation": "human",
+ "validation_detail": "fully remote brain angiogram between two Toronto hospitals, Oct 2025, operator V. Mendes Pereira (therobotreport, ieee spectrum via search; case count N.R.); remote silicone-model navigation over 12,800 km (chen2026_teleoperation)",
+ "key_numbers": "US$35M raised (Axios Oct 2025 via therobotreport); 45 patents (search summary)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "clinical-photo",
+  "source": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000c.jpg (Unity Health Toronto story https://unityhealth.to/2025/11/first-robotic-assisted-neurovascular-procedure/)",
+  "source_url": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000c.jpg",
+  "licence": "press image (Unity Health Toronto; photographer credit on the page)",
+  "credit": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000c.jpg (Unity Health Toronto story https://unityhealth.to/2025/11/first-robotic-assisted-neurovascular-procedure/). Licence: press image (Unity Health Toronto; photographer credit on the page).",
+  "edits": "cropped (380,250)-(1280,880) of 1500x1000; not upscaled; no tone change; no erasing",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "n1_remedy2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Draped N1 bedside unit at the angiography table with the treating team",
+   "source_key": "web:unityhealth.to",
+   "source": "unityhealth.to, (Unity Health Toronto story, 2025-11)",
+   "source_url": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000d.jpg",
+   "where": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000d.jpg (Unity Health Toronto story, 2025-11)",
+   "licence": "press image"
+  },
+  {
+   "id": "n1_remedy2025_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Neurointerventionalist at the remote N1 workstation outside the procedure room",
+   "source_key": "web:unityhealth.to",
+   "source": "unityhealth.to, (Unity Health Toronto story, 2025-11)",
+   "source_url": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000a.jpg",
+   "where": "https://unityhealth.to/wp-content/uploads/2025/09/2509-cut-the-cord-1500-1000a.jpg (Unity Health Toronto story, 2025-11)",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "chen2026_teleoperation",
+   "doi": "10.1109/TMRB.2026.3681030",
+   "url": null,
+   "title": "Remote Teleoperation of Endovascular Intervention Robots: A Systematic Review",
+   "year": 2026,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  }
+ ],
+ "read_level": "web",
+ "read_level_detail": "web",
+ "notes": "No clearance found (June 2026 summaries say N1 not yet for sale). Mission Thrombectomy exclusive robotics partner (Oct 2025); Australian Stroke Alliance partnership. Head of Regulatory Affairs job posting seen.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

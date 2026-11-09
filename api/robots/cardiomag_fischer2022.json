@@ -1,0 +1,100 @@
+{
+ "schema_version": 1,
+ "id": "cardiomag_fischer2022",
+ "name": "CardioMag",
+ "full_name": "CardioMag eMNS with magnetic catheter and magnetic localisation (ETH)",
+ "group": "Nelson, ETH Zurich (Fischer, Boehler)",
+ "group_short": "ETH Zurich",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2022,
+ "latest_year": 2022,
+ "versions": "single (RA-L 2022); same eMNS platform as Navion's academic origin; 2017-19: ETH (Nelson) magnetic catheters in Aeon Phocus: tethered magnet catheter with force and 5-DOF pose control (Chautems 2017 ICRA) and variable-stiffness 2- and 3-segment catheters (Chautems 2017 IROS; 2019 Adv. Intell. Syst.) (Hwang 2020 Figs. 8a, 8g) (hwang2020_review)",
+ "target_anatomy": "endoluminal, 2D vascular models (24 mm and 11 mm channels)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "own catheter: OD 2.8 mm / ID 2 mm Flexan tube with 3 mm OD x 6 mm permanent magnet at tip, Hall sensor 12 mm behind magnet",
+ "n_dof": null,
+ "n_dof_detail": "field direction and gradient from 8 electromagnets; advance by Maxon-motor catheter advancer at 10 mm/s",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "field direction",
+ "device_range": "N.R.",
+ "footprint_mm": "eMNS about 0.3 m scale bar in Fig. 1 (size N.R. in text)",
+ "mass_kg": "N.R.",
+ "force_sensing": "Hall-effect sensor for localisation (range +/- 36 mT per axis), no force sensing",
+ "haptics_leader": "no",
+ "imaging_compat": "localisation from magnetic field; fluoroscopy minimised; overhead camera as ground truth",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "2D vascular models a and b; catheter navigated through all branches; localisation tested over 40 trials on path 1-3 of model a",
+ "key_numbers": "eMNS fields 20 mT, gradient 0.15 mT/mm; mean localisation error 3.64 mm (sd 1.61) model b, 2.74 mm with extra field change; model a mean 7.94 mm (sd 2.94), 5.65 mm with extra gradient; position estimate 38.3 ms",
+ "sim_model": "linear model of the eMNS (coil currents to field), calibrated; no physics simulator of the catheter",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "photo",
+  "source": "fischer2022_using Fig. 3(a) (setup inside CardioMag: advancer, catheter, phantom between the coils)",
+  "source_url": "https://doi.org/10.1109/lra.2022.3181420",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Fischer et al., IEEE Robotics and Automation Letters (2022), Fig. 3(a). publisher copyright (IEEE).",
+  "edits": "native extract, crop left panel only",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "cardiomag_fischer2022_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "Rendering of the CardioMag electromagnetic navigation system",
+   "source_key": "fischer2022_using",
+   "source": "Fischer et al., IEEE Robotics and Automation Letters (2022), Fig. 1(a), p. 2",
+   "source_url": "https://doi.org/10.1109/lra.2022.3181420",
+   "where": "Fig. 1(a), p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "cardiomag_fischer2022_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Magnetic catheter in the vascular model: overhead camera and RViz overlay",
+   "source_key": "fischer2022_using",
+   "source": "Fischer et al., IEEE Robotics and Automation Letters (2022), Fig. 3(b-c), p. 3",
+   "source_url": "https://doi.org/10.1109/lra.2022.3181420",
+   "where": "Fig. 3(b-c), p. 3",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "fischer2022_using",
+   "doi": "10.1109/lra.2022.3181420",
+   "url": null,
+   "title": "Using Magnetic Fields to Navigate and Simultaneously Localize Catheters in Endoluminal Environments",
+   "year": 2022,
+   "venue": "IEEE Robotics and Automation Letters"
+  },
+  {
+   "key": "hwang2020_review",
+   "doi": "10.1007/s11370-020-00311-0",
+   "url": null,
+   "title": "A review of magnetic actuation systems and magnetically actuated guidewire- and catheter-based microrobots for vascular interventions",
+   "year": 2020,
+   "venue": "Intelligent Service Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "Centre-line automation plus localisation from field only. Commercial Navion is A4's.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

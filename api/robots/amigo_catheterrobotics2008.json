@@ -1,0 +1,143 @@
+{
+ "schema_version": 1,
+ "id": "amigo_catheterrobotics2008",
+ "name": "Amigo",
+ "full_name": "Amigo Remote Catheter System",
+ "group": "Catheter Robotics, now Catheter Precision (VTAK)",
+ "group_short": "Catheter Robotics",
+ "family": "commercial",
+ "category": "commercial",
+ "first_year": 2008,
+ "latest_year": 2026,
+ "versions": "single",
+ "target_anatomy": "cardiac EP (mapping)",
+ "devices": [
+  "catheter",
+  "sheath"
+ ],
+ "devices_driven": "one standard steerable EP catheter handle (Boston Scientific Blazer or Biosense Webster EZ Steer orientation, docking station specific to the catheter type); no proprietary catheters, introducers or sheaths (catheterrobotics2020_amigo_BROCHURE pp. 3, 7)",
+ "n_dof": 3,
+ "n_dof_detail": "3 (insert/withdraw, continuous 360-degree rotation, bidirectional deflection) (brochure p. 5)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: mechanical cradle moving catheter handle",
+ "rotation_mechanism": "handle-rotation",
+ "rotation_detail": "cradle",
+ "device_range": "linear translation < 12 +- 2 mm/s; linear resolution < 1.6 mm; rotation resolution < 1.1 deg; rotation max < 0.42 rev/s; articulation resolution 1.0% full scale; articulation max 0.48 rev/s (brochure p. 3)",
+ "footprint_mm": "1016 x 1372 x 1118 mm (H x W x D; converted by X2 from 40 x 54 x 44 in as listed, whole robot) (brochure p. 3)",
+ "mass_kg": "approx. 70 lb = 31.8 kg (converted by X2) (brochure p. 3)",
+ "force_sensing": "none (used with contact-force catheters)",
+ "haptics_leader": "no: handheld remote controller like a catheter handle (rotation knob, deflection knob, insert and withdraw buttons), up to 100 ft away (brochure p. 5)",
+ "imaging_compat": "uses existing EP-lab monitors and workstations, no room rebuild (brochure p. 3)",
+ "sterility": "disposable kit: drapes over the sides and top, nosecone to the introducer, catheter track, docking station and spreader form the sterile interface (brochure p. 7)",
+ "highest_validation": "human",
+ "validation_detail": "IDE trial NCT01139814: 206 patients enrolled at 13 centres, 8 pre-specified locations each, 1,448 locations mapped (brochure p. 1); 181-pt analysis 1,396/1,448 (96%) (PMC7252924 via search, not opened)",
+ "key_numbers": "efficacy 96% (97% adjusted for missing source data; 99% with fluoroscopic confirmation only); responder success (6 of 8 locations) 98%; mean manipulation time 45 s per location, falling significantly by the 3rd case; no major complications, no perforations (brochure p. 1); FDA K122488 (2012): manipulation of diagnostic catheters in RA/RV only, ablation not established (510k.innolitics via search summary)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "product-photo",
+  "source": "catheterrobotics2020_amigo_BROCHURE (Catheter Robotics \"Amigo Remote Catheter System\" product sheet 82-1012-001 Rev1, (c) 2012), p. 3 embedded image (5616 x 3744; the page shows only a clipped part of it),",
+  "source_url": null,
+  "licence": "press image (Catheter Robotics brochure)",
+  "credit": "Catheter Robotics, 2012. press image (Catheter Robotics brochure).",
+  "edits": "native extract; cropped (0,520)-(5616,3744) to drop a lamp reflection at the top; nothing erased; none upscaled; no tone change",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "amigo_catheterrobotics2008_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Amigo handheld remote controller held in the operator's hand",
+   "source_key": "chen2023_operating",
+   "source": "Chen et al., IEEE Transactions on Medical Robotics and Bionics (2023), Fig. 8(e), p. 7",
+   "source_url": "https://doi.org/10.1109/tmrb.2023.3272049",
+   "where": "Fig. 8(e), p. 7",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "amigo_catheterrobotics2008_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Amigo under its sterile drape on the table of an EP laboratory",
+   "source_key": "catheterrobotics2020_amigo_BROCHURE",
+   "source": "Catheter Robotics (2012), brochure \"Amigo in Clinical Use\" (82-0100-005 Rev1), p. 1 (embedded image)",
+   "source_url": null,
+   "where": "brochure \"Amigo in Clinical Use\" (82-0100-005 Rev1), p. 1 (embedded image)",
+   "licence": "press image"
+  },
+  {
+   "id": "amigo_catheterrobotics2008_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Handheld remote controller with rotation knob, deflection knob and insert/withdraw buttons",
+   "source_key": "catheterrobotics2020_amigo_BROCHURE",
+   "source": "Catheter Robotics (2012), brochure \"Controller\" sheet (82-8020-001 Rev1), p. 5 (embedded image)",
+   "source_url": null,
+   "where": "brochure \"Controller\" sheet (82-8020-001 Rev1), p. 5 (embedded image)",
+   "licence": "press image"
+  },
+  {
+   "id": "amigo_catheterrobotics2008_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Disposable docking station and track that hold the catheter handle",
+   "source_key": "catheterrobotics2020_amigo_BROCHURE",
+   "source": "Catheter Robotics (2012), brochure \"Disposable Kit\" sheet (82-2000-001 Rev01), p. 7 (embedded image)",
+   "source_url": null,
+   "where": "brochure \"Disposable Kit\" sheet (82-2000-001 Rev01), p. 7 (embedded image)",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "rafiitari2014_current",
+   "doi": "10.1007/s10439-013-0946-8",
+   "url": null,
+   "title": "Current and Emerging Robot-Assisted Endovascular Catheterization Technologies: A Review",
+   "year": 2014,
+   "venue": "Annals of Biomedical Engineering"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "chen2026_teleoperation",
+   "doi": "10.1109/TMRB.2026.3681030",
+   "url": null,
+   "title": "Remote Teleoperation of Endovascular Intervention Robots: A Systematic Review",
+   "year": 2026,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "catheterrobotics2020_amigo_BROCHURE",
+   "doi": null,
+   "url": null,
+   "title": "Amigo Remote Catheter System brochure (Amigo in Clinical Use; Technical Specifications; Controller; Disposable Kit)",
+   "year": 2012,
+   "venue": null
+  }
+ ],
+ "read_level": "web",
+ "read_level_detail": "brochure (full, catheterrobotics2020_amigo_BROCHURE); web",
+ "notes": "Transcontinental in-vitro remote demo (Serafini 2022, 3,380 km, chen2026_teleoperation Table I). Company still lists Amigo as an IP asset in FY2025 (aggregator). | X2 2026-11-08: Amigo brochure (Catheter Robotics, (c) 2012) read in full; the main picture is now its studio product photo. | X4 2026-11-08: footprint cell reordered so the mm triple comes first (the volume parsers read the first A x B x C as mm)",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

@@ -1,0 +1,121 @@
+{
+ "schema_version": 1,
+ "id": "siemens_ice_kim2020",
+ "name": "ICE manipulator",
+ "full_name": "Siemens Healthineers robotic ICE catheter manipulator (proximal and distal units)",
+ "group": "Siemens Healthineers Digital Technology & Innovation (Y.-H. Kim, A. Kapoor, T. Mansi) with Houston Methodist (C. H. Lin, Z. Li) and Texas A&M (R. Langari, zero-slack design)",
+ "group_short": "Siemens",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2020,
+ "latest_year": 2022,
+ "versions": "2020 arXiv (kim2020_towards: 'Back' unit on the handle turns both knobs and gives bulk rotation, 'Front' unit at the introducer gives translation and rotation; 3 pig experiments) / 2022 IJCARS 4-DOF manipulator with automated view recovery (distal and proximal units; 4 pig experiments); 2022 arXiv zero-slack separable ICE robot (debuy2022_design: reusable back portion with four Faulhaber LM 1483-080-11-C linear motors pulling the four tendons directly through 3:1 spools, disposable front portion clipped on with a twist lock and magnetic coupling; 2 bending DOF only, translation/rotation not handled; Materials and Methods, Fig. 1); 2025 arXiv tip-visibility guidance (title)",
+ "target_anatomy": "intracardiac echocardiography during EP and structural-heart procedures (incl. transseptal puncture)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "ACUSON AcuNav Volume ICE catheters (Siemens Healthineers)",
+ "n_dof": 4,
+ "n_dof_detail": "4 (two knob angles, bulk rotation, translation)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: proximal unit at the introducer sheath gives linear and rotational motion of the shaft (mechanism N.R.)",
+ "rotation_mechanism": "handle-rotation",
+ "rotation_detail": "distal unit holds the handle, turns both knobs and gives bulk rotation synchronised with the proximal unit",
+ "device_range": "one ICE catheter family",
+ "footprint_mm": "zero-slack version: 298 mm long, 66 mm diameter (debuy2022 Fig. 1(a) dimension labels); 2020/2022 manipulator N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "6-DOF analog joystick, no force feedback",
+ "imaging_compat": "ICE ultrasound; fluoroscopy-free robot-guided transseptal punctures in animals",
+ "sterility": "zero-slack version: reusable actuator back portion, disposable front portion that holds the catheter tendons (debuy2022 Introduction, Fig. 1); 2020/2022 manipulator N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "4 animal experiments (pig, Houston Methodist MITIE) including 2 fluoro-less robot-guided transseptal punctures; beating-heart phantom (Archetype Medical) (kim2022 Sec. 3)",
+ "key_numbers": "view recovery 2.09 +- 0.90 mm and 3.93 +- 2.07 deg in animals, 0.67 +- 0.79 mm and 0.37 +- 0.19 deg in phantom (kim2022 abstract); bench compensation at 60 deg bend 14.8 mm / 31.0 deg -> 5.0 mm / 10.3 deg RMSE (kim2020 arXiv); zero-slack bench, 3 sinusoid trials: tip MAE 4.80 mm / 6.11 deg, 3.31 mm / 3.26 deg with +/-10 deg hysteresis compensation (debuy2022 Table 1)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "clinical-photo",
+  "source": "kim2022_ice_IJCARS Fig. 1(b) robotic ICE manipulator (distal and proximal units) on the pig",
+  "source_url": "https://doi.org/10.1007/s11548-022-02631-1",
+  "licence": "publisher copyright (Springer, (c) CARS 2022)",
+  "credit": "Kim et al., International Journal of Computer Assisted Radiology and Surgery (2022), Fig. 1(b). publisher copyright (Springer, (c) CARS 2022).",
+  "edits": "native extract (1500x961); cropped to panel (b) without its panel caption; label boxes and arrows on the robot left as is; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "siemens_ice_kim2020_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Robotic ICE manipulator on the pig in the CT suite, operators at the table",
+   "source_key": "kim2022_automated",
+   "source": "Kim et al., International Journal of Computer Assisted Radiology and Surgery (2022), Fig. 1(a), p. 3",
+   "source_url": "https://doi.org/10.1007/s11548-022-02631-1",
+   "where": "Fig. 1(a), p. 3",
+   "licence": "publisher copyright (Springer, (c) CARS 2022)"
+  },
+  {
+   "id": "siemens_ice_kim2020_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "2020 version on the pig: orange back unit on the handle, front unit at the sheath",
+   "source_key": "kim2020_towards",
+   "source": "Kim et al. (2020), Fig. 1, top photograph, p. 2 (arXiv 2009.05859)",
+   "source_url": "https://doi.org/10.48550/ARXIV.2009.05859",
+   "where": "Fig. 1, top photograph, p. 2 (arXiv 2009.05859)",
+   "licence": "arXiv non-exclusive distribution licence (authors' copyright)"
+  },
+  {
+   "id": "siemens_ice_kim2020_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "Zero-slack separable ICE robot: reusable linear-motor back portion, disposable tendon front portion",
+   "source_key": "debuy2022_design",
+   "source": "DeBuy et al. (2022), Fig. 1(a)-(c), p. 1 (arXiv 2204.00645)",
+   "source_url": "https://doi.org/10.48550/ARXIV.2204.00645",
+   "where": "Fig. 1(a)-(c), p. 1 (arXiv 2204.00645)",
+   "licence": "arXiv non-exclusive distribution licence (authors' copyright)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "kim2022_automated",
+   "doi": "10.1007/s11548-022-02631-1",
+   "url": null,
+   "title": "Automated catheter tip repositioning for intra-cardiac echocardiography",
+   "year": 2022,
+   "venue": "International Journal of Computer Assisted Radiology and Surgery"
+  },
+  {
+   "key": "kim2020_towards",
+   "doi": "10.48550/ARXIV.2009.05859",
+   "url": null,
+   "title": "Towards Automatic Manipulation of Intra-cardiac Echocardiography Catheter",
+   "year": 2020,
+   "venue": "arXiv"
+  },
+  {
+   "key": "debuy2022_design",
+   "doi": "10.48550/ARXIV.2204.00645",
+   "url": null,
+   "title": "Design and validation of zero-slack separable manipulator for Intracardiac Echocardiography",
+   "year": 2022,
+   "venue": "arXiv"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (IJCARS 2022; arXiv 2009.05859, PDF ); full (zero-slack, 2-page arXiv 2204.00645, )",
+ "notes": "Industrial research prototype, not a product; category academic for that reason. Covers the 'Houston' gap through Houston Methodist. | 2026-11-08 X3: zero-slack paper read in full (it is a 2-page abstract); kim2020 PDF confirms 3 animal experiments in the 2020 version, the row keeps kim2022's 4",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

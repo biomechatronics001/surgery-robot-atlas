@@ -1,0 +1,130 @@
+{
+ "schema_version": 1,
+ "id": "polymtl_gosselin2011",
+ "name": "MRN platform",
+ "full_name": "MRI-based magnetic resonance navigation platform steering bead-tipped catheters and guidewires with added gradient coils",
+ "group": "Martel, NanoRobotics Laboratory, Polytechnique Montreal (with Soulez, CHUM, for the animal study)",
+ "group_short": "Polytechnique",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2011,
+ "latest_year": 2015,
+ "versions": "2011: catheter with ferromagnetic spheres steered by MRI gradients, deflection characterised (gosselin2011_characterization, review-only); MRN platform with a propulsion and imaging coil insert in a 1.5-T Siemens Sonata (vonthron2011_mri); 2015: guidewire with a ferromagnetic bead steered in 2 rabbits (lalande2015_vivo, abstract)",
+ "target_anatomy": "selective catheterization of aortic branches (renal, superior mesenteric and iliac arteries) in rabbits (lalande2015_vivo abstract)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "2.5 Fr catheter (FasTracker 018, Boston Scientific) with two 0.9 mm chrome-steel beads 1.6 mm apart (vonthron2011_mri Sec. VII-A); guidewire with a magnetic bead at its tip (lalande2015_vivo abstract)",
+ "n_dof": null,
+ "n_dof_detail": "3D gradient force on the tip bead (three propulsion gradient axes, vonthron2011_mri Sec. IV)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (gradient-force steering of the tip); advance N.R. in the abstract (manual per li2020_magnetic Sec. 4.1: 'blindly controlled' between tracking sequences)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "gradient direction of the added coils",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (coil insert inside a clinical 1.5-T bore, vonthron2011_mri Fig. 2)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "no",
+ "imaging_compat": "MRI tracking sequence interleaved with propulsion (imaging and propulsion mutually exclusive, vonthron2011_mri Fig. 3); MRA roadmap and dedicated tracking (lalande2015_vivo abstract)",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "2 rabbits: selective catheterization of right and left renal arteries successful and reproducible, SMA and iliac feasible, no inadvertent side-branch entry when advanced without actuation (lalande2015_vivo abstract); catheter deflection in a water bath for gradients -400 to +400 mT/m in Maxwell coils and in the propulsion insert (vonthron2011_mri Sec. VII-A, Figs. 5-7)",
+ "key_numbers": "propulsion insert up to 450 mT/m in three directions; minimum coil rise time 20 ms; clinical imaging gradients about 20 mT/m effective (40 mT/m nominal) on a Siemens Sonata (vonthron2011_mri Sec. III-IV)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "vonthron2011_mri Fig. 2",
+  "source_url": "https://doi.org/10.1109/iros.2011.6094721",
+  "licence": "publisher copyright",
+  "credit": "Vonthron et al., 2011 IEEE/RSJ International Conference on Intelligent Robots and Systems (2011), Fig. 2. publisher copyright.",
+  "edits": "native extract from vonthron2011_mri-platform_IROS.pdf p. 3; no crop; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "polymtl_gosselin2011_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Catheter and camera inside the propulsion coil insert",
+   "source_key": "vonthron2011_mri",
+   "source": "Vonthron et al., 2011 IEEE/RSJ International Conference on Intelligent Robots and Systems (2011), Fig. 6(a), p. 5",
+   "source_url": "https://doi.org/10.1109/iros.2011.6094721",
+   "where": "Fig. 6(a), p. 5",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "polymtl_gosselin2011_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Catheter deflection test between a pair of Maxwell coils",
+   "source_key": "vonthron2011_mri",
+   "source": "Vonthron et al., 2011 IEEE/RSJ International Conference on Intelligent Robots and Systems (2011), Fig. 5(a), p. 5",
+   "source_url": "https://doi.org/10.1109/iros.2011.6094721",
+   "where": "Fig. 5(a), p. 5",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "polymtl_gosselin2011_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Catheter tip with two ferromagnetic beads",
+   "source_key": "vonthron2011_mri",
+   "source": "Vonthron et al., 2011 IEEE/RSJ International Conference on Intelligent Robots and Systems (2011), Fig. 4, p. 4",
+   "source_url": "https://doi.org/10.1109/iros.2011.6094721",
+   "where": "Fig. 4, p. 4",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "vonthron2011_mri",
+   "doi": "10.1109/iros.2011.6094721",
+   "url": null,
+   "title": "A MRI-based integrated platform for the navigation of micro-devices and microrobots",
+   "year": 2011,
+   "venue": "2011 IEEE/RSJ International Conference on Intelligent Robots and Systems"
+  },
+  {
+   "key": "lalande2015_vivo",
+   "doi": "10.1118/1.4906194",
+   "url": null,
+   "title": "In vivo demonstration of magnetic guidewire steerability in a MRI system with additional gradient coils",
+   "year": 2015,
+   "venue": "Medical Physics"
+  },
+  {
+   "key": "gosselin2011_characterization",
+   "doi": "10.1118/1.3622599",
+   "url": null,
+   "title": "Characterization of the deflections of a catheter steered using a magnetic resonance imaging system",
+   "year": 2011,
+   "venue": "Medical Physics"
+  },
+  {
+   "key": "li2020_magnetic",
+   "doi": "10.1007/s11370-020-00311-0",
+   "url": null,
+   "title": "A review of magnetic actuation systems and magnetically actuated guidewire- and catheter-based microrobots for vascular interventions",
+   "year": 2020,
+   "venue": "Intelligent Service Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (vonthron2011_mri); abstract (lalande2015_vivo); review-only (gosselin2011_characterization via li2020_magnetic Sec. 4.2)",
+ "notes": "Family: magnetic. The group's untethered MRN (1.5 mm sphere in a swine carotid) is out of scope. Lalande 2015 and Gosselin 2011 are Med. Phys. (Wiley): manual list; Lalande Fig. (in vivo setup) would be the better picture.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

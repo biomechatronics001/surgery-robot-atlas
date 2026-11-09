@@ -1,0 +1,115 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "review.schema.json",
+ "title": "Catheter Robot Atlas: hardware review record",
+ "description": "One published review of endovascular robot hardware, described by what it covers.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "schema_version",
+  "key",
+  "year",
+  "title",
+  "doi"
+ ],
+ "properties": {
+  "schema_version": {
+   "type": "integer",
+   "const": 1
+  },
+  "key": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(_[a-z0-9]+)+$",
+   "description": "BibTeX key <firstauthor><year>_<word>."
+  },
+  "year": {
+   "type": "integer",
+   "minimum": 1990,
+   "maximum": 2035,
+   "description": "Publication year."
+  },
+  "venue": {
+   "type": "string",
+   "description": "Journal or conference."
+  },
+  "title": {
+   "type": "string",
+   "minLength": 1
+  },
+  "doi": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "pattern": "^10\\.\\d{4,9}/\\S+$",
+   "description": "DOI without the https://doi.org/ prefix."
+  },
+  "n_robots": {
+   "type": "string",
+   "description": "How many robots the review lists, and where."
+  },
+  "robot_pictures": {
+   "type": "string",
+   "description": "Whether the review shows pictures of the robots it lists."
+  },
+  "taxonomy_axes": {
+   "type": "string",
+   "description": "How the review classifies robots."
+  },
+  "commercial": {
+   "type": "string",
+   "description": "Coverage of commercial systems (yes / no / which)."
+  },
+  "academic": {
+   "type": "string",
+   "description": "Coverage of academic robots."
+  },
+  "actuated_tip": {
+   "type": "string",
+   "description": "Coverage of actuated-tip devices."
+  },
+  "magnetic": {
+   "type": "string",
+   "description": "Coverage of magnetic navigation."
+  },
+  "simulation": {
+   "type": "string",
+   "description": "Coverage of simulation.",
+   "x-internal": true
+  },
+  "sim2real": {
+   "type": "string",
+   "description": "Coverage of simulation-to-robot transfer.",
+   "x-internal": true
+  },
+  "pages": {
+   "type": [
+    "integer",
+    "string",
+    "null"
+   ],
+   "description": "Page count."
+  },
+  "n_refs": {
+   "type": [
+    "integer",
+    "string",
+    "null"
+   ],
+   "description": "Number of references."
+  },
+  "citations": {
+   "type": [
+    "integer",
+    "string",
+    "null"
+   ],
+   "description": "Citation count when the review was read (source: OpenCitations or publisher page)."
+  },
+  "read_level": {
+   "type": "string",
+   "description": "How the review was read."
+  }
+ },
+ "x-internal-note": "Fields with x-internal: true stay in-house: the public build and the public repository leave them out."
+}

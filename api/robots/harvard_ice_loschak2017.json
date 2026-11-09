@@ -1,0 +1,87 @@
+{
+ "schema_version": 1,
+ "id": "harvard_ice_loschak2017",
+ "name": "ICE catheter robot",
+ "full_name": "Harvard 4-DOF robotic ultrasound (ICE) catheter steering system",
+ "group": "Harvard SEAS (R. D. Howe; P. M. Loschak, A. Degirmenci) with MIT Lincoln Laboratory (L. J. Brattain) and Beth Israel Deaconess Medical Center (C. M. Tschabrunn, E. Anter)",
+ "group_short": "Harvard",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2017,
+ "latest_year": 2020,
+ "versions": "2017 TRO algorithms for automatically pointing ICE catheters, benchtop (full, PMC author manuscript); 2020 IJRR in-vivo automatic steering with respiratory motion compensation (full, loschak2020_automatically); earlier in vivo navigation study Degirmenci et al. 2016 (cited in loschak2020 Sec. 1, not read)",
+ "target_anatomy": "intracardiac echocardiography in the heart chambers",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "AcuNav 10 Fr (3.30 mm) 110 cm ICE catheter with 64-element array (Biosense Webster) (TRO 2017 Sec. II)",
+ "n_dof": 4,
+ "n_dof_detail": "4 (pitch knob, yaw knob, handle roll, handle translation)",
+ "translation_mechanism": "linear-stage+clamp",
+ "translation_detail": "linear-stage+clamp (lead-screw translation stage carries the whole handle)",
+ "rotation_mechanism": "handle-rotation",
+ "rotation_detail": "motor grounded to the stage turns the handle by timing belt; two handle-mounted motors turn the knobs by timing belts",
+ "device_range": "one ICE catheter model",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none reported",
+ "haptics_leader": "none (automatic target-based steering)",
+ "imaging_compat": "ICE ultrasound; EM tracking of instrument tip in tests; IJRR 2020: four EM trackers (two on the US catheter, one on the target catheter, one on the chest wall for respiration) (Sec. 3.2)",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "2017: benchtop water tank with gelatin left-atrium phantom; 2020: one 64 kg live pig, US catheter via a 14 Fr femoral-vein introducer into the right atrium, target 6 Fr quadpolar catheter in the left ventricle, heart paced at 120 bpm; volume-imaging steps (18 steps, 133 s), instrument tracking (329 s) and tracking a manually steered target (431 s) (IJRR 2020 Sec. 3.2-3.3)",
+ "key_numbers": "benchtop position RMS 1.9 mm; imager spinning 0.25 deg RMS with 1.0 mm tip drift; 3-D pointing 1.6 mm and 0.17 deg RMS; test speeds <= 1 mm/s and <= 0.5 deg/s; 6.5 W brushed DC motors with Maxon EPOS2 (TRO 2017); in vivo 1.05 mm and 1.33 deg mean absolute error with respiratory compensation (IJRR 2020 abstract); in vivo step imaging 2.56 mm / 0.98 deg MAE over 134 s of well-modelled breathing, 6.59 mm / 2.27 deg when the model was outdated; manual-target tracking 2.81 deg MAE and 2.14 mm position MAE over 431 s (Sec. 3.3)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "loschak2017_algorithms Fig. 11 (US catheter steering robot with 4 DOF); https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5311/5295822/ec2024e38a33/nihms820364f11.jpg (PMC5295822)",
+  "source_url": "https://doi.org/10.1109/tro.2016.2623331",
+  "licence": "publisher copyright (IEEE; NIH author manuscript in PMC)",
+  "credit": "Loschak et al., IEEE Transactions on Robotics (2017), Fig. 11. publisher copyright (IEEE; NIH author manuscript in PMC).",
+  "edits": "PMC figure image as is; not upscaled; labels and green dashed outline left in place (they cross the robot)",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "harvard_ice_loschak2017_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "CAD of the catheter steering robot holding the ICE handle, beside a heart diagram",
+   "source_key": "loschak2013_automated",
+   "source": "loschak2013_automated, Fig. 1, p. 1 (ICRA 2013, 10.1109/icra.2013.6631410)",
+   "source_url": null,
+   "where": "Fig. 1, p. 1 (ICRA 2013, 10.1109/icra.2013.6631410)",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "loschak2017_algorithms",
+   "doi": "10.1109/tro.2016.2623331",
+   "url": null,
+   "title": "Algorithms for Automatically Pointing Ultrasound Imaging Catheters",
+   "year": 2017,
+   "venue": "IEEE Transactions on Robotics"
+  },
+  {
+   "key": "loschak2020_automatically",
+   "doi": "10.1177/0278364920903785",
+   "url": null,
+   "title": "Automatically steering cardiac catheters in vivo with respiratory motion compensation",
+   "year": 2020,
+   "venue": "The International Journal of Robotics Research"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (TRO 2017 via PMC HTML; IJRR 2020, )",
+ "notes": "Second ICE-handle robot next to the Siemens one (siemens_ice_kim2020), which cites it as prior work. | 2026-11-08 X3: IJRR 2020 read in full; it has no photograph of the robot (only a small drawing in Fig. 3), so the main picture stays the TRO 2017 Fig. 11; one 64 kg pig confirms the animal level",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

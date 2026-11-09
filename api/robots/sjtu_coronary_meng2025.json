@@ -1,0 +1,81 @@
+{
+ "schema_version": 1,
+ "id": "sjtu_coronary_meng2025",
+ "name": "SJTU PCI robot",
+ "full_name": "SJTU master-slave PCI robot with magnetic-coupling modular drive and thin-film force sensing",
+ "group": "Shanghai Jiao Tong University, School of Mechanical Engineering (Meng, Fang, Jing, Fu et al.)",
+ "group_short": "SJTU",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2025,
+ "latest_year": 2025,
+ "versions": "meng2025_design (ROBIO 2025)",
+ "target_anatomy": "coronary PCI (complex vascular geometries in simulation and bench)",
+ "devices": [
+  "guidewire",
+  "catheter",
+  "therapeutic-device"
+ ],
+ "devices_driven": "guidewire (0.014-0.035 in), guide catheter, balloon/stent catheter",
+ "n_dof": 4,
+ "n_dof_detail": "4 (guidewire advance and rotation; catheter linear insertion; balloon/stent linear transport)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller (guidewire: gear-driven dual friction wheels; balloon/stent: symmetric friction wheels; catheter: gear-rack clamping with linear drive)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "Guidewire rotated continuously through drive wheel 1 and bevel gears (360 deg)",
+ "device_range": "guidewire 0.014 in to 0.035 in",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "Thin-film pressure sensors between worm and housing give axial guidewire force",
+ "haptics_leader": "N.R.",
+ "imaging_compat": "N.R.",
+ "sterility": "Electromechanical decoupling by magnetic coupling torque transmission so the distal module can be a hygienic, separable part",
+ "highest_validation": "bench",
+ "validation_detail": "Simulink control simulation plus hardware experiments; number of trials N.R.",
+ "key_numbers": "Displacement error within +/-1 mm and angular error within +/-15 deg; Smith predictor + RBF self-tuning PID",
+ "sim_model": "Simulink control-loop model only",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "render",
+  "source": "meng2025_design Fig. 1 (structure of the robotic system), ROBIO 2025, doi:10.1109/ROBIO66223.2025.11378419",
+  "source_url": "https://doi.org/10.1109/ROBIO66223.2025.11378419",
+  "licence": "publisher copyright",
+  "credit": "Meng et al., 2025 IEEE International Conference on Robotics and Biomimetics (ROBIO) (2025), Fig. 1. publisher copyright.",
+  "edits": "figure rebuilt from its 19 embedded raster tiles at native scale (labels and leader lines are inside the tiles); main panel cropped; fragments of neighbouring panels whitened; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "sjtu_coronary_meng2025_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "CAD of the guidewire drive module with an inset of the catheter module",
+   "source_key": "meng2025_design",
+   "source": "Meng et al., 2025 IEEE International Conference on Robotics and Biomimetics (ROBIO) (2025), Fig. 1 (right part), p. 2",
+   "source_url": "https://doi.org/10.1109/robio66223.2025.11378419",
+   "where": "Fig. 1 (right part), p. 2",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "meng2025_design",
+   "doi": "10.1109/robio66223.2025.11378419",
+   "url": null,
+   "title": "Design and Control of a Robotic System for Coronary Interventions",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Robotics and Biomimetics (ROBIO)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (meng2025 text)",
+ "notes": "CAD render only; no prototype photo in the paper.",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

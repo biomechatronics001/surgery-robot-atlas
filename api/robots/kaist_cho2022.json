@@ -1,0 +1,73 @@
+{
+ "schema_version": 1,
+ "id": "kaist_cho2022",
+ "name": "KAIST wire bench",
+ "full_name": "KAIST/Asan guidewire-controller test bench for image-based sim-to-real navigation",
+ "group": "KAIST School of Electrical Engineering (Dong Eui Chang; Yongjun Cho, Sangbaek Yoo) with Asan Medical Center / University of Ulsan and LN Robotics (Jaesoon Choi)",
+ "group_short": "KAIST / Asan",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2021,
+ "latest_year": 2025,
+ "versions": "cho2022_sim (IROS 2022, DDPG+behaviour cloning) -> yoo2025_robust (ICRA 2025, PPO with domain randomisation); same test bench in both",
+ "target_anatomy": "planar vessel phantom (bifurcating paths) on a bench; coronary-like trees in simulation",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "one guidewire",
+ "n_dof": 2,
+ "n_dof_detail": "2 (translation 0.4 mm steps, rotation 10 deg steps in cho2022)",
+ "translation_mechanism": "not-reported",
+ "translation_detail": "N.R. (called 'a guidewire controller'; photo shows a compact block with wiring, mechanism not described)",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "none",
+ "imaging_compat": "Overhead camera replaces X-ray; image reduced to vessel and guidewire masks",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "cho2022: 40 phantom episodes; yoo2025: three tests of 40 runs each on one bench with four paths",
+ "key_numbers": "cho2022: simulation 100/100, phantom 40/40, 35.06 s vs 63.2 s for the rule-based controller; yoo2025: simulation 86.9 % with vessel randomisation vs 53.7 % without, phantom 93.3 %, 89.2 %, 91.7 % (earlier controllers 83.3 % and 19.2 % in test I) (S7b evidence)",
+ "sim_model": "SOFA vessel and guidewire simulation, one planar map with four targets (cho2022); randomised vessel trees every episode (yoo2025)",
+ "has_sim_model": true,
+ "sim2real": "yes",
+ "sim2real_detail": "yes: both papers train in SOFA and run on the physical bench (cho2022 40/40; yoo2025 93.3 %, 89.2 %, 91.7 %); full read by S7b agent, abstract/figures re-checked here",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "photo",
+  "source": "cho2022_sim Fig. 8 (guidewire controller, controller box, camera, phantom), IROS 2022, doi:10.1109/IROS47612.2022.9982168",
+  "source_url": "https://doi.org/10.1109/IROS47612.2022.9982168",
+  "licence": "publisher copyright",
+  "credit": "Cho et al., 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2022), Fig. 8. publisher copyright.",
+  "edits": "native extract (878x878); cropped to the bench; no erasing; not upscaled",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "cho2022_sim",
+   "doi": "10.1109/iros47612.2022.9982168",
+   "url": null,
+   "title": "Sim-to-Real Transfer of Image-Based Autonomous Guidewire Navigation Trained by Deep Deterministic Policy Gradient with Behavior Cloning for Fast Learning",
+   "year": 2022,
+   "venue": "2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  },
+  {
+   "key": "yoo2025_robust",
+   "doi": "10.1109/icra55743.2025.11127741",
+   "url": null,
+   "title": "A Robust Deep Reinforcement Learning Framework for Image-Based Autonomous Guidewire Navigation",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)"
+  }
+ ],
+ "read_level": "partial",
+ "read_level_detail": "partial (cho2022, yoo2025 text); S7b evidence",
+ "notes": "Jaesoon Choi is listed with LN Robotics in yoo2025, the maker of the commercial AVIAR (A4 scope); the bench driver may share hardware with AVIAR but the papers do not say so.",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

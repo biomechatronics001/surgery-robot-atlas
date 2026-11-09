@@ -1,0 +1,101 @@
+{
+ "schema_version": 1,
+ "id": "levshai_menshikov2023",
+ "name": "LevshAi",
+ "full_name": "LevshAi intelligent robotic motion-copying system for endovascular neurosurgery",
+ "group": "Neurosputnik LLC with MIPT, NUST MISIS and Moscow State University (I. Menshikov, A. Bernadotte)",
+ "group_short": "Neurosputnik",
+ "family": "commercial",
+ "category": "commercial",
+ "first_year": 2023,
+ "latest_year": 2023,
+ "versions": "2023 IEEE CBS system paper (full); 2023 ICARA personalised 3-D vascular simulator (title)",
+ "target_anatomy": "cerebral vessels (endovascular neurosurgery, aneurysm coiling)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "catheters and guidewires; dispenser for gel; coil installation on the control side (Sec. II)",
+ "n_dof": null,
+ "n_dof_detail": "N.R. (axial movement and rotation of catheters)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: stepper transmission mechanisms (type N.R.)",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "stepper transmission (N.R.)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "optical motion encoders and piezo sensors along the catheter detect twisting and vibration (Sec. II-C)",
+ "haptics_leader": "leader identical to a real catheter and torquer; stepper motors render twist resistance, linear miniature solenoids render wall contact, LED force scale",
+ "imaging_compat": "X-ray fluoroscopy; AI processing of fluoroscopy",
+ "sterility": "N.R.",
+ "highest_validation": "bench",
+ "validation_detail": "tested by surgeons of the Russian Endovascular Neuro Society, qualitative only (Sec. I)",
+ "key_numbers": "N.R.",
+ "sim_model": "personalised 3-D vascular simulator built from patient images (menshikov2023_preoperative, title; CBS Sec. II-E)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "menshikov2023_levshai_CBS Fig. 6 (preclinical trial photo), hardware box at the bottom edge",
+  "source_url": null,
+  "licence": "publisher copyright (IEEE)",
+  "credit": "menshikov2023_levshai_CBS Fig. 6 (preclinical trial photo), hardware box at the bottom edge. Licence: publisher copyright (IEEE).",
+  "edits": "the PDF splits the photo into 7 raster tiles: stitched at native size, a 3-px tile seam filled from the neighbouring column, cropped to the hardware box (people excluded); not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "levshai_menshikov2023_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Preclinical trial: control unit on the table with the 3D vessel simulation projected",
+   "source_key": "menshikov2023_intelligent",
+   "source": "Menshikov et al., 2022 IEEE International Conference on Cyborg and Bionic Systems (CBS) (2023), Fig. 6, p. 5",
+   "source_url": "https://doi.org/10.1109/cbs55922.2023.10115398",
+   "where": "Fig. 6, p. 5",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "levshai_menshikov2023_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "System drawing: executive manipulator at the patient, surgeon-side control unit",
+   "source_key": "menshikov2023_intelligent",
+   "source": "Menshikov et al., 2022 IEEE International Conference on Cyborg and Bionic Systems (CBS) (2023), Fig. 1, p. 3",
+   "source_url": "https://doi.org/10.1109/cbs55922.2023.10115398",
+   "where": "Fig. 1, p. 3",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "menshikov2023_intelligent",
+   "doi": "10.1109/cbs55922.2023.10115398",
+   "url": null,
+   "title": "Intelligent Robotic Motion Copying System LevshAi for Neurosurgical Endovascular Operations with Haptic Feedback and Preoperative Personalized Simulation",
+   "year": 2023,
+   "venue": "2022 IEEE International Conference on Cyborg and Bionic Systems (CBS)"
+  },
+  {
+   "key": "menshikov2023_preoperative",
+   "doi": "10.1109/icara56516.2023.10125981",
+   "url": null,
+   "title": "Preoperative Personalized Vascular 3D Simulator of the Intelligent Robotic Ecosystem LevshAI for Endovascular Neurosurgery",
+   "year": 2023,
+   "venue": "2023 9th International Conference on Automation, Robotics and Applications (ICARA)"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (CBS 2023)",
+ "notes": "Company prototype with university co-authors; no quantitative results or hardware photo in the paper.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

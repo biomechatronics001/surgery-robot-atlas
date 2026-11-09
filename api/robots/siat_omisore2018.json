@@ -1,0 +1,125 @@
+{
+ "schema_version": 1,
+ "id": "siat_omisore2018",
+ "name": "SIAT belt grasper",
+ "full_name": "SIAT second-generation robotic catheter system for cardiovascular intervention (belt-driven graspers)",
+ "group": "Shenzhen Institutes of Advanced Technology, CAS (Lei Wang; Olatunji Mumini Omisore)",
+ "group_short": "SIAT",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2018,
+ "latest_year": 2018,
+ "versions": "omisore2018_towards (TBCAS 2018, second generation); the same lab's third-generation isomorphic primary-secondary system (du2024_analyzing, omisore2024_sample, duan2025_development) is row siat_haptic_duan2025; 2011-14: SIAT first-generation master-slave robot (P. Zhang 2011 ICMA; Mi 2014 ICMA) (Alekseeva 2025 Table 2 row 5; Belikov 2024 Fig. 6 MIs; Zhao 2022 Table 1 row 15b) (alekseeva2025_design; belikov2024_evolution; zhao2022_remote)",
+ "target_anatomy": "radial artery through axillary and subclavian arteries to the aortic arch (tubular phantoms)",
+ "devices": [
+  "catheter",
+  "sheath"
+ ],
+ "devices_driven": "one 9 Fr, 130 cm unactuated catheter sheath (no steerable catheters)",
+ "n_dof": 2,
+ "n_dof_detail": "2 (axial translation, rotation)",
+ "translation_mechanism": "belt/track",
+ "translation_detail": "belt/track",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "Rotary drive grasper on a Maxon EC16 motor; belt carries four axial drive graspers for continuous push (Maxon EC32)",
+ "device_range": "9 Fr catheter sheath; two guiding sheaths of 35 mm length, 10 mm inner diameter at the belt ends",
+ "footprint_mm": "400 x 180 x 150",
+ "mass_kg": "about 9.5 (S8 evidence reading of Sec. II-C); battery 10,000 mAh, 220 +/- 27 min",
+ "force_sensing": "Strain gauges on the 9 Fr sheath, 5 mm and 25 mm from the tip (gauge factor 2.08, 120 ohm), Coulomb friction term subtracted; EM sensor (NDI Aurora) in the lumen for tip motion",
+ "haptics_leader": "none in this paper",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "Tubular PVC phantoms (10 mm) from the radial artery to the aortic arch; one insertion with compensation and none without (S8 reading)",
+ "key_numbers": "Backlash gaps 3.94-9.30 mm between motor encoder and tip EM sensor; adaptive neuro-fuzzy compensation final error 0.4 mm (duan2023_progress, review statement); sensor accuracy 0.9 mm / 0.8 deg",
+ "sim_model": "none found for the robot",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found for this generation. The 2024 DRL PID-tuning study (omisore2024_sample, full) ran on the current-generation slave (Sec. II-A: \"The current generation is an isomorphic master-slave RCS\"; 57 x 22 x 16 cm, 4 DoF), not on this belt-driven robot: see row siat_haptic_duan2025.",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "omisore2018_towards Fig. 13 (experimental setup, robot outlined in red), TBCAS 2018, doi:10.1109/TBCAS.2018.2825359",
+  "source_url": "https://doi.org/10.1109/TBCAS.2018.2825359",
+  "licence": "publisher copyright",
+  "credit": "Omisore et al., IEEE Transactions on Biomedical Circuits and Systems (2018), Fig. 13. publisher copyright.",
+  "edits": "native extract (2050x1275 figure, soft source photo); cropped; red outline, red arrow, label box and a yellow leader erased (LaMa, colour mask + boxes); not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "siat_omisore2018_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "CAD of the second-generation robot: axial graspers, rotary grasper, actuators",
+   "source_key": "omisore2018_towards",
+   "source": "Omisore et al., IEEE Transactions on Biomedical Circuits and Systems (2018), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1109/tbcas.2018.2825359",
+   "where": "Fig. 1, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "siat_omisore2018_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Catheter tip with strain-gauge force sensors and plastic holder",
+   "source_key": "omisore2018_towards",
+   "source": "Omisore et al., IEEE Transactions on Biomedical Circuits and Systems (2018), Fig. 2, p. 3",
+   "source_url": "https://doi.org/10.1109/tbcas.2018.2825359",
+   "where": "Fig. 2, p. 3",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "omisore2018_towards",
+   "doi": "10.1109/tbcas.2018.2825359",
+   "url": null,
+   "title": "Towards Characterization and Adaptive Compensation of Backlash in a Novel Robotic Catheter System for Cardiovascular Interventions",
+   "year": 2018,
+   "venue": "IEEE Transactions on Biomedical Circuits and Systems"
+  },
+  {
+   "key": "duan2023_progress",
+   "doi": "10.3390/mi14010197",
+   "url": null,
+   "title": "Technical and Clinical Progress on Robot-Assisted Endovascular Interventions: A Review",
+   "year": 2023,
+   "venue": "Micromachines"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  },
+  {
+   "key": "zhao2022_remote",
+   "doi": "10.21037/qims-21-792",
+   "url": null,
+   "title": "Remote vascular interventional surgery robotics: a literature review",
+   "year": 2022,
+   "venue": "Quantitative Imaging in Medicine and Surgery"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (omisore2018 via S8 evidence + figures); omisore2024_sample full text read 2026-10-14 and moved to row siat_haptic_duan2025",
+ "notes": "Fig. 1 of the paper is a CAD model; the setup photo was chosen as the prototype image. F4 2026-10-14: omisore2024_sample removed from this row (it describes the current, isomorphic generation).",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

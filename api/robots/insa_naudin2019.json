@@ -1,0 +1,122 @@
+{
+ "schema_version": 1,
+ "id": "insa_naudin2019",
+ "name": "EVAR platform",
+ "full_name": "INSA Lyon / Ampère low-cost robotic platform for endovascular aneurysm repair (EVAR): two stacked conveyors pinch the guidewire, an X-Y table rolls it, simulation-driven haptic leader",
+ "group": "Laboratoire Ampère (UMR CNRS 5005), Université de Lyon, INSA Lyon (Iris Naudin, Minh Tu Pham, Richard Moreau, Arnaud Lelevé) (naudin2019_evar, affiliation line)",
+ "group_short": "INSA Lyon",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2019,
+ "latest_year": 2019,
+ "versions": "single version (naudin2019_evar, AIM 2019); its finite-element model of guide insertion comes from the INSA thesis of G. Mouktadiri 2012 and Mouktadiri et al., J. Biomed. Sci. Eng. 2013 (refs 5-6, not read)",
+ "target_anatomy": "abdominal aorta and iliac arteries (EVAR of an abdominal aortic aneurysm); patient-specific silicone phantom printed by additive manufacturing, spring-suspended in a water tank (Sec. II, III-A, Fig. 6)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "guidewire (\"guide\"); \"it is also possible to drive a catheter by this system instead of a guide wire\"; one device at a time (Sec. III-A)",
+ "n_dof": 2,
+ "n_dof_detail": "2 device DOF (translation along z, rotation about z) plus a prismatic gap adjustment (y) that sets the conveyor spacing for the device diameter (Sec. III-A, Fig. 3)",
+ "translation_mechanism": "belt/track",
+ "translation_detail": "belt/track: two conveyors placed one over the other pinch the guidewire, each driven by a DC motor, coupled so they turn in opposite directions (Sec. III-A, IV-A, Figs. 3-4)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "other: an X-Y table translates one conveyor over the other, rolling the pinched wire about its own axis (cylindrical joint S1-S2; Sec. III-A, Figs. 3, 5)",
+ "device_range": "N.R. (conveyor gap adjustable \"to use guide wires with different diameters\", Sec. III-A)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none on the robot; the force sent to the leader is the guide-aorta contact force of an ABAQUS simulation, looked up by inserted length (Sec. III-C, IV-B); the authors state it is not the force at the tool (Sec. V)",
+ "haptics_leader": "Geomagic Touch (6 DOF, 3 motorised); pressing a stylus button acts as pinching the guide (clutch), stylus translation and rotation are sent to the conveyors and the X-Y table; renders the simulated contact force opposite to the push (Sec. III-A, III-C, Fig. 7)",
+ "imaging_compat": "N.R. (no fluoroscopy in the platform; phantom in a transparent water tank)",
+ "sterility": "N.R.",
+ "highest_validation": "bench",
+ "validation_detail": "bench: conveyor translation tracking of the stylus reference trajectory with a proportional speed loop (Simulink/ControlDesk, Fig. 14) and recording of the rotation reference (Sec. IV-A); haptic lookup coupled to the platform (Sec. IV-B). The silicone aorta phantom is built for guide insertion but no insertion result is reported; real-time control was not achieved with MATLAB/Simulink/dSPACE and was re-written in C afterwards (Sec. V). Alekseeva 2025 Table 4 lists it as TRL3 (ex vivo phantom).",
+ "key_numbers": "motor speed command 0-10 V, direction 0/5 V (Sec. IV-A); simulated insertion speed 20 mm/s (Sec. IV-B); exit of contact for an arbitrary 90 deg rotation (Sec. V); tracking error shown only as a curve x10 (Fig. 14), no number reported (N.R.)",
+ "sim_model": "yes: ABAQUS finite-element model of the guide inserted in a patient aorta and iliac model (elastic, hyperelastic and linear composite materials; Mouktadiri 2013, ref 6) gives contact forces per inserted length, used as the haptic lookup table (naudin2019_evar Sec. III-B, IV-B, Fig. 8)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found (the simulation feeds an offline force lookup; no simulation-trained controller)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "naudin2019_evar Fig. 4 (two conveyors), p. 3",
+  "source_url": "https://doi.org/10.1109/AIM.2019.8868919",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Naudin et al., 2019 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2019), Fig. 4. publisher copyright (IEEE).",
+  "edits": "native extract; no crop; no edit; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "insa_naudin2019_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Top view of the X-Y table that shifts one conveyor to roll the wire",
+   "source_key": "naudin2019_evar",
+   "source": "Naudin et al., 2019 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2019), Fig. 5, p. 3",
+   "source_url": "https://doi.org/10.1109/AIM.2019.8868919",
+   "where": "Fig. 5, p. 3",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "insa_naudin2019_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Silicone aorta and iliac phantom suspended in a water tank",
+   "source_key": "naudin2019_evar",
+   "source": "Naudin et al., 2019 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2019), Fig. 6, p. 3",
+   "source_url": "https://doi.org/10.1109/AIM.2019.8868919",
+   "where": "Fig. 6, p. 3",
+   "licence": "publisher copyright (IEEE)"
+  },
+  {
+   "id": "insa_naudin2019_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Geomagic Touch haptic device used as the leader, with joint labels",
+   "source_key": "naudin2019_evar",
+   "source": "Naudin et al., 2019 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2019), Fig. 7, p. 3 (image credited to Geomagic)",
+   "source_url": "https://doi.org/10.1109/AIM.2019.8868919",
+   "where": "Fig. 7, p. 3 (image credited to Geomagic)",
+   "licence": "publisher copyright (IEEE)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "naudin2019_evar",
+   "doi": "10.1109/AIM.2019.8868919",
+   "url": null,
+   "title": "A Robotic Platform For Endovascular Aneurysm Repair",
+   "year": 2019,
+   "venue": "2019 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (naudin2019_evar); review-only (alekseeva2025_design Table 4 row 1; belikov2024_evolution Fig. 6 NA)",
+ "notes": "N2 2026-11-08, from review_comparison §1.2 row 23. Built as a low-cost teaching and trajectory-planning platform for EVAR (Abstract, Sec. I). Alekseeva Fig. 12c draws only its rolling-belt principle. Highest validation is bench, not phantom as Alekseeva says: the phantom exists, but no result in it is reported.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

@@ -1,0 +1,113 @@
+{
+ "schema_version": 1,
+ "id": "armm_heunis2020",
+ "name": "ARMM",
+ "full_name": "ARMM (Advanced Robotics for Magnetic Manipulation)",
+ "group": "Misra, Surgical Robotics Lab, University of Twente",
+ "group_short": "U. Twente",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2019,
+ "latest_year": 2020,
+ "versions": "single (RA-L 2020); coil optimisation in Sikorski 2019 (cited, not read); 2016: Twente (Misra) magnetically actuated catheter in closed loop on 2D ultrasound (Boskma, Scheggi, Misra 2016 BioRob) (Alekseeva 2025 Table 12 row 6) (alekseeva2025_design)",
+ "target_anatomy": "iliac / aortic phantom from CT of a 62-year-old (gelatin torso phantom, pulsating flow)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "commercial Sherpa NX Active 2 mm coronary guide catheter (500 mm) with five NdFeB magnets (2 mm x 2 mm) in the tip",
+ "n_dof": null,
+ "n_dof_detail": "two UR manipulators (UR10 carries the electromagnetic coil, UR5 carries the ultrasound probe) plus a 1-axis catheter insertion device",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (steering); separate insertion device, servo-driven gear and bearing, 1.3-6.4 mm/s, takes 3-34 Fr",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "coil pose, no shaft rotation",
+ "device_range": "500 mm catheter",
+ "footprint_mm": "workspace sphere radius 783 mm (max 1300 mm); 9 m3 environment",
+ "mass_kg": "N.R.",
+ "force_sensing": "none; tip tracked by ultrasound (30 Hz) and motion capture",
+ "haptics_leader": "no",
+ "imaging_compat": "3D ultrasound feedback, optical motion capture; radiation-free",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "gelatin torso phantom with pulsating flow, 3D targets, PI control; target count N.R. in my read",
+ "key_numbers": "coil at least 20 mT and over 0.6 mT/mm at 50-200 mm; mean tip error 2.09 +/- 0.49 mm; median time to target 32.6 s",
+ "sim_model": "none found (dipole-field actuation model; no simulator)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "photo",
+  "source": "U-Today 2021-06-28 \"Robot for surgeries inside blood vessels\", photo by Hans Wolkers: https://www.utoday.nl/uploads/images/2021/week26/_Z723444.jpg (UR arm with electromagnet over the torso phantom, researcher operating)",
+  "source_url": "https://www.utoday.nl/uploads/images/2021/week26/_Z723444.jpg",
+  "licence": "press image (U-Today / Hans Wolkers), terms not stated",
+  "credit": "U-Today 2021-06-28 \"Robot for surgeries inside blood vessels\", photo by Hans Wolkers: https://www.utoday.nl/uploads/images/2021/week26/_Z723444.jpg (UR arm with electromagnet over the torso phantom, researcher operating). Licence: press image (U-Today / Hans Wolkers), terms not stated.",
+  "edits": "downscaled 50 % from 5315 px (no crop); not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "armm_heunis2020_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Electromagnet coil with cooling fans on the UR arm end-effector",
+   "source_key": "heunis2020_armm",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2020), U-Today 2021-06-28 photo by Hans Wolkers, (cropped to the coil)",
+   "source_url": "https://doi.org/10.1109/lra.2020.2965077",
+   "where": "U-Today 2021-06-28 photo by Hans Wolkers, https://www.utoday.nl/uploads/images/2021/week26/_Z723495.jpg (cropped to the coil)",
+   "licence": "press image (U-Today / Hans Wolkers)"
+  },
+  {
+   "id": "armm_heunis2020_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "ARMM in a clinical-style setting: UR arms with coil and US probe over a torso",
+   "source_key": "heunis2020_armm",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2020), Fig. 1, p. 1",
+   "source_url": "https://doi.org/10.1109/lra.2020.2965077",
+   "where": "Fig. 1, p. 1",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "armm_heunis2020_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "Rendering of the electromagnetic coil and the force-sensed ultrasound transducer over the phantom",
+   "source_key": "heunis2020_armm",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2020), Fig. 4 (right), p. 5",
+   "source_url": "https://doi.org/10.1109/lra.2020.2965077",
+   "where": "Fig. 4 (right), p. 5",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "heunis2020_armm",
+   "doi": "10.1109/lra.2020.2965077",
+   "url": null,
+   "title": "The ARMM System - Autonomous Steering of Magnetically-Actuated Catheters: Towards Endovascular Applications",
+   "year": 2020,
+   "venue": "IEEE Robotics and Automation Letters"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "Mobile electromagnet on a robot arm; not a clinical room install.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

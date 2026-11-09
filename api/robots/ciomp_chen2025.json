@@ -1,0 +1,93 @@
+{
+ "schema_version": 1,
+ "id": "ciomp_chen2025",
+ "name": "CIOMP isomorphic",
+ "full_name": "CIOMP leader-follower isomorphic vascular interventional surgical robot",
+ "group": "Changchun Institute of Optics, Fine Mechanics and Physics, CAS, State Key Laboratory of Dynamic Optical Imaging and Measurement (Pengfei Chen, Yutang Wang, Dapeng Tian)",
+ "group_short": "CIOMP (CAS)",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2025,
+ "latest_year": 2025,
+ "versions": "single version (chen2025_design)",
+ "target_anatomy": "human vascular model",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "catheter and guidewire (catheter delivery mechanism, catheter rotation mechanism, guidewire operation mechanism; chen2025_design Fig. 1 labels)",
+ "n_dof": null,
+ "n_dof_detail": "N.R. (catheter delivery + rotation, guidewire delivery + rotation shown)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: catheter between upper and lower pressing plates with an electric clamp; guidewire via operating handle on a screw drive (Fig. 1 labels)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "gear drive (driving/driven gears, rotating motor; Fig. 1 labels)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R. in abstract; force channels in the four-channel bilateral controller (Fig. 2)",
+ "haptics_leader": "isomorphic leader with identical structure; four-channel acceleration-based bilateral control with DOB/RFOB (abstract, Fig. 2)",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "intervention task in a human vascular model with 4 volunteers; CUSUM learning curves (chen2025_design abstract, Fig. 7)",
+ "key_numbers": "leader-follower delivery error < 1 mm, guidewire rotation error < 0.3 deg; operators mastered the task within 10 trials; operator-experience classification accuracy 94% (chen2025_design abstract)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "chen2025_design Fig. 1 centre panel, https://mdpi-res.com/actuators/actuators-14-00029/article_deploy/html/images/actuators-14-00029-g001.png (page https://www.mdpi.com/2076-0825/14/1/29)",
+  "source_url": "https://doi.org/10.3390/act14010029",
+  "licence": "CC BY 4.0",
+  "credit": "Chen et al., Actuators (2025), Fig. 1. CC BY 4.0.",
+  "edits": "cropped to the grey render panel; not upscaled",
+  "file": "pictures/ciomp_chen2025.jpg"
+ },
+ "pictures": [
+  {
+   "id": "ciomp_chen2025_01",
+   "status": "cleared",
+   "file": "pictures/extra/ciomp_chen2025_01.jpg",
+   "thumb": "pictures/thumbs/ciomp_chen2025_01.jpg",
+   "kind": "setup",
+   "caption": "Leader robot, follower robot, camera and IPC on the test bench",
+   "source_key": "chen2025_design",
+   "source": "Chen et al., Actuators (2025), Fig. 4(a) (MDPI HTML figure g004)",
+   "source_url": "https://doi.org/10.3390/act14010029",
+   "where": "Fig. 4(a) (MDPI HTML figure g004)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "ciomp_chen2025_02",
+   "status": "cleared",
+   "file": "pictures/extra/ciomp_chen2025_02.jpg",
+   "thumb": "pictures/thumbs/ciomp_chen2025_02.jpg",
+   "kind": "render",
+   "caption": "CAD close-ups: catheter delivery, catheter rotation and guidewire mechanisms",
+   "source_key": "chen2025_design",
+   "source": "Chen et al., Actuators (2025), Fig. 1 (bottom row) (MDPI HTML figure g001)",
+   "source_url": "https://doi.org/10.3390/act14010029",
+   "where": "Fig. 1 (bottom row) (MDPI HTML figure g001)",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "chen2025_design",
+   "doi": "10.3390/act14010029",
+   "url": null,
+   "title": "Design and Evaluation of a Leader–Follower Isomorphic Vascular Interventional Surgical Robot",
+   "year": 2025,
+   "venue": "Actuators"
+  }
+ ],
+ "read_level": "abstract",
+ "read_level_detail": "abstract + figures",
+ "notes": "Not in any earlier list.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

@@ -1,0 +1,100 @@
+{
+ "schema_version": 1,
+ "id": "hit_fu2011",
+ "name": "HIT catheter robot",
+ "full_name": "HIT master-slave robotic catheter system for a steerable pull-wire catheter",
+ "group": "Harbin Institute of Technology, State Key Laboratory of Robotics and System (Yili Fu, Anzhu Gao, Hao Liu, Kai Li, Zhaoguang Liang) with Harbin Medical University",
+ "group_short": "HIT",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2011,
+ "latest_year": 2011,
+ "versions": "2008-2010 active/steerable catheter navigation studies (Fu et al., IJMRCAS 2008-2009, titles); 2011 robotic catheter system (fu2011_development, full); 2011 master-slave catheterisation system (fu2011_masterslave, title)",
+ "target_anatomy": "thoracic/cardiac vessels (thorax vascular phantom, brachiocephalic trunk)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "custom 7 Fr single-curve pull-wire steerable catheter with two 5-DOF magnetic tracking sensors, two electrodes and a thermocouple (fu2011_development Sec. III)",
+ "n_dof": 3,
+ "n_dof_detail": "3 (push/pull, rotate, bend; fu2011_development Sec. II-C)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller",
+ "rotation_mechanism": "rotating-drive-unit",
+ "rotation_detail": "other: both stepping motors at equal speed rotate the whole friction-wheel unit about the catheter (fu2011_development Sec. IV); bending by a lead-screw slide unit moving the handle sleeve",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "proximal: two force-sensing elements between the inner and outer wheel of the active friction wheel (fu2011_development Fig. 6)",
+ "haptics_leader": "Novint Falcon 3-DOF handle with force feedback (fu2011_development Fig. 2)",
+ "imaging_compat": "EM magnetic tracking + MR-derived 3D guiding image (20 slices); intended to reduce X-ray use",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "thorax vascular phantom (Shelley Medical), catheterisation to the brachiocephalic trunk (fu2011_development Sec. VI)",
+ "key_numbers": "image-sensor registration error mean 0.19 mm, RMS 0.49 mm, SD 0.46 mm over 700 wall points (fu2011_development Sec. VI, Fig. 9)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "fu2011_development Fig. 7 handle manipulation mechanism (native scan raster p. 3)",
+  "source_url": "https://doi.org/10.1109/iccme.2011.5876772",
+  "licence": "publisher copyright",
+  "credit": "Fu et al., The 2011 IEEE/ICME International Conference on Complex Medical Engineering (2011), Fig. 7. publisher copyright.",
+  "edits": "native extract; cropped below baked-in text labels and above a blue arrow; two thin leader lines on the robot left; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "hit_fu2011_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Whole system: insertion and handle mechanisms, 3-DOF master handle, phantom",
+   "source_key": "fu2011_development",
+   "source": "Fu et al., The 2011 IEEE/ICME International Conference on Complex Medical Engineering (2011), Fig. 1, p. 2",
+   "source_url": "https://doi.org/10.1109/iccme.2011.5876772",
+   "where": "Fig. 1, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "hit_fu2011_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Catheter insertion mechanism with friction wheels and stepping motors",
+   "source_key": "fu2011_development",
+   "source": "Fu et al., The 2011 IEEE/ICME International Conference on Complex Medical Engineering (2011), Fig. 5, p. 3",
+   "source_url": "https://doi.org/10.1109/iccme.2011.5876772",
+   "where": "Fig. 5, p. 3",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "fu2011_development",
+   "doi": "10.1109/iccme.2011.5876772",
+   "url": null,
+   "title": "Development of a novel robotic catheter system for endovascular minimally invasive surgery",
+   "year": 2011,
+   "venue": "The 2011 IEEE/ICME International Conference on Complex Medical Engineering"
+  },
+  {
+   "key": "fu2011_masterslave",
+   "doi": "10.1504/ijma.2011.045271",
+   "url": null,
+   "title": "The master-slave catheterisation system for positioning the steerable catheter",
+   "year": 2011,
+   "venue": "International Journal of Mechatronics and Automation"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (fu2011_development, OCR of a scanned PDF); title (fu2011_masterslave)",
+ "notes": "Anzhu Gao later moved to SJTU (row sjtumr_huang2022). The full-system photo (Fig. 1) and insertion mechanism (Fig. 5) carry baked-in labels.",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

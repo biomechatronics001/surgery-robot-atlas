@@ -1,0 +1,101 @@
+{
+ "schema_version": 1,
+ "id": "mpi_tiryaki2023",
+ "name": "7-T MRI steering",
+ "full_name": "Ultrahigh-field magnetic guidewire steering inside a 7-T MRI scanner with a robotic MRI stage",
+ "group": "Sitti, Physical Intelligence Department, Max Planck Institute for Intelligent Systems",
+ "group_short": "MPI-IS",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2023,
+ "latest_year": 2023,
+ "versions": "single (Sci. Adv. 2023)",
+ "target_anatomy": "endovascular under MRI: renal artery, type 1 aortic arch, common carotid and middle cerebral artery glass models (tiryaki2023_magnetic Fig. 7); ex vivo porcine kidney renal cavity (non-vascular, Fig. 8)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "own guidewire: MRI-compatible glass fibre-optic rod core with NdFeB tip magnets (1 mm x 1 mm cylinders) in parallel, perpendicular, antiparallel or dual configurations; 900 um Teflon supporting catheter (tiryaki2023_magnetic Results)",
+ "n_dof": null,
+ "n_dof_detail": "robotic MRI stage: x, y and yaw; manual insertion and base twist (tiryaki2023_magnetic Results, Fig. 5A)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (tip steering by MRI main-field torque and fringe-field gradient); insertion by hand (tiryaki2023_magnetic Fig. 5A, Fig. 7)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "motorized stage moves and rotates the phantom relative to the main field; manual base twist (tiryaki2023_magnetic Results)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (inside a 7-T preclinical MRI bore)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none during navigation (MRI-conditioned force sensor used only to calibrate magnet force)",
+ "haptics_leader": "no: joystick / remote controller for the stage (tiryaki2023_magnetic Results)",
+ "imaging_compat": "MRI (real-time 1-Hz FISP in the kidney test; tip seen as a 37 x 29 mm susceptibility artefact) (tiryaki2023_magnetic Fig. 8)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "3D glass vascular models with physiological flow (renal artery, aortic arch at 100 mL per beat, CCA, MCAs), access through a Teflon port 40 cm from the target (tiryaki2023_magnetic Fig. 7); 2D obstacle tasks with three targets (Fig. 5); ex vivo porcine kidney renal cavity under real-time MRI, guidewire through the urinary tract, not a vessel (Fig. 8)",
+ "key_numbers": "7 T; fringe gradients up to 20 T/m at the bore entrance; tip workspace 161 deg at 7 T (Fig. 3C); antiparallel magnet rotates up to 164 deg; platform rotation up to 48 deg needed in 2D tasks (tiryaki2023_magnetic Results)",
+ "sim_model": "Cosserat rod model (20 segments) with a UHF magnetization model, used for guidewire design (tiryaki2023_magnetic Methods)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found (model used for design, no trained controller)",
+ "picture": {
+  "status": "cleared",
+  "grade": "C",
+  "kind": "render",
+  "source": "tiryaki2023_magnetic Fig. 1(A) (PMC10132757 figure file sciadv.adg6438-f1.jpg)",
+  "source_url": "https://doi.org/10.1126/sciadv.adg6438",
+  "licence": "CC BY 4.0",
+  "credit": "Tiryaki et al., Science Advances (2023), Fig. 1. CC BY 4.0.",
+  "edits": "cropped panel A from the 785 px PMC figure; panel letter removed by crop; none upscaled",
+  "file": "pictures/mpi_tiryaki2023.jpg"
+ },
+ "pictures": [
+  {
+   "id": "mpi_tiryaki2023_01",
+   "status": "cleared",
+   "file": "pictures/extra/mpi_tiryaki2023_01.jpg",
+   "thumb": "pictures/thumbs/mpi_tiryaki2023_01.jpg",
+   "kind": "in-use",
+   "caption": "Guidewire steering in renal, arch, carotid and cerebral glass models",
+   "source_key": "tiryaki2023_magnetic",
+   "source": "Tiryaki et al., Science Advances (2023), Fig. 7",
+   "source_url": "https://doi.org/10.1126/sciadv.adg6438",
+   "where": "Fig. 7",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "mpi_tiryaki2023_02",
+   "status": "cleared",
+   "file": "pictures/extra/mpi_tiryaki2023_02.jpg",
+   "thumb": "pictures/thumbs/mpi_tiryaki2023_02.jpg",
+   "kind": "in-use",
+   "caption": "Obstacle tasks with three tip-magnet configurations inside the 7-T scanner",
+   "source_key": "tiryaki2023_magnetic",
+   "source": "Tiryaki et al., Science Advances (2023), Fig. 5",
+   "source_url": "https://doi.org/10.1126/sciadv.adg6438",
+   "where": "Fig. 5",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "tiryaki2023_magnetic",
+   "doi": "10.1126/sciadv.adg6438",
+   "url": null,
+   "title": "Magnetic guidewire steering at ultrahigh magnetic fields",
+   "year": 2023,
+   "venue": "Science Advances"
+  },
+  {
+   "key": "konda2025_robotically",
+   "doi": "10.1126/scirobotics.adt7461",
+   "url": null,
+   "title": "Robotically steerable guidewires—Current trends and future directions",
+   "year": 2025,
+   "venue": "Science Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (PMC full text)",
+ "notes": "Family: magnetic. konda2025 Table 2 row 4. The guidewire is advanced by hand; motor control is the stage that moves the phantom in the field. No photo of the stage in the paper body (fig. S7 in the supplement, not opened: manual list).",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

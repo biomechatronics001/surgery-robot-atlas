@@ -1,0 +1,149 @@
+{
+ "schema_version": 1,
+ "id": "cgci_magnetecs2011",
+ "name": "CGCI",
+ "full_name": "CGCI (Catheter Guidance Control and Imaging) remote magnetic navigation system",
+ "group": "Magnetecs Corp.",
+ "group_short": "Magnetecs",
+ "family": "commercial",
+ "category": "magnetic-navigation",
+ "first_year": 2011,
+ "latest_year": 2013,
+ "versions": "single system: animal validation in 10 pigs (gang2011_dynamically, abstract); initial human safety and feasibility protocol at La Paz University Hospital, Madrid, 5 flutter ablations (filgueirasrama2013_remote, Table 1); later discontinued (mandhumula2025_robotic: 'now seems to have been discontinued', 'not adopted commercially')",
+ "target_anatomy": "cardiac electrophysiology: right and left atrial flutter ablation (filgueirasrama2013_remote Table 1); pig left atrium mapping and RF lesions (gang2011_dynamically abstract)",
+ "devices": [
+  "catheter",
+  "sheath"
+ ],
+ "devices_driven": "magnetized irrigated gold-tip EP ablation catheter (MedFact) with three permanent-magnet pellets at the tip, through an Agilis ES sheath (filgueirasrama2013_remote Protocol 1, Fig. 1); 4-mm-tip ablation catheter in pigs (gang2011_dynamically abstract); catheter 7 Fr / 2.2 mm (jeong2017_feasibility Introduction)",
+ "n_dof": 3,
+ "n_dof_detail": "3 (mandhumula2025_robotic Table 1; alekseeva2025_design Table 14); field shaped by 8 coil-core electromagnets, push-pull by field gradient (filgueirasrama2013_remote Representative Results) plus a motorized linear catheter advancer",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (field-gradient push-pull at the tip); motorized linear catheter advancement mechanism with a sterilizable wheel-drive gearbox on a motor base, joystick-controlled slack/advance (filgueirasrama2013_remote Protocol 1, Fig. 2A, 2C)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "tip direction by dynamically shaped field of 8 fixed electromagnets, 4 above and 4 below the patient in a semi-spherical chamber (li2020_magnetic Sec. 3.3; gang2011_dynamically abstract)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (semi-spherical chamber of 8 electromagnets around the torso, li2020_magnetic Fig. 5)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none reported",
+ "haptics_leader": "no: right-hand 3D controller and left-hand 3-axis joystick at a remote operation console (filgueirasrama2013_remote Fig. 2B-C)",
+ "imaging_compat": "X-ray fluoroscopy, EnSite NavX electroanatomic mapping, EP recording and ICE unified at the operation console (filgueirasrama2013_remote Protocol 1); recording and fluoroscopic equipment unaffected by the fields (gang2011_dynamically abstract)",
+ "sterility": "sterilizable wheel-drive gearbox, disposable sheath clip and leg mount on the advancer (filgueirasrama2013_remote Fig. 2A)",
+ "highest_validation": "human",
+ "validation_detail": "human: 5 atrial flutter ablations (3 left, 2 counterclockwise right), acute success 5/5, no procedure-derived complications, no recurrence at 3-11 months (filgueirasrama2013_remote Table 1); animal: 10 pigs, left-atrial mapping, linear and circumferential RF lesions, selective PV isolation in a subset (gang2011_dynamically abstract)",
+ "key_numbers": "field up to 0.16 T (filgueirasrama2013_remote Protocol 1); 0.14 T and 0.7 T/m gradients (mandhumula2025_robotic text); pigs, automated mode: 96 +/- 8.4% reproducible, 1.9 +/- 0.4 mm from target, 11.6 +/- 3.5 s to target, lesion depth 78.5 +/- 12.1% of atrial wall (gang2011_dynamically abstract); five initial experimental procedures: 95.7% reproducible, 1.9 +/- 0.9 mm, 23.28 +/- 14.8 s (filgueirasrama2013_remote Representative Results)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "photo",
+  "source": "li2020_magnetic Fig. 5 (Hwang 2020; reproduced there from Moya 2013 Rev Esp Cardiol)",
+  "source_url": "https://doi.org/10.1007/s11370-020-00311-0",
+  "licence": "publisher copyright",
+  "credit": "Hwang et al., Intelligent Service Robotics (2020), Fig. 5. publisher copyright.",
+  "edits": "native extract from p. 5; no crop; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "cgci_magnetecs2011_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Motorized catheter advancer, 3D controller and joystick",
+   "source_key": "filgueirasrama2013_remote",
+   "source": "Filgueiras-Rama et al., Journal of Visualized Experiments (2013), Fig. 2, PMC3665328",
+   "source_url": "https://doi.org/10.3791/3658",
+   "where": "Fig. 2, PMC3665328",
+   "licence": "CC BY-NC-ND 3.0"
+  },
+  {
+   "id": "cgci_magnetecs2011_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "photo",
+   "caption": "CGCI chamber with the operation console inset",
+   "source_key": "li2024_design",
+   "source": "Li et al., IEEE Transactions on Medical Robotics and Bionics (2024), Fig. 1(G), p. 2",
+   "source_url": "https://doi.org/10.1109/tmrb.2024.3377374",
+   "where": "Fig. 1(G), p. 2",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "gang2011_dynamically",
+   "doi": "10.1161/circep.110.959692",
+   "url": null,
+   "title": "Dynamically Shaped Magnetic Fields: Initial Animal Validation of a New Remote Electrophysiology Catheter Guidance and Control System",
+   "year": 2011,
+   "venue": "Circulation: Arrhythmia and Electrophysiology"
+  },
+  {
+   "key": "filgueirasrama2013_remote",
+   "doi": "10.3791/3658",
+   "url": null,
+   "title": "Remote Magnetic Navigation for Accurate, Real-time Catheter Positioning and Ablation in Cardiac Electrophysiology Procedures",
+   "year": 2013,
+   "venue": "Journal of Visualized Experiments"
+  },
+  {
+   "key": "li2020_magnetic",
+   "doi": "10.1007/s11370-020-00311-0",
+   "url": null,
+   "title": "A review of magnetic actuation systems and magnetically actuated guidewire- and catheter-based microrobots for vascular interventions",
+   "year": 2020,
+   "venue": "Intelligent Service Robotics"
+  },
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "rafiitari2014_current",
+   "doi": "10.1007/s10439-013-0946-8",
+   "url": null,
+   "title": "Current and Emerging Robot-Assisted Endovascular Catheterization Technologies: A Review",
+   "year": 2014,
+   "venue": "Annals of Biomedical Engineering"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  },
+  {
+   "key": "jeong2017_feasibility",
+   "doi": "10.1007/s12555-015-0269-7",
+   "url": null,
+   "title": "Feasibility study on magnetically steerable guidewire device for percutaneous coronary intervention",
+   "year": 2016,
+   "venue": "International Journal of Control, Automation and Systems"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (filgueirasrama2013_remote, Europe PMC full text); abstract (gang2011_dynamically); review-only for status (li2020_magnetic, mandhumula2025_robotic)",
+ "notes": "Family: commercial (A4 scope; clinical-stage magnetic navigation). A4 had set it aside as EP-only and discontinued; the author put it in (round 8). data/snowball_candidates.csv files Gang 2011 under 'Niobe': it is the CGCI paper. Regulatory clearance N.R. in the sources read. Conflict: field maximum 0.16 T (filgueirasrama2013_remote) vs 0.14 T (mandhumula2025_robotic).",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

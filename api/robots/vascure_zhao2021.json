@@ -1,0 +1,268 @@
+{
+ "schema_version": 1,
+ "id": "vascure_zhao2021",
+ "name": "CASIA VasCure",
+ "full_name": "CASIA vascular robotic system: Dual-finger Robotic Hand (DRH) and VasCure two-channel PCI robot",
+ "group": "Institute of Automation, Chinese Academy of Sciences (CASIA), State Key Lab of Management and Control for Complex Systems / Multimodal AI Systems (Zeng-Guang Hou, Xiao-Liang Xie, Xiao-Hu Zhou, Shi-Qi Liu, Gui-Bin Bian); animal tests at Shanghai Huadong Hospital",
+ "group_short": "CASIA",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2011,
+ "latest_year": 2025,
+ "versions": "2011 image-based guidewire navigation and delivery system (ji2011_guidewire, title); 2013 enhanced dual-finger robotic hand for catheter (bian2013_enhanced, title); 2015 dual-finger robotic hand (DRH): bionic thumb (driven roller, 2 DOF) and bionic forefinger (passive roller, 3 DOF); rotating the rollers about their axes advances the device, translating them in opposite directions along their axes rolls it; two steppers, guidewire gripper, console with handle and LCD panel; bench tests with EM tracking (feng2015_bioinspired, full: Sec. II-A, II-B, III); motion-scaling control (feng2015_motion abstract); 2020 Dual-finger Robotic Hand for Angioplasty, DRH: bionic thumb + bionic forefinger rollers on two steppers, DC-motor clamping, guidewire gripper (wei2020_novel Sec. 2, full); 2021 VasCure: one active + two passive rollers = two channels for two guidewires, graspers A/B, slave on a robot arm (zhao2021_vascure Sec. II, full) and 5G version with generalized predictive control (zhang2021_improved, abstract); 2023-2025 same platform in a white/blue housing on an arm used for learning-based delivery (li2024_modelbased Fig. 2; li2023_casog; li2023_discrete; wang2025_fuzzy); VasCure",
+ "target_anatomy": "coronary (PCI; bifurcation lesions with two-stent technique)",
+ "devices": [
+  "guidewire",
+  "catheter",
+  "therapeutic-device"
+ ],
+ "devices_driven": "guidewire (two guidewires in VasCure) and balloon/stent catheter; master has separate catheter and balloon joysticks; guide catheter advanced manually by the assistant in the pig test (zhao2021_vascure Sec. II-A, III-B)",
+ "n_dof": null,
+ "n_dof_detail": "N.R. as a total; per channel guidewire translation + rotation (zhao2021_vascure Sec. II-B) 2015 DRH: thumb 2 DOF + forefinger 3 DOF (feng2015 Sec. II-A).",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller",
+ "rotation_mechanism": "roller-rolling",
+ "rotation_detail": "other: active and passive rollers translate along their own axes to roll the wire like thumb and forefinger (zhao2021_vascure Sec. II-B); A4/chen2026 review calls it a subjacent lifting mechanism",
+ "device_range": "N.R. (DRH stated compatible with catheters and balloon/stent catheters of different diameters, wei2020_novel Sec. 2) 2015 tests: guidewire 0.35 mm (0.36 in Table I) and balloon/stent catheter 0.7 mm, displacement limited to 200 mm (feng2015 Sec. III-A, III-D).",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "proximal: guidewire friction force from motor torque via a T21WN torque sensor (li2024_modelbased Sec. IV-B); no integrated force feedback in VasCure per chen2026_teleoperation (review) 2015 DRH: none; a torque sensor is future work (feng2015 Sec. IV).",
+ "haptics_leader": "no force feedback reported; master console = guidewire handle (push/pull + rotating knob), catheter joystick, balloon joystick, touchscreen GUI (zhao2021_vascure Fig. 3)",
+ "imaging_compat": "X-ray fluoroscopy (DSA in pig PCI); EM tracking used for bench accuracy",
+ "sterility": "N.R.",
+ "highest_validation": "animal",
+ "validation_detail": "Remote pig PCI over a 5G commercial network, surgeon about 10 km away, two guidewires to LCX and LAD then balloons along both (zhao2021_vascure Sec. III-B; one pig described); GPC controller PCI on an experimental pig, IAE reduced by at least 20% (zhang2021_improved, abstract); further 5G remote PCI pig trials reported by a review (Han 2023 via chen2026_teleoperation [57], review-level)",
+ "key_numbers": "VasCure max guidewire error 0.25 mm advance / 0.38 mm retract over 150 mm at 7.2-25.2 mm/s, 10 trials per speed per channel, EM tracker at 40 Hz (zhao2021_vascure Sec. III-A, Tables I-II); DRH mean axial RMSe 0.72 +/- 0.49 mm (wei2020_novel Abstract); review: 5G latency 90 -> 163 ms at 1100 km and 81 -> 161 ms at 18.3 km (chen2026_teleoperation, Han 2023); learning on the robot: CASOG 94.00 +/- 4.32% success (50 deliveries x 3 seeds; human demonstrations 39/42) on a 15 x 15 x 1 cm printed planar phantom (li2023_casog, arXiv HTML Table 2); CORVE 80.33 +/- 5.09% and 84.00 +/- 4.76% vs CASOG 69.67 +/- 2.69% on phantom 1 (li2024_modelbased Table II) 2015 DRH (feng2015 Sec. III): 5 trials per manipulation (guidewire and balloon/stent translation at 10 mm/s, guidewire rotation), speed sweeps 0.5-60 mm/s; RMS errors shown only as bar plots (Fig. 6), no number in the text.",
+ "sim_model": "group's own guidewire/vessel VR simulators (fast and stable guidewire simulator EMBC 2015; elastic guidewire simulator wang2018_simulator; titles only); no model of the robot found",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found: the RL controllers (CASOG, CORVE, discrete SAC, offline-online RL) were trained on data recorded on the physical robot over a planar phantom with an overhead 140 x 140 px camera, not in simulation (li2024_modelbased Sec. III-A, full; li2023_casog Sec. IV, arXiv HTML); li2023_discrete (Robotica 2023, full): DSAC-AE learned guidewire delivery directly on the 2-DOF robot over a 15 x 15 x 1.5 cm 3D-printed planar model, 140 x 140 px overhead images, 10 discrete actions every 0.5 s, success after 50k real samples in < 15 h (Sec. 2.1, 4); the paper argues against training in simulation (Sec. 1)",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "photo",
+  "source": "wei2020_novel Fig. 1 (DRH; native embedded raster p. 3)",
+  "source_url": "https://doi.org/10.1007/978-3-030-63833-7_61",
+  "licence": "publisher copyright",
+  "credit": "Wei et al., Neural Information Processing (2020), Fig. 1. publisher copyright.",
+  "edits": "native extract; no crop; no edits; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "vascure_zhao2021_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "VasCure slave on its arm at the animal experiment site",
+   "source_key": "zhao2021_vascure",
+   "source": "Zhao et al., 2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC) (2021), Fig. 9, p. 3",
+   "source_url": "https://doi.org/10.1109/embc46164.2021.9629943",
+   "where": "Fig. 9, p. 3",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "VasCure master console with two handles and touch screen",
+   "source_key": "zhao2021_vascure",
+   "source": "Zhao et al., 2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC) (2021), Fig. 3, p. 2",
+   "source_url": "https://doi.org/10.1109/embc46164.2021.9629943",
+   "where": "Fig. 3, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "render",
+   "caption": "CAD of the two-channel delivery device",
+   "source_key": "zhao2021_vascure",
+   "source": "Zhao et al., 2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC) (2021), Fig. 4, p. 2",
+   "source_url": "https://doi.org/10.1109/embc46164.2021.9629943",
+   "where": "Fig. 4, p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Dual-finger robotic hand beside the acrylic phantom table",
+   "source_key": "wei2020_novel",
+   "source": "Wei et al., Neural Information Processing (2020), Fig. 2, p. 4",
+   "source_url": "https://doi.org/10.1007/978-3-030-63833-7_61",
+   "where": "Fig. 2, p. 4",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_05",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Dual-finger robotic hand (DRH) with its transparent cover",
+   "source_key": "feng2015_bioinspired",
+   "source": "Feng et al., 2015 IEEE International Conference on Robotics and Automation (ICRA) (2015), Fig. 1(a), p. 2",
+   "source_url": "https://doi.org/10.1109/icra.2015.7139944",
+   "where": "Fig. 1(a), p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_06",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "leader",
+   "caption": "Master console of the DRH system with operating handle",
+   "source_key": "feng2015_bioinspired",
+   "source": "Feng et al., 2015 IEEE International Conference on Robotics and Automation (ICRA) (2015), Fig. 1(b), p. 2",
+   "source_url": "https://doi.org/10.1109/icra.2015.7139944",
+   "where": "Fig. 1(b), p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_07",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Pre-clinical setup: vascular simulator fed by the robot's delivery unit",
+   "source_key": "li2024_modelbased",
+   "source": "Li et al., IEEE Transactions on Medical Robotics and Bionics (2024), Fig. 2(a), p. 2",
+   "source_url": "https://doi.org/10.1109/tmrb.2024.3407349",
+   "where": "Fig. 2(a), p. 2",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "vascure_zhao2021_08",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Robot feeding a guidewire into the 3D-printed planar phantom used for on-robot RL",
+   "source_key": "li2023_discrete",
+   "source": "Li et al., Robotica (2022), Fig. 1(a), p. 1117",
+   "source_url": "https://doi.org/10.1017/s0263574722001527",
+   "where": "Fig. 1(a), p. 1117",
+   "licence": "publisher copyright (Cambridge University Press)"
+  }
+ ],
+ "sources": [
+  {
+   "key": "zhao2021_vascure",
+   "doi": "10.1109/embc46164.2021.9629943",
+   "url": null,
+   "title": "Design and Performance Evaluation of a Novel Vascular Robotic System for Complex Percutaneous Coronary Interventions",
+   "year": 2021,
+   "venue": "2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)"
+  },
+  {
+   "key": "wei2020_novel",
+   "doi": "10.1007/978-3-030-63833-7_61",
+   "url": null,
+   "title": "A Novel Vascular Robotic System: Performance Evaluation",
+   "year": 2020,
+   "venue": "Neural Information Processing"
+  },
+  {
+   "key": "zhang2021_improved",
+   "doi": "10.1109/embc46164.2021.9630311",
+   "url": null,
+   "title": "An Improved Networked Predictive Controller for Vascular Robot Using 5G Networks",
+   "year": 2021,
+   "venue": "2021 43rd Annual International Conference of the IEEE Engineering in Medicine &amp; Biology Society (EMBC)"
+  },
+  {
+   "key": "feng2015_bioinspired",
+   "doi": "10.1109/icra.2015.7139944",
+   "url": null,
+   "title": "Design and evaluation of a bio-inspired robotic hand for percutaneous coronary intervention",
+   "year": 2015,
+   "venue": "2015 IEEE International Conference on Robotics and Automation (ICRA)"
+  },
+  {
+   "key": "feng2015_motion",
+   "doi": "10.1109/embc.2015.7319490",
+   "url": null,
+   "title": "Preliminary study for motion scaling based control in minimally invasive vascular interventional robot",
+   "year": 2015,
+   "venue": "2015 37th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)"
+  },
+  {
+   "key": "bian2013_enhanced",
+   "doi": "10.1109/icinfa.2013.6720323",
+   "url": null,
+   "title": "An enhanced dual-finger robotic Hand for Catheter manipulating in vascular intervention: A preliminary study",
+   "year": 2013,
+   "venue": "2013 IEEE International Conference on Information and Automation (ICIA)"
+  },
+  {
+   "key": "ji2011_guidewire",
+   "doi": "10.1109/coginf.2011.6016161",
+   "url": null,
+   "title": "Guidewire navigation and delivery system for robot-assisted cardiology interventions",
+   "year": 2011,
+   "venue": "IEEE 10th International Conference on Cognitive Informatics and Cognitive Computing (ICCI-CC′11)"
+  },
+  {
+   "key": "li2023_casog",
+   "doi": "10.1109/tie.2023.3310021",
+   "url": null,
+   "title": "CASOG: Conservative Actor–Critic With SmOoth Gradient for Skill Learning in Robot-Assisted Intervention",
+   "year": 2024,
+   "venue": "IEEE Transactions on Industrial Electronics"
+  },
+  {
+   "key": "li2024_modelbased",
+   "doi": "10.1109/tmrb.2024.3407349",
+   "url": null,
+   "title": "Model-Based Offline Reinforcement Learning for Autonomous Delivery of Guidewire",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "li2023_discrete",
+   "doi": "10.1017/s0263574722001527",
+   "url": null,
+   "title": "Discrete soft actor-critic with auto-encoder on vascular robotic system",
+   "year": 2022,
+   "venue": "Robotica"
+  },
+  {
+   "key": "wang2025_fuzzy",
+   "doi": "10.1109/rcar65431.2025.11139655",
+   "url": null,
+   "title": "A Fuzzy-Logic-Based Method for Autonomous Guidewire Delivery",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Real-time Computing and Robotics (RCAR)"
+  },
+  {
+   "key": "wang2018_simulator",
+   "doi": "10.1007/s11432-017-9476-y",
+   "url": null,
+   "title": "A simulator with an elastic guidewire and vascular system for minimally invasive vascular surgery",
+   "year": 2018,
+   "venue": "Science China Information Sciences"
+  },
+  {
+   "key": "chen2026_teleoperation",
+   "doi": "10.1109/TMRB.2026.3681030",
+   "url": null,
+   "title": "Remote Teleoperation of Endovascular Intervention Robots: A Systematic Review",
+   "year": 2026,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (zhao2021_vascure, wei2020_novel, li2024_modelbased); partial (li2023_casog arXiv HTML); abstract (zhang2021_improved, feng2015_motion); review (chen2026_teleoperation); full (feng2015_bioinspired, 2026-10-14); title (ji2011_guidewire, bian2013_enhanced, wang2025_fuzzy); full (li2023_discrete,, 2026-11-08)",
+ "notes": "SAME ROBOT as A4 row vascure_unknown2021 (developer N.R. there): VasCure is CASIA's (zhao2021_vascure author list and Sec. I). Merge: keep this row's group/mechanism/numbers and A4's review-level 5G trial counts. The A4 'clinical-stage' label is not supported: no human study found. X-ray overlay in zhao2021 Fig. 10 reads 'SH WEICHUANG MEDICAL CO.' (meaning N.R.). | 2026-11-08 X3: li2023_discrete read in full; its Fig. 1(a) (robot beside the planar phantom) added to the gallery as _08; merged from vascure_unknown2021 (A4)",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

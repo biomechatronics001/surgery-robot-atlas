@@ -1,0 +1,291 @@
+{
+ "schema_version": 1,
+ "id": "kagawa_mrf_guo2019",
+ "name": "RAECS / ECRS",
+ "full_name": "Kagawa/BIT magnetorheological-fluid haptic master-slave catheter system (RAECS / ECRS)",
+ "group": "Kagawa University and Beijing Institute of Technology (Shuxiang Guo; Yu Song, Xuanchun Yin, Linshuai Zhang, Xingyu Li); later Chengdu University of Information Technology",
+ "group_short": "Kagawa / BIT",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2016,
+ "latest_year": 2025,
+ "versions": "guo2016_design (MR-fluid leader, force-sensor array) -> yin2018_magnetorheological (2-DOF slave, force sensing unit) -> song2018_performance -> guo2019_novel (T-RO: MR leader around a real catheter, fibre-optic tip sensor, collision zones) -> zhang2021_magnetorheological (catheter+guidewire system) -> li2022_collaborative (ECRS: collaborative handles, hydrogel + solid MR fluid, tremor-reduction structure) -> zhang2025_innovative (MRF master interface); 2007: S. Guo (Kagawa) \"new catheter operating system\" (Guo, Kondo, Wang, Guo, Tamiya 2007, ICME; Rafii-Tari 2014 Table 4 row 2) (rafiitari2014_current); 2014-21: J. Guo / S. Guo grasper-type slave (Belikov GU2.1-2.3): 2014 grasper, 2019 wedge-block guidewire clamp (ICMA), 2020 fuzzy PID, 2021 pinion fixture (ICMA), Liao 2022 (Alekseeva 2025 Table 6 row 5, Fig. 10f) (alekseeva2025_design; belikov2024_evolution; chen2023_operating; li2024_design); 2006: Harbin Engineering University with S. Guo, master-slave catheter driving mechanism for intravascular neurosurgery, two stepping motors (disk gear rotation, gear-pair axial drive), Internet remote control, bench precision test of a 2 mm catheter with a laser displacement sensor (Feng 2006 ICMA) (Zhao 2022 Table 1 row 24; Li 2024 Fig. 5A) (feng2006_highly; zhao2022_remote; li2024_design)",
+ "target_anatomy": "cerebrovascular / general (endovascular evaluator model)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "guo2016: catheter on a slave whose insertion angle adjusts 0-45 deg (guo2016 Sec. 2.4); yin2018 and guo2019: one 5 F patient catheter (7 F input catheter at the leader); zhang2021: catheter or guidewire held by an electromagnetic adaptive collet (Sec. 3, Fig. 4); li2022: 5 Fr catheter and 260 cm J-type guidewire at once, catheter and guidewire manipulation units (CMU, GMU) (Sec. 2.2, 4.4)",
+ "n_dof": 2,
+ "n_dof_detail": "2 for the catheter (axial, radial; guo2016, yin2018, guo2019); li2022 CMU + GMU move catheter and guidewire separately (count N.R.)",
+ "translation_mechanism": "clamp-relay",
+ "translation_detail": "clamp-relay (guo2019: platform on two stepper motors, grasper A holds for insertion/retraction/rotation while grasper B holds the catheter during A's return; axial grip force 4 N, S8 reading of Sec. II-B)",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "Rotation of the holding grasper (radial DOF)",
+ "device_range": "5 F catheter (guo2019)",
+ "footprint_mm": "li2022 slave: 920 mm overall length, 400 mm CMU/GMU travel (Sec. 2.2); earlier versions N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "Load cell on the follower for proximal force; 1.3 mm fibre-optic pressure sensor in a 5 F catheter for tip contact force, working range 0-0.2 N (guo2019 Sec. IV-B); guo2016: load cell on the driven module behind grasper 1, plus a tip force-sensor array; zhang2021: load cell under the clamp; li2022: two TEAC TU-UJ load cells (+/-5 N) and two torque sensors for radial torque (Sec. 2.2)",
+ "haptics_leader": "Passive MR-fluid haptic interface around the real input catheter; resistance up to ~0.5 N at 150 mT (0.4 N at 110 mT); three levels switched at tip forces 0.08, 0.10, 0.12 N (guo2019); ten operators noticed the step at 150 mT in 93 % of trials",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "In vitro only: guo2016 tracking and force-feedback benches with a vascular model; yin2018 ten novice volunteers drove a 5 Fr catheter through a rigid cerebral model into a wide-neck aneurysm; guo2019 ten operators in the EVE model; zhang2021 ten non-medical subjects in the EVE model with collision cues; li2022 tracking tests and six trialists inserting a guidewire into the EVE model with and without haptics; zhang2025 volunteers reaching targets along a 15 cm vascular-model path (Sec. 4 of each)",
+ "key_numbers": "guo2019: axial positioning error 1.23 +/- 0.07 mm, rotation 1.57 +/- 0.07 deg; li2022: mean translation tracking error 0.94 mm, rotation 0.89 deg (abstract); MR resistance 0.16-0.5 N across 30-150 mT; guo2016: axial tracking error < 2 mm; zhang2021: axial transmission error < 1 mm (10 runs), 5 Fr catheter driven at 3.5 mm/s in the force test; li2022: CMU/GMU stepping motors 0.36 deg resolution",
+ "sim_model": "VR catheter-operation simulators from the same group (guo2012_virtual; wang2016_virtual); no physics model of the follower found",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "A",
+  "kind": "photo",
+  "source": "guo2019_novel Fig. 3 (catheter manipulator photo: grasper A, load cell, grasper B on ball-screw stage), T-RO 2019, doi:10.1109/TRO.2019.2896763",
+  "source_url": "https://doi.org/10.1109/TRO.2019.2896763",
+  "licence": "publisher copyright",
+  "credit": "Guo et al., IEEE Transactions on Robotics (2019), Fig. 3. publisher copyright.",
+  "edits": "native extract (2073x1373); 4 text labels and 4 straight leader arrows on the wall, a curved double arrow above grasper A, and a double-headed motion arrow over the linear-stage base plate erased (LaMa + OpenCV Telea for arrow tips, local chroma correction of fill tint); cropped; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "kagawa_mrf_guo2019_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Local master haptic interface and remote catheter manipulator with vascular model",
+   "source_key": "guo2019_novel",
+   "source": "Guo et al., IEEE Transactions on Robotics (2019), Fig. 14, p. 7",
+   "source_url": "https://doi.org/10.1109/tro.2019.2896763",
+   "where": "Fig. 14, p. 7",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_02",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_02.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_02.jpg",
+   "kind": "photo",
+   "caption": "ECRS slave with catheter and guidewire manipulation units on a slide rail",
+   "source_key": "li2022_collaborative",
+   "source": "Li et al., Micromachines (2022), Fig. 3 (MDPI HTML figure g003)",
+   "source_url": "https://doi.org/10.3390/mi13040505",
+   "where": "Fig. 3 (MDPI HTML figure g003)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_03",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_03.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_03.jpg",
+   "kind": "leader",
+   "caption": "MR-fluid haptic master: magnetic field generator around the input catheter",
+   "source_key": "yin2018_magnetorheological",
+   "source": "Yin et al., Micromachines (2018), Fig. 11 (MDPI HTML figure g011)",
+   "source_url": "https://doi.org/10.3390/mi9090465",
+   "where": "Fig. 11 (MDPI HTML figure g011)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_04",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_04.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_04.jpg",
+   "kind": "leader",
+   "caption": "MR-fluid master with encoders for translation and rotation of the catheter",
+   "source_key": "zhang2021_magnetorheological",
+   "source": "Zhang et al., Micromachines (2021), Fig. 3 (MDPI HTML figure g003)",
+   "source_url": "https://doi.org/10.3390/mi12060640",
+   "where": "Fig. 3 (MDPI HTML figure g003)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_05",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_05.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_05.jpg",
+   "kind": "setup",
+   "caption": "Slave manipulator with load cell and sliding table for force calibration",
+   "source_key": "zhang2021_magnetorheological",
+   "source": "Zhang et al., Micromachines (2021), Fig. 13 (MDPI HTML figure g013)",
+   "source_url": "https://doi.org/10.3390/mi12060640",
+   "where": "Fig. 13 (MDPI HTML figure g013)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_06",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_06.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_06.jpg",
+   "kind": "in-use",
+   "caption": "Slave manipulator robot driving devices into the EVE vascular model",
+   "source_key": "li2022_collaborative",
+   "source": "Li et al., Micromachines (2022), Fig. 15(b) (MDPI HTML figure g015)",
+   "source_url": "https://doi.org/10.3390/mi13040505",
+   "where": "Fig. 15(b) (MDPI HTML figure g015)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_07",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_07.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_07.jpg",
+   "kind": "setup",
+   "caption": "MRF master interface and slave manipulator with force sensor on the bench",
+   "source_key": "zhang2025_innovative",
+   "source": "Zhang et al., Sensors (2025), Fig. 12 (MDPI HTML figure g012)",
+   "source_url": "https://doi.org/10.3390/s25247450",
+   "where": "Fig. 12 (MDPI HTML figure g012)",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "id": "kagawa_mrf_guo2019_08",
+   "status": "cleared",
+   "file": "pictures/extra/kagawa_mrf_guo2019_08.jpg",
+   "thumb": "pictures/thumbs/kagawa_mrf_guo2019_08.jpg",
+   "kind": "render",
+   "caption": "CAD of the ECRS slave with catheter and guidewire operating units",
+   "source_key": "li2022_collaborative",
+   "source": "Li et al., Micromachines (2022), Fig. 2 (MDPI HTML figure g002)",
+   "source_url": "https://doi.org/10.3390/mi13040505",
+   "where": "Fig. 2 (MDPI HTML figure g002)",
+   "licence": "CC BY 4.0"
+  }
+ ],
+ "sources": [
+  {
+   "key": "guo2019_novel",
+   "doi": "10.1109/tro.2019.2896763",
+   "url": null,
+   "title": "A Novel Robot-Assisted Endovascular Catheterization System With Haptic Force Feedback",
+   "year": 2019,
+   "venue": "IEEE Transactions on Robotics"
+  },
+  {
+   "key": "guo2016_design",
+   "doi": "10.1007/s10544-016-0100-0",
+   "url": null,
+   "title": "Design and characteristics evaluation of a novel teleoperated robotic catheterization system with force feedback for vascular interventional surgery",
+   "year": 2016,
+   "venue": "Biomedical Microdevices"
+  },
+  {
+   "key": "yin2018_magnetorheological",
+   "doi": "10.3390/mi9090465",
+   "url": null,
+   "title": "Magnetorheological Fluids Actuated Haptic-Based Teleoperated Catheter Operating System",
+   "year": 2018,
+   "venue": "Micromachines"
+  },
+  {
+   "key": "song2018_performance",
+   "doi": "10.1007/s10544-018-0294-4",
+   "url": null,
+   "title": "Performance evaluation of a robot-assisted catheter operating system with haptic feedback",
+   "year": 2018,
+   "venue": "Biomedical Microdevices"
+  },
+  {
+   "key": "zhang2021_magnetorheological",
+   "doi": "10.3390/mi12060640",
+   "url": null,
+   "title": "A Magnetorheological Fluids-Based Robot-Assisted Catheter/Guidewire Surgery System for Endovascular Catheterization",
+   "year": 2021,
+   "venue": "Micromachines"
+  },
+  {
+   "key": "li2022_collaborative",
+   "doi": "10.3390/mi13040505",
+   "url": null,
+   "title": "An Endovascular Catheterization Robotic System Using Collaborative Operation with Magnetically Controlled Haptic Force Feedback",
+   "year": 2022,
+   "venue": "Micromachines"
+  },
+  {
+   "key": "zhang2025_innovative",
+   "doi": "10.3390/s25247450",
+   "url": null,
+   "title": "An Innovative Master Haptic Interface Employing Magnetorheological Fluids for Endovascular Catheterization",
+   "year": 2025,
+   "venue": "Sensors"
+  },
+  {
+   "key": "guo2012_virtual",
+   "doi": "10.20965/jrm.2012.p0649",
+   "url": null,
+   "title": "Virtual Reality Simulators Based on a Novel Robotic Catheter Operating System for Training in Minimally Invasive Surgery",
+   "year": 2012,
+   "venue": "Journal of Robotics and Mechatronics"
+  },
+  {
+   "key": "wang2016_virtual",
+   "doi": "10.1002/rcs.1769",
+   "url": null,
+   "title": "A virtual‐reality simulator and force sensation combined catheter operation training system and its preliminary evaluation",
+   "year": 2016,
+   "venue": "The International Journal of Medical Robotics and Computer Assisted Surgery"
+  },
+  {
+   "key": "rafiitari2014_current",
+   "doi": "10.1007/s10439-013-0946-8",
+   "url": null,
+   "title": "Current and Emerging Robot-Assisted Endovascular Catheterization Technologies: A Review",
+   "year": 2014,
+   "venue": "Annals of Biomedical Engineering"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  },
+  {
+   "key": "chen2023_operating",
+   "doi": "10.1109/tmrb.2023.3272049",
+   "url": null,
+   "title": "The Catheter and Guidewire Operating Systems of Vascular Interventional Surgical Robots: A Systematic Review",
+   "year": 2023,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "feng2006_highly",
+   "doi": "10.1109/icma.2006.257760",
+   "url": null,
+   "title": "Highly Precise Catheter Driving Mechanism for Intravascular Neurosurgery",
+   "year": 2006,
+   "venue": "2006 International Conference on Mechatronics and Automation"
+  },
+  {
+   "key": "zhao2022_remote",
+   "doi": "10.21037/qims-21-792",
+   "url": null,
+   "title": "Remote vascular interventional surgery robotics: a literature review",
+   "year": 2022,
+   "venue": "Quantitative Imaging in Medicine and Surgery"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (guo2019; guo2016_design, yin2018, zhang2021, li2022 and zhang2025 PDFs in lit/pdfs, 2026-11-08)",
+ "notes": "Highest validation is bench/phantom in every paper found; the animal and dog experiments belong to the RVIR-CI lineage (bit_rvirci_bao2022). MDPI and PMC render URLs returned HTTP 403 for the wrapper, so 2018-2022 MDPI papers are abstract-level (manual-download list in the notes). | 2026-11-08 X3: five MDPI/Springer papers read in full; gallery already 8, nothing added. All tests stay in vitro, so validation stays phantom",
+ "maintainers_own": false,
+ "found_by": "academic"
+}

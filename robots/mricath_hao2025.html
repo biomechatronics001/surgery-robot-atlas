@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MRI-actuated cath. — Catheter Robot Atlas</title><meta name="description" content="MRI-actuated cath.: MRI-actuated robotic catheter (Lorentz-force micro-coils)"><meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Thing", "name": "MRI-actuated cath.", "alternateName": "MRI-actuated robotic catheter (Lorentz-force micro-coils)", "description": "Magnetic navigation; own catheter: rigid actuator segment with one axial and two side coils between flexible segments; tested up to bench.", "url": "robots/mricath_hao2025.html", "subjectOf": [{"@type": "ScholarlyArticle", "name": "Real-Time Forward Kinematics and Jacobians for Control of an MRI-Guided Magnetically Actuated Robotic Catheter", "datePublished": "2025"}]}</script>
+</head><body><div class="banner"><div class="wrap"><b>Lab preview.</b> This build shows pictures under publisher copyright or press terms. Pictures are reproduced from the cited papers and company material and stay under their owners' copyright; do not reuse them.</div></div>
+<header class="top"><div class="wrap"><a class="mark" href="../index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 C 12 26, 10 8, 20 8 S 28 14, 28 6" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round"/><circle cx="28" cy="6" r="2.6" fill="#222"/></svg>Catheter Robot Atlas</a><nav><a href="../index.html">Home</a><a href="../library.html">Library</a><a href="../reviews.html">Reviews</a><a href="../sim2real.html">Sim-to-real</a><a href="../docs.html">Schema &amp; API</a><a href="../contribute.html">Contribute</a><a href="../about.html">About</a></nav></div></header>
+<main><div class="wrap"><div class="crumb"><a href="../library.html">← All robots</a></div>
+<div class="dhead"><p class="kicker">Magnetic navigation · mricath_hao2025</p>
+<h1>MRI-actuated cath.</h1><div class="full">MRI-actuated robotic catheter (Lorentz-force micro-coils)</div>
+<div class="meta">Cavusoglu, Case Western Reserve University · –2025</div></div>
+<div class="split"><div><figure class="hero-pic"><a class="pic g-item" href="../pictures/mricath_hao2025.jpg" data-caption="MRI-actuated cath.: main picture" data-source="hao2025_realtime arXiv 2512.23085 Fig. 1 (one-coil-set catheter prototype hanging from its base). Licence: arXiv author preprint, licence not checked; not cleared for distribution." data-url="https://arxiv.org/abs/2512.23085"><img src="../pictures/mricath_hao2025.jpg" alt="MRI-actuated cath."></a><figcaption><b>Not cleared for distribution.</b> hao2025_realtime arXiv 2512.23085 Fig. 1 (one-coil-set catheter prototype hanging from its base). Licence: arXiv author preprint, licence not checked. Picture grade B.</figcaption></figure></div><div><dl class="facts">
+<dt>Family</dt><dd>Magnetic navigation <span class="muted">(magnetic-navigation)</span></dd>
+<dt>Devices</dt><dd>own catheter: rigid actuator segment with one axial and two side coils between flexible segments</dd>
+<dt>Degrees of freedom</dt><dd>3 coil currents per actuator (one coil set in the prototype)</dd>
+<dt>Push</dt><dd>Magnetic</dd>
+<dt>Twist</dt><dd>Field direction</dd>
+<dt>Tested up to</dt><dd><span class="ladder" aria-hidden="true"><i class=f></i><i></i><i></i><i></i><i></i></span>Bench</dd>
+<dt>Sim-to-real</dt><dd>Model-based only <span class="muted">— Commands computed in a simulator or from a physical model ran on the robot; nothing was learned.</span></dd>
+</dl></div></div>
+
+<div class="dsec"><h2>Testing</h2><dl><dt>Highest level</dt><dd>Bench</dd><dt>What was tested</dt><dd>open-loop complex tip trajectories tracked by stereo camera; no phantom with flow</dd><dt>Key numbers</dt><dd>N.R. (error figures not extracted)</dd></dl></div>
+<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>magnetic (MRI scanner static field acts on current-carrying coils); insertion length is an input</dd><dt>Twist (rotation)</dt><dd>coil torque</dd><dt>Device range</dt><dd><span class="nr">N.R.</span></dd><dt>Target anatomy</dt><dd>cardiac EP (atrial fibrillation ablation under real-time MRI)</dd></dl></div>
+<div class="dsec"><h2>Sensing and interface</h2><dl><dt>Force sensing</dt><dd>none</dd><dt>Leader and haptics</dt><dd>no</dd><dt>Imaging</dt><dd>MRI-actuated and MR-guided by design; catadioptric stereo camera used in bench tests</dd><dt>Sterility</dt><dd><span class="nr">N.R.</span></dd></dl></div>
+<div class="dsec"><h2>Size</h2><dl><dt>Footprint (mm)</dt><dd><span class="nr">N.R.</span></dd><dt>Mass (kg)</dt><dd><span class="nr">N.R.</span></dd></dl></div>
+<div class="dsec"><h2>Simulation</h2><dl><dt>Simulation model</dt><dd>static Cosserat rod with analytical Jacobians, real-time (hao2025_realtime, abstract + method)</dd><dt>Sim-trained controller</dt><dd>model-based: kinematic model used for open-loop control of the prototype; no learned policy</dd></dl></div>
+<div class="dsec"><h2>Versions</h2><dl><dt>Lineage</dt><dd>single-coil-set prototype in 2025 kinematics paper; earlier design papers cited (refs 5-7 of hao2025, not read)</dd></dl></div>
+<div class="dsec" id="sources"><h2>Sources</h2><ol class="srcs"><li>Real-Time Forward Kinematics and Jacobians for Control of an MRI-Guided Magnetically Actuated Robotic Catheter · <a href="https://arxiv.org/abs/2512.23085">link</a> <span class="nr">[hao2025_realtime]</span></li></ol></div>
+<div class="dsec"><h2>Notes</h2><dl><dt>Notes</dt><dd>Cardiac EP, no mechanical bedside push described in what I read.</dd></dl></div>
+<div class="dsec"><h2>This record</h2><dl><dt>Read level</dt><dd>abstract — abstract and intro read; numbers not extracted</dd><dt>Picture</dt><dd>hao2025_realtime arXiv 2512.23085 Fig. 1 (one-coil-set catheter prototype hanging from its base) <a href="https://arxiv.org/abs/2512.23085">↗</a> — licence: arXiv author preprint, licence not checked; grade B</dd><dt>Picture changes</dt><dd>native extract; crop to the catheter column (drops the coil-drawing inset); 7 arrowheads on the plain wall erased (LaMa); not upscaled</dd><dt>Found by</dt><dd>actuated-tip: Search of actuated-tip and magnetic devices.</dd><dt>Data</dt><dd><a href="../api/robots/mricath_hao2025.json">JSON</a> · YAML: <code>records/robots/mricath_hao2025.yaml</code></dd><dt>Correction</dt><dd>Suggest a correction <span class="todo" title="open decision for the maintainers">[repository not created yet]</span></dd></dl></div>
+<div class="pager"><span>← <a href="southeast_jin2024.html">MR-fluid platform</a></span><span><a href="polymtl_gosselin2011.html">MRN platform</a> →</span></div>
+</div></main>
+<footer class="foot"><div class="wrap">
+<div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
+the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
+pictures keep their owners' licences. Built 2026-11-09.</div>
+<div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
+Paper: Endovascular Catheter and Guidewire Robots: A Hardware Atlas (in preparation)</div>
+<div>Machine-readable: <a href="../api/robots.json">robots.json</a> · <a href="../robots.csv">robots.csv</a> ·
+<a href="../api/schema.json">schema.json</a><br><a href="../docs.html">Schema &amp; API</a> · <a href="../contribute.html">Contribute</a></div>
+</div></footer><script src="../assets/gallery.js"></script>
+</body></html>

@@ -1,0 +1,122 @@
+{
+ "schema_version": 1,
+ "id": "buffalo_seta_srimathveeravalli2010",
+ "name": "SETA",
+ "full_name": "SETA (System for Endovascular Teleoperated Access)",
+ "group": "State University of New York (SUNY) at Buffalo, Dept. of Mechanical and Aerospace Engineering (G. Srimathveeravalli, T. Kesavadas, X. Li)",
+ "group_short": "U. Buffalo",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2010,
+ "latest_year": 2010,
+ "versions": "2010 IJMRCAS (full); the same PI's later SAER robot (UIUC/Buffalo) is robots_A3 saer_sankaran2018; Ashammagari et al. 2016 IMECE automated aortic-arch access on the VIST simulator used a 7-DOF Robai Cyton arm, neither SETA nor SAER (ashammagari2016_image, full)",
+ "target_anatomy": "neurovascular / endovascular access (design data from femoral-to-internal-carotid angiograms in rabbits and on VIST; srimathveeravalli2010_design Materials and Methods)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "guidewire and catheter simultaneously, any standard device 0.014-0.13 in (friction-wheel range); bench: 0.035 in guidewire + 5 Fr Boston Scientific Expo catheter (Results); VIST trial: the manual angiogram (0.035 / 0.014 in Emerald guidewires, 5 Fr Tempo Aqua catheter) repeated with SETA",
+ "n_dof": 3,
+ "n_dof_detail": "3 motorised: guidewire insert/withdraw, catheter insert/withdraw, catheter twist (three Maxon EC-22 motors); a travelling cart carrying the guidewire drive and the steering stage runs on a pulley (Design of patient-side slave, Actuators; Fig. 2)",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller: driven lower + idler upper 2 in polyurethane wheels (Shore 55A, mu ~0.6), spring-tensioned self-adjusting housing, normal load 1.275 N (Slave actuators; Fig. 3)",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "catheter only: miniature gripper of brass roller pins on O-ring-tensioned steel shafts (transmits torque, allows axial slip) turned by a pulley from a servomotor and torque sensor (Slave actuators; Fig. 4)",
+ "device_range": "0.014-0.13 in (Slave actuators)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "proximal: LXT 971 torque sensor (Cooper Instruments, +/-2.5 Nm, 0.005 Nm resolution) between each motor and its wheel/pulley, converted to axial and radial tool forces (Slave actuators; Teleoperation)",
+ "haptics_leader": "Novint Falcon; twist mapped to left-right stylus motion; force-reflecting loop at 500 Hz with Butterworth tremor filter (5-25 Hz), motion scaling and delay term (Teleoperation and haptic feedback, Eq. 1, Fig. 5)",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "bench: step inputs to 30/60/90 mm at 1000/2500/5000 rpm, 15 repeats each, plus ramps (Fig. 6); steering 1 deg steps over 360 deg, 10 cycles each way on a 5 F catheter (Fig. 7); phantom: teleoperated 0.035 in guidewire in a silicone vessel with one bifurcation (Fig. 8); VIST simulator: 8 neurovascular surgeons and fellows (7 M, 1 F, mean 500 cases) repeated a carotid angiogram, procedure time 87.42 s robotic vs 80.57 s manual (p = 0.829), contrast 7 vs 5.75 cc (p = 0.723), 1 participant did not finish; questionnaire 2.25-3.0 of 4 (Table 3, Fig. 11). In vivo animal studies only planned (Abstract, Conclusion)",
+ "key_numbers": "insertion slip < 0.4 mm per 100 mm; teleoperated phantom lag < 0.003 in; back-slip force 0.76 N (4x below the 3 N tool limit, so buckling stays outside the lumen); EC-22 motors 18,000 rpm max with 1:128 gearhead (~3 Nm); friction-wheel assembly 130 g; teleoperation 500 Hz; master spec from motion study: 28.5 mm stroke, 4.5 N, 13 Hz hand motion (Slave actuators, Teleoperation, Results)",
+ "sim_model": "none found (VIST simulator used as the test patient, not a model of SETA)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "C",
+  "kind": "photo",
+  "source": "srimathveeravalli2010_design Fig. 2 (patient-side slave, two photographs), p. 164, IJMRCAS 2010 doi:10.1002/rcs.301",
+  "source_url": "https://doi.org/10.1002/rcs.301",
+  "licence": "publisher copyright",
+  "credit": "Srimathveeravalli et al., The International Journal of Medical Robotics and Computer Assisted Surgery (2010), Fig. 2. publisher copyright.",
+  "edits": "native extract (the PDF embeds the figure at 500 x 327); no crop; nothing erased; not upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "buffalo_seta_srimathveeravalli2010_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Slave driving guidewire and catheter into the VIST simulator, simulated fluoroscopy behind",
+   "source_key": "srimathveeravalli2010_design",
+   "source": "Srimathveeravalli et al., The International Journal of Medical Robotics and Computer Assisted Surgery (2010), Fig. 10, p. 168",
+   "source_url": "https://doi.org/10.1002/rcs.301",
+   "where": "Fig. 10, p. 168",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "buffalo_seta_srimathveeravalli2010_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Friction-wheel insertion and withdrawal actuator with polyurethane wheels",
+   "source_key": "srimathveeravalli2010_design",
+   "source": "Srimathveeravalli et al., The International Journal of Medical Robotics and Computer Assisted Surgery (2010), Fig. 3(B), p. 165",
+   "source_url": "https://doi.org/10.1002/rcs.301",
+   "where": "Fig. 3(B), p. 165",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "buffalo_seta_srimathveeravalli2010_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Steering stage: miniature roller gripper inside its pulley housing",
+   "source_key": "srimathveeravalli2010_design",
+   "source": "Srimathveeravalli et al., The International Journal of Medical Robotics and Computer Assisted Surgery (2010), Fig. 4(B), p. 165",
+   "source_url": "https://doi.org/10.1002/rcs.301",
+   "where": "Fig. 4(B), p. 165",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "srimathveeravalli2010_design",
+   "doi": "10.1002/rcs.301",
+   "url": null,
+   "title": "Design and fabrication of a robotic mechanism for remote steering and positioning of interventional devices",
+   "year": 2010,
+   "venue": "The International Journal of Medical Robotics and Computer Assisted Surgery"
+  },
+  {
+   "key": "ashammagari2016_image",
+   "doi": "10.1115/imece2016-65922",
+   "url": null,
+   "title": "Image Guided Automation of Endovascular Robotic Surgery",
+   "year": 2016,
+   "venue": "Volume 14: Emerging Technologies; Materials: Genetics to Structures; Safety Engineering and Risk Analysis"
+  },
+  {
+   "key": "rafiitari2014_current",
+   "doi": "10.1007/s10439-013-0946-8",
+   "url": null,
+   "title": "Current and Emerging Robot-Assisted Endovascular Catheterization Technologies: A Review",
+   "year": 2014,
+   "venue": "Annals of Biomedical Engineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (srimathveeravalli2010_design,, hand-downloaded 2026-11-08)",
+ "notes": "Predecessor of SAER in the Kesavadas group. No picture: Wiley paper not downloaded. | 2026-11-08 X3: full text read. The rabbit work in the paper is the manual motion-capture study (2 radiologists, 15 datasets), not a robot test, so validation stays phantom. Slave on a passive articulated arm for orientation at the cannula; authors list footprint reduction and a twisting master as open items (Conclusion). The paper's Table 1 surveys 8 earlier systems",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

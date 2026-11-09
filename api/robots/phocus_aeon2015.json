@@ -1,0 +1,140 @@
+{
+ "schema_version": 1,
+ "id": "phocus_aeon2015",
+ "name": "Aeon Phocus",
+ "full_name": "Aeon Phocus electromagnetic catheter steering system",
+ "group": "Aeon Scientific AG (ETH Zurich spin-off)",
+ "group_short": "Aeon Scientific",
+ "family": "commercial",
+ "category": "magnetic-navigation",
+ "first_year": 2015,
+ "latest_year": 2017,
+ "versions": "single system: CE mark announced 2015-07-30 (startupticker2015_aeon); host of the ETH magnetic-catheter tests of 2017 (chautems2017_tethered, chautems2017_variable); company no longer in business (li2020_magnetic Sec. 3.4); 'discontinued despite regulatory approval' (mandhumula2025_robotic)",
+ "target_anatomy": "cardiac arrhythmias (catheter ablation) in all four heart chambers (chautems2017_tethered Sec. III-A)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "magnetic ablation catheters (model N.R.); in ETH tests a tethered magnet (NdFeB, 29 mm long, 5 mm radius) and variable-stiffness magnetic catheters with LMPA segments (chautems2017_tethered Fig. 7; chautems2017_variable)",
+ "n_dof": 3,
+ "n_dof_detail": "3 (alekseeva2025_design Table 14); field and field gradient from 7 electromagnets (chautems2017_tethered Sec. II)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (field gradient on the tip magnet); catheter advance mechanism N.R.",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "tip direction by field of 7 electromagnets arranged around the patient's torso (li2020_magnetic Sec. 3.4); static electromagnets (chautems2017_tethered Sec. I) vs 'movable electromagnets' (mandhumula2025_robotic): conflict",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R. (encloses the patient's upper body, li2020_magnetic Fig. 6b)",
+ "mass_kg": "N.R.",
+ "force_sensing": "none in the system; ETH added Hall sensors around the workspace for field correction (chautems2017_tethered Sec. II)",
+ "haptics_leader": "no: joystick in a separate control room (li2020_magnetic Sec. 3.4; chautems2017_tethered Sec. III-A)",
+ "imaging_compat": "integrated with a Siemens Artis Zee angiography system (chautems2017_tethered Fig. 6; li2020_magnetic Sec. 3.4)",
+ "sterility": "N.R.",
+ "highest_validation": "bench",
+ "validation_detail": "bench only in the sources read: tethered-magnet trajectories and force measurements inside the Aeon Phocus at Aeon's lab (chautems2017_tethered Sec. III); variable-stiffness catheter configurations in the Aeon field (chautems2017_variable Fig. 3). Clinical use is stated ('a medically certified system currently in clinical use', chautems2017_tethered abstract) but no patient study was found; alekseeva2025_design Table 14 gives 'ex vivo phantom studies (TRL3)'",
+ "key_numbers": "7 electromagnets; model vs measured force error below 0.01 N, nine points at 0.071 +/- 0.005 N (chautems2017_tethered Sec. III-C); field controlled closed-loop at 1 Hz in the ETH tests (chautems2017_tethered Sec. II); 100 mT used to load a VS catheter with 0.003 Nm (chautems2017_variable Sec. III)",
+ "sim_model": "none found (linear field model with saturation correction, no simulator; chautems2017_tethered Sec. II)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "photo",
+  "source": "chautems2017_variable Fig. 1(B) (same photo as li2020_magnetic Fig. 6a)",
+  "source_url": "https://doi.org/10.1109/iros.2017.8202155",
+  "licence": "publisher copyright",
+  "credit": "Chautems et al., 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) (2017), Fig. 1. publisher copyright.",
+  "edits": "native extract from chautems2017_variable-stiffness_IROS.pdf p. 1; cropped to panel B; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "phocus_aeon2015_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "photo",
+   "caption": "Aeon Phocus electromagnets beside the patient table and Artis Zee",
+   "source_key": "chautems2017_tethered",
+   "source": "Chautems et al., 2017 IEEE International Conference on Robotics and Automation (ICRA) (2017), Fig. 6, p. 5",
+   "source_url": "https://doi.org/10.1109/icra.2017.7989562",
+   "where": "Fig. 6, p. 5",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "phocus_aeon2015_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "photo",
+   "caption": "Aeon Phocus in the angiography suite with the control room inset",
+   "source_key": "li2024_design",
+   "source": "Li et al., IEEE Transactions on Medical Robotics and Bionics (2024), Fig. 1(H), p. 2",
+   "source_url": "https://doi.org/10.1109/tmrb.2024.3377374",
+   "where": "Fig. 1(H), p. 2",
+   "licence": "publisher copyright"
+  }
+ ],
+ "sources": [
+  {
+   "key": "chautems2017_tethered",
+   "doi": "10.1109/icra.2017.7989562",
+   "url": null,
+   "title": "The tethered magnet: Force and 5-DOF pose control for cardiac ablation",
+   "year": 2017,
+   "venue": "2017 IEEE International Conference on Robotics and Automation (ICRA)"
+  },
+  {
+   "key": "chautems2017_variable",
+   "doi": "10.1109/iros.2017.8202155",
+   "url": null,
+   "title": "A variable stiffness catheter controlled with an external magnetic field",
+   "year": 2017,
+   "venue": "2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  },
+  {
+   "key": "startupticker2015_aeon",
+   "doi": null,
+   "url": null,
+   "title": "Green light to Aeon Scientific to launch its Aeon Phocus",
+   "year": 2015,
+   "venue": null
+  },
+  {
+   "key": "li2020_magnetic",
+   "doi": "10.1007/s11370-020-00311-0",
+   "url": null,
+   "title": "A review of magnetic actuation systems and magnetically actuated guidewire- and catheter-based microrobots for vascular interventions",
+   "year": 2020,
+   "venue": "Intelligent Service Robotics"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (chautems2017_tethered, chautems2017_variable); web (startupticker2015_aeon)",
+ "notes": "Family: commercial (A4 scope; CE-marked magnetic navigation). A4 had set it aside as EP-only; the author put it in (round 8). Nanoflex (navion_nanoflex2025) is a later, different ETH spin-off. Same ETH group tested the tethered magnet in it (review_coverage rows 'ETH_CHAUTEMS', not added here).",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

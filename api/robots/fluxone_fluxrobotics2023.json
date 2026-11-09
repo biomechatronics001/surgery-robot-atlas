@@ -1,0 +1,150 @@
+{
+ "schema_version": 1,
+ "id": "fluxone_fluxrobotics2023",
+ "name": "Flux One",
+ "full_name": "Flux One mobile magnetic navigation system",
+ "group": "Flux Robotics B.V. (University of Twente spin-off; Heunis, Misra)",
+ "group_short": "Flux Robotics",
+ "family": "commercial",
+ "category": "magnetic-navigation",
+ "first_year": 2023,
+ "latest_year": 2026,
+ "versions": "Flux One: KUKA LBR iiwa with a liquid-cooled electromagnetic coil on a mobile trolley (heunis2023_flux Sec. II-B, Fig. 4); later system on a Doosan arm in the company photo (twente_fluxrobotics, article names 'Flux 2, the latest version'); described as a prototype of ARMM (utwente2023_flux; see armm_heunis2020)",
+ "target_anatomy": "fenestrated EVAR: coeliac artery and branches, SMA, left renal and contralateral common iliac arteries of an abdominal phantom (heunis2023_flux Sec. III-B)",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "magnetic J-tip guidewire: Terumo Radifocus 0.032-in (0.81 mm) with a 10 mm tip of five NdFeB magnets, 2 mm diameter, silicone coated (heunis2023_flux Sec. III-A)",
+ "n_dof": 7,
+ "n_dof_detail": "7 (arm and coil) + surgeon push-pull 1, guidewire bent in two planes (heunis2023_flux Sec. IV-C)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (tip steering); insertion by the surgeon's hand at the bedside (heunis2023_flux Sec. I, IV-C)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "coil pose (7-DoF arm) and coil current set field strength and direction (heunis2023_flux Sec. I-II)",
+ "device_range": "tip deflection -135 to 135 deg planned (heunis2023_flux Sec. II-A)",
+ "footprint_mm": "arm horizontal reach 830 (heunis2023_flux Sec. II-B)",
+ "mass_kg": "120 (whole mobile trolley, heunis2023_flux Sec. II-B)",
+ "force_sensing": "none on the guidewire; arm keeps a 4 N virtual interaction-force constraint (heunis2023_flux Sec. III-A)",
+ "haptics_leader": "Omega.6 haptic device for coil positioning with force feedback at a virtual safety barrier, plus SpaceMouse, push buttons and touchscreen (heunis2023_flux Sec. II-B, Fig. 4e)",
+ "imaging_compat": "pre-operative cone-beam CT planning and live fluoroscopy in a hybrid OR (Siemens Artis Pheno); no CT artefacts per Siemens technician (heunis2023_flux Sec. III-B)",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "silicone abdominal phantom from patient CT, 4 targets: one vascular surgeon with conventional (case 1) and magnetic (case 2) guidewire, 11 novice operators with Flux One; all targets reached, no adverse events (heunis2023_flux Sec. III-B, IV-A, IV-C). Company reports preclinical animal trials and first tests in Miami (twente_fluxrobotics), no published result",
+ "key_numbers": "coil field up to 60 mT (heunis2023_flux Sec. I, citing its ref. 18); guidewire navigation time -47%; target 4: 22.7 s vs 73 s (-69%); 11-37 s per target in case 2; mean SUS 80%; coil cooling 9.2 L/min keeps surface at 45 C; arm speed limit 0.02 m/s (heunis2023_flux Sec. III-IV)",
+ "sim_model": "virtual clone of the system for trajectory planning (Policy Improvement with Path Integrals), no guidewire physics simulator (heunis2023_flux Sec. II-C)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "product-photo",
+  "source": "https://cdn.twente.com/filer_public/49/a6/49a6c924-a590-47aa-bc1a-fe419149be09/fluxrobotics_home.jpeg (page https://twente.com/en/artikelen/5595/flux-robotics-verandert-operaties-met-hightech-medische-innovatie/)",
+  "source_url": "https://cdn.twente.com/filer_public/49/a6/49a6c924-a590-47aa-bc1a-fe419149be09/fluxrobotics_home.jpeg",
+  "licence": "press image",
+  "credit": "https://cdn.twente.com/filer_public/49/a6/49a6c924-a590-47aa-bc1a-fe419149be09/fluxrobotics_home.jpeg (page https://twente.com/en/artikelen/5595/flux-robotics-verandert-operaties-met-hightech-medische-innovatie/). Licence: press image.",
+  "edits": "2048 px original; cropped to the trolley, arm and coil (people at left removed); no edit; none upscaled",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "fluxone_fluxrobotics2023_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Electromagnetic coil on the KUKA arm over the aortic phantom",
+   "source_key": "heunis2023_flux",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2023), Fig. 1, p. 1",
+   "source_url": "https://doi.org/10.1109/lra.2023.3289108",
+   "where": "Fig. 1, p. 1",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "fluxone_fluxrobotics2023_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Flux One trolley and arm in a hybrid operating room",
+   "source_key": "heunis2023_flux",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2023), Fig. 4 (centre), p. 6",
+   "source_url": "https://doi.org/10.1109/lra.2023.3289108",
+   "where": "Fig. 4 (centre), p. 6",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "fluxone_fluxrobotics2023_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "close-up",
+   "caption": "Liquid-cooled electromagnetic end-effector of Flux One",
+   "source_key": "heunis2023_flux",
+   "source": "Heunis et al., IEEE Robotics and Automation Letters (2023), Fig. 4(a), p. 6",
+   "source_url": "https://doi.org/10.1109/lra.2023.3289108",
+   "where": "Fig. 4(a), p. 6",
+   "licence": "publisher copyright"
+  },
+  {
+   "id": "fluxone_fluxrobotics2023_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Researchers with the arm-mounted coil over a vascular phantom",
+   "source_key": "utwente2023_flux",
+   "source": "Twente (2023), web photo (Frans Nikkels)",
+   "source_url": null,
+   "where": "web photo (Frans Nikkels)",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "heunis2023_flux",
+   "doi": "10.1109/lra.2023.3289108",
+   "url": null,
+   "title": "The Flux One Magnetic Navigation System: A Preliminary Assessment for Stent Implantation",
+   "year": 2023,
+   "venue": "IEEE Robotics and Automation Letters"
+  },
+  {
+   "key": "twente_fluxrobotics",
+   "doi": null,
+   "url": null,
+   "title": "Flux Robotics verandert operaties met hightech medische innovatie",
+   "year": null,
+   "venue": null
+  },
+  {
+   "key": "utwente2023_flux",
+   "doi": null,
+   "url": null,
+   "title": "Robots improve safety, efficiency and precision of vascular surgery",
+   "year": 2023,
+   "venue": null
+  },
+  {
+   "key": "pescio2025_endovascular",
+   "doi": "10.1080/13645706.2025.2454237",
+   "url": null,
+   "title": "Endovascular robotics: technical advances and future directions",
+   "year": 2025,
+   "venue": "Minimally Invasive Therapy & Allied Technologies"
+  },
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (heunis2023_flux); web (twente_fluxrobotics, utwente2023_flux)",
+ "notes": "Family: commercial (A4 scope) by the author's decision (round 8; pescio2025 lists it as commercial-stage). By the Sec. II-A family rule it is preclinical: no clearance, no registered study, no patient found. Same group as armm_heunis2020 (kept as a separate row). The main picture shows the later Doosan-arm system, not the KUKA of the 2023 paper; the paper's photos are in the gallery.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}

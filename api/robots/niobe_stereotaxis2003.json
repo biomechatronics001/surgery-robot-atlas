@@ -1,0 +1,143 @@
+{
+ "schema_version": 1,
+ "id": "niobe_stereotaxis2003",
+ "name": "Niobe / Genesis",
+ "full_name": "Niobe / Genesis / GenesisX Robotic Magnetic Navigation",
+ "group": "Stereotaxis",
+ "group_short": "Stereotaxis",
+ "family": "commercial",
+ "category": "magnetic-navigation",
+ "first_year": 2003,
+ "latest_year": 2026,
+ "versions": "Niobe ES (2003-); Genesis (FDA 2020 per ren2023_critical); GenesisX (FDA 510(k) 2025-11-10, limited launch)",
+ "target_anatomy": "cardiac electrophysiology (ablation, AF); coronary/peripheral use reported historically",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "magnetic-tip catheters and guidewires; Vdrive advancer",
+ "n_dof": 3,
+ "n_dof_detail": "3 (li2024_design Table I)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "tip direction by external field (two permanent magnets, 0.08-0.12 T, mandhumula2025_robotic)",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none in robot; contact-force catheters integrated",
+ "haptics_leader": "no",
+ "imaging_compat": "fluoroscopy/mapping integrated (EP lab)",
+ "sterility": "disposable advancer parts (N.R. detail)",
+ "highest_validation": "human",
+ "validation_detail": "thousands of EP cases historically (N.R. exact in sources opened)",
+ "key_numbers": "GenesisX 510(k) Nov 2025 (medtechdive/dicardiology via search, not opened)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "not-cleared",
+  "grade": "B",
+  "kind": "render",
+  "source": "https://www.stereotaxis.com/wp-content/uploads/2024/09/Genesis-Product-Image-scaled.webp (page https://www.stereotaxis.com/products/)",
+  "source_url": "https://www.stereotaxis.com/wp-content/uploads/2024/09/Genesis-Product-Image-scaled.webp",
+  "licence": "press image (Stereotaxis)",
+  "credit": "https://www.stereotaxis.com/wp-content/uploads/2024/09/Genesis-Product-Image-scaled.webp (page https://www.stereotaxis.com/products/). Licence: press image (Stereotaxis).",
+  "edits": "cropped (1,42)-(2559,1239) of 2560x1280 RGBA, flattened on white; cut = publisher alpha",
+  "file": null
+ },
+ "pictures": [
+  {
+   "id": "niobe_stereotaxis2003_01",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "in-use",
+   "caption": "Genesis RMN magnet arms around the table in the Warsaw electrophysiology lab",
+   "source_key": "web:stereotaxis.com",
+   "source": "stereotaxis.com",
+   "source_url": "https://www.stereotaxis.com/wp-content/uploads/2024/08/1.-Stereotaxis-Genesis-RMN-system-in-the-robotic-electrophysiology-lab-at-the-National-Institute-of-Cardiology-in-Warsaw-Poland-2-scaled.jpg",
+   "where": "https://www.stereotaxis.com/wp-content/uploads/2024/08/1.-Stereotaxis-Genesis-RMN-system-in-the-robotic-electrophysiology-lab-at-the-National-Institute-of-Cardiology-in-Warsaw-Poland-2-scaled.jpg",
+   "licence": "press image"
+  },
+  {
+   "id": "niobe_stereotaxis2003_02",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "photo",
+   "caption": "GenesisX magnet pods and patient table, front product view",
+   "source_key": "web:stereotaxis.com",
+   "source": "stereotaxis.com",
+   "source_url": "https://www.stereotaxis.com/wp-content/uploads/2024/09/GenesisX-Product-Image-1-scaled.webp",
+   "where": "https://www.stereotaxis.com/wp-content/uploads/2024/09/GenesisX-Product-Image-1-scaled.webp",
+   "licence": "press image"
+  },
+  {
+   "id": "niobe_stereotaxis2003_03",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "photo",
+   "caption": "GenesisX system, quarter-angle product view with table and C-arm",
+   "source_key": "web:stereotaxis.com",
+   "source": "stereotaxis.com",
+   "source_url": "https://www.stereotaxis.com/wp-content/uploads/2024/10/GenesisX-qtr-angle@3x-2.png",
+   "where": "https://www.stereotaxis.com/wp-content/uploads/2024/10/GenesisX-qtr-angle@3x-2.png",
+   "licence": "press image"
+  },
+  {
+   "id": "niobe_stereotaxis2003_04",
+   "status": "not-cleared",
+   "file": null,
+   "thumb": null,
+   "kind": "setup",
+   "caption": "Genesis lab viewed from the control room with navigation workstation",
+   "source_key": "web:stereotaxis.com",
+   "source": "stereotaxis.com",
+   "source_url": "https://www.stereotaxis.com/wp-content/uploads/2021/11/Genesis-Clinical-Lab.jpg",
+   "where": "https://www.stereotaxis.com/wp-content/uploads/2021/11/Genesis-Clinical-Lab.jpg",
+   "licence": "press image"
+  }
+ ],
+ "sources": [
+  {
+   "key": "ren2023_critical",
+   "doi": "10.1109/jsen.2023.3320356",
+   "url": null,
+   "title": "The Critical Technologies of Vascular Interventional Robotic Catheterization: A Review",
+   "year": 2023,
+   "venue": "IEEE Sensors Journal"
+  },
+  {
+   "key": "li2024_design",
+   "doi": "10.1109/tmrb.2024.3377374",
+   "url": null,
+   "title": "Robotic Systems Design in Endovascular Treatment",
+   "year": 2024,
+   "venue": "IEEE Transactions on Medical Robotics and Bionics"
+  },
+  {
+   "key": "mandhumula2025_robotic",
+   "doi": "10.14797/mdcvj.1652",
+   "url": null,
+   "title": "Robotic Systems in Cardiovascular Interventions: Evolving Platforms and the Path Forward",
+   "year": 2025,
+   "venue": "Methodist DeBakey Cardiovascular Journal"
+  },
+  {
+   "key": "crinnion2022_robotics",
+   "doi": "10.1136/neurintsurg-2021-018096",
+   "url": null,
+   "title": "Robotics in neurointerventional surgery: a systematic review of the literature",
+   "year": 2021,
+   "venue": "Journal of NeuroInterventional Surgery"
+  }
+ ],
+ "read_level": "web",
+ "read_level_detail": "web",
+ "notes": "Stereotaxis bought Robocath 2026 (see rone row): now owns a mechanical-drive PCI robot plus magnetic EP robot.",
+ "maintainers_own": false,
+ "found_by": "commercial"
+}
