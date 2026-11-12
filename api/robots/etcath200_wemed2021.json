@@ -39,13 +39,13 @@
  "sim2real_detail": "none found",
  "picture": {
   "status": "not-cleared",
-  "grade": "C",
-  "kind": "clinical-photo",
-  "source": "image 2 (https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg) of China Daily story https://cn.chinadaily.com.cn/a/202605/26/WS6a158025a310942cc49ae6e9.html (Lanzhou University First Hospital, 2026-05)",
-  "source_url": "https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg",
-  "licence": "press image (news photo)",
-  "credit": "image 2 (https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg) of China Daily story https://cn.chinadaily.com.cn/a/202605/26/WS6a158025a310942cc49ae6e9.html (Lanzhou University First Hospital, 2026-05). Licence: press image (news photo).",
-  "edits": "cropped (0,0)-(1198,680) of 1198x852; not upscaled; no tone change; no erasing",
+  "grade": "A",
+  "kind": "render",
+  "source": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png (WeMed product page 冠脉介入手术控制系统 ETcath200, https://www.we-med.com/index.php?c=show&id=661; the same file is the listing image https://www.we-med.com/uploadfile/202509/5289d21516dd81b.png)",
+  "source_url": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png",
+  "licence": "press image (company product image)",
+  "credit": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png (WeMed product page 冠脉介入手术控制系统 ETcath200, https://www.we-med.com/index.php?c=show&id=661; the same file is the listing image https://www.we-med.com/uploadfile/202509/5289d21516dd81b.png). Licence: press image (company product image).",
+  "edits": "RGBA product render flattened on white; cropped to the drawing with about 4 % margin (0,0)-(1422,1129) of 1422x1182; no erasing; not upscaled",
   "file": null
  },
  "pictures": [

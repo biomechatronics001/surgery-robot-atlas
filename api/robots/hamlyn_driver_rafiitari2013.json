@@ -37,13 +37,13 @@
  "sim2real_detail": "none found (policies learned from real phantom demonstrations)",
  "picture": {
   "status": "not-cleared",
-  "grade": "C",
-  "kind": "render",
-  "source": "rafiitari2014_hierarchical_hmm_primitives_MICCAI Fig. 1(d) (CAD: slave catheter driver with servo, and master position-sensing unit)",
-  "source_url": "https://doi.org/10.1007/978-3-319-10404-1_62",
-  "licence": "publisher copyright (Springer LNCS)",
-  "credit": "Rafii-Tari et al., Lecture Notes in Computer Science (2014), Fig. 1(d). publisher copyright (Springer LNCS).",
-  "edits": "native extract (788x869); cropped to exclude panel letter and Slave/Master labels; 189 px pointer-line remnant at the left edge replaced by background copied from 16 px above; not upscaled",
+  "grade": "B",
+  "kind": "photo",
+  "source": "payne2012_forcefeedback_IROS Fig. 1 (top photograph: the master-slave force feedback system in situ), IROS 2012",
+  "source_url": "https://doi.org/10.1109/iros.2012.6386149",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Payne et al., 2012 IEEE/RSJ International Conference on Intelligent Robots and Systems (2012), Fig. 1. publisher copyright (IEEE).",
+  "edits": "native extract (1509x686); white margins trimmed to (84,45)-(1426,686); no erasing; not upscaled",
   "file": null
  },
  "pictures": [

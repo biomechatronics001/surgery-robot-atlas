@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09",
+ "generated": "2026-11-11",
  "robots": 126,
  "reviews": 34,
  "first_year": 1996,
@@ -88,9 +88,9 @@
   "found": 126,
   "cleared_for_reuse": 21,
   "by_grade": {
-   "B": 45,
-   "A": 26,
-   "C": 55
+   "B": 49,
+   "A": 28,
+   "C": 49
   }
  },
  "notes": "by_decade uses first_year.",

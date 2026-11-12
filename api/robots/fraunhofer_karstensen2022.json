@@ -85,6 +85,19 @@
    "source_url": "https://doi.org/10.1515/cdbme-2020-0007",
    "where": "Fig. 1, p. 2",
    "licence": "CC BY 4.0"
+  },
+  {
+   "id": "fraunhofer_karstensen2022_04",
+   "status": "cleared",
+   "file": "pictures/extra/fraunhofer_karstensen2022_04.jpg",
+   "thumb": "pictures/thumbs/fraunhofer_karstensen2022_04.jpg",
+   "kind": "setup",
+   "caption": "2020 bench: the 2-DOF guidewire manipulator in its housing beside the camera-tracked vessel phantom and a gamepad for manual control (labelled figure)",
+   "source_key": "karstensen2020_autonomous",
+   "source": "Karstensen et al., Current Directions in Biomedical Engineering (2020), Fig. 1, p. 2 (embedded 972x728)",
+   "source_url": "https://doi.org/10.1515/cdbme-2020-0007",
+   "where": "Fig. 1, p. 2 (embedded 972x728)",
+   "licence": "CC BY 4.0"
   }
  ],
  "sources": [

@@ -37,13 +37,13 @@
  "sim2real_detail": "none found (the virtual model drives haptic feedback while the real catheter runs open loop; no simulation-trained controller, elfakir2022_towards Sec. IV)",
  "picture": {
   "status": "not-cleared",
-  "grade": "C",
+  "grade": "B",
   "kind": "photo",
-  "source": "elfakir2022_magnetic Fig. 6(A)",
-  "source_url": "https://doi.org/10.1109/icarm54641.2022.9959369",
-  "licence": "publisher copyright",
-  "credit": "Elfakir et al., 2022 International Conference on Advanced Robotics and Mechatronics (ICARM) (2022), Fig. 6. publisher copyright.",
-  "edits": "native extract from elfakir2022_complex-network_ICARM.pdf p. 5; cropped to the arm, magnet, catheter driver and phantom (control panel and inset B removed); none upscaled",
+  "source": "elfakir2022_towards (AIM 2022, ) Fig. 2 (block diagram of the master-slave robotic system, p. 2): the photo of the 8-electromagnet actuation platform embedded in that figure, printed 34 x 56 pt but stored at 1141 x 1831 px",
+  "source_url": "https://doi.org/10.1109/aim52237.2022.9863252",
+  "licence": "publisher copyright (IEEE)",
+  "credit": "Elfakir et al., 2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2022), Fig. 2. publisher copyright (IEEE).",
+  "edits": "native extract (1141x1831); no crop; no erasing; not upscaled",
   "file": null
  },
  "pictures": [

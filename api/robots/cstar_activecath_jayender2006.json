@@ -37,13 +37,13 @@
  "sim2real_detail": "none found",
  "picture": {
   "status": "not-cleared",
-  "grade": "C",
+  "grade": "B",
   "kind": "photo",
-  "source": "jayender2008_autonomous_TRO Fig. 2 (test bed with Mitsubishi PA10-7C arm)",
-  "source_url": "https://doi.org/10.1109/tro.2008.2001353",
+  "source": "jayender2006_impedance_ICRA Fig. 2 'Testbed for catheter insertion' (photo, p. 3), ICRA 2006",
+  "source_url": "https://doi.org/10.1109/robot.2006.1641777",
   "licence": "publisher copyright (IEEE)",
-  "credit": "Jayender et al., IEEE Transactions on Robotics (2008), Fig. 2. publisher copyright (IEEE).",
-  "edits": "native extract (708x698); no crop; labels and arrows are baked into the raster and cross the arm, left as is; not upscaled",
+  "credit": "Jayender et al., Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006. (), Fig. 2. publisher copyright (IEEE).",
+  "edits": "native extract (1024x743); no crop; no erasing; not upscaled",
   "file": null
  },
  "pictures": [

@@ -1,6 +1,6 @@
 {
  "name": "Catheter Robot Atlas",
- "generated": "2026-11-09",
+ "generated": "2026-11-11",
  "schema": "schema.json",
  "metadata_licence": "to be decided by the maintainers (CC0-1.0 or CC-BY-4.0)",
  "pictures": "Each picture keeps its owner's licence (see picture.licence); only cleared pictures are published.",
@@ -3997,6 +3997,19 @@
      "source_url": "https://doi.org/10.1515/cdbme-2020-0007",
      "where": "Fig. 1, p. 2",
      "licence": "CC BY 4.0"
+    },
+    {
+     "id": "fraunhofer_karstensen2022_04",
+     "status": "cleared",
+     "file": "pictures/extra/fraunhofer_karstensen2022_04.jpg",
+     "thumb": "pictures/thumbs/fraunhofer_karstensen2022_04.jpg",
+     "kind": "setup",
+     "caption": "2020 bench: the 2-DOF guidewire manipulator in its housing beside the camera-tracked vessel phantom and a gamepad for manual control (labelled figure)",
+     "source_key": "karstensen2020_autonomous",
+     "source": "Karstensen et al., Current Directions in Biomedical Engineering (2020), Fig. 1, p. 2 (embedded 972x728)",
+     "source_url": "https://doi.org/10.1515/cdbme-2020-0007",
+     "where": "Fig. 1, p. 2 (embedded 972x728)",
+     "licence": "CC BY 4.0"
     }
    ],
    "sources": [
@@ -6830,13 +6843,13 @@
    "sim2real_detail": "none found",
    "picture": {
     "status": "not-cleared",
-    "grade": "C",
-    "kind": "clinical-photo",
-    "source": "image 2 (https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg) of China Daily story https://cn.chinadaily.com.cn/a/202605/26/WS6a158025a310942cc49ae6e9.html (Lanzhou University First Hospital, 2026-05)",
-    "source_url": "https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg",
-    "licence": "press image (news photo)",
-    "credit": "image 2 (https://cds.chinadaily.com.cn/dams/capital/image/202605/26/6a1580006b8ed8bf19126524_m.jpeg) of China Daily story https://cn.chinadaily.com.cn/a/202605/26/WS6a158025a310942cc49ae6e9.html (Lanzhou University First Hospital, 2026-05). Licence: press image (news photo).",
-    "edits": "cropped (0,0)-(1198,680) of 1198x852; not upscaled; no tone change; no erasing",
+    "grade": "A",
+    "kind": "render",
+    "source": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png (WeMed product page 冠脉介入手术控制系统 ETcath200, https://www.we-med.com/index.php?c=show&id=661; the same file is the listing image https://www.we-med.com/uploadfile/202509/5289d21516dd81b.png)",
+    "source_url": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png",
+    "licence": "press image (company product image)",
+    "credit": "https://www.we-med.com/uploadfile/202509/2d2d043639daec2.png (WeMed product page 冠脉介入手术控制系统 ETcath200, https://www.we-med.com/index.php?c=show&id=661; the same file is the listing image https://www.we-med.com/uploadfile/202509/5289d21516dd81b.png). Licence: press image (company product image).",
+    "edits": "RGBA product render flattened on white; cropped to the drawing with about 4 % margin (0,0)-(1422,1129) of 1422x1182; no erasing; not upscaled",
     "file": null
    },
    "pictures": [
@@ -7573,13 +7586,13 @@
    "sim2real_detail": "AI controller on live fluoroscopy in pig (liu2026_ai, full; sim_to_real flagged no in S7b)",
    "picture": {
     "status": "cleared",
-    "grade": "C",
-    "kind": "photo",
-    "source": "liu2026_ai Fig. 1(b), PMC image https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fc68/13509165/4899e05a13e2/bioengineering-13-00848-g001.webp (article https://pmc.ncbi.nlm.nih.gov/articles/PMC13509165/)",
+    "grade": "B",
+    "kind": "clinical-photo",
+    "source": "liu2026_ai Fig. 1(b), MDPI full-resolution figure https://mdpi-res.com/bioengineering/bioengineering-13-00848/article_deploy/html/images/bioengineering-13-00848-g001.png (1796x1176; article https://www.mdpi.com/2306-5354/13/8/848)",
     "source_url": "https://doi.org/10.3390/bioengineering13080848",
     "licence": "CC BY 4.0",
     "credit": "Liu et al., Bioengineering (2026), Fig. 1(b). CC BY 4.0.",
-    "edits": "cropped (68,595)-(783,1030) of 1600x1048, right of the panel letter \"b\"",
+    "edits": "cropped (78,662)-(882,1172) of the 1796x1176 MDPI image, i.e. panel (b) right of the panel letter; no erasing; not upscaled",
     "file": "pictures/raysight_raysight2025.jpg"
    },
    "pictures": [
@@ -10735,13 +10748,13 @@
    "sim2real_detail": "none found (the virtual model drives haptic feedback while the real catheter runs open loop; no simulation-trained controller, elfakir2022_towards Sec. IV)",
    "picture": {
     "status": "not-cleared",
-    "grade": "C",
+    "grade": "B",
     "kind": "photo",
-    "source": "elfakir2022_magnetic Fig. 6(A)",
-    "source_url": "https://doi.org/10.1109/icarm54641.2022.9959369",
-    "licence": "publisher copyright",
-    "credit": "Elfakir et al., 2022 International Conference on Advanced Robotics and Mechatronics (ICARM) (2022), Fig. 6. publisher copyright.",
-    "edits": "native extract from elfakir2022_complex-network_ICARM.pdf p. 5; cropped to the arm, magnet, catheter driver and phantom (control panel and inset B removed); none upscaled",
+    "source": "elfakir2022_towards (AIM 2022, ) Fig. 2 (block diagram of the master-slave robotic system, p. 2): the photo of the 8-electromagnet actuation platform embedded in that figure, printed 34 x 56 pt but stored at 1141 x 1831 px",
+    "source_url": "https://doi.org/10.1109/aim52237.2022.9863252",
+    "licence": "publisher copyright (IEEE)",
+    "credit": "Elfakir et al., 2022 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) (2022), Fig. 2. publisher copyright (IEEE).",
+    "edits": "native extract (1141x1831); no crop; no erasing; not upscaled",
     "file": null
    },
    "pictures": [
@@ -14600,13 +14613,13 @@
    "sim2real_detail": "none found",
    "picture": {
     "status": "not-cleared",
-    "grade": "C",
+    "grade": "A",
     "kind": "render",
-    "source": "zhu2025_firstinman Fig. 1(A) (articulating arm with control platform and 3 functional modules, control cockpit, central control computer), JACC Cardiovasc Interv 2025;18:953-955, p. 2,",
+    "source": "zhu2025_firstinman Fig. 1(A) (articulating arm with the three functional modules, control cockpit, trolley), JACC Cardiovasc Interv 2025;18:953-955, p. 2,",
     "source_url": "https://doi.org/10.1016/j.jcin.2025.01.437",
     "licence": "publisher copyright (ACC Foundation / Elsevier)",
     "credit": "Zhu et al., JACC: Cardiovascular Interventions (2025), Fig. 1. publisher copyright (ACC Foundation / Elsevier).",
-    "edits": "native extract (embedded 1943 x 2002 holds panels A and B); cropped to panel A; panel letter A and the callout numbers 1, 2, 3 on the plain background filled by row-wise interpolation of the neighbouring background (no LaMa); the inset photo and its own callout left as they are; none upscaled",
+    "edits": "starts from the X2 file (native extract, panel A, callouts filled); the inset photo with red/green/yellow boxes and its callout 1 (pixels (30,641)-(1218,1186)) replaced by a bilinear interpolation of the studio background sampled on the four sides of that rectangle plus 1 px gaussian grain (numpy, no inpainting model); nothing else changed; not upscaled",
     "file": null
    },
    "pictures": [
@@ -15377,13 +15390,13 @@
    "sim2real_detail": "none found",
    "picture": {
     "status": "not-cleared",
-    "grade": "C",
+    "grade": "B",
     "kind": "photo",
-    "source": "jayender2008_autonomous_TRO Fig. 2 (test bed with Mitsubishi PA10-7C arm)",
-    "source_url": "https://doi.org/10.1109/tro.2008.2001353",
+    "source": "jayender2006_impedance_ICRA Fig. 2 'Testbed for catheter insertion' (photo, p. 3), ICRA 2006",
+    "source_url": "https://doi.org/10.1109/robot.2006.1641777",
     "licence": "publisher copyright (IEEE)",
-    "credit": "Jayender et al., IEEE Transactions on Robotics (2008), Fig. 2. publisher copyright (IEEE).",
-    "edits": "native extract (708x698); no crop; labels and arrows are baked into the raster and cross the arm, left as is; not upscaled",
+    "credit": "Jayender et al., Proceedings 2006 IEEE International Conference on Robotics and Automation, 2006. ICRA 2006. (), Fig. 2. publisher copyright (IEEE).",
+    "edits": "native extract (1024x743); no crop; no erasing; not upscaled",
     "file": null
    },
    "pictures": [
@@ -16950,13 +16963,13 @@
    "sim2real_detail": "none found (policies learned from real phantom demonstrations)",
    "picture": {
     "status": "not-cleared",
-    "grade": "C",
-    "kind": "render",
-    "source": "rafiitari2014_hierarchical_hmm_primitives_MICCAI Fig. 1(d) (CAD: slave catheter driver with servo, and master position-sensing unit)",
-    "source_url": "https://doi.org/10.1007/978-3-319-10404-1_62",
-    "licence": "publisher copyright (Springer LNCS)",
-    "credit": "Rafii-Tari et al., Lecture Notes in Computer Science (2014), Fig. 1(d). publisher copyright (Springer LNCS).",
-    "edits": "native extract (788x869); cropped to exclude panel letter and Slave/Master labels; 189 px pointer-line remnant at the left edge replaced by background copied from 16 px above; not upscaled",
+    "grade": "B",
+    "kind": "photo",
+    "source": "payne2012_forcefeedback_IROS Fig. 1 (top photograph: the master-slave force feedback system in situ), IROS 2012",
+    "source_url": "https://doi.org/10.1109/iros.2012.6386149",
+    "licence": "publisher copyright (IEEE)",
+    "credit": "Payne et al., 2012 IEEE/RSJ International Conference on Intelligent Robots and Systems (2012), Fig. 1. publisher copyright (IEEE).",
+    "edits": "native extract (1509x686); white margins trimmed to (84,45)-(1426,686); no erasing; not upscaled",
     "file": null
    },
    "pictures": [

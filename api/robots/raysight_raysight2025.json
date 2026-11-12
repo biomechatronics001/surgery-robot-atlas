@@ -39,13 +39,13 @@
  "sim2real_detail": "AI controller on live fluoroscopy in pig (liu2026_ai, full; sim_to_real flagged no in S7b)",
  "picture": {
   "status": "cleared",
-  "grade": "C",
-  "kind": "photo",
-  "source": "liu2026_ai Fig. 1(b), PMC image https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fc68/13509165/4899e05a13e2/bioengineering-13-00848-g001.webp (article https://pmc.ncbi.nlm.nih.gov/articles/PMC13509165/)",
+  "grade": "B",
+  "kind": "clinical-photo",
+  "source": "liu2026_ai Fig. 1(b), MDPI full-resolution figure https://mdpi-res.com/bioengineering/bioengineering-13-00848/article_deploy/html/images/bioengineering-13-00848-g001.png (1796x1176; article https://www.mdpi.com/2306-5354/13/8/848)",
   "source_url": "https://doi.org/10.3390/bioengineering13080848",
   "licence": "CC BY 4.0",
   "credit": "Liu et al., Bioengineering (2026), Fig. 1(b). CC BY 4.0.",
-  "edits": "cropped (68,595)-(783,1030) of 1600x1048, right of the panel letter \"b\"",
+  "edits": "cropped (78,662)-(882,1172) of the 1796x1176 MDPI image, i.e. panel (b) right of the panel letter; no erasing; not upscaled",
   "file": "pictures/raysight_raysight2025.jpg"
  },
  "pictures": [

@@ -39,13 +39,13 @@
  "sim2real_detail": "none found",
  "picture": {
   "status": "not-cleared",
-  "grade": "C",
+  "grade": "A",
   "kind": "render",
-  "source": "zhu2025_firstinman Fig. 1(A) (articulating arm with control platform and 3 functional modules, control cockpit, central control computer), JACC Cardiovasc Interv 2025;18:953-955, p. 2,",
+  "source": "zhu2025_firstinman Fig. 1(A) (articulating arm with the three functional modules, control cockpit, trolley), JACC Cardiovasc Interv 2025;18:953-955, p. 2,",
   "source_url": "https://doi.org/10.1016/j.jcin.2025.01.437",
   "licence": "publisher copyright (ACC Foundation / Elsevier)",
   "credit": "Zhu et al., JACC: Cardiovascular Interventions (2025), Fig. 1. publisher copyright (ACC Foundation / Elsevier).",
-  "edits": "native extract (embedded 1943 x 2002 holds panels A and B); cropped to panel A; panel letter A and the callout numbers 1, 2, 3 on the plain background filled by row-wise interpolation of the neighbouring background (no LaMa); the inset photo and its own callout left as they are; none upscaled",
+  "edits": "starts from the X2 file (native extract, panel A, callouts filled); the inset photo with red/green/yellow boxes and its callout 1 (pixels (30,641)-(1218,1186)) replaced by a bilinear interpolation of the studio background sampled on the four sides of that rectangle plus 1 px gaussian grain (numpy, no inpainting model); nothing else changed; not upscaled",
   "file": null
  },
  "pictures": [

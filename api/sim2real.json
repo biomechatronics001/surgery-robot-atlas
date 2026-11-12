@@ -1,6 +1,6 @@
 {
  "name": "Catheter Robot Atlas",
- "generated": "2026-11-09",
+ "generated": "2026-11-11",
  "schema": "sim2real.schema.json",
  "metadata_licence": "to be decided by the maintainers (CC0-1.0 or CC-BY-4.0)",
  "pictures": "Each picture keeps its owner's licence (see picture.licence); only cleared pictures are published.",
