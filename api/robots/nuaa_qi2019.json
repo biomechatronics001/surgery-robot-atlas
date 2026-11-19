@@ -1,0 +1,90 @@
+{
+ "schema_version": 1,
+ "id": "nuaa_qi2019",
+ "name": "Cable-driven robot",
+ "full_name": "Cable-driven continuum robot with a navigation method for semi-autonomous vascular intervention",
+ "group": "Nanjing University of Aeronautics and Astronautics, College of Mechanical and Electrical Engineering (Fei Qi, Feng Ju, Dongming Bai, Yaoyao Wang, Bai Chen) (qi2019_kinematic, affiliation of the PubMed record)",
+ "group_short": "NUAA",
+ "family": "tip",
+ "category": "actuated-device",
+ "first_year": 2018,
+ "latest_year": 2019,
+ "versions": "2018: modular cable-driven continuum robot for minimally invasive surgery, three sections; workspace, dexterity and a static model, with 'simulations and experiments for plane and spatial motions' (qi2018_kinematics abstract; no vessel) -> 2019: kinematics, decoupling and 'a navigation method ... to achieve semi-autonomous interventional surgery based on the vascular constraints', tested with the prototype in 'a simulated glass blood vessel' (qi2019_kinematic abstract)",
+ "target_anatomy": "N.R. (blood vessels in general: 'the vascular environment is complicated and tortuous'; tested in 'a simulated glass blood vessel', qi2019_kinematic abstract)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "its own cable-driven continuum robot, the part that enters the vessel; no off-the-shelf catheter or guidewire named (qi2019_kinematic abstract)",
+ "n_dof": null,
+ "n_dof_detail": "N.R. ('the three-section continuum robot' in qi2018_kinematics abstract; sections and feed axis of the 2019 prototype N.R. in the abstract)",
+ "translation_mechanism": "tendon/tip-actuation",
+ "translation_detail": "tendon/tip-actuation (driving cables threaded through disks and fixed at the distal end, 'three guiding holes evenly distributed in the circumference of each disk with an interval of 120' degrees: alekseeva2025_design Sec. 3.2, Fig. 19b); feed by friction rollers (review-level: 'Cable-driven, Friction roller-based', alekseeva2025_design Table 12 row 8); feed not described in the abstracts",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "N.R. (a static model relates the bending shape to the driving force, qi2018_kinematics abstract; no sensor named)",
+ "haptics_leader": "Novint Falcon haptic device (review-level: alekseeva2025_design Table 12 row 8); force rendering N.R.; no leader named in the abstracts",
+ "imaging_compat": "X-ray (review-level: alekseeva2025_design Table 12 row 8, column Visualization); not named in the abstracts",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "phantom: 'by using the prototype, the interventional simulations and experiments for a simulated glass blood vessel are developed to validate the feasibility and maneuverability of the proposed model and navigation method' (qi2019_kinematic abstract); bench, earlier: 'simulations and experiments for plane and spatial motions' (qi2018_kinematics abstract). Number of runs and measured results N.R. in the abstracts",
+ "key_numbers": "N.R. (the two abstracts give no number)",
+ "sim_model": "yes: kinematic model under the piecewise-constant-curvature assumption with a decoupling algorithm, used for 'interventional simulations' (qi2019_kinematic abstract); static model by the principle of virtual work (qi2018_kinematics abstract)",
+ "has_sim_model": true,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "none",
+  "grade": "none",
+  "kind": null,
+  "source": "",
+  "source_url": null,
+  "licence": "",
+  "credit": "",
+  "edits": "",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "qi2019_kinematic",
+   "doi": "10.1002/rcs.2007",
+   "url": null,
+   "title": "Kinematic analysis and navigation method of a cable‐driven continuum robot used for minimally invasive surgery",
+   "year": 2019,
+   "venue": "The International Journal of Medical Robotics and Computer Assisted Surgery"
+  },
+  {
+   "key": "qi2018_kinematics",
+   "doi": "10.1177/0954411917747008",
+   "url": null,
+   "title": "Kinematics optimization and static analysis of a modular continuum robot used for minimally invasive surgery",
+   "year": 2017,
+   "venue": "Proceedings of the Institution of Mechanical Engineers, Part H: Journal of Engineering in Medicine"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  }
+ ],
+ "read_level": "abstract",
+ "read_level_detail": "abstract (qi2019_kinematic, PMID 31050135; qi2018_kinematics, PMID 29228866); review-only (alekseeva2025_design Table 12 row 8, Sec. 3.2, Fig. 19b; belikov2024_evolution Sec. 4.9)",
+ "notes": "D2 2026-11-19: catalogued without a picture (author's rule of 2026-11-19: a missing picture does not decide inclusion). N3 2026-11-08 had judged it in scope (data/staging/uncertain_decisions_N3.csv). In scope as an actuated device: a prototype cable-driven continuum robot was navigated in a glass vessel model. The feed, leader and imaging cells rest on a review's table, not on the two papers, whose texts were not obtained. belikov2024_evolution Sec. 4.9 lists it among the tendon-actuated specialised catheters (QI1s).",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

@@ -1,20 +1,20 @@
 {
- "generated": "2026-11-11",
- "robots": 126,
+ "generated": "2026-11-19",
+ "robots": 130,
  "reviews": 34,
  "first_year": 1996,
  "latest_year": 2026,
  "by_family": {
-  "commercial": 33,
+  "commercial": 34,
   "academic": 62,
-  "tip": 10,
-  "magnetic": 21
+  "tip": 12,
+  "magnetic": 22
  },
  "by_highest_validation": {
   "bench": 18,
-  "phantom": 54,
+  "phantom": 57,
   "ex-vivo": 3,
-  "animal": 26,
+  "animal": 27,
   "human": 25
  },
  "family_x_validation": {
@@ -22,7 +22,7 @@
    "bench": 3,
    "phantom": 3,
    "ex-vivo": 0,
-   "animal": 2,
+   "animal": 3,
    "human": 25
   },
   "academic": {
@@ -34,14 +34,14 @@
   },
   "tip": {
    "bench": 1,
-   "phantom": 6,
+   "phantom": 8,
    "ex-vivo": 1,
    "animal": 2,
    "human": 0
   },
   "magnetic": {
    "bench": 1,
-   "phantom": 13,
+   "phantom": 14,
    "ex-vivo": 0,
    "animal": 7,
    "human": 0
@@ -50,34 +50,34 @@
  "by_decade": {
   "1990s": 1,
   "2000s": 9,
-  "2010s": 39,
-  "2020s": 76,
+  "2010s": 42,
+  "2020s": 77,
   "N.R.": 1
  },
  "by_translation_mechanism": {
   "friction-roller": 29,
-  "magnetic": 25,
+  "magnetic": 26,
   "other": 24,
   "linear-stage+clamp": 16,
   "clamp-relay": 12,
-  "tendon/tip-actuation": 10,
-  "not-reported": 8,
+  "tendon/tip-actuation": 12,
+  "not-reported": 9,
   "belt/track": 2
  },
  "by_rotation_mechanism": {
-  "magnetic-field": 25,
+  "magnetic-field": 26,
+  "not-reported": 20,
   "rotating-clamp": 19,
   "other": 18,
   "rotating-drive-unit": 18,
-  "not-reported": 17,
   "handle-rotation": 11,
   "none": 8,
   "roller-rolling": 6,
   "tendon-bending": 4
  },
  "by_device": {
-  "catheter": 94,
-  "guidewire": 73,
+  "catheter": 97,
+  "guidewire": 75,
   "therapeutic-device": 25,
   "sheath": 21,
   "microcatheter": 15,
@@ -90,17 +90,18 @@
   "by_grade": {
    "B": 49,
    "A": 28,
-   "C": 49
+   "C": 49,
+   "none": 4
   }
  },
  "notes": "by_decade uses first_year.",
  "sim2real_studies": 26,
  "by_sim2real": {
-  "none-found": 112,
+  "none-found": 116,
   "yes": 8,
   "model-based": 4,
   "partial": 1,
   "unclear": 1
  },
- "with_sim_model": 37
+ "with_sim_model": 38
 }

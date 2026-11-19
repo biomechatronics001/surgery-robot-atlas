@@ -1,0 +1,89 @@
+{
+ "schema_version": 1,
+ "id": "stanford_yip2017",
+ "name": "Model-less catheter",
+ "full_name": "Robotic catheter under model-less hybrid position/force control, tracing cardiac ablation paths autonomously",
+ "group": "Stanford University, Department of Bioengineering (Jake A. Sganga, David B. Camarillo), with University of California San Diego, Department of Electrical and Computer Engineering (Michael C. Yip) (yip2017_autonomous, affiliations of the Crossref record)",
+ "group_short": "Stanford U.",
+ "family": "tip",
+ "category": "actuated-device",
+ "first_year": 2017,
+ "latest_year": 2017,
+ "versions": "controller lineage: 2014 model-less feedback control (yip2014_modelless) and 2016 model-less hybrid position/force control (yip2016_modelless), both run on a planar tendon-driven test manipulator (polypropylene backbone 280 mm long, 0.8 mm x 12 mm section, two tendons and an insertion actuator: yip2014 Sec. IV; yip2016 Sec. IV-A, Fig. 3), which is not this row's device -> 2017: 'a robotic catheter autonomously traced clinically relevant paths on a simulated beating heart environment while regulating contact force' (yip2017_autonomous abstract)",
+ "target_anatomy": "cardiac ablation on the beating heart: ablation paths traced on 'a simulated beating heart environment' (yip2017_autonomous abstract)",
+ "devices": [
+  "catheter"
+ ],
+ "devices_driven": "its own robotic catheter (a continuum manipulator; type and size N.R. in the abstract)",
+ "n_dof": null,
+ "n_dof_detail": "N.R.",
+ "translation_mechanism": "tendon/tip-actuation",
+ "translation_detail": "tendon/tip-actuation (tip position and contact force of a continuum robotic catheter under closed-loop control; the actuator type is N.R. in the abstract; the group's earlier test manipulator was tendon-driven, and belikov2024_evolution Sec. 4.9 lists the system among the tendon-actuated specialised catheters)",
+ "rotation_mechanism": "not-reported",
+ "rotation_detail": "N.R.",
+ "device_range": "N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "contact force regulated in closed loop ('while regulating contact force', yip2017_autonomous abstract); the sensor and its site are N.R. in the abstract",
+ "haptics_leader": "none for the reported task (autonomous path tracing); manual 'user demonstrations' of the same task serve as the comparison, their interface N.R. (yip2017_autonomous abstract)",
+ "imaging_compat": "N.R.",
+ "sterility": "N.R.",
+ "highest_validation": "phantom",
+ "validation_detail": "phantom: 'a robotic catheter autonomously traced clinically relevant paths on a simulated beating heart environment while regulating contact force', with 'a gating procedure' to tighten the treatment margins; a tracking error is reported for the robot and for manual user demonstrations of the same task, but the abstract record prints the values as '[Formula: see text]'. Number of paths and runs N.R. (yip2017_autonomous abstract)",
+ "key_numbers": "N.R. (tracking errors not readable in the abstract record)",
+ "sim_model": "none: the controller is model-less ('manipulators with unknown kinematics/mechanics'; the Jacobian is estimated in real time, yip2017_autonomous abstract)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "none",
+  "grade": "none",
+  "kind": null,
+  "source": "",
+  "source_url": null,
+  "licence": "",
+  "credit": "",
+  "edits": "",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "yip2017_autonomous",
+   "doi": "10.1142/s2424905x17500027",
+   "url": null,
+   "title": "Autonomous Control of Continuum Robot Manipulators for Complex Cardiac Ablation Tasks",
+   "year": 2017,
+   "venue": "Journal of Medical Robotics Research"
+  },
+  {
+   "key": "yip2014_modelless",
+   "doi": "10.1109/tro.2014.2309194",
+   "url": null,
+   "title": "Model-Less Feedback Control of Continuum Manipulators in Constrained Environments",
+   "year": 2014,
+   "venue": "IEEE Transactions on Robotics"
+  },
+  {
+   "key": "yip2016_modelless",
+   "doi": "10.1109/lra.2016.2526062",
+   "url": null,
+   "title": "Model-Less Hybrid Position/Force Control: A Minimalist Approach for Continuum Manipulators in Unknown, Constrained Environments",
+   "year": 2016,
+   "venue": "IEEE Robotics and Automation Letters"
+  },
+  {
+   "key": "belikov2024_evolution",
+   "doi": "10.1016/j.jestch.2024.101789",
+   "url": null,
+   "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
+   "year": 2024,
+   "venue": "Engineering Science and Technology, an International Journal"
+  }
+ ],
+ "read_level": "abstract",
+ "read_level_detail": "abstract (yip2017_autonomous, Crossref record); review-only (belikov2024_evolution Sec. 4.9). The two earlier controller papers (yip2014_modelless, yip2016_modelless) were read to the end, but they describe the planar test manipulator",
+ "notes": "D2 2026-11-19: catalogued without a picture (author's rule of 2026-11-19: a missing picture does not decide inclusion). N3 2026-11-08 had judged it in scope and N4 2026-11-09 confirmed that the 2016 hardware is the planar beam. In scope as an actuated device: a robotic catheter traced ablation paths on a beating-heart model with a measured tracking error. Every cell on the catheter rests on the 2017 abstract; the article was not obtained.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}

@@ -1,0 +1,73 @@
+{
+ "schema_version": 1,
+ "id": "bit_wei2024",
+ "name": "Magnetic wire robot",
+ "full_name": "Magnetically actuated guidewire robot (0.9 mm PDMS and NdFeB tip on a guidewire core), steered by a permanent magnet and characterised in three-axis Helmholtz coils",
+ "group": "Beijing Institute of Technology, School of Automation (Siyi Wei, Jinhui Zhang, Zhiwei Wu) and School of Medical Technology (Duanduan Chen) (wei2024_magnetic p. 12592)",
+ "group_short": "BIT",
+ "family": "magnetic",
+ "category": "magnetic-navigation",
+ "first_year": 2024,
+ "latest_year": 2024,
+ "versions": "single paper (wei2024_magnetic, IEEE Trans. Ind. Electron. 71(10):12592-12600, 2024)",
+ "target_anatomy": "coronary intervention (PCI) as the stated motivation (Sec. I); sized for the carotid ('external carotid artery with typical diameters of about 5.2 +/- 1.0 mm', Sec. II); navigated in a 2-D branch phantom (inner diameter 6 mm) and into the right external and internal carotid branches of a 3-D cardio-cerebrovascular silicone phantom (Sec. IV, Figs. 2-4)",
+ "devices": [
+  "guidewire"
+ ],
+ "devices_driven": "its own magnetic guidewire robot: PDMS with NdFeB particles (6.5 um, 66.7 wt%) moulded around a stiff core, the 0.47 mm x 3 m V-18 ControlWire (Boston Scientific), with a 0.2 mm silicone shell and a hydrophilic PVP coating; outer diameter 900 um (Sec. II-III)",
+ "n_dof": null,
+ "n_dof_detail": "tip deflection in any direction set by the outside field (three field axes in the coil tests); advance and retraction by the operator's hand (Sec. IV-A, V)",
+ "translation_mechanism": "magnetic",
+ "translation_detail": "magnetic (steering); forward push by hand ('the translation of the magnetically actuated robot is controlled by the push/pull forces under the manipulation of the operator', Sec. IV-A)",
+ "rotation_mechanism": "magnetic-field",
+ "rotation_detail": "tip direction by the outside field: repulsive or attractive steering with an NdFeB magnet (flipped to switch the mode), or the uniform field of three orthogonal pairs of Helmholtz coils; no shaft rotation (Sec. II, IV, V)",
+ "device_range": "outer diameter 900 um; core wire 0.47 mm x 3 m; robot-to-vessel diameter ratio 0.2-0.24 : 1 (Sec. II-III)",
+ "footprint_mm": "N.R.",
+ "mass_kg": "N.R.",
+ "force_sensing": "none",
+ "haptics_leader": "none (the operator pushes the wire by hand and the magnet is positioned beside the phantom; no leader device)",
+ "imaging_compat": "N.R. (transparent phantoms, results shown as frames of movies M1-M4)",
+ "sterility": "N.R. (PVP coating 'reported to have no cytotoxicity', Sec. III)",
+ "highest_validation": "phantom",
+ "validation_detail": "phantom: single and double circular navigation in a 2-D branch phantom (inner diameter 6 mm, bifurcations of 98 and 120 deg) with an NdFeB magnet in repulsive or attractive mode while the operator pushes the wire (Sec. IV-A, Fig. 2, movies M1-M2); selective navigation into the right external and internal carotid branches of a 3-D cardio-cerebrovascular silicone phantom with pulsatile flow of a blood analogue, 40 % glycerin (Sec. IV-B, Figs. 3-4, movies M3-M4); bench: deflection against field strength in three orthogonal pairs of Helmholtz coils, x and y coils 0-22 A in 2 A steps, z coil 0-2.2 A in 0.2 A steps (Sec. V, Figs. 5-6). Number of runs N.R.",
+ "key_numbers": "deflection up to about 120 deg with the magnet (Sec. II, IV); in the coils 20 and 26 deg (counterclockwise, clockwise) at 8.58 mT in x, 21 and 31 deg at 9.17 mT in y, vertical displacement 11.05 and 13.55 mm at 5.87 mT in z (Sec. V); deflection against field strength R2 0.994-0.999 (Sec. V-C); magnetisation 95 kA/m, Young's modulus 1.68 MPa (Sec. III); magnet N52, 50 mm diameter x 100 mm (Sec. II); uniform-field region 36 x 36 x 36 mm at 1 % (Sec. VI)",
+ "sim_model": "none found",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "none",
+  "grade": "none",
+  "kind": null,
+  "source": "",
+  "source_url": null,
+  "licence": "",
+  "credit": "",
+  "edits": "",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "wei2024_magnetic",
+   "doi": "10.1109/tie.2023.3340205",
+   "url": null,
+   "title": "Magnetic Robot for Endovascular Intervention: Performance Evaluation",
+   "year": 2024,
+   "venue": "IEEE Transactions on Industrial Electronics"
+  },
+  {
+   "key": "alekseeva2025_design",
+   "doi": "10.1002/rob.22480",
+   "url": null,
+   "title": "The Design of Endovascular Robots for Cardiac Interventions: A Survey",
+   "year": 2024,
+   "venue": "Journal of Field Robotics"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full (wei2024_magnetic); review-only (alekseeva2025_design Table 15 row 6)",
+ "notes": "D2 2026-11-19: catalogued without a picture (author's rule of 2026-11-19: a missing picture does not decide inclusion). N3 2026-11-08 had judged it in scope from the article (alekseeva2025_design Table 15 row 6). In scope as magnetic navigation: computer-driven Helmholtz coils deflect the tip with measured results, and the wire is navigated in vessel phantoms. Who or what holds the permanent magnet during navigation is N.R. Supplementary movies M1-M4 not seen.",
+ "maintainers_own": false,
+ "found_by": "actuated-tip"
+}
