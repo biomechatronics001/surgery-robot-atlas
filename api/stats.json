@@ -1,20 +1,20 @@
 {
  "generated": "2026-11-23",
- "robots": 130,
+ "robots": 138,
  "reviews": 34,
  "first_year": 1996,
  "latest_year": 2026,
  "by_family": {
   "commercial": 34,
-  "academic": 62,
-  "tip": 12,
-  "magnetic": 22
+  "academic": 63,
+  "tip": 16,
+  "magnetic": 25
  },
  "by_highest_validation": {
-  "bench": 18,
-  "phantom": 57,
+  "bench": 19,
+  "phantom": 63,
   "ex-vivo": 3,
-  "animal": 27,
+  "animal": 28,
   "human": 25
  },
  "family_x_validation": {
@@ -27,21 +27,21 @@
   },
   "academic": {
    "bench": 13,
-   "phantom": 32,
+   "phantom": 33,
    "ex-vivo": 2,
    "animal": 15,
    "human": 0
   },
   "tip": {
-   "bench": 1,
-   "phantom": 8,
+   "bench": 2,
+   "phantom": 10,
    "ex-vivo": 1,
-   "animal": 2,
+   "animal": 3,
    "human": 0
   },
   "magnetic": {
    "bench": 1,
-   "phantom": 14,
+   "phantom": 17,
    "ex-vivo": 0,
    "animal": 7,
    "human": 0
@@ -50,38 +50,38 @@
  "by_decade": {
   "1990s": 1,
   "2000s": 9,
-  "2010s": 42,
-  "2020s": 77,
+  "2010s": 44,
+  "2020s": 83,
   "N.R.": 1
  },
  "by_translation_mechanism": {
   "friction-roller": 29,
-  "magnetic": 26,
-  "other": 24,
+  "magnetic": 29,
+  "other": 25,
   "linear-stage+clamp": 16,
+  "tendon/tip-actuation": 16,
   "clamp-relay": 12,
-  "tendon/tip-actuation": 12,
   "not-reported": 9,
   "belt/track": 2
  },
  "by_rotation_mechanism": {
-  "magnetic-field": 26,
-  "not-reported": 20,
+  "magnetic-field": 29,
+  "not-reported": 21,
+  "other": 21,
   "rotating-clamp": 19,
-  "other": 18,
   "rotating-drive-unit": 18,
   "handle-rotation": 11,
-  "none": 8,
+  "none": 9,
   "roller-rolling": 6,
   "tendon-bending": 4
  },
  "by_device": {
-  "catheter": 97,
-  "guidewire": 75,
-  "therapeutic-device": 25,
+  "catheter": 102,
+  "guidewire": 79,
+  "therapeutic-device": 26,
   "sheath": 21,
   "microcatheter": 15,
-  "other": 7,
+  "other": 8,
   "not-reported": 1
  },
  "pictures": {
@@ -91,17 +91,17 @@
    "B": 49,
    "A": 28,
    "C": 49,
-   "none": 4
+   "none": 12
   }
  },
  "notes": "by_decade uses first_year.",
  "sim2real_studies": 26,
  "by_sim2real": {
-  "none-found": 116,
+  "none-found": 124,
   "yes": 8,
   "model-based": 4,
   "partial": 1,
   "unclear": 1
  },
- "with_sim_model": 38
+ "with_sim_model": 42
 }

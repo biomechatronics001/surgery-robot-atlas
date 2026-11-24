@@ -1,0 +1,82 @@
+{
+ "schema_version": 1,
+ "id": "bitujn_vir_zhao2011",
+ "name": "BIT / University of Jinan tele-operated ",
+ "full_name": "BIT / University of Jinan tele-operated vascular interventional robot: 5-DOF active supporting manipulator (ASMM) carrying a 2-DOF catheter operating system",
+ "group": "Intelligent Robotics Institute, Beijing Institute of Technology (X. Duan, H. Yu, X. Wang, Q. Huang, X. Gao); School of Mechanical Engineering, University of Jinan (H. Zhao); Beijing Beifang Hospital (C. Gao); Robotics Institute and Image Processing Center, Beihang University (D. Liu, B. Liu); 863 Programme funding (zhao2011_teleoperating p. 1; wang2011_masterslave p. 1)",
+ "group_short": "Intelligent Robotics Institute",
+ "family": "academic",
+ "category": "academic",
+ "first_year": 2011,
+ "latest_year": 2011,
+ "versions": "2011 ICMA (zhao2011_teleoperating, full): system overview, 2-DOF catheter driving unit, 5-DOF supporting manipulator, safety design, advance precision test; 2011 ROBIO (wang2011_masterslave, full, Wang, Duan et al.): ASMM structure synthesis, DSA calibration and 3D reconstruction, master-slave control with a haptic interface, glass vascular model experiment; 2011 ICCME (zhao2011_mechanical): the earlier mechanical design and control paper, judged arm-only in the first REV4 pass (REV4_19_candidates.md §1 row 4) and not re-read",
+ "target_anatomy": "'vascular interventional surgery' (VIS) for cardiovascular and cerebrovascular disease under fluoroscopy (Abstract); coronary dilatation, aneurysm treatment and local chemotherapy named as VIS uses (zhao2011_teleoperating Sec. II) and intravascular neurosurgery as the delicate case (Sec. I); tested in a transparent glass vascular model with five branches, no organ named (wang2011_masterslave Sec. V-B, V-C)",
+ "devices": [
+  "guidewire",
+  "catheter"
+ ],
+ "devices_driven": "catheter (and guide wire) clamped in the catheter operating system carried at the tip of the supporting manipulator; one catheter at a time, sizes N.R. (zhao2011_teleoperating Sec. II, III; wang2011_masterslave Sec. II-B)",
+ "n_dof": 7,
+ "n_dof_detail": "7 = 5 (active supporting manipulator: joints 1-3 position, joints 4-5 pose) + 2 (catheter: axial advance and rotation); seven DC motors on a PC + PMAC controller (zhao2011_teleoperating Sec. III, IV, V; wang2011_masterslave Sec. III)",
+ "translation_mechanism": "other",
+ "translation_detail": "other: trolley advance, the catheter is clipped by two trolleys (one driven, one passive) on the advance unit, driven by an advance motor; a photoelectric coder on the passive trolley measures the distance (zhao2011_teleoperating Sec. III-A, Fig. 5)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "gear transmission: the advance and detecting units sit on a rotating unit driven by a rotating motor (zhao2011_teleoperating Sec. III-A, Fig. 5)",
+ "device_range": "advance tested over 10 to 100 mm in ten commanded distances (zhao2011_teleoperating Table 1); device diameters N.R.",
+ "footprint_mm": "N.R.",
+ "mass_kg": "about 4 (catheter navigator only, the load of the supporting manipulator) (wang2011_masterslave Sec. II-B, III-B)",
+ "force_sensing": "none: contact force on the vessel is named as a problem and force feedback as future work (zhao2011_teleoperating Sec. I, VII)",
+ "haptics_leader": "haptic interface device at the master site, in a radiation-proof room, with 2D projection images and a 3D reconstructed vascular model on two displays; its force feedback N.R. (wang2011_masterslave Sec. II-A, IV, V-C); tele-operation over TCP/IP (zhao2011_teleoperating Sec. III-B, Fig. 6)",
+ "imaging_compat": "DSA / X-ray: DSA calibrated by the Tsai method and two projections reconstructed in 3D (wang2011_masterslave Sec. IV-B); binocular vision guides the manipulator (Sec. II-A); robot materials N.R.",
+ "sterility": "N.R.; 'easiness of sterilization' is one of five stated design points for the driving unit (zhao2011_teleoperating Sec. III-A)",
+ "highest_validation": "phantom",
+ "validation_detail": "bench: catheter advance, 10 commanded distances from 10 to 100 mm, real distance measured three times each (zhao2011_teleoperating Sec. VI-B, Table 1); supporting manipulator: absolute positioning at 20 random preset points measured on a three-coordinate machine (wang2011_masterslave Sec. V-A); 3D reconstruction of a glass model, 5 branch diameters (Sec. V-B, Table I); phantom: surgeons drove the catheter forward, backward and in rotation through the branches of a transparent glass vascular model from the haptic master with the supporting manipulator holding the navigator (wang2011_masterslave Sec. V-C, Fig. 15; zhao2011_teleoperating Fig. 15); number of runs N.R.; no animal or human test",
+ "key_numbers": "advance error against the command 3.34 to 6.0 % (column r, Table 1), coder feedback against the measured distance 0.47 to 0.84 %, 'smaller than 1 %' (column f); supporting manipulator max error < 0.8 mm over 20 points (wang2011_masterslave Sec. V-A); reconstructed branch diameter error -0.018 to 0.878 mm, 'smaller than 1 mm' (Table I); safety: software distance to the groin incision > 40 mm, 50 ms PMAC watchdog, fuses, brakes, hall limit switches, binocular vision, emergency stop (zhao2011_teleoperating Sec. V-C)",
+ "sim_model": "none found (kinematic analysis and quintic-polynomial trajectory planning of the arm, zhao2011_teleoperating Sec. VI-A)",
+ "has_sim_model": false,
+ "sim2real": "none-found",
+ "sim2real_detail": "none found",
+ "picture": {
+  "status": "none",
+  "grade": "none",
+  "kind": null,
+  "source": "",
+  "source_url": null,
+  "licence": "",
+  "credit": "",
+  "edits": "",
+  "file": null
+ },
+ "pictures": [],
+ "sources": [
+  {
+   "key": "zhao2011_teleoperating",
+   "doi": "10.1109/ICMA.2011.5986252",
+   "url": null,
+   "title": "A New Tele-operating Vascular Interventional Robot for Medical Applications",
+   "year": 2011,
+   "venue": "2011 IEEE International Conference on Mechatronics and Automation"
+  },
+  {
+   "key": "wang2011_masterslave",
+   "doi": "10.1109/ROBIO.2011.6181294",
+   "url": null,
+   "title": "Structure Design and Master-slave Control System of a Vascular Interventional Robot",
+   "year": 2011,
+   "venue": "2011 IEEE International Conference on Robotics and Biomimetics (ROBIO)"
+  },
+  {
+   "key": "zhao2011_mechanical",
+   "doi": "10.1109/iccme.2011.5876765",
+   "url": null,
+   "title": "Mechanical design and control system of vascular interventional robot",
+   "year": 2011,
+   "venue": "The 2011 IEEE/ICME International Conference on Complex Medical Engineering"
+  }
+ ],
+ "read_level": "full",
+ "read_level_detail": "full",
+ "notes": "REV4 2026-11-23: included after the full assessment of the 19 candidates (REV4_19_candidates.md §7). Decided A after the ICMA paper showed a measured catheter-advance test and the ROBIO paper a catheter run in a glass vascular model; the earlier 'arm only' reading (criterion 4) came from the ICCME paper. Table 1 of the ICMA paper: the coordinator's note gave 4.1-6.0 %, the column r runs 3.34-6.0 %. The ROBIO PDF has a shifted text layer (decoded by the coordinator); digits were stripped there, the values quoted come from a re-decode of the PDF text layer. Separate robot from ujn_cao2024 (a different University of Jinan group paper, 2024).",
+ "maintainers_own": false,
+ "found_by": "gap"
+}

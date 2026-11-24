@@ -9,7 +9,7 @@
  "category": "academic",
  "first_year": 2023,
  "latest_year": 2023,
- "versions": "2023 ICRA (only); 2016: KCL 3-DOF MR-compatible multisegment cardiac catheter steering mechanism (Ataollahi 2016 TBME) (Belikov 2024 Fig. 5 AT1; Pescio 2025 Table 2 row 10) (belikov2024_evolution; pescio2025_endovascular); 2015-19: KCL (K. Rhode, H. Liu, J. Back) tendon-driven catheter robot with tension sensing (Back 2015; model-free position control Back 2017), likely the same hardware as Z. Zhang 2019 RA-L cable-driven continuum catheter control with Inria (Belikov 2024 Fig. 5 AT2, JEs) (belikov2024_evolution)",
+ "versions": "2023 ICRA (only); 2016: KCL 3-DOF MR-compatible multisegment cardiac catheter steering mechanism (Ataollahi 2016 TBME) (Belikov 2024 Fig. 5 AT1; Pescio 2025 Table 2 row 10) (belikov2024_evolution; pescio2025_endovascular); 2015-19: KCL (K. Rhode, H. Liu, J. Back) tendon-driven catheter robot with tension sensing (Back 2015; model-free position control Back 2017), likely the same hardware as Z. Zhang 2019 RA-L cable-driven continuum catheter control with Inria (Belikov 2024 Fig. 5 AT2, JEs) (belikov2024_evolution); 2017 Front Robot AI 4:17 (back2017_model, full text read 2026-11-23): own four-tendon ablation-catheter tip pulled by five linear actuators (Arduino Mega) with tension feedback and electromagnetic tip tracking; bench: 0.5 +- 0.2 mm tip position error in five repeated trials, line-following RMSE 1.5 +- 1.1 mm for the model-free control against 3.4 +- 2.1 mm for the inverse Jacobian; a different drive principle from the 2023 proximal transseptal drive, kept here as a version line to match the catalogue (REV4_19_candidates.md §5.3)",
  "target_anatomy": "interatrial septum (transseptal puncture before left-atrial ablation)",
  "devices": [
   "sheath"
@@ -137,11 +137,19 @@
    "title": "Endovascular robotics: technical advances and future directions",
    "year": 2025,
    "venue": "Minimally Invasive Therapy & Allied Technologies"
+  },
+  {
+   "key": "back2017_model",
+   "doi": "10.3389/frobt.2017.00017",
+   "url": null,
+   "title": "Model-Free Position Control for Cardiac Ablation Catheter Steering Using Electromagnetic Position Tracking and Tension Feedback",
+   "year": 2017,
+   "venue": "Frontiers in Robotics and AI"
   }
  ],
  "read_level": "full",
  "read_level_detail": "full",
- "notes": "Authors applied CC BY to the accepted manuscript; IEEE version is publisher copyright.",
+ "notes": "Authors applied CC BY to the accepted manuscript; IEEE version is publisher copyright. | REV4 2026-11-23: version line added (back2017_model)",
  "maintainers_own": false,
  "found_by": "gap"
 }

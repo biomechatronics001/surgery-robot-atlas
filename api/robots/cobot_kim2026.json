@@ -9,7 +9,7 @@
  "category": "magnetic-navigation",
  "first_year": 2022,
  "latest_year": 2026,
- "versions": "2022 ECMIS (hwang2022_ecmis, Adv. Healthc. Mater.): eight-coil hemispherical electromagnetic actuation system under a carbon-composite bed, biplane C-arms, magnetic tip on a 0.014-in wire, Hanyang 5-DOF master-slave advancer, 2 swine -> 2026 Cobot guidewire (kim2026_magnetic): 8-coil system with IMsystem, phantom and swine. The link is inferred from the shared DGIST / IMsystem authors (S. Jeon, J.-y. Kim) and the eight-coil design; ECMIS is not named 'Cobot'; 2018-19: DGIST (S. Jeon, H. Choi) magnetic soft guidewire tip steered in MiniMag (Jeon 2018 Micro Nano Syst. Lett.) and OctoMag (Jeon 2019 Soft Robot.), phantoms (Hwang 2020 Figs. 7a-b; Konda 2025 Table 2 row 3) (hwang2020_review; konda2025_robotically)",
+ "versions": "2022 ECMIS (hwang2022_ecmis, Adv. Healthc. Mater.): eight-coil hemispherical electromagnetic actuation system under a carbon-composite bed, biplane C-arms, magnetic tip on a 0.014-in wire, Hanyang 5-DOF master-slave advancer, 2 swine -> 2026 Cobot guidewire (kim2026_magnetic): 8-coil system with IMsystem, phantom and swine. The link is inferred from the shared DGIST / IMsystem authors (S. Jeon, J.-y. Kim) and the eight-coil design; ECMIS is not named 'Cobot'; 2018-19: DGIST (S. Jeon, H. Choi) magnetic soft guidewire tip steered in MiniMag (Jeon 2018 Micro Nano Syst. Lett.) and OctoMag (Jeon 2019 Soft Robot.), phantoms (Hwang 2020 Figs. 7a-b; Konda 2025 Table 2 row 3) (hwang2020_review; konda2025_robotically); 2019 Soft Robot. 6(1):54-68 (jeon2019_magnetically, abstract only): DGIST soft microrobot attached to the tip of a guidewire and steered by the direction and intensity of an external field, 21.1 to 132.7 deg at 15 mT, 2D tracking, three-dimensional coronary phantom (the OctoMag / MiniMag line above)",
  "target_anatomy": "neuro (2026, phantom and swine); coronary, iliac and renal arteries (2022 ECMIS, swine)",
  "devices": [
   "guidewire",
@@ -172,11 +172,19 @@
    "title": "Robotically steerable guidewires—Current trends and future directions",
    "year": 2025,
    "venue": "Science Robotics"
+  },
+  {
+   "key": "jeon2019_magnetically",
+   "doi": "10.1089/soro.2018.0019",
+   "url": null,
+   "title": "A Magnetically Controlled Soft Microrobot Steering a Guidewire in a Three-Dimensional Phantom Vascular Network",
+   "year": 2019,
+   "venue": "Soft Robotics"
   }
  ],
  "read_level": "full",
  "read_level_detail": "full (hwang2022_ecmis); kim2026_magnetic full HTML via P6 notes (not re-read by X2)",
- "notes": "Group and 2026 numbers from P6_gallery.md section 4 (PMC13410658 full HTML). ECMIS (2022) added as the predecessor system by inference; first_year 2026 -> 2022 rests on that inference. | X2 2026-11-08. | X4 2026-11-08: first_year marked (inferred): ECMIS (hwang2022_ecmis) taken as the predecessor from shared authors and the 8-coil design; no text states the link",
+ "notes": "Group and 2026 numbers from P6_gallery.md section 4 (PMC13410658 full HTML). ECMIS (2022) added as the predecessor system by inference; first_year 2026 -> 2022 rests on that inference. | X2 2026-11-08. | X4 2026-11-08: first_year marked (inferred): ECMIS (hwang2022_ecmis) taken as the predecessor from shared authors and the 8-coil design; no text states the link | REV4 2026-11-23: version line added (jeon2019_magnetically)",
  "maintainers_own": false,
  "found_by": "actuated-tip"
 }

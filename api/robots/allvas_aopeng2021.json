@@ -9,7 +9,7 @@
  "category": "clinical-stage",
  "first_year": 2021,
  "latest_year": 2026,
- "versions": "ALLVAS; predecessor: the group's first-generation robot ('similar to the first-generation surgical robot initially studied by our research group', song2022_biomimetic p. 14, refs 13-14 = Wang 2018 IJMRCAS 14:e1915 and Lu 2020 VES 54:598-604; not read) -> 2022 biomimetic system, 38 porcine cases (song2022_biomimetic; robot unnamed there, identified as ALLVAS by song2023_novel, which cites it) -> 2023 EVAR in patients (song2023_novel); 2022: Changhai (Q. Lu) remote-controlled robot driven by hollow ultrasonic motors, ex vivo phantom (Lu 2022) (Alekseeva 2025 Table 7 row 1, Fig. 13e; Belikov 2024 Fig. 6 QIN) (alekseeva2025_design; belikov2024_evolution)",
+ "versions": "ALLVAS; predecessor: the group's first-generation robot ('similar to the first-generation surgical robot initially studied by our research group', song2022_biomimetic p. 14, refs 13-14 = Wang 2018 IJMRCAS 14:e1915 and Lu 2020 VES 54:598-604; not read) -> 2022 biomimetic system, 38 porcine cases (song2022_biomimetic; robot unnamed there, identified as ALLVAS by song2023_novel, which cites it) -> 2023 EVAR in patients (song2023_novel); 2022: Changhai (Q. Lu) remote-controlled robot driven by hollow ultrasonic motors, ex vivo phantom (Lu 2022) (Alekseeva 2025 Table 7 row 1, Fig. 13e; Belikov 2024 Fig. 6 QIN) (alekseeva2025_design; belikov2024_evolution); 2026 ICRA (wang2026_sampleefficient, arXiv 2602.20216, full text): pair of custom 2-DoF robotic arms with grippers pushing and twisting the catheter on a silicone renal artery phantom, SAC with online expert correction 59.00 % (177/300) success; the robot is not named in the paper, the match to ALLVAS rests on co-author D. Liu of Shanghai Operation Robot Co., Ltd., the four-arm photo and the group's T-RO 2026 paper that captions the platform ALLVAS (Fig. 2)",
  "target_anatomy": "aortic (EVAR), peripheral, coronary (one remote PCI)",
  "devices": [
   "guidewire",
@@ -226,11 +226,19 @@
    "title": "Evolution and current state of robotic catheters for endovascular surgery: A comprehensive review",
    "year": 2024,
    "venue": "Engineering Science and Technology, an International Journal"
+  },
+  {
+   "key": "wang2026_sampleefficient",
+   "doi": null,
+   "url": "https://arxiv.org/abs/2602.20216",
+   "title": "Sample-Efficient Learning with Online Expert Correction for Autonomous Catheter Steering in Endovascular Bifurcation Navigation",
+   "year": 2026,
+   "venue": null
   }
  ],
  "read_level": "full",
  "read_level_detail": "full (song2022_biomimetic); partial (S8) for the rest",
- "notes": "NMPA registration not verified. Only commercial-grade robot with simulation-trained controllers on hardware (phantom only). | X2 2026-11-08: song2022 (Micromachines, CC BY 4.0) read in full: 18 DOF (12 was the short-axis count), 38 swine cases.",
+ "notes": "NMPA registration not verified. Only commercial-grade robot with simulation-trained controllers on hardware (phantom only). | X2 2026-11-08: song2022 (Micromachines, CC BY 4.0) read in full: 18 DOF (12 was the short-axis count), 38 swine cases. | REV4 2026-11-23: version line added (wang2026_sampleefficient)",
  "maintainers_own": false,
  "found_by": "commercial"
 }
