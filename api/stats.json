@@ -85,13 +85,13 @@
   "not-reported": 1
  },
  "pictures": {
-  "found": 126,
+  "found": 134,
   "cleared_for_reuse": 21,
   "by_grade": {
-   "B": 49,
-   "A": 28,
-   "C": 49,
-   "none": 12
+   "B": 51,
+   "A": 29,
+   "C": 54,
+   "none": 4
   }
  },
  "notes": "by_decade uses first_year.",
