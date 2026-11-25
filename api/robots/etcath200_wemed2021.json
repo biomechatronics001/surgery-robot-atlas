@@ -18,9 +18,9 @@
  ],
  "devices_driven": "guidewire, RX balloon/stent catheter (guidewire arm); guiding catheter advance (catheter arm)",
  "n_dof": null,
- "n_dof_detail": "N.R. as a count",
- "translation_mechanism": "friction-roller",
- "translation_detail": "friction-roller (roller interface per yang2026_feasibility)",
+ "n_dof_detail": "N.R. as a count; guidewire arm: advancement and retraction and rotation of the guidewire and the rapid-exchange balloon or stent catheter; catheter arm: advance of the guiding catheter (yang2026_feasibility Fig. 1)",
+ "translation_mechanism": "not-reported",
+ "translation_detail": "N.R. (yang2026_feasibility: its joystick-roller interface is the control box of the operator; the drive of the two passive arms is not named)",
  "rotation_mechanism": "not-reported",
  "rotation_detail": "N.R.",
  "device_range": "N.R.",
@@ -109,7 +109,7 @@
  ],
  "read_level": "full",
  "read_level_detail": "full text on disk (yang2026) + web",
- "notes": "NMPA approval reported March 2025 (people.cn 2025-03-25 citing a Beijing E-Town WeChat post; registration number/date not seen). First robotic PCI at Anzhen Oct 2021 (search). WeMed contributed to NMPA standard YY/T 1994-2025 (web). Possible WeMed neuro product (Weimai) status: under review per yicai 2024.",
+ "notes": "NMPA approval reported March 2025 (people.cn 2025-03-25 citing a Beijing E-Town WeChat post; registration number/date not seen). First robotic PCI at Anzhen Oct 2021 (search). WeMed contributed to NMPA standard YY/T 1994-2025 (web). Possible WeMed neuro product (Weimai) status: under review per yicai 2024. Drive (IE 2026-11-24): the earlier code friction-roller read the joystick-roller control box of yang2026_feasibility; a review gives grippers for the guidewire and rollers for the balloon of the WeMed robot of 2022 (ren2023_critical Sec. III-C and Table IV p. 13; not a source key of this row).",
  "maintainers_own": false,
  "found_by": "commercial"
 }

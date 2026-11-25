@@ -29,7 +29,7 @@
  "imaging_compat": "'Visual (Likely TEE and X-ray)' (mandhumula2025_robotic Table 1)",
  "sterility": "N.R. (robot draped in an animal-lab photo, santacruzworks_capstan)",
  "highest_validation": "human",
- "validation_detail": "human: 2 TMVR patients at Hospital Clinico Universidad Catolica, Santiago, both with mitral regurgitation eliminated and unobstructed LVOT (capstan2025_press, 2025-03-06); registered FIH study NCT06600191: 10 participants (estimated), 4 sites (Melbourne, Sao Paulo, Santiago, Auckland), recruiting (nct06600191_capstan, accessed 2026-11-08)",
+ "validation_detail": "human: 2 TMVR patients at Hospital Clinico Universidad Catolica, Santiago, both with mitral regurgitation eliminated and unobstructed LVOT (capstan2025_press, 2025-03-06); registered FIH study NCT06600191: 10 participants (estimated), 4 sites, recruiting (nct06600191_capstan, accessed 2026-11-08)",
  "key_numbers": "NCT06600191 first posted 2024-09-19, start 2025-02-24, primary completion 2026-12 (estimated), last update 2026-08-28 (nct06600191_capstan); USD 110 M financing (PR Newswire 2024-12-11)",
  "sim_model": "none found",
  "has_sim_model": false,

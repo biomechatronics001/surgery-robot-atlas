@@ -32,7 +32,7 @@
  "imaging_compat": "works on monoplane angiography (company claim)",
  "sterility": "N.R.",
  "highest_validation": "human",
- "validation_detail": "3 aneurysm pts, Panama Clinic, Nov 2025 (press); 1 telerobotic thrombectomy, Panama, ~200 km, March 2026 (press); both company-reported",
+ "validation_detail": "3 aneurysm pts, Panama Clinic, Nov 2025 (press); 1 telerobotic thrombectomy over ~200 km, March 2026 (press); both company-reported",
  "key_numbers": "telerobotic thrombectomy: NIHSS 21 LVO, mTICI 3, first pass (hitconsultant 2026-03-20). Series C US$30M March 2026, total US$92M (pulse2/massdevice).",
  "sim_model": "none found",
  "has_sim_model": false,

@@ -30,7 +30,7 @@
  "imaging_compat": "C-arm in phantom test; MR compatibility N.R.",
  "sterility": "N.R.",
  "highest_validation": "phantom",
- "validation_detail": "2025: phantom vessel under pulsatile flow, traversal, balloon inflation, flow arrest (one demonstration); 2026: one navigation of an abdominal aorta phantom, wire buckled between phantom entry and device (abstract-level counts N.R.)",
+ "validation_detail": "2025: phantom vessel under pulsatile flow, traversal, balloon inflation, flow arrest (one demonstration); 2026: one qualitative navigation of an abdominal aorta model with the handheld unit, which dispensed the wire without the tube buckling between the phantom insertion point and the unit, unlike the earlier COAST version (chavenet2026_handheld; counts N.R.)",
  "key_numbers": "balloon radii inflated 0.75-2.50 mm in 0.25 mm steps; 1.22 mm OD balloon on guidewire; Abaqus model of balloon inflation; pressure-channel test: position change 0.038 mm and curvature change 0.2 % (barre2025 Sec. V, context only partly read)",
  "sim_model": "Abaqus FE model of balloon inflation plus analytical curvature model (barre2025 Sec. III-IV, partial read)",
  "has_sim_model": true,

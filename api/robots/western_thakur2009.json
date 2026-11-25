@@ -29,7 +29,7 @@
  "imaging_compat": "fluoroscopy (2009); MRI-compatible (2013): worst-case SNR drop 2.5%, slave 60 cm from isocentre; 2016 SNR drop < 3%, no artifacts",
  "sterility": "N.R.",
  "highest_validation": "animal",
- "validation_detail": "2009: bench plus 8 operators navigating a carotid model; 2013: bench and in-scanner tests; porcine in-vivo and ex-vivo tests reported in the Western thesis (ir.lib.uwo.ca/etd/3024), web summary only, animal count not read",
+ "validation_detail": "2009: bench plus 8 operators navigating a carotid model; 2013: bench and in-scanner tests; porcine in-vivo and ex-vivo tests reported in a Western University thesis (ir.lib.uwo.ca/etd/3024), web summary only, animal count not read",
  "key_numbers": "2009: within 1 mm and 1 deg, latency under 300 ms; 2013: delay 41+-21 ms, 2+-2 deg radial, 1.0+-0.8 mm over 100 mm axial; 2016: axial error < 1 mm over 30 mm; axial grip 4 N, radial grip 18 mN.m",
  "sim_model": "none found",
  "has_sim_model": false,

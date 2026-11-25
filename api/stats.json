@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23",
+ "generated": "2026-11-24",
  "robots": 138,
  "reviews": 34,
  "first_year": 1996,
@@ -11,9 +11,9 @@
   "magnetic": 25
  },
  "by_highest_validation": {
-  "bench": 19,
-  "phantom": 63,
-  "ex-vivo": 3,
+  "bench": 18,
+  "phantom": 62,
+  "ex-vivo": 5,
   "animal": 28,
   "human": 25
  },
@@ -26,8 +26,8 @@
    "human": 25
   },
   "academic": {
-   "bench": 13,
-   "phantom": 33,
+   "bench": 12,
+   "phantom": 34,
    "ex-vivo": 2,
    "animal": 15,
    "human": 0
@@ -41,8 +41,8 @@
   },
   "magnetic": {
    "bench": 1,
-   "phantom": 17,
-   "ex-vivo": 0,
+   "phantom": 15,
+   "ex-vivo": 2,
    "animal": 7,
    "human": 0
   }
@@ -55,13 +55,13 @@
   "N.R.": 1
  },
  "by_translation_mechanism": {
-  "friction-roller": 29,
   "magnetic": 29,
+  "friction-roller": 28,
   "other": 25,
   "linear-stage+clamp": 16,
   "tendon/tip-actuation": 16,
   "clamp-relay": 12,
-  "not-reported": 9,
+  "not-reported": 10,
   "belt/track": 2
  },
  "by_rotation_mechanism": {
