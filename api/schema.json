@@ -81,13 +81,13 @@
    ],
    "description": "One of four families used across the atlas.",
    "x-labels": {
-    "commercial": "Commercial and clinical-stage systems",
+    "commercial": "Commercial and pre-commercial systems",
     "academic": "Academic bedside robots",
     "tip": "Actuated-tip devices",
     "magnetic": "Magnetic navigation"
    },
    "x-definitions": {
-    "commercial": "Products and clinical-stage systems from companies, including commercial magnetic systems.",
+    "commercial": "Commercial systems and pre-commercial systems (company prototypes to systems in clinical studies), including commercial magnetic systems.",
     "academic": "Research robots at the bedside that push and twist catheters and guidewires.",
     "tip": "Devices whose own tip bends (tendons, shape-memory alloy, fluid, notched tubes), with or without a bedside drive.",
     "magnetic": "Academic systems that steer a magnetic device tip with an external field."
@@ -657,7 +657,7 @@
    "description": "Which logged search added the record.",
    "x-definitions": {
     "academic": "Search of academic bedside robots.",
-    "commercial": "Search of commercial and clinical-stage systems.",
+    "commercial": "Search of commercial and pre-commercial systems.",
     "actuated-tip": "Search of actuated-tip and magnetic devices.",
     "gap": "Gap searches for robots the other searches missed.",
     "contributor": "Added by a contributor through a pull request."
