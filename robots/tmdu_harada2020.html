@@ -12,14 +12,14 @@
 <dt>Family</dt><dd>Academic bedside robots <span class="muted">(academic)</span></dd>
 <dt>Devices</dt><dd>SATAKE HotBalloon catheter (Toray) and its sheath</dd>
 <dt>Degrees of freedom</dt><dd>1 (push/pull)</dd>
-<dt>Push</dt><dd>Other drives</dd>
+<dt>Push</dt><dd>Linear stage</dd>
 <dt>Twist</dt><dd>None</dd>
 <dt>Tested up to</dt><dd><span class="ladder" aria-hidden="true"><i class=f></i><i class=f></i><i class=f></i><i class=f></i><i></i></span>Animal</dd>
 <dt>Sim-to-real</dt><dd>None found <span class="muted">— No simulation-trained controller found for this robot.</span></dd>
 </dl></div></div>
 
 <div class="dsec"><h2>Testing</h2><dl><dt>Highest level</dt><dd>Animal</dd><dt>What was tested</dt><dd>pulmonary-vein blocking with the balloon in a live pig (one animal described); anomaly detection tested on an excised pig heart (harada2020_development Sec. IV-V)</dd><dt>Key numbers</dt><dd>push force about 10 N; gripper magnets 11.8 N (9 mm) and 4.3 N (5 mm) (harada2020_development Sec. III)</dd></dl></div>
-<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>other: pneumatic air cylinder (100 mm stroke) moving a magnet-closed catheter gripper</dd><dt>Twist (rotation)</dt><dd>none</dd><dt>Device range</dt><dd><span class="nr">N.R.</span></dd><dt>Target anatomy</dt><dd>left atrium / pulmonary veins (hot-balloon catheter ablation)</dd></dl></div>
+<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>linear-stage+clamp: a magnet-closed catheter gripper pushed by a pneumatic air cylinder of 100 mm stroke (harada2020_development Sec. III-A, III-B)</dd><dt>Twist (rotation)</dt><dd>none</dd><dt>Device range</dt><dd><span class="nr">N.R.</span></dd><dt>Target anatomy</dt><dd>left atrium / pulmonary veins (hot-balloon catheter ablation)</dd></dl></div>
 <div class="dsec"><h2>Sensing and interface</h2><dl><dt>Force sensing</dt><dd>contact force estimated from cylinder air pressure; magnetic distance sensor on the gripper</dd><dt>Leader and haptics</dt><dd>haptic display of the pressure-estimated force (prototype)</dd><dt>Imaging</dt><dd>X-ray fluoroscopy</dd><dt>Sterility</dt><dd><span class="nr">N.R.</span></dd></dl></div>
 <div class="dsec"><h2>Size</h2><dl><dt>Footprint (mm)</dt><dd><span class="nr">N.R.</span></dd><dt>Mass (kg)</dt><dd><span class="nr">N.R.</span></dd></dl></div>
 <div class="dsec"><h2>Simulation</h2><dl><dt>Simulation model</dt><dd>none found</dd><dt>Sim-trained controller</dt><dd>none found</dd></dl></div>
@@ -32,7 +32,7 @@
 <footer class="foot"><div class="wrap">
 <div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
 the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
-pictures keep their owners' licences. Built 2026-11-24.</div>
+pictures keep their owners' licences. Built 2026-11-25.</div>
 <div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
 Paper: Endovascular Robotics Atlas: A Systematic Review of Hardware Design and Performance (in preparation)</div>
 <div>Machine-readable: <a href="../api/robots.json">robots.json</a> · <a href="../robots.csv">robots.csv</a> ·

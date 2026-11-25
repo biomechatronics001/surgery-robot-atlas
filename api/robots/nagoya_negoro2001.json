@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "id": "nagoya_negoro2001",
- "name": "Nagoya robot",
+ "name": "Nagoya University robot",
  "full_name": "Nagoya University catheter-driving robots for intravascular neurosurgery (roller and linear-stepping drives) with the EVE patient-specific simulator",
  "group": "Nagoya University (Toshio Fukuda, Fumihito Arai; neurosurgeon Makoto Negoro), later Seiichi Ikeda and Carlos Tercero",
  "group_short": "Nagoya U.",

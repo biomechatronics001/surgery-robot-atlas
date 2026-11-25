@@ -18,10 +18,10 @@
  "devices_driven": "interventional tool (guidewire/catheter)",
  "n_dof": null,
  "n_dof_detail": "translation + rotation, motion decoupling and coupling kinematics",
- "translation_mechanism": "not-reported",
- "translation_detail": "N.R.",
- "rotation_mechanism": "not-reported",
- "rotation_detail": "N.R.",
+ "translation_mechanism": "friction-roller",
+ "translation_detail": "friction-roller: two roller wheels clamp the catheter and drive it, travel unlimited; rough polyurethane wheels against slip (peng2023_design Methods, Fig. 2)",
+ "rotation_mechanism": "other",
+ "rotation_detail": "the roller wheels and their holder rotate about the catheter axis (peng2023_design Methods, Fig. 2)",
  "device_range": "N.R.",
  "footprint_mm": "N.R.",
  "mass_kg": "N.R.",
@@ -98,8 +98,8 @@
    "venue": "International Journal of Computer Assisted Radiology and Surgery"
   }
  ],
- "read_level": "abstract",
- "read_level_detail": "abstract (Europe PMC)",
+ "read_level": "partial",
+ "read_level_detail": "partial (translation and rotation cells read in the peng2023_design text on disk, RF-A 2026-11-24); abstract (Europe PMC) for the other cells",
  "notes": "Group must be identified from the PDF. | 2026-10-13 coordinator: highest_validation bench -> phantom from the full text (W4_notes.md)",
  "maintainers_own": false,
  "found_by": "academic"

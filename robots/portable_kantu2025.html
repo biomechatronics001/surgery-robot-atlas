@@ -19,7 +19,7 @@
 </dl></div></div>
 
 <div class="dsec"><h2>Testing</h2><dl><dt>Highest level</dt><dd>Phantom</dd><dt>What was tested</dt><dd>benchtop tracking with motion capture; force/torque tests (2 catheters, 2 wires); guidewire advanced to left coronary ostium in a 3D-printed human-heart phantom with EM tracker (one demonstration)</dd><dt>Key numbers</dt><dd>peak force 5.49 N (8 F), 3.44 N (5 F), wire 0.38/0.35 N; peak torque 10.61/6.55 mN.m (8F/5F), wire 0.42/0.22 mN.m; tracking RMSE 10.3 deg and 0.31 mm; wire deviation ~6.9 deg / 0.9 mm; 90% smaller than CorPath (1780x690x1170 mm)</dd></dl></div>
-<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>other: guide catheter on 1.5 mm-pitch lead-screw platform (300 mm range); guidewire by active friction roller plus spring-loaded passive roller, range &gt; 1200 mm</dd><dt>Twist (rotation)</dt><dd>guide catheter: BLDC motor with 2:1 spur gears (360 deg); guidewire: commercial torque device on motor gear train (360 deg)</dd><dt>Device range</dt><dd>catheter 5-9 F; wire 0.33-1 mm (abstract: 1-9 F; text: clamp for 0.33-3 mm)</dd><dt>Target anatomy</dt><dd>coronary (simulated PCI in 3D-printed heart model)</dd></dl></div>
+<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>friction-roller + clamp hybrid: guidewire by an active friction roller and a spring-loaded passive roller, range &gt; 1200 mm; guide catheter on a 1.5 mm-pitch lead-screw platform (300 mm range) (kantu2025_portable Fig. 2)</dd><dt>Twist (rotation)</dt><dd>guide catheter: BLDC motor with 2:1 spur gears (360 deg); guidewire: commercial torque device on motor gear train (360 deg)</dd><dt>Device range</dt><dd>catheter 5-9 F; wire 0.33-1 mm (abstract: 1-9 F; text: clamp for 0.33-3 mm)</dd><dt>Target anatomy</dt><dd>coronary (simulated PCI in 3D-printed heart model)</dd></dl></div>
 <div class="dsec"><h2>Sensing and interface</h2><dl><dt>Force sensing</dt><dd>motor current; external load cell in bench tests only</dd><dt>Leader and haptics</dt><dd>none</dd><dt>Imaging</dt><dd><span class="nr">N.R.</span></dd><dt>Sterility</dt><dd>N.R. (cartridge for sterilisation proposed in discussion)</dd></dl></div>
 <div class="dsec"><h2>Size</h2><dl><dt>Footprint (mm)</dt><dd>250 x 350 x 250 (abstract; LegoBot Table I writes 360 x 250 x 250)</dd><dt>Mass (kg)</dt><dd>N.R. (direct-drive motor 92 g each)</dd></dl></div>
 <div class="dsec"><h2>Simulation</h2><dl><dt>Simulation model</dt><dd>none found</dd><dt>Sim-trained controller</dt><dd>none found</dd></dl></div>
@@ -32,7 +32,7 @@
 <footer class="foot"><div class="wrap">
 <div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
 the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
-pictures keep their owners' licences. Built 2026-11-24.</div>
+pictures keep their owners' licences. Built 2026-11-25.</div>
 <div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
 Paper: Endovascular Robotics Atlas: A Systematic Review of Hardware Design and Performance (in preparation)</div>
 <div>Machine-readable: <a href="../api/robots.json">robots.json</a> · <a href="../robots.csv">robots.csv</a> ·

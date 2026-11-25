@@ -21,7 +21,7 @@
  "n_dof": null,
  "n_dof_detail": "N.R.",
  "translation_mechanism": "other",
- "translation_detail": "other: microwire by an electric-gripper clamp on a lead-screw carriage with reverse drive (alternate clamp/release); microcatheter by dual friction wheels with multitooth Shore A70 silicone sleeve; guide catheter by advance-rotation module with Y-valve",
+ "translation_detail": "friction-roller + clamp hybrid: microcatheter by a dual friction-wheel drive with a multitooth Shore A70 silicone sleeve; microwire by an electric-gripper clamp on a 180 mm ball-screw stroke, gripper 1 and gripper 2 alternating (pulsating progression); guide catheter advanced and rotated with its Y-valve (zhu2026_bending, robot design, Fig. 4)",
  "rotation_mechanism": "rotating-clamp",
  "rotation_detail": "Microwire twisted by the clamp ('guidewire twister', not friction wheels); guide catheter rotated through bevel gears and clutch",
  "device_range": "0.014 in microwire (nominal 0.36 mm); catheter sizes N.R.",

@@ -12,14 +12,14 @@
 <dt>Family</dt><dd>Academic bedside robots <span class="muted">(academic)</span></dd>
 <dt>Devices</dt><dd>catheter, &quot;compliant with catheter sizes 3-11 Fr&quot; (Sec. 8)</dd>
 <dt>Degrees of freedom</dt><dd>2 (thrust and rotation) on the slave and on the master (Sec. 8)</dd>
-<dt>Push</dt><dd>Other drives</dd>
+<dt>Push</dt><dd>Clamp relay</dd>
 <dt>Twist</dt><dd>Rotating drive unit</dd>
 <dt>Tested up to</dt><dd><span class="ladder" aria-hidden="true"><i class=f></i><i></i><i></i><i></i><i></i></span>Bench</dd>
 <dt>Sim-to-real</dt><dd>None found <span class="muted">— No simulation-trained controller found for this robot.</span></dd>
 </dl></div></div>
 
 <div class="dsec"><h2>Testing</h2><dl><dt>Highest level</dt><dd>Bench</dd><dt>What was tested</dt><dd>initial thrust and rotation tracking of the slave following the master; no phantom, trial counts N.R. (Sec. 8, Figs. 10-11)</dd><dt>Key numbers</dt><dd>rotation tracking error &lt; 1 deg with time delay &lt; 10 ms; thrust tracking shows &quot;1:5 distance differences&quot; and a tracking error in the second stroke (Sec. 8); design limits: translational velocity below 10 mm/s, collision threshold 0.12 N (Sec. 6)</dd></dl></div>
-<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>other: &quot;passive roller as thrust mechanism while holding the catheter&quot;, rubber with a high friction coefficient; stepping motor, DC motor and slide rail labelled in Fig. 9, their roles not stated (Sec. 8)</dd><dt>Twist (rotation)</dt><dd>rotation of the slave housing about the catheter axis (Fig. 9 &quot;Rotation movement&quot;); actuator N.R.</dd><dt>Device range</dt><dd>3-11 Fr (Sec. 8)</dd><dt>Target anatomy</dt><dd>interventional radiology catheterisation (vessel not specified)</dd></dl></div>
+<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>clamp-relay: a passive rubber roller holds the catheter (&quot;passive roller as thrust mechanism while holding the catheter&quot;) on a slide rail, stroke by stroke (&quot;error of tracking in the second stroke&quot;); a stepping motor and a DC motor are labelled in Fig. 9, their roles not stated (zakaria2012_development Sec. 8)</dd><dt>Twist (rotation)</dt><dd>rotation of the slave housing about the catheter axis (Fig. 9 &quot;Rotation movement&quot;); actuator N.R.</dd><dt>Device range</dt><dd>3-11 Fr (Sec. 8)</dd><dt>Target anatomy</dt><dd>interventional radiology catheterisation (vessel not specified)</dd></dl></div>
 <div class="dsec"><h2>Sensing and interface</h2><dl><dt>Force sensing</dt><dd>claimed but not shown: &quot;It is installed with a force sensor to enable haptic feedback&quot; and &quot;For future work, force sensors will be attached to the slave robot&quot; (Sec. 8); design threshold: contact force above 0.12 N is treated as a collision (Sec. 6)</dd><dt>Leader and haptics</dt><dd>master tool with 2 DOF (thrust on a sliding screw and bearing, rotation) and electro-rheological (ER) fluid as a passive actuator that stiffens when force is detected (Sec. 8); not demonstrated</dd><dt>Imaging</dt><dd>N.R. (concept: DSA, surgeon in a separate control room, Fig. 1)</dd><dt>Sterility</dt><dd>requirement only: &quot;the parts of the catheter must be sterilizable&quot; (Sec. 8)</dd></dl></div>
 <div class="dsec"><h2>Size</h2><dl><dt>Footprint (mm)</dt><dd>N.R. (&quot;lightweight, compact&quot;, Sec. 8)</dd><dt>Mass (kg)</dt><dd><span class="nr">N.R.</span></dd></dl></div>
 <div class="dsec"><h2>Simulation</h2><dl><dt>Simulation model</dt><dd>none found (control software in MATLAB Simulink; system specified in CONSENS)</dd><dt>Sim-trained controller</dt><dd>none found</dd></dl></div>
@@ -32,7 +32,7 @@
 <footer class="foot"><div class="wrap">
 <div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
 the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
-pictures keep their owners' licences. Built 2026-11-24.</div>
+pictures keep their owners' licences. Built 2026-11-25.</div>
 <div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
 Paper: Endovascular Robotics Atlas: A Systematic Review of Hardware Design and Performance (in preparation)</div>
 <div>Machine-readable: <a href="../api/robots.json">robots.json</a> · <a href="../robots.csv">robots.csv</a> ·

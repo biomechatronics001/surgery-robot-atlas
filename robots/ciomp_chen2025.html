@@ -12,14 +12,14 @@
 <dt>Family</dt><dd>Academic bedside robots <span class="muted">(academic)</span></dd>
 <dt>Devices</dt><dd>catheter and guidewire (catheter delivery mechanism, catheter rotation mechanism, guidewire operation mechanism; chen2025_design Fig. 1 labels)</dd>
 <dt>Degrees of freedom</dt><dd>N.R. (catheter delivery + rotation, guidewire delivery + rotation shown)</dd>
-<dt>Push</dt><dd>Other drives</dd>
+<dt>Push</dt><dd>Linear stage</dd>
 <dt>Twist</dt><dd>Other</dd>
 <dt>Tested up to</dt><dd><span class="ladder" aria-hidden="true"><i class=f></i><i class=f></i><i></i><i></i><i></i></span>Phantom</dd>
 <dt>Sim-to-real</dt><dd>None found <span class="muted">— No simulation-trained controller found for this robot.</span></dd>
 </dl></div></div>
 
 <div class="dsec"><h2>Testing</h2><dl><dt>Highest level</dt><dd>Phantom</dd><dt>What was tested</dt><dd>intervention task in a human vascular model with 4 volunteers; CUSUM learning curves (chen2025_design abstract, Fig. 7)</dd><dt>Key numbers</dt><dd>leader-follower delivery error &lt; 1 mm, guidewire rotation error &lt; 0.3 deg; operators mastered the task within 10 trials; operator-experience classification accuracy 94% (chen2025_design abstract)</dd></dl></div>
-<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>other: catheter between upper and lower pressing plates with an electric clamp; guidewire via operating handle on a screw drive (Fig. 1 labels)</dd><dt>Twist (rotation)</dt><dd>gear drive (driving/driven gears, rotating motor; Fig. 1 labels)</dd><dt>Device range</dt><dd><span class="nr">N.R.</span></dd><dt>Target anatomy</dt><dd>human vascular model</dd></dl></div>
+<div class="dsec"><h2>Mechanism</h2><dl><dt>Push (translation)</dt><dd>linear-stage+clamp: the follower&#x27;s modules, which hold the catheter&#x27;s Y-connector and the guidewire&#x27;s operating handle, ride its linear rails (chen2025_design Fig. 4(a)); catheter between upper and lower pressing plates with an electric clamp; guidewire via operating handle on a screw drive (Fig. 1 labels)</dd><dt>Twist (rotation)</dt><dd>gear drive (driving/driven gears, rotating motor; Fig. 1 labels)</dd><dt>Device range</dt><dd><span class="nr">N.R.</span></dd><dt>Target anatomy</dt><dd>human vascular model</dd></dl></div>
 <div class="dsec"><h2>Sensing and interface</h2><dl><dt>Force sensing</dt><dd>N.R. in abstract; force channels in the four-channel bilateral controller (Fig. 2)</dd><dt>Leader and haptics</dt><dd>isomorphic leader with identical structure; four-channel acceleration-based bilateral control with DOB/RFOB (abstract, Fig. 2)</dd><dt>Imaging</dt><dd><span class="nr">N.R.</span></dd><dt>Sterility</dt><dd><span class="nr">N.R.</span></dd></dl></div>
 <div class="dsec"><h2>Size</h2><dl><dt>Footprint (mm)</dt><dd><span class="nr">N.R.</span></dd><dt>Mass (kg)</dt><dd><span class="nr">N.R.</span></dd></dl></div>
 <div class="dsec"><h2>Simulation</h2><dl><dt>Simulation model</dt><dd>none found</dd><dt>Sim-trained controller</dt><dd>none found</dd></dl></div>
@@ -32,7 +32,7 @@
 <footer class="foot"><div class="wrap">
 <div><b>Catheter Robot Atlas</b> — an open catalogue of endovascular catheter and guidewire robots, maintained by
 the BIRO Lab, New York University. Listing is descriptive and is not an endorsement. Each record links to its sources;
-pictures keep their owners' licences. Built 2026-11-24.</div>
+pictures keep their owners' licences. Built 2026-11-25.</div>
 <div>Site code: MIT<br>Catalogue metadata: <span class="todo" title="open decision for the maintainers">[CC0 or CC BY 4.0]</span><br>
 Paper: Endovascular Robotics Atlas: A Systematic Review of Hardware Design and Performance (in preparation)</div>
 <div>Machine-readable: <a href="../api/robots.json">robots.json</a> · <a href="../robots.csv">robots.csv</a> ·

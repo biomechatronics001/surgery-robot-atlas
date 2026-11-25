@@ -2,7 +2,7 @@
  "schema_version": 1,
  "id": "navion_nanoflex2025",
  "name": "Navion",
- "full_name": "Nanoflex magnetic telerobotic platform (Navion per S8)",
+ "full_name": "Nanoflex magnetic telerobotic platform (Navion)",
  "group": "Nanoflex Robotics (ETH Zurich spin-off, 2021)",
  "group_short": "Nanoflex Robotics",
  "family": "commercial",
@@ -29,8 +29,8 @@
  "haptics_leader": "no",
  "imaging_compat": "mobile field generator compatible with C-arm",
  "sterility": "N.R.",
- "highest_validation": "phantom",
- "validation_detail": "7,000 km in-vitro coronary angiography, 260 runs, latency 134-143 ms (madder2025_transatlantic via S8); CTO reports 100% navigation + clot retrieval (magneticsmag, web)",
+ "highest_validation": "animal",
+ "validation_detail": "animal: in vivo navigation in a porcine model with the Navion eMNS, one 45 kg pig (dreyfus2024_dexterous, Results and Materials and Methods); 7,000 km in-vitro coronary angiography, 260 runs, latency 134-143 ms (madder2025_transatlantic via S8); CTO reports 100% navigation + clot retrieval (magneticsmag, web)",
  "key_numbers": "no first-in-human found; FIH/FDA submission once planned for Q3 2023 (slipped)",
  "sim_model": "none found",
  "has_sim_model": false,
@@ -104,11 +104,19 @@
    "title": "Robot-Assisted Cardiovascular Interventions",
    "year": 2025,
    "venue": "Journal of the Society for Cardiovascular Angiography & Interventions"
+  },
+  {
+   "key": "dreyfus2024_dexterous",
+   "doi": "10.1126/scirobotics.adh0298",
+   "url": null,
+   "title": "Dexterous helical magnetic robot for improved endovascular access",
+   "year": 2024,
+   "venue": "Science Robotics"
   }
  ],
- "read_level": "web",
- "read_level_detail": "web",
- "notes": "The name Navion was not found in any 2026 source I opened (search found nothing for \"Navion\"); S8 carries it from a paper. Treat the name as unverified.",
+ "read_level": "partial",
+ "read_level_detail": "partial (highest_validation read in the full text of dreyfus2024_dexterous on disk, RF-A 2026-11-25); web for the other cells",
+ "notes": "The name Navion is joined to the Nanoflex system by two sources: \"the Navion system, a preclinical device developed by the Multi-Scale Robotics Lab\" ... \"commercialized by Nanoflex Robotics AG\" (dreyfus2024_dexterous, Electromagnetic navigation system) and \"Navion, Nanoflex Robotics AG\" (chen2026_teleoperation, Sec. IV-A) (RF-A 2026-11-24, Revision_Audit E14).",
  "maintainers_own": false,
  "found_by": "commercial"
 }

@@ -17,10 +17,10 @@
  "devices_driven": "multiple interventional instruments delivered collaboratively",
  "n_dof": null,
  "n_dof_detail": "N.R.",
- "translation_mechanism": "not-reported",
- "translation_detail": "N.R.",
- "rotation_mechanism": "not-reported",
- "rotation_detail": "N.R.",
+ "translation_mechanism": "other",
+ "translation_detail": "friction-roller + clamp hybrid: an auxiliary module of friction wheels replaces the guidewire and delivers the balloon or stent; the catheter and two guidewires are pushed by clamping modules on sliding platforms (single stroke 400 mm) and held by fixed modules while the clamping modules return (yu2023_design Sec. 2.1, Figs. 6, 12)",
+ "rotation_mechanism": "rotating-clamp",
+ "rotation_detail": "clamping modules twist the catheter and each guidewire after closing on it (yu2023_design Sec. 2.1, Figs. 7-10)",
  "device_range": "N.R.",
  "footprint_mm": "N.R.",
  "mass_kg": "N.R.",
@@ -162,8 +162,8 @@
    "venue": "Medical &amp; Biological Engineering &amp; Computing"
   }
  ],
- "read_level": "abstract",
- "read_level_detail": "abstract (Europe PMC)",
+ "read_level": "partial",
+ "read_level_detail": "partial (translation and rotation cells read in the yu2023_design text on disk, RF-A 2026-11-24); abstract (Europe PMC) for the other cells",
  "notes": "Group must be identified from the PDF. | 2026-10-13 Q2: highest_validation bench -> phantom from the full text (W4_notes.md item 4); group from the full-text author list. The coordinator correction of 18:00 had been applied to yanshan_yu2023 by mistake (W6_notes.md item 9). Other cells left at abstract level so that Sec. V and VII counts stay as written (Sec. V-B names the full-text mechanism).",
  "maintainers_own": false,
  "found_by": "academic"
